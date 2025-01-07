@@ -151,10 +151,10 @@ fuseDrillBaseAddres = "http://localhost:5184/";
 fuseDrillOpenApiUrl = "http://localhost:5184/swagger/v1/swagger.json";
 githubToken = Environment.GetEnvironmentVariable("GITHUB_TOKEN");
 geminiToken = Environment.GetEnvironmentVariable("GEMINI_API_KEY");
-branch = "add-readme";
+branch = "Ordering_bug";
 repoName = "FuseDrill";
 owner = "martasp";
-pullReqestNumber = "20";
+pullReqestNumber = "26";
 #endif
 
 

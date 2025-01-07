@@ -117,6 +117,7 @@ public class ApiFuzzer : IApiFuzzer
 
         //order api calls
         testSuitesProcessed.ForEach(suite => { suite.ApiCalls = suite.ApiCalls.OrderBy(item => item.Order).ThenBy(item=>item.MethodName).ToList(); });
+        testSuitesProcessed.OrderBy(item => item.Order);
 
         var tests = new FuzzerTests();
         tests.TestSuites = testSuitesProcessed;
