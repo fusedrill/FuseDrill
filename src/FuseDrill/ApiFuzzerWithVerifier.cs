@@ -30,6 +30,7 @@ public class ApiFuzzerWithVerifier : IApiFuzzer
         settings.UseStrictJson();
         settings.DontScrubGuids();
         settings.DontIgnoreEmptyCollections();
+        settings.IncludePrimitiveMembers();
 
         var testSuitesProcessed = await _apiFuzzer.TestWholeApi(filter);
 

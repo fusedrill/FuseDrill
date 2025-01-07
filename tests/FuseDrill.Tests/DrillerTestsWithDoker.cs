@@ -3,7 +3,7 @@ using FuseDrill;
 
 namespace tests;
 public class ApiIntegrationTests
-{
+{   
     [Fact]
     public async Task TestApiContainer()
     {

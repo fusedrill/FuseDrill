@@ -114,9 +114,7 @@ public class DataGenerationHelper
             return GetDefaultValue(type);  // Return empty or default value if recursion limit reached
         }
 
-#pragma warning disable CS8603 // Possible null reference return., thats expected because of nullables
-
-        //Todo improve determistic behaviour
+        //Todo improve deterministic behaviour uisng random seed as key : MethodName + type.FullName + propertyName
         var res = type switch
         {
             // Handle non-nullable types
@@ -326,17 +324,16 @@ public class DataGenerationHelper
         return dictionary;
     }
 
-
     // Helper method to get a random value from an enum type
     private object GetRandomEnumValue(Type enumType, Random random)
     {
         var values = Enum.GetValues(enumType);
         var randomIndex = random.Next(values.Length);
 
-        // Check if the random index is within the range of valid enum values
+        // Check if the random testSuiteOrder is within the range of valid enum values
         if (randomIndex >= values.Length)
         {
-            throw new InvalidOperationException("Random index is out of range of valid enum values.");
+            throw new InvalidOperationException("Random testSuiteOrder is out of range of valid enum values.");
         }
 
         var result = values.GetValue(randomIndex);
@@ -354,55 +351,31 @@ public class DataGenerationHelper
         //However, a common range for endpoints per micro-service is generally between 5 to 20 endpoints.
 
         //TODO How to reduce search space? Currently just a simple hack.
-        var listSuitePermutations = range.Count switch
+        var methodNamePermutations = range.Count switch
         {
-            > 50 => PermutationGenerator.GetPermutationsOfOne(range), // Skip permutations if count > 50
-            > 5 => PermutationGenerator.GetPermutationsOfTwo(range), // If count > 5, use GetPermutationsOfTwo
-            _ => PermutationGenerator.GetPermutations(range) // Otherwise, get full permutations
+            > 50 => PermutationGenerator.GetPermutationsOfOne(dataModel.Methods), // Skip permutations if count > 50
+            > 5 => PermutationGenerator.GetPermutationsOfTwo(dataModel.Methods), // If count > 5, use GetPermutationsOfTwo
+            _ => PermutationGenerator.GetPermutations(dataModel.Methods) // Otherwise, get full permutations
         };
 
-        var permuations = listSuitePermutations.Select(set =>
+        var testSuites = methodNamePermutations.Select((calls, testSuiteOrder) => new TestSuite
         {
-            var list = set.Zip(dataModel.Methods).Select((item, index) => new ApiCall
+            ApiCalls = calls.Select((item, apiCallOrder) => new ApiCall
             {
-                Order = item.First,
-                HttpMethod = item.Second.HttpMethod,
-                MethodName = item.Second.MethodName,
-                Request = PickCorrectRequestReflectionBased(item.Second.MethodName, item.Second.MethodParameterTypes, dataModel.Methods.Count),
+                Order = apiCallOrder,
+                HttpMethod = item.HttpMethod,
+                MethodName = item.MethodName,
+                Request = PickCorrectRequestReflectionBased(item.MethodName, item.MethodParameterTypes, dataModel.Methods.Count),
                 Response = null,
-            }).ToList();
-            return list.ToList();
-        }).ToList();
-
-        var testSuites = permuations.Select(calls => new TestSuite
-        {
-            ApiCalls = calls.ToList(),
+            }).ToList(),
+            Order = testSuiteOrder,
             TestCoveragePercentage = 0,
         }).ToList();
-
-        //if (range.Count == 1) // To complicated, Todo Generate all permutations of property values, atlest for enums ,and bools.
-        //{
-        //    ///loop trhou all testsuites 
-        //    ///     loop throut all api calls
-        //    ///         find properties that are bool and set them to oposite
-
-        //    foreach (var testSuite in testSuites)
-        //    {
-        //        foreach (var apiCall in testSuite.ApiCalls)
-        //        {
-        //            if (apiCall.Request is bool)
-        //            {
-        //                apiCall.Request = !apiCall.Request;
-        //            }
-        //        }
-        //    }
-        //}
 
         return testSuites;
     }
 
 }
-
 
 public class RecursionGuard
 {
