@@ -38,6 +38,12 @@ public static class SimpleDiffer
             });
         }
 
+        // If no changes were found, return an empty string
+        if (diffResult.Lines.All(item=>item.Type == ChangeType.Unchanged))
+        {
+            return string.Empty;
+        }
+
         return sb.ToString(); // Return the diff as a string
 
     }

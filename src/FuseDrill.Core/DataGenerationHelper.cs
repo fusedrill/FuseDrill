@@ -362,13 +362,13 @@ public class DataGenerationHelper
         {
             ApiCalls = calls.Select((item, apiCallOrder) => new ApiCall
             {
-                Order = apiCallOrder,
+                ApiCallOrderId = apiCallOrder,
                 HttpMethod = item.HttpMethod,
                 MethodName = item.MethodName,
                 Request = PickCorrectRequestReflectionBased(item.MethodName, item.MethodParameterTypes, dataModel.Methods.Count),
                 Response = null,
             }).ToList(),
-            Order = testSuiteOrder,
+            TestSuiteOrderId = testSuiteOrder,
             TestCoveragePercentage = 0,
         }).ToList();
 

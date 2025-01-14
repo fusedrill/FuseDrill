@@ -5,7 +5,7 @@
       "ApiCalls": [
         {
           "MethodName": "GetWeatherForecast_http_get_Async",
-          "Order": 0,
+          "ApiCallOrderId": 0,
           "Response": [
             {
               "Date": "DateTimeOffset_1",
@@ -18,13 +18,13 @@
         },
         {
           "MethodName": "PetsAll_http_get_Async",
-          "Order": 1,
+          "ApiCallOrderId": 1,
           "Response": [],
           "HttpMethod": "get"
         },
         {
           "MethodName": "PetsGET_http_get_Async",
-          "Order": 2,
+          "ApiCallOrderId": 2,
           "Request": 4,
           "Response": {
             "StatusCode": 404,
@@ -35,7 +35,7 @@
         },
         {
           "MethodName": "PetsPOST_http_post_Async",
-          "Order": 3,
+          "ApiCallOrderId": 3,
           "Request": {
             "Id": 4,
             "Breed": "RandomString275",
@@ -52,7 +52,7 @@
         },
         {
           "MethodName": "PetsPUT_http_put_Async",
-          "Order": 4,
+          "ApiCallOrderId": 4,
           "Request": {
             "Id": 4,
             "Breed": "RandomString919",
@@ -68,13 +68,13 @@
         }
       ],
       "TestCoveragePercentage": 0.0,
-      "Order": 0
+      "TestSuiteOrderId": 0
     },
     {
       "ApiCalls": [
         {
           "MethodName": "GetWeatherForecast_http_get_Async",
-          "Order": 0,
+          "ApiCallOrderId": 0,
           "Response": [
             {
               "Date": "DateTimeOffset_2",
@@ -87,13 +87,13 @@
         },
         {
           "MethodName": "PetsAll_http_get_Async",
-          "Order": 1,
+          "ApiCallOrderId": 1,
           "Response": [],
           "HttpMethod": "get"
         },
         {
           "MethodName": "PetsGET_http_get_Async",
-          "Order": 2,
+          "ApiCallOrderId": 2,
           "Request": 1,
           "Response": {
             "StatusCode": 404,
@@ -104,7 +104,7 @@
         },
         {
           "MethodName": "PetsPUT_http_put_Async",
-          "Order": 3,
+          "ApiCallOrderId": 3,
           "Request": {
             "Id": 2,
             "Breed": "RandomString757",
@@ -120,7 +120,7 @@
         },
         {
           "MethodName": "PetsPOST_http_post_Async",
-          "Order": 4,
+          "ApiCallOrderId": 4,
           "Request": {
             "Id": 1,
             "Breed": "RandomString919",
@@ -137,13 +137,13 @@
         }
       ],
       "TestCoveragePercentage": 0.0,
-      "Order": 1
+      "TestSuiteOrderId": 1
     },
     {
       "ApiCalls": [
         {
           "MethodName": "GetWeatherForecast_http_get_Async",
-          "Order": 0,
+          "ApiCallOrderId": 0,
           "Response": [
             {
               "Date": "DateTimeOffset_3",
@@ -156,13 +156,13 @@
         },
         {
           "MethodName": "PetsAll_http_get_Async",
-          "Order": 1,
+          "ApiCallOrderId": 1,
           "Response": [],
           "HttpMethod": "get"
         },
         {
           "MethodName": "PetsPOST_http_post_Async",
-          "Order": 2,
+          "ApiCallOrderId": 2,
           "Request": {
             "Id": 4,
             "Breed": "RandomString684",
@@ -179,7 +179,7 @@
         },
         {
           "MethodName": "PetsGET_http_get_Async",
-          "Order": 3,
+          "ApiCallOrderId": 3,
           "Request": 1,
           "Response": {
             "StatusCode": 404,
@@ -190,7 +190,7 @@
         },
         {
           "MethodName": "PetsPUT_http_put_Async",
-          "Order": 4,
+          "ApiCallOrderId": 4,
           "Request": {
             "Id": 4,
             "Breed": "RandomString320",
@@ -206,13 +206,13 @@
         }
       ],
       "TestCoveragePercentage": 0.0,
-      "Order": 2
+      "TestSuiteOrderId": 2
     },
     {
       "ApiCalls": [
         {
           "MethodName": "GetWeatherForecast_http_get_Async",
-          "Order": 0,
+          "ApiCallOrderId": 0,
           "Response": [
             {
               "Date": "DateTimeOffset_4",
@@ -225,13 +225,13 @@
         },
         {
           "MethodName": "PetsAll_http_get_Async",
-          "Order": 1,
+          "ApiCallOrderId": 1,
           "Response": [],
           "HttpMethod": "get"
         },
         {
           "MethodName": "PetsPOST_http_post_Async",
-          "Order": 2,
+          "ApiCallOrderId": 2,
           "Request": {
             "Id": 1,
             "Breed": "RandomString996",
@@ -248,7 +248,7 @@
         },
         {
           "MethodName": "PetsPUT_http_put_Async",
-          "Order": 3,
+          "ApiCallOrderId": 3,
           "Request": {
             "Id": 4,
             "Breed": "RandomString276",
@@ -264,7 +264,7 @@
         },
         {
           "MethodName": "PetsGET_http_get_Async",
-          "Order": 4,
+          "ApiCallOrderId": 4,
           "Request": 2,
           "Response": {
             "StatusCode": 404,
@@ -275,13 +275,13 @@
         }
       ],
       "TestCoveragePercentage": 0.0,
-      "Order": 3
+      "TestSuiteOrderId": 3
     },
     {
       "ApiCalls": [
         {
           "MethodName": "GetWeatherForecast_http_get_Async",
-          "Order": 0,
+          "ApiCallOrderId": 0,
           "Response": [
             {
               "Date": "DateTimeOffset_5",
@@ -294,13 +294,13 @@
         },
         {
           "MethodName": "PetsAll_http_get_Async",
-          "Order": 1,
+          "ApiCallOrderId": 1,
           "Response": [],
           "HttpMethod": "get"
         },
         {
           "MethodName": "PetsPUT_http_put_Async",
-          "Order": 2,
+          "ApiCallOrderId": 2,
           "Request": {
             "Id": 3,
             "Breed": "RandomString332",
@@ -316,7 +316,7 @@
         },
         {
           "MethodName": "PetsPOST_http_post_Async",
-          "Order": 3,
+          "ApiCallOrderId": 3,
           "Request": {
             "Id": 3,
             "Breed": "RandomString857",
@@ -333,7 +333,7 @@
         },
         {
           "MethodName": "PetsGET_http_get_Async",
-          "Order": 4,
+          "ApiCallOrderId": 4,
           "Request": 1,
           "Response": {
             "StatusCode": 404,
@@ -344,13 +344,13 @@
         }
       ],
       "TestCoveragePercentage": 0.0,
-      "Order": 4
+      "TestSuiteOrderId": 4
     },
     {
       "ApiCalls": [
         {
           "MethodName": "GetWeatherForecast_http_get_Async",
-          "Order": 0,
+          "ApiCallOrderId": 0,
           "Response": [
             {
               "Date": "DateTimeOffset_6",
@@ -363,13 +363,13 @@
         },
         {
           "MethodName": "PetsAll_http_get_Async",
-          "Order": 1,
+          "ApiCallOrderId": 1,
           "Response": [],
           "HttpMethod": "get"
         },
         {
           "MethodName": "PetsPUT_http_put_Async",
-          "Order": 2,
+          "ApiCallOrderId": 2,
           "Request": {
             "Id": 4,
             "Breed": "RandomString369",
@@ -385,7 +385,7 @@
         },
         {
           "MethodName": "PetsGET_http_get_Async",
-          "Order": 3,
+          "ApiCallOrderId": 3,
           "Request": 1,
           "Response": {
             "StatusCode": 404,
@@ -396,7 +396,7 @@
         },
         {
           "MethodName": "PetsPOST_http_post_Async",
-          "Order": 4,
+          "ApiCallOrderId": 4,
           "Request": {
             "Id": 3,
             "Breed": "RandomString626",
@@ -413,13 +413,13 @@
         }
       ],
       "TestCoveragePercentage": 0.0,
-      "Order": 5
+      "TestSuiteOrderId": 5
     },
     {
       "ApiCalls": [
         {
           "MethodName": "GetWeatherForecast_http_get_Async",
-          "Order": 0,
+          "ApiCallOrderId": 0,
           "Response": [
             {
               "Date": "DateTimeOffset_7",
@@ -432,7 +432,7 @@
         },
         {
           "MethodName": "PetsGET_http_get_Async",
-          "Order": 1,
+          "ApiCallOrderId": 1,
           "Request": 1,
           "Response": {
             "StatusCode": 404,
@@ -443,13 +443,13 @@
         },
         {
           "MethodName": "PetsAll_http_get_Async",
-          "Order": 2,
+          "ApiCallOrderId": 2,
           "Response": [],
           "HttpMethod": "get"
         },
         {
           "MethodName": "PetsPOST_http_post_Async",
-          "Order": 3,
+          "ApiCallOrderId": 3,
           "Request": {
             "Id": 2,
             "Breed": "RandomString759",
@@ -466,7 +466,7 @@
         },
         {
           "MethodName": "PetsPUT_http_put_Async",
-          "Order": 4,
+          "ApiCallOrderId": 4,
           "Request": {
             "Id": 3,
             "Breed": "RandomString566",
@@ -482,13 +482,13 @@
         }
       ],
       "TestCoveragePercentage": 0.0,
-      "Order": 6
+      "TestSuiteOrderId": 6
     },
     {
       "ApiCalls": [
         {
           "MethodName": "GetWeatherForecast_http_get_Async",
-          "Order": 0,
+          "ApiCallOrderId": 0,
           "Response": [
             {
               "Date": "DateTimeOffset_8",
@@ -501,7 +501,7 @@
         },
         {
           "MethodName": "PetsGET_http_get_Async",
-          "Order": 1,
+          "ApiCallOrderId": 1,
           "Request": 1,
           "Response": {
             "StatusCode": 404,
@@ -512,13 +512,13 @@
         },
         {
           "MethodName": "PetsAll_http_get_Async",
-          "Order": 2,
+          "ApiCallOrderId": 2,
           "Response": [],
           "HttpMethod": "get"
         },
         {
           "MethodName": "PetsPUT_http_put_Async",
-          "Order": 3,
+          "ApiCallOrderId": 3,
           "Request": {
             "Id": 2,
             "Breed": "RandomString666",
@@ -534,7 +534,7 @@
         },
         {
           "MethodName": "PetsPOST_http_post_Async",
-          "Order": 4,
+          "ApiCallOrderId": 4,
           "Request": {
             "Id": 2,
             "Breed": "RandomString700",
@@ -551,13 +551,13 @@
         }
       ],
       "TestCoveragePercentage": 0.0,
-      "Order": 7
+      "TestSuiteOrderId": 7
     },
     {
       "ApiCalls": [
         {
           "MethodName": "GetWeatherForecast_http_get_Async",
-          "Order": 0,
+          "ApiCallOrderId": 0,
           "Response": [
             {
               "Date": "DateTimeOffset_9",
@@ -570,7 +570,7 @@
         },
         {
           "MethodName": "PetsGET_http_get_Async",
-          "Order": 1,
+          "ApiCallOrderId": 1,
           "Request": 2,
           "Response": {
             "StatusCode": 404,
@@ -581,7 +581,7 @@
         },
         {
           "MethodName": "PetsPOST_http_post_Async",
-          "Order": 2,
+          "ApiCallOrderId": 2,
           "Request": {
             "Id": 4,
             "Breed": "RandomString99",
@@ -598,13 +598,13 @@
         },
         {
           "MethodName": "PetsAll_http_get_Async",
-          "Order": 3,
+          "ApiCallOrderId": 3,
           "Response": [],
           "HttpMethod": "get"
         },
         {
           "MethodName": "PetsPUT_http_put_Async",
-          "Order": 4,
+          "ApiCallOrderId": 4,
           "Request": {
             "Id": 1,
             "Breed": "RandomString880",
@@ -620,13 +620,13 @@
         }
       ],
       "TestCoveragePercentage": 0.0,
-      "Order": 8
+      "TestSuiteOrderId": 8
     },
     {
       "ApiCalls": [
         {
           "MethodName": "GetWeatherForecast_http_get_Async",
-          "Order": 0,
+          "ApiCallOrderId": 0,
           "Response": [
             {
               "Date": "DateTimeOffset_10",
@@ -639,7 +639,7 @@
         },
         {
           "MethodName": "PetsGET_http_get_Async",
-          "Order": 1,
+          "ApiCallOrderId": 1,
           "Request": 2,
           "Response": {
             "StatusCode": 404,
@@ -650,7 +650,7 @@
         },
         {
           "MethodName": "PetsPOST_http_post_Async",
-          "Order": 2,
+          "ApiCallOrderId": 2,
           "Request": {
             "Id": 3,
             "Breed": "RandomString831",
@@ -667,7 +667,7 @@
         },
         {
           "MethodName": "PetsPUT_http_put_Async",
-          "Order": 3,
+          "ApiCallOrderId": 3,
           "Request": {
             "Id": 2,
             "Breed": "RandomString266",
@@ -683,19 +683,19 @@
         },
         {
           "MethodName": "PetsAll_http_get_Async",
-          "Order": 4,
+          "ApiCallOrderId": 4,
           "Response": [],
           "HttpMethod": "get"
         }
       ],
       "TestCoveragePercentage": 0.0,
-      "Order": 9
+      "TestSuiteOrderId": 9
     },
     {
       "ApiCalls": [
         {
           "MethodName": "GetWeatherForecast_http_get_Async",
-          "Order": 0,
+          "ApiCallOrderId": 0,
           "Response": [
             {
               "Date": "DateTimeOffset_11",
@@ -708,7 +708,7 @@
         },
         {
           "MethodName": "PetsGET_http_get_Async",
-          "Order": 1,
+          "ApiCallOrderId": 1,
           "Request": 3,
           "Response": {
             "StatusCode": 404,
@@ -719,7 +719,7 @@
         },
         {
           "MethodName": "PetsPUT_http_put_Async",
-          "Order": 2,
+          "ApiCallOrderId": 2,
           "Request": {
             "Id": 2,
             "Breed": "RandomString495",
@@ -735,7 +735,7 @@
         },
         {
           "MethodName": "PetsPOST_http_post_Async",
-          "Order": 3,
+          "ApiCallOrderId": 3,
           "Request": {
             "Id": 4,
             "Breed": "RandomString404",
@@ -752,19 +752,19 @@
         },
         {
           "MethodName": "PetsAll_http_get_Async",
-          "Order": 4,
+          "ApiCallOrderId": 4,
           "Response": [],
           "HttpMethod": "get"
         }
       ],
       "TestCoveragePercentage": 0.0,
-      "Order": 10
+      "TestSuiteOrderId": 10
     },
     {
       "ApiCalls": [
         {
           "MethodName": "GetWeatherForecast_http_get_Async",
-          "Order": 0,
+          "ApiCallOrderId": 0,
           "Response": [
             {
               "Date": "DateTimeOffset_12",
@@ -777,7 +777,7 @@
         },
         {
           "MethodName": "PetsGET_http_get_Async",
-          "Order": 1,
+          "ApiCallOrderId": 1,
           "Request": 2,
           "Response": {
             "StatusCode": 404,
@@ -788,7 +788,7 @@
         },
         {
           "MethodName": "PetsPUT_http_put_Async",
-          "Order": 2,
+          "ApiCallOrderId": 2,
           "Request": {
             "Id": 2,
             "Breed": "RandomString698",
@@ -804,13 +804,13 @@
         },
         {
           "MethodName": "PetsAll_http_get_Async",
-          "Order": 3,
+          "ApiCallOrderId": 3,
           "Response": [],
           "HttpMethod": "get"
         },
         {
           "MethodName": "PetsPOST_http_post_Async",
-          "Order": 4,
+          "ApiCallOrderId": 4,
           "Request": {
             "Id": 4,
             "Breed": "RandomString656",
@@ -827,13 +827,13 @@
         }
       ],
       "TestCoveragePercentage": 0.0,
-      "Order": 11
+      "TestSuiteOrderId": 11
     },
     {
       "ApiCalls": [
         {
           "MethodName": "GetWeatherForecast_http_get_Async",
-          "Order": 0,
+          "ApiCallOrderId": 0,
           "Response": [
             {
               "Date": "DateTimeOffset_13",
@@ -846,7 +846,7 @@
         },
         {
           "MethodName": "PetsPOST_http_post_Async",
-          "Order": 1,
+          "ApiCallOrderId": 1,
           "Request": {
             "Id": 4,
             "Breed": "RandomString588",
@@ -863,7 +863,7 @@
         },
         {
           "MethodName": "PetsGET_http_get_Async",
-          "Order": 2,
+          "ApiCallOrderId": 2,
           "Request": 2,
           "Response": {
             "StatusCode": 404,
@@ -874,13 +874,13 @@
         },
         {
           "MethodName": "PetsAll_http_get_Async",
-          "Order": 3,
+          "ApiCallOrderId": 3,
           "Response": [],
           "HttpMethod": "get"
         },
         {
           "MethodName": "PetsPUT_http_put_Async",
-          "Order": 4,
+          "ApiCallOrderId": 4,
           "Request": {
             "Id": 2,
             "Breed": "RandomString878",
@@ -896,13 +896,13 @@
         }
       ],
       "TestCoveragePercentage": 0.0,
-      "Order": 12
+      "TestSuiteOrderId": 12
     },
     {
       "ApiCalls": [
         {
           "MethodName": "GetWeatherForecast_http_get_Async",
-          "Order": 0,
+          "ApiCallOrderId": 0,
           "Response": [
             {
               "Date": "DateTimeOffset_14",
@@ -915,7 +915,7 @@
         },
         {
           "MethodName": "PetsPOST_http_post_Async",
-          "Order": 1,
+          "ApiCallOrderId": 1,
           "Request": {
             "Id": 3,
             "Breed": "RandomString246",
@@ -932,7 +932,7 @@
         },
         {
           "MethodName": "PetsGET_http_get_Async",
-          "Order": 2,
+          "ApiCallOrderId": 2,
           "Request": 1,
           "Response": {
             "StatusCode": 404,
@@ -943,7 +943,7 @@
         },
         {
           "MethodName": "PetsPUT_http_put_Async",
-          "Order": 3,
+          "ApiCallOrderId": 3,
           "Request": {
             "Id": 2,
             "Breed": "RandomString700",
@@ -959,19 +959,19 @@
         },
         {
           "MethodName": "PetsAll_http_get_Async",
-          "Order": 4,
+          "ApiCallOrderId": 4,
           "Response": [],
           "HttpMethod": "get"
         }
       ],
       "TestCoveragePercentage": 0.0,
-      "Order": 13
+      "TestSuiteOrderId": 13
     },
     {
       "ApiCalls": [
         {
           "MethodName": "GetWeatherForecast_http_get_Async",
-          "Order": 0,
+          "ApiCallOrderId": 0,
           "Response": [
             {
               "Date": "DateTimeOffset_15",
@@ -984,7 +984,7 @@
         },
         {
           "MethodName": "PetsPOST_http_post_Async",
-          "Order": 1,
+          "ApiCallOrderId": 1,
           "Request": {
             "Id": 2,
             "Breed": "RandomString662",
@@ -1001,13 +1001,13 @@
         },
         {
           "MethodName": "PetsAll_http_get_Async",
-          "Order": 2,
+          "ApiCallOrderId": 2,
           "Response": [],
           "HttpMethod": "get"
         },
         {
           "MethodName": "PetsGET_http_get_Async",
-          "Order": 3,
+          "ApiCallOrderId": 3,
           "Request": 1,
           "Response": {
             "StatusCode": 404,
@@ -1018,7 +1018,7 @@
         },
         {
           "MethodName": "PetsPUT_http_put_Async",
-          "Order": 4,
+          "ApiCallOrderId": 4,
           "Request": {
             "Id": 2,
             "Breed": "RandomString738",
@@ -1034,13 +1034,13 @@
         }
       ],
       "TestCoveragePercentage": 0.0,
-      "Order": 14
+      "TestSuiteOrderId": 14
     },
     {
       "ApiCalls": [
         {
           "MethodName": "GetWeatherForecast_http_get_Async",
-          "Order": 0,
+          "ApiCallOrderId": 0,
           "Response": [
             {
               "Date": "DateTimeOffset_16",
@@ -1053,7 +1053,7 @@
         },
         {
           "MethodName": "PetsPOST_http_post_Async",
-          "Order": 1,
+          "ApiCallOrderId": 1,
           "Request": {
             "Id": 4,
             "Breed": "RandomString686",
@@ -1070,13 +1070,13 @@
         },
         {
           "MethodName": "PetsAll_http_get_Async",
-          "Order": 2,
+          "ApiCallOrderId": 2,
           "Response": [],
           "HttpMethod": "get"
         },
         {
           "MethodName": "PetsPUT_http_put_Async",
-          "Order": 3,
+          "ApiCallOrderId": 3,
           "Request": {
             "Id": 1,
             "Breed": "RandomString997",
@@ -1092,7 +1092,7 @@
         },
         {
           "MethodName": "PetsGET_http_get_Async",
-          "Order": 4,
+          "ApiCallOrderId": 4,
           "Request": 3,
           "Response": {
             "StatusCode": 404,
@@ -1103,13 +1103,13 @@
         }
       ],
       "TestCoveragePercentage": 0.0,
-      "Order": 15
+      "TestSuiteOrderId": 15
     },
     {
       "ApiCalls": [
         {
           "MethodName": "GetWeatherForecast_http_get_Async",
-          "Order": 0,
+          "ApiCallOrderId": 0,
           "Response": [
             {
               "Date": "DateTimeOffset_17",
@@ -1122,7 +1122,7 @@
         },
         {
           "MethodName": "PetsPOST_http_post_Async",
-          "Order": 1,
+          "ApiCallOrderId": 1,
           "Request": {
             "Id": 2,
             "Breed": "RandomString116",
@@ -1139,7 +1139,7 @@
         },
         {
           "MethodName": "PetsPUT_http_put_Async",
-          "Order": 2,
+          "ApiCallOrderId": 2,
           "Request": {
             "Id": 4,
             "Breed": "RandomString101",
@@ -1155,13 +1155,13 @@
         },
         {
           "MethodName": "PetsAll_http_get_Async",
-          "Order": 3,
+          "ApiCallOrderId": 3,
           "Response": [],
           "HttpMethod": "get"
         },
         {
           "MethodName": "PetsGET_http_get_Async",
-          "Order": 4,
+          "ApiCallOrderId": 4,
           "Request": 1,
           "Response": {
             "StatusCode": 404,
@@ -1172,13 +1172,13 @@
         }
       ],
       "TestCoveragePercentage": 0.0,
-      "Order": 16
+      "TestSuiteOrderId": 16
     },
     {
       "ApiCalls": [
         {
           "MethodName": "GetWeatherForecast_http_get_Async",
-          "Order": 0,
+          "ApiCallOrderId": 0,
           "Response": [
             {
               "Date": "DateTimeOffset_18",
@@ -1191,7 +1191,7 @@
         },
         {
           "MethodName": "PetsPOST_http_post_Async",
-          "Order": 1,
+          "ApiCallOrderId": 1,
           "Request": {
             "Id": 2,
             "Breed": "RandomString56",
@@ -1208,7 +1208,7 @@
         },
         {
           "MethodName": "PetsPUT_http_put_Async",
-          "Order": 2,
+          "ApiCallOrderId": 2,
           "Request": {
             "Id": 4,
             "Breed": "RandomString864",
@@ -1224,7 +1224,7 @@
         },
         {
           "MethodName": "PetsGET_http_get_Async",
-          "Order": 3,
+          "ApiCallOrderId": 3,
           "Request": 3,
           "Response": {
             "StatusCode": 404,
@@ -1235,19 +1235,19 @@
         },
         {
           "MethodName": "PetsAll_http_get_Async",
-          "Order": 4,
+          "ApiCallOrderId": 4,
           "Response": [],
           "HttpMethod": "get"
         }
       ],
       "TestCoveragePercentage": 0.0,
-      "Order": 17
+      "TestSuiteOrderId": 17
     },
     {
       "ApiCalls": [
         {
           "MethodName": "GetWeatherForecast_http_get_Async",
-          "Order": 0,
+          "ApiCallOrderId": 0,
           "Response": [
             {
               "Date": "DateTimeOffset_19",
@@ -1260,7 +1260,7 @@
         },
         {
           "MethodName": "PetsPUT_http_put_Async",
-          "Order": 1,
+          "ApiCallOrderId": 1,
           "Request": {
             "Id": 4,
             "Breed": "RandomString706",
@@ -1276,7 +1276,7 @@
         },
         {
           "MethodName": "PetsGET_http_get_Async",
-          "Order": 2,
+          "ApiCallOrderId": 2,
           "Request": 4,
           "Response": {
             "StatusCode": 404,
@@ -1287,7 +1287,7 @@
         },
         {
           "MethodName": "PetsPOST_http_post_Async",
-          "Order": 3,
+          "ApiCallOrderId": 3,
           "Request": {
             "Id": 4,
             "Breed": "RandomString113",
@@ -1304,19 +1304,19 @@
         },
         {
           "MethodName": "PetsAll_http_get_Async",
-          "Order": 4,
+          "ApiCallOrderId": 4,
           "Response": [],
           "HttpMethod": "get"
         }
       ],
       "TestCoveragePercentage": 0.0,
-      "Order": 18
+      "TestSuiteOrderId": 18
     },
     {
       "ApiCalls": [
         {
           "MethodName": "GetWeatherForecast_http_get_Async",
-          "Order": 0,
+          "ApiCallOrderId": 0,
           "Response": [
             {
               "Date": "DateTimeOffset_20",
@@ -1329,7 +1329,7 @@
         },
         {
           "MethodName": "PetsPUT_http_put_Async",
-          "Order": 1,
+          "ApiCallOrderId": 1,
           "Request": {
             "Id": 2,
             "Breed": "RandomString784",
@@ -1345,7 +1345,7 @@
         },
         {
           "MethodName": "PetsGET_http_get_Async",
-          "Order": 2,
+          "ApiCallOrderId": 2,
           "Request": 2,
           "Response": {
             "StatusCode": 404,
@@ -1356,13 +1356,13 @@
         },
         {
           "MethodName": "PetsAll_http_get_Async",
-          "Order": 3,
+          "ApiCallOrderId": 3,
           "Response": [],
           "HttpMethod": "get"
         },
         {
           "MethodName": "PetsPOST_http_post_Async",
-          "Order": 4,
+          "ApiCallOrderId": 4,
           "Request": {
             "Id": 4,
             "Breed": "RandomString812",
@@ -1379,13 +1379,13 @@
         }
       ],
       "TestCoveragePercentage": 0.0,
-      "Order": 19
+      "TestSuiteOrderId": 19
     },
     {
       "ApiCalls": [
         {
           "MethodName": "GetWeatherForecast_http_get_Async",
-          "Order": 0,
+          "ApiCallOrderId": 0,
           "Response": [
             {
               "Date": "DateTimeOffset_21",
@@ -1398,7 +1398,7 @@
         },
         {
           "MethodName": "PetsPUT_http_put_Async",
-          "Order": 1,
+          "ApiCallOrderId": 1,
           "Request": {
             "Id": 4,
             "Breed": "RandomString293",
@@ -1414,7 +1414,7 @@
         },
         {
           "MethodName": "PetsPOST_http_post_Async",
-          "Order": 2,
+          "ApiCallOrderId": 2,
           "Request": {
             "Id": 2,
             "Breed": "RandomString355",
@@ -1431,7 +1431,7 @@
         },
         {
           "MethodName": "PetsGET_http_get_Async",
-          "Order": 3,
+          "ApiCallOrderId": 3,
           "Request": 2,
           "Response": {
             "StatusCode": 404,
@@ -1442,19 +1442,19 @@
         },
         {
           "MethodName": "PetsAll_http_get_Async",
-          "Order": 4,
+          "ApiCallOrderId": 4,
           "Response": [],
           "HttpMethod": "get"
         }
       ],
       "TestCoveragePercentage": 0.0,
-      "Order": 20
+      "TestSuiteOrderId": 20
     },
     {
       "ApiCalls": [
         {
           "MethodName": "GetWeatherForecast_http_get_Async",
-          "Order": 0,
+          "ApiCallOrderId": 0,
           "Response": [
             {
               "Date": "DateTimeOffset_22",
@@ -1467,7 +1467,7 @@
         },
         {
           "MethodName": "PetsPUT_http_put_Async",
-          "Order": 1,
+          "ApiCallOrderId": 1,
           "Request": {
             "Id": 1,
             "Breed": "RandomString727",
@@ -1483,7 +1483,7 @@
         },
         {
           "MethodName": "PetsPOST_http_post_Async",
-          "Order": 2,
+          "ApiCallOrderId": 2,
           "Request": {
             "Id": 3,
             "Breed": "RandomString992",
@@ -1500,13 +1500,13 @@
         },
         {
           "MethodName": "PetsAll_http_get_Async",
-          "Order": 3,
+          "ApiCallOrderId": 3,
           "Response": [],
           "HttpMethod": "get"
         },
         {
           "MethodName": "PetsGET_http_get_Async",
-          "Order": 4,
+          "ApiCallOrderId": 4,
           "Request": 3,
           "Response": {
             "StatusCode": 404,
@@ -1517,13 +1517,13 @@
         }
       ],
       "TestCoveragePercentage": 0.0,
-      "Order": 21
+      "TestSuiteOrderId": 21
     },
     {
       "ApiCalls": [
         {
           "MethodName": "GetWeatherForecast_http_get_Async",
-          "Order": 0,
+          "ApiCallOrderId": 0,
           "Response": [
             {
               "Date": "DateTimeOffset_23",
@@ -1536,7 +1536,7 @@
         },
         {
           "MethodName": "PetsPUT_http_put_Async",
-          "Order": 1,
+          "ApiCallOrderId": 1,
           "Request": {
             "Id": 1,
             "Breed": "RandomString213",
@@ -1552,13 +1552,13 @@
         },
         {
           "MethodName": "PetsAll_http_get_Async",
-          "Order": 2,
+          "ApiCallOrderId": 2,
           "Response": [],
           "HttpMethod": "get"
         },
         {
           "MethodName": "PetsPOST_http_post_Async",
-          "Order": 3,
+          "ApiCallOrderId": 3,
           "Request": {
             "Id": 1,
             "Breed": "RandomString964",
@@ -1575,7 +1575,7 @@
         },
         {
           "MethodName": "PetsGET_http_get_Async",
-          "Order": 4,
+          "ApiCallOrderId": 4,
           "Request": 4,
           "Response": {
             "StatusCode": 404,
@@ -1586,13 +1586,13 @@
         }
       ],
       "TestCoveragePercentage": 0.0,
-      "Order": 22
+      "TestSuiteOrderId": 22
     },
     {
       "ApiCalls": [
         {
           "MethodName": "GetWeatherForecast_http_get_Async",
-          "Order": 0,
+          "ApiCallOrderId": 0,
           "Response": [
             {
               "Date": "DateTimeOffset_24",
@@ -1605,7 +1605,7 @@
         },
         {
           "MethodName": "PetsPUT_http_put_Async",
-          "Order": 1,
+          "ApiCallOrderId": 1,
           "Request": {
             "Id": 1,
             "Breed": "RandomString150",
@@ -1621,13 +1621,13 @@
         },
         {
           "MethodName": "PetsAll_http_get_Async",
-          "Order": 2,
+          "ApiCallOrderId": 2,
           "Response": [],
           "HttpMethod": "get"
         },
         {
           "MethodName": "PetsGET_http_get_Async",
-          "Order": 3,
+          "ApiCallOrderId": 3,
           "Request": 2,
           "Response": {
             "StatusCode": 404,
@@ -1638,7 +1638,7 @@
         },
         {
           "MethodName": "PetsPOST_http_post_Async",
-          "Order": 4,
+          "ApiCallOrderId": 4,
           "Request": {
             "Id": 3,
             "Breed": "RandomString968",
@@ -1655,19 +1655,19 @@
         }
       ],
       "TestCoveragePercentage": 0.0,
-      "Order": 23
+      "TestSuiteOrderId": 23
     },
     {
       "ApiCalls": [
         {
           "MethodName": "PetsAll_http_get_Async",
-          "Order": 0,
+          "ApiCallOrderId": 0,
           "Response": [],
           "HttpMethod": "get"
         },
         {
           "MethodName": "GetWeatherForecast_http_get_Async",
-          "Order": 1,
+          "ApiCallOrderId": 1,
           "Response": [
             {
               "Date": "DateTimeOffset_25",
@@ -1680,7 +1680,7 @@
         },
         {
           "MethodName": "PetsGET_http_get_Async",
-          "Order": 2,
+          "ApiCallOrderId": 2,
           "Request": 4,
           "Response": {
             "StatusCode": 404,
@@ -1691,7 +1691,7 @@
         },
         {
           "MethodName": "PetsPOST_http_post_Async",
-          "Order": 3,
+          "ApiCallOrderId": 3,
           "Request": {
             "Id": 2,
             "Breed": "RandomString356",
@@ -1708,7 +1708,7 @@
         },
         {
           "MethodName": "PetsPUT_http_put_Async",
-          "Order": 4,
+          "ApiCallOrderId": 4,
           "Request": {
             "Id": 2,
             "Breed": "RandomString522",
@@ -1724,19 +1724,19 @@
         }
       ],
       "TestCoveragePercentage": 0.0,
-      "Order": 24
+      "TestSuiteOrderId": 24
     },
     {
       "ApiCalls": [
         {
           "MethodName": "PetsAll_http_get_Async",
-          "Order": 0,
+          "ApiCallOrderId": 0,
           "Response": [],
           "HttpMethod": "get"
         },
         {
           "MethodName": "GetWeatherForecast_http_get_Async",
-          "Order": 1,
+          "ApiCallOrderId": 1,
           "Response": [
             {
               "Date": "DateTimeOffset_26",
@@ -1749,7 +1749,7 @@
         },
         {
           "MethodName": "PetsGET_http_get_Async",
-          "Order": 2,
+          "ApiCallOrderId": 2,
           "Request": 4,
           "Response": {
             "StatusCode": 404,
@@ -1760,7 +1760,7 @@
         },
         {
           "MethodName": "PetsPUT_http_put_Async",
-          "Order": 3,
+          "ApiCallOrderId": 3,
           "Request": {
             "Id": 2,
             "Breed": "RandomString170",
@@ -1776,7 +1776,7 @@
         },
         {
           "MethodName": "PetsPOST_http_post_Async",
-          "Order": 4,
+          "ApiCallOrderId": 4,
           "Request": {
             "Id": 2,
             "Breed": "RandomString215",
@@ -1793,19 +1793,19 @@
         }
       ],
       "TestCoveragePercentage": 0.0,
-      "Order": 25
+      "TestSuiteOrderId": 25
     },
     {
       "ApiCalls": [
         {
           "MethodName": "PetsAll_http_get_Async",
-          "Order": 0,
+          "ApiCallOrderId": 0,
           "Response": [],
           "HttpMethod": "get"
         },
         {
           "MethodName": "GetWeatherForecast_http_get_Async",
-          "Order": 1,
+          "ApiCallOrderId": 1,
           "Response": [
             {
               "Date": "DateTimeOffset_27",
@@ -1818,7 +1818,7 @@
         },
         {
           "MethodName": "PetsPOST_http_post_Async",
-          "Order": 2,
+          "ApiCallOrderId": 2,
           "Request": {
             "Id": 3,
             "Breed": "RandomString870",
@@ -1835,7 +1835,7 @@
         },
         {
           "MethodName": "PetsGET_http_get_Async",
-          "Order": 3,
+          "ApiCallOrderId": 3,
           "Request": 4,
           "Response": {
             "StatusCode": 404,
@@ -1846,7 +1846,7 @@
         },
         {
           "MethodName": "PetsPUT_http_put_Async",
-          "Order": 4,
+          "ApiCallOrderId": 4,
           "Request": {
             "Id": 4,
             "Breed": "RandomString358",
@@ -1862,19 +1862,19 @@
         }
       ],
       "TestCoveragePercentage": 0.0,
-      "Order": 26
+      "TestSuiteOrderId": 26
     },
     {
       "ApiCalls": [
         {
           "MethodName": "PetsAll_http_get_Async",
-          "Order": 0,
+          "ApiCallOrderId": 0,
           "Response": [],
           "HttpMethod": "get"
         },
         {
           "MethodName": "GetWeatherForecast_http_get_Async",
-          "Order": 1,
+          "ApiCallOrderId": 1,
           "Response": [
             {
               "Date": "DateTimeOffset_28",
@@ -1887,7 +1887,7 @@
         },
         {
           "MethodName": "PetsPOST_http_post_Async",
-          "Order": 2,
+          "ApiCallOrderId": 2,
           "Request": {
             "Id": 4,
             "Breed": "RandomString863",
@@ -1904,7 +1904,7 @@
         },
         {
           "MethodName": "PetsPUT_http_put_Async",
-          "Order": 3,
+          "ApiCallOrderId": 3,
           "Request": {
             "Id": 4,
             "Breed": "RandomString229",
@@ -1920,7 +1920,7 @@
         },
         {
           "MethodName": "PetsGET_http_get_Async",
-          "Order": 4,
+          "ApiCallOrderId": 4,
           "Request": 3,
           "Response": {
             "StatusCode": 404,
@@ -1931,19 +1931,19 @@
         }
       ],
       "TestCoveragePercentage": 0.0,
-      "Order": 27
+      "TestSuiteOrderId": 27
     },
     {
       "ApiCalls": [
         {
           "MethodName": "PetsAll_http_get_Async",
-          "Order": 0,
+          "ApiCallOrderId": 0,
           "Response": [],
           "HttpMethod": "get"
         },
         {
           "MethodName": "GetWeatherForecast_http_get_Async",
-          "Order": 1,
+          "ApiCallOrderId": 1,
           "Response": [
             {
               "Date": "DateTimeOffset_29",
@@ -1956,7 +1956,7 @@
         },
         {
           "MethodName": "PetsPUT_http_put_Async",
-          "Order": 2,
+          "ApiCallOrderId": 2,
           "Request": {
             "Id": 2,
             "Breed": "RandomString88",
@@ -1972,7 +1972,7 @@
         },
         {
           "MethodName": "PetsPOST_http_post_Async",
-          "Order": 3,
+          "ApiCallOrderId": 3,
           "Request": {
             "Id": 2,
             "Breed": "RandomString56",
@@ -1989,7 +1989,7 @@
         },
         {
           "MethodName": "PetsGET_http_get_Async",
-          "Order": 4,
+          "ApiCallOrderId": 4,
           "Request": 1,
           "Response": {
             "StatusCode": 404,
@@ -2000,19 +2000,19 @@
         }
       ],
       "TestCoveragePercentage": 0.0,
-      "Order": 28
+      "TestSuiteOrderId": 28
     },
     {
       "ApiCalls": [
         {
           "MethodName": "PetsAll_http_get_Async",
-          "Order": 0,
+          "ApiCallOrderId": 0,
           "Response": [],
           "HttpMethod": "get"
         },
         {
           "MethodName": "GetWeatherForecast_http_get_Async",
-          "Order": 1,
+          "ApiCallOrderId": 1,
           "Response": [
             {
               "Date": "DateTimeOffset_30",
@@ -2025,7 +2025,7 @@
         },
         {
           "MethodName": "PetsPUT_http_put_Async",
-          "Order": 2,
+          "ApiCallOrderId": 2,
           "Request": {
             "Id": 4,
             "Breed": "RandomString83",
@@ -2041,7 +2041,7 @@
         },
         {
           "MethodName": "PetsGET_http_get_Async",
-          "Order": 3,
+          "ApiCallOrderId": 3,
           "Request": 1,
           "Response": {
             "StatusCode": 404,
@@ -2052,7 +2052,7 @@
         },
         {
           "MethodName": "PetsPOST_http_post_Async",
-          "Order": 4,
+          "ApiCallOrderId": 4,
           "Request": {
             "Id": 4,
             "Breed": "RandomString268",
@@ -2069,19 +2069,19 @@
         }
       ],
       "TestCoveragePercentage": 0.0,
-      "Order": 29
+      "TestSuiteOrderId": 29
     },
     {
       "ApiCalls": [
         {
           "MethodName": "PetsAll_http_get_Async",
-          "Order": 0,
+          "ApiCallOrderId": 0,
           "Response": [],
           "HttpMethod": "get"
         },
         {
           "MethodName": "PetsGET_http_get_Async",
-          "Order": 1,
+          "ApiCallOrderId": 1,
           "Request": 3,
           "Response": {
             "StatusCode": 404,
@@ -2092,7 +2092,7 @@
         },
         {
           "MethodName": "GetWeatherForecast_http_get_Async",
-          "Order": 2,
+          "ApiCallOrderId": 2,
           "Response": [
             {
               "Date": "DateTimeOffset_31",
@@ -2105,7 +2105,7 @@
         },
         {
           "MethodName": "PetsPOST_http_post_Async",
-          "Order": 3,
+          "ApiCallOrderId": 3,
           "Request": {
             "Id": 4,
             "Breed": "RandomString309",
@@ -2122,7 +2122,7 @@
         },
         {
           "MethodName": "PetsPUT_http_put_Async",
-          "Order": 4,
+          "ApiCallOrderId": 4,
           "Request": {
             "Id": 4,
             "Breed": "RandomString110",
@@ -2138,19 +2138,19 @@
         }
       ],
       "TestCoveragePercentage": 0.0,
-      "Order": 30
+      "TestSuiteOrderId": 30
     },
     {
       "ApiCalls": [
         {
           "MethodName": "PetsAll_http_get_Async",
-          "Order": 0,
+          "ApiCallOrderId": 0,
           "Response": [],
           "HttpMethod": "get"
         },
         {
           "MethodName": "PetsGET_http_get_Async",
-          "Order": 1,
+          "ApiCallOrderId": 1,
           "Request": 4,
           "Response": {
             "StatusCode": 404,
@@ -2161,7 +2161,7 @@
         },
         {
           "MethodName": "GetWeatherForecast_http_get_Async",
-          "Order": 2,
+          "ApiCallOrderId": 2,
           "Response": [
             {
               "Date": "DateTimeOffset_32",
@@ -2174,7 +2174,7 @@
         },
         {
           "MethodName": "PetsPUT_http_put_Async",
-          "Order": 3,
+          "ApiCallOrderId": 3,
           "Request": {
             "Id": 3,
             "Breed": "RandomString412",
@@ -2190,7 +2190,7 @@
         },
         {
           "MethodName": "PetsPOST_http_post_Async",
-          "Order": 4,
+          "ApiCallOrderId": 4,
           "Request": {
             "Id": 1,
             "Breed": "RandomString806",
@@ -2207,19 +2207,19 @@
         }
       ],
       "TestCoveragePercentage": 0.0,
-      "Order": 31
+      "TestSuiteOrderId": 31
     },
     {
       "ApiCalls": [
         {
           "MethodName": "PetsAll_http_get_Async",
-          "Order": 0,
+          "ApiCallOrderId": 0,
           "Response": [],
           "HttpMethod": "get"
         },
         {
           "MethodName": "PetsGET_http_get_Async",
-          "Order": 1,
+          "ApiCallOrderId": 1,
           "Request": 4,
           "Response": {
             "StatusCode": 404,
@@ -2230,7 +2230,7 @@
         },
         {
           "MethodName": "PetsPOST_http_post_Async",
-          "Order": 2,
+          "ApiCallOrderId": 2,
           "Request": {
             "Id": 3,
             "Breed": "RandomString426",
@@ -2247,7 +2247,7 @@
         },
         {
           "MethodName": "GetWeatherForecast_http_get_Async",
-          "Order": 3,
+          "ApiCallOrderId": 3,
           "Response": [
             {
               "Date": "DateTimeOffset_33",
@@ -2260,7 +2260,7 @@
         },
         {
           "MethodName": "PetsPUT_http_put_Async",
-          "Order": 4,
+          "ApiCallOrderId": 4,
           "Request": {
             "Id": 2,
             "Breed": "RandomString527",
@@ -2276,19 +2276,19 @@
         }
       ],
       "TestCoveragePercentage": 0.0,
-      "Order": 32
+      "TestSuiteOrderId": 32
     },
     {
       "ApiCalls": [
         {
           "MethodName": "PetsAll_http_get_Async",
-          "Order": 0,
+          "ApiCallOrderId": 0,
           "Response": [],
           "HttpMethod": "get"
         },
         {
           "MethodName": "PetsGET_http_get_Async",
-          "Order": 1,
+          "ApiCallOrderId": 1,
           "Request": 4,
           "Response": {
             "StatusCode": 404,
@@ -2299,7 +2299,7 @@
         },
         {
           "MethodName": "PetsPOST_http_post_Async",
-          "Order": 2,
+          "ApiCallOrderId": 2,
           "Request": {
             "Id": 4,
             "Breed": "RandomString839",
@@ -2316,7 +2316,7 @@
         },
         {
           "MethodName": "PetsPUT_http_put_Async",
-          "Order": 3,
+          "ApiCallOrderId": 3,
           "Request": {
             "Id": 3,
             "Breed": "RandomString714",
@@ -2332,7 +2332,7 @@
         },
         {
           "MethodName": "GetWeatherForecast_http_get_Async",
-          "Order": 4,
+          "ApiCallOrderId": 4,
           "Response": [
             {
               "Date": "DateTimeOffset_34",
@@ -2345,19 +2345,19 @@
         }
       ],
       "TestCoveragePercentage": 0.0,
-      "Order": 33
+      "TestSuiteOrderId": 33
     },
     {
       "ApiCalls": [
         {
           "MethodName": "PetsAll_http_get_Async",
-          "Order": 0,
+          "ApiCallOrderId": 0,
           "Response": [],
           "HttpMethod": "get"
         },
         {
           "MethodName": "PetsGET_http_get_Async",
-          "Order": 1,
+          "ApiCallOrderId": 1,
           "Request": 2,
           "Response": {
             "StatusCode": 404,
@@ -2368,7 +2368,7 @@
         },
         {
           "MethodName": "PetsPUT_http_put_Async",
-          "Order": 2,
+          "ApiCallOrderId": 2,
           "Request": {
             "Id": 3,
             "Breed": "RandomString350",
@@ -2384,7 +2384,7 @@
         },
         {
           "MethodName": "PetsPOST_http_post_Async",
-          "Order": 3,
+          "ApiCallOrderId": 3,
           "Request": {
             "Id": 4,
             "Breed": "RandomString908",
@@ -2401,7 +2401,7 @@
         },
         {
           "MethodName": "GetWeatherForecast_http_get_Async",
-          "Order": 4,
+          "ApiCallOrderId": 4,
           "Response": [
             {
               "Date": "DateTimeOffset_35",
@@ -2414,19 +2414,19 @@
         }
       ],
       "TestCoveragePercentage": 0.0,
-      "Order": 34
+      "TestSuiteOrderId": 34
     },
     {
       "ApiCalls": [
         {
           "MethodName": "PetsAll_http_get_Async",
-          "Order": 0,
+          "ApiCallOrderId": 0,
           "Response": [],
           "HttpMethod": "get"
         },
         {
           "MethodName": "PetsGET_http_get_Async",
-          "Order": 1,
+          "ApiCallOrderId": 1,
           "Request": 4,
           "Response": {
             "StatusCode": 404,
@@ -2437,7 +2437,7 @@
         },
         {
           "MethodName": "PetsPUT_http_put_Async",
-          "Order": 2,
+          "ApiCallOrderId": 2,
           "Request": {
             "Id": 4,
             "Breed": "RandomString107",
@@ -2453,7 +2453,7 @@
         },
         {
           "MethodName": "GetWeatherForecast_http_get_Async",
-          "Order": 3,
+          "ApiCallOrderId": 3,
           "Response": [
             {
               "Date": "DateTimeOffset_36",
@@ -2466,7 +2466,7 @@
         },
         {
           "MethodName": "PetsPOST_http_post_Async",
-          "Order": 4,
+          "ApiCallOrderId": 4,
           "Request": {
             "Id": 1,
             "Breed": "RandomString271",
@@ -2483,19 +2483,19 @@
         }
       ],
       "TestCoveragePercentage": 0.0,
-      "Order": 35
+      "TestSuiteOrderId": 35
     },
     {
       "ApiCalls": [
         {
           "MethodName": "PetsAll_http_get_Async",
-          "Order": 0,
+          "ApiCallOrderId": 0,
           "Response": [],
           "HttpMethod": "get"
         },
         {
           "MethodName": "PetsPOST_http_post_Async",
-          "Order": 1,
+          "ApiCallOrderId": 1,
           "Request": {
             "Id": 1,
             "Breed": "RandomString494",
@@ -2512,7 +2512,7 @@
         },
         {
           "MethodName": "PetsGET_http_get_Async",
-          "Order": 2,
+          "ApiCallOrderId": 2,
           "Request": 1,
           "Response": {
             "StatusCode": 404,
@@ -2523,7 +2523,7 @@
         },
         {
           "MethodName": "GetWeatherForecast_http_get_Async",
-          "Order": 3,
+          "ApiCallOrderId": 3,
           "Response": [
             {
               "Date": "DateTimeOffset_37",
@@ -2536,7 +2536,7 @@
         },
         {
           "MethodName": "PetsPUT_http_put_Async",
-          "Order": 4,
+          "ApiCallOrderId": 4,
           "Request": {
             "Id": 1,
             "Breed": "RandomString891",
@@ -2552,19 +2552,19 @@
         }
       ],
       "TestCoveragePercentage": 0.0,
-      "Order": 36
+      "TestSuiteOrderId": 36
     },
     {
       "ApiCalls": [
         {
           "MethodName": "PetsAll_http_get_Async",
-          "Order": 0,
+          "ApiCallOrderId": 0,
           "Response": [],
           "HttpMethod": "get"
         },
         {
           "MethodName": "PetsPOST_http_post_Async",
-          "Order": 1,
+          "ApiCallOrderId": 1,
           "Request": {
             "Id": 2,
             "Breed": "RandomString407",
@@ -2581,7 +2581,7 @@
         },
         {
           "MethodName": "PetsGET_http_get_Async",
-          "Order": 2,
+          "ApiCallOrderId": 2,
           "Request": 1,
           "Response": {
             "StatusCode": 404,
@@ -2592,7 +2592,7 @@
         },
         {
           "MethodName": "PetsPUT_http_put_Async",
-          "Order": 3,
+          "ApiCallOrderId": 3,
           "Request": {
             "Id": 3,
             "Breed": "RandomString277",
@@ -2608,7 +2608,7 @@
         },
         {
           "MethodName": "GetWeatherForecast_http_get_Async",
-          "Order": 4,
+          "ApiCallOrderId": 4,
           "Response": [
             {
               "Date": "DateTimeOffset_38",
@@ -2621,19 +2621,19 @@
         }
       ],
       "TestCoveragePercentage": 0.0,
-      "Order": 37
+      "TestSuiteOrderId": 37
     },
     {
       "ApiCalls": [
         {
           "MethodName": "PetsAll_http_get_Async",
-          "Order": 0,
+          "ApiCallOrderId": 0,
           "Response": [],
           "HttpMethod": "get"
         },
         {
           "MethodName": "PetsPOST_http_post_Async",
-          "Order": 1,
+          "ApiCallOrderId": 1,
           "Request": {
             "Id": 1,
             "Breed": "RandomString354",
@@ -2650,7 +2650,7 @@
         },
         {
           "MethodName": "GetWeatherForecast_http_get_Async",
-          "Order": 2,
+          "ApiCallOrderId": 2,
           "Response": [
             {
               "Date": "DateTimeOffset_39",
@@ -2663,7 +2663,7 @@
         },
         {
           "MethodName": "PetsGET_http_get_Async",
-          "Order": 3,
+          "ApiCallOrderId": 3,
           "Request": 2,
           "Response": {
             "StatusCode": 404,
@@ -2674,7 +2674,7 @@
         },
         {
           "MethodName": "PetsPUT_http_put_Async",
-          "Order": 4,
+          "ApiCallOrderId": 4,
           "Request": {
             "Id": 1,
             "Breed": "RandomString76",
@@ -2690,19 +2690,19 @@
         }
       ],
       "TestCoveragePercentage": 0.0,
-      "Order": 38
+      "TestSuiteOrderId": 38
     },
     {
       "ApiCalls": [
         {
           "MethodName": "PetsAll_http_get_Async",
-          "Order": 0,
+          "ApiCallOrderId": 0,
           "Response": [],
           "HttpMethod": "get"
         },
         {
           "MethodName": "PetsPOST_http_post_Async",
-          "Order": 1,
+          "ApiCallOrderId": 1,
           "Request": {
             "Id": 4,
             "Breed": "RandomString443",
@@ -2719,7 +2719,7 @@
         },
         {
           "MethodName": "GetWeatherForecast_http_get_Async",
-          "Order": 2,
+          "ApiCallOrderId": 2,
           "Response": [
             {
               "Date": "DateTimeOffset_40",
@@ -2732,7 +2732,7 @@
         },
         {
           "MethodName": "PetsPUT_http_put_Async",
-          "Order": 3,
+          "ApiCallOrderId": 3,
           "Request": {
             "Id": 1,
             "Breed": "RandomString582",
@@ -2748,7 +2748,7 @@
         },
         {
           "MethodName": "PetsGET_http_get_Async",
-          "Order": 4,
+          "ApiCallOrderId": 4,
           "Request": 4,
           "Response": {
             "StatusCode": 404,
@@ -2759,19 +2759,19 @@
         }
       ],
       "TestCoveragePercentage": 0.0,
-      "Order": 39
+      "TestSuiteOrderId": 39
     },
     {
       "ApiCalls": [
         {
           "MethodName": "PetsAll_http_get_Async",
-          "Order": 0,
+          "ApiCallOrderId": 0,
           "Response": [],
           "HttpMethod": "get"
         },
         {
           "MethodName": "PetsPOST_http_post_Async",
-          "Order": 1,
+          "ApiCallOrderId": 1,
           "Request": {
             "Id": 4,
             "Breed": "RandomString319",
@@ -2788,7 +2788,7 @@
         },
         {
           "MethodName": "PetsPUT_http_put_Async",
-          "Order": 2,
+          "ApiCallOrderId": 2,
           "Request": {
             "Id": 3,
             "Breed": "RandomString515",
@@ -2804,7 +2804,7 @@
         },
         {
           "MethodName": "GetWeatherForecast_http_get_Async",
-          "Order": 3,
+          "ApiCallOrderId": 3,
           "Response": [
             {
               "Date": "DateTimeOffset_41",
@@ -2817,7 +2817,7 @@
         },
         {
           "MethodName": "PetsGET_http_get_Async",
-          "Order": 4,
+          "ApiCallOrderId": 4,
           "Request": 3,
           "Response": {
             "StatusCode": 404,
@@ -2828,19 +2828,19 @@
         }
       ],
       "TestCoveragePercentage": 0.0,
-      "Order": 40
+      "TestSuiteOrderId": 40
     },
     {
       "ApiCalls": [
         {
           "MethodName": "PetsAll_http_get_Async",
-          "Order": 0,
+          "ApiCallOrderId": 0,
           "Response": [],
           "HttpMethod": "get"
         },
         {
           "MethodName": "PetsPOST_http_post_Async",
-          "Order": 1,
+          "ApiCallOrderId": 1,
           "Request": {
             "Id": 3,
             "Breed": "RandomString998",
@@ -2857,7 +2857,7 @@
         },
         {
           "MethodName": "PetsPUT_http_put_Async",
-          "Order": 2,
+          "ApiCallOrderId": 2,
           "Request": {
             "Id": 1,
             "Breed": "RandomString846",
@@ -2873,7 +2873,7 @@
         },
         {
           "MethodName": "PetsGET_http_get_Async",
-          "Order": 3,
+          "ApiCallOrderId": 3,
           "Request": 1,
           "Response": {
             "StatusCode": 404,
@@ -2884,7 +2884,7 @@
         },
         {
           "MethodName": "GetWeatherForecast_http_get_Async",
-          "Order": 4,
+          "ApiCallOrderId": 4,
           "Response": [
             {
               "Date": "DateTimeOffset_42",
@@ -2897,19 +2897,19 @@
         }
       ],
       "TestCoveragePercentage": 0.0,
-      "Order": 41
+      "TestSuiteOrderId": 41
     },
     {
       "ApiCalls": [
         {
           "MethodName": "PetsAll_http_get_Async",
-          "Order": 0,
+          "ApiCallOrderId": 0,
           "Response": [],
           "HttpMethod": "get"
         },
         {
           "MethodName": "PetsPUT_http_put_Async",
-          "Order": 1,
+          "ApiCallOrderId": 1,
           "Request": {
             "Id": 3,
             "Breed": "RandomString458",
@@ -2925,7 +2925,7 @@
         },
         {
           "MethodName": "PetsGET_http_get_Async",
-          "Order": 2,
+          "ApiCallOrderId": 2,
           "Request": 4,
           "Response": {
             "StatusCode": 404,
@@ -2936,7 +2936,7 @@
         },
         {
           "MethodName": "PetsPOST_http_post_Async",
-          "Order": 3,
+          "ApiCallOrderId": 3,
           "Request": {
             "Id": 2,
             "Breed": "RandomString563",
@@ -2953,7 +2953,7 @@
         },
         {
           "MethodName": "GetWeatherForecast_http_get_Async",
-          "Order": 4,
+          "ApiCallOrderId": 4,
           "Response": [
             {
               "Date": "DateTimeOffset_43",
@@ -2966,19 +2966,19 @@
         }
       ],
       "TestCoveragePercentage": 0.0,
-      "Order": 42
+      "TestSuiteOrderId": 42
     },
     {
       "ApiCalls": [
         {
           "MethodName": "PetsAll_http_get_Async",
-          "Order": 0,
+          "ApiCallOrderId": 0,
           "Response": [],
           "HttpMethod": "get"
         },
         {
           "MethodName": "PetsPUT_http_put_Async",
-          "Order": 1,
+          "ApiCallOrderId": 1,
           "Request": {
             "Id": 2,
             "Breed": "RandomString569",
@@ -2994,7 +2994,7 @@
         },
         {
           "MethodName": "PetsGET_http_get_Async",
-          "Order": 2,
+          "ApiCallOrderId": 2,
           "Request": 4,
           "Response": {
             "StatusCode": 404,
@@ -3005,7 +3005,7 @@
         },
         {
           "MethodName": "GetWeatherForecast_http_get_Async",
-          "Order": 3,
+          "ApiCallOrderId": 3,
           "Response": [
             {
               "Date": "DateTimeOffset_44",
@@ -3018,7 +3018,7 @@
         },
         {
           "MethodName": "PetsPOST_http_post_Async",
-          "Order": 4,
+          "ApiCallOrderId": 4,
           "Request": {
             "Id": 3,
             "Breed": "RandomString603",
@@ -3035,19 +3035,19 @@
         }
       ],
       "TestCoveragePercentage": 0.0,
-      "Order": 43
+      "TestSuiteOrderId": 43
     },
     {
       "ApiCalls": [
         {
           "MethodName": "PetsAll_http_get_Async",
-          "Order": 0,
+          "ApiCallOrderId": 0,
           "Response": [],
           "HttpMethod": "get"
         },
         {
           "MethodName": "PetsPUT_http_put_Async",
-          "Order": 1,
+          "ApiCallOrderId": 1,
           "Request": {
             "Id": 3,
             "Breed": "RandomString49",
@@ -3063,7 +3063,7 @@
         },
         {
           "MethodName": "PetsPOST_http_post_Async",
-          "Order": 2,
+          "ApiCallOrderId": 2,
           "Request": {
             "Id": 3,
             "Breed": "RandomString662",
@@ -3080,7 +3080,7 @@
         },
         {
           "MethodName": "PetsGET_http_get_Async",
-          "Order": 3,
+          "ApiCallOrderId": 3,
           "Request": 3,
           "Response": {
             "StatusCode": 404,
@@ -3091,7 +3091,7 @@
         },
         {
           "MethodName": "GetWeatherForecast_http_get_Async",
-          "Order": 4,
+          "ApiCallOrderId": 4,
           "Response": [
             {
               "Date": "DateTimeOffset_45",
@@ -3104,19 +3104,19 @@
         }
       ],
       "TestCoveragePercentage": 0.0,
-      "Order": 44
+      "TestSuiteOrderId": 44
     },
     {
       "ApiCalls": [
         {
           "MethodName": "PetsAll_http_get_Async",
-          "Order": 0,
+          "ApiCallOrderId": 0,
           "Response": [],
           "HttpMethod": "get"
         },
         {
           "MethodName": "PetsPUT_http_put_Async",
-          "Order": 1,
+          "ApiCallOrderId": 1,
           "Request": {
             "Id": 4,
             "Breed": "RandomString272",
@@ -3132,7 +3132,7 @@
         },
         {
           "MethodName": "PetsPOST_http_post_Async",
-          "Order": 2,
+          "ApiCallOrderId": 2,
           "Request": {
             "Id": 4,
             "Breed": "RandomString128",
@@ -3149,7 +3149,7 @@
         },
         {
           "MethodName": "GetWeatherForecast_http_get_Async",
-          "Order": 3,
+          "ApiCallOrderId": 3,
           "Response": [
             {
               "Date": "DateTimeOffset_46",
@@ -3162,7 +3162,7 @@
         },
         {
           "MethodName": "PetsGET_http_get_Async",
-          "Order": 4,
+          "ApiCallOrderId": 4,
           "Request": 1,
           "Response": {
             "StatusCode": 404,
@@ -3173,19 +3173,19 @@
         }
       ],
       "TestCoveragePercentage": 0.0,
-      "Order": 45
+      "TestSuiteOrderId": 45
     },
     {
       "ApiCalls": [
         {
           "MethodName": "PetsAll_http_get_Async",
-          "Order": 0,
+          "ApiCallOrderId": 0,
           "Response": [],
           "HttpMethod": "get"
         },
         {
           "MethodName": "PetsPUT_http_put_Async",
-          "Order": 1,
+          "ApiCallOrderId": 1,
           "Request": {
             "Id": 3,
             "Breed": "RandomString123",
@@ -3201,7 +3201,7 @@
         },
         {
           "MethodName": "GetWeatherForecast_http_get_Async",
-          "Order": 2,
+          "ApiCallOrderId": 2,
           "Response": [
             {
               "Date": "DateTimeOffset_47",
@@ -3214,7 +3214,7 @@
         },
         {
           "MethodName": "PetsPOST_http_post_Async",
-          "Order": 3,
+          "ApiCallOrderId": 3,
           "Request": {
             "Id": 3,
             "Breed": "RandomString577",
@@ -3231,7 +3231,7 @@
         },
         {
           "MethodName": "PetsGET_http_get_Async",
-          "Order": 4,
+          "ApiCallOrderId": 4,
           "Request": 1,
           "Response": {
             "StatusCode": 404,
@@ -3242,19 +3242,19 @@
         }
       ],
       "TestCoveragePercentage": 0.0,
-      "Order": 46
+      "TestSuiteOrderId": 46
     },
     {
       "ApiCalls": [
         {
           "MethodName": "PetsAll_http_get_Async",
-          "Order": 0,
+          "ApiCallOrderId": 0,
           "Response": [],
           "HttpMethod": "get"
         },
         {
           "MethodName": "PetsPUT_http_put_Async",
-          "Order": 1,
+          "ApiCallOrderId": 1,
           "Request": {
             "Id": 2,
             "Breed": "RandomString566",
@@ -3270,7 +3270,7 @@
         },
         {
           "MethodName": "GetWeatherForecast_http_get_Async",
-          "Order": 2,
+          "ApiCallOrderId": 2,
           "Response": [
             {
               "Date": "DateTimeOffset_48",
@@ -3283,7 +3283,7 @@
         },
         {
           "MethodName": "PetsGET_http_get_Async",
-          "Order": 3,
+          "ApiCallOrderId": 3,
           "Request": 4,
           "Response": {
             "StatusCode": 404,
@@ -3294,7 +3294,7 @@
         },
         {
           "MethodName": "PetsPOST_http_post_Async",
-          "Order": 4,
+          "ApiCallOrderId": 4,
           "Request": {
             "Id": 3,
             "Breed": "RandomString735",
@@ -3311,13 +3311,13 @@
         }
       ],
       "TestCoveragePercentage": 0.0,
-      "Order": 47
+      "TestSuiteOrderId": 47
     },
     {
       "ApiCalls": [
         {
           "MethodName": "PetsGET_http_get_Async",
-          "Order": 0,
+          "ApiCallOrderId": 0,
           "Request": 2,
           "Response": {
             "StatusCode": 404,
@@ -3328,13 +3328,13 @@
         },
         {
           "MethodName": "PetsAll_http_get_Async",
-          "Order": 1,
+          "ApiCallOrderId": 1,
           "Response": [],
           "HttpMethod": "get"
         },
         {
           "MethodName": "GetWeatherForecast_http_get_Async",
-          "Order": 2,
+          "ApiCallOrderId": 2,
           "Response": [
             {
               "Date": "DateTimeOffset_49",
@@ -3347,7 +3347,7 @@
         },
         {
           "MethodName": "PetsPOST_http_post_Async",
-          "Order": 3,
+          "ApiCallOrderId": 3,
           "Request": {
             "Id": 1,
             "Breed": "RandomString756",
@@ -3364,7 +3364,7 @@
         },
         {
           "MethodName": "PetsPUT_http_put_Async",
-          "Order": 4,
+          "ApiCallOrderId": 4,
           "Request": {
             "Id": 2,
             "Breed": "RandomString658",
@@ -3380,13 +3380,13 @@
         }
       ],
       "TestCoveragePercentage": 0.0,
-      "Order": 48
+      "TestSuiteOrderId": 48
     },
     {
       "ApiCalls": [
         {
           "MethodName": "PetsGET_http_get_Async",
-          "Order": 0,
+          "ApiCallOrderId": 0,
           "Request": 3,
           "Response": {
             "StatusCode": 404,
@@ -3397,13 +3397,13 @@
         },
         {
           "MethodName": "PetsAll_http_get_Async",
-          "Order": 1,
+          "ApiCallOrderId": 1,
           "Response": [],
           "HttpMethod": "get"
         },
         {
           "MethodName": "GetWeatherForecast_http_get_Async",
-          "Order": 2,
+          "ApiCallOrderId": 2,
           "Response": [
             {
               "Date": "DateTimeOffset_50",
@@ -3416,7 +3416,7 @@
         },
         {
           "MethodName": "PetsPUT_http_put_Async",
-          "Order": 3,
+          "ApiCallOrderId": 3,
           "Request": {
             "Id": 3,
             "Breed": "RandomString706",
@@ -3432,7 +3432,7 @@
         },
         {
           "MethodName": "PetsPOST_http_post_Async",
-          "Order": 4,
+          "ApiCallOrderId": 4,
           "Request": {
             "Id": 3,
             "Breed": "RandomString437",
@@ -3449,13 +3449,13 @@
         }
       ],
       "TestCoveragePercentage": 0.0,
-      "Order": 49
+      "TestSuiteOrderId": 49
     },
     {
       "ApiCalls": [
         {
           "MethodName": "PetsGET_http_get_Async",
-          "Order": 0,
+          "ApiCallOrderId": 0,
           "Request": 4,
           "Response": {
             "StatusCode": 404,
@@ -3466,13 +3466,13 @@
         },
         {
           "MethodName": "PetsAll_http_get_Async",
-          "Order": 1,
+          "ApiCallOrderId": 1,
           "Response": [],
           "HttpMethod": "get"
         },
         {
           "MethodName": "PetsPOST_http_post_Async",
-          "Order": 2,
+          "ApiCallOrderId": 2,
           "Request": {
             "Id": 2,
             "Breed": "RandomString470",
@@ -3489,7 +3489,7 @@
         },
         {
           "MethodName": "GetWeatherForecast_http_get_Async",
-          "Order": 3,
+          "ApiCallOrderId": 3,
           "Response": [
             {
               "Date": "DateTimeOffset_51",
@@ -3502,7 +3502,7 @@
         },
         {
           "MethodName": "PetsPUT_http_put_Async",
-          "Order": 4,
+          "ApiCallOrderId": 4,
           "Request": {
             "Id": 1,
             "Breed": "RandomString631",
@@ -3518,13 +3518,13 @@
         }
       ],
       "TestCoveragePercentage": 0.0,
-      "Order": 50
+      "TestSuiteOrderId": 50
     },
     {
       "ApiCalls": [
         {
           "MethodName": "PetsGET_http_get_Async",
-          "Order": 0,
+          "ApiCallOrderId": 0,
           "Request": 3,
           "Response": {
             "StatusCode": 404,
@@ -3535,13 +3535,13 @@
         },
         {
           "MethodName": "PetsAll_http_get_Async",
-          "Order": 1,
+          "ApiCallOrderId": 1,
           "Response": [],
           "HttpMethod": "get"
         },
         {
           "MethodName": "PetsPOST_http_post_Async",
-          "Order": 2,
+          "ApiCallOrderId": 2,
           "Request": {
             "Id": 4,
             "Breed": "RandomString312",
@@ -3558,7 +3558,7 @@
         },
         {
           "MethodName": "PetsPUT_http_put_Async",
-          "Order": 3,
+          "ApiCallOrderId": 3,
           "Request": {
             "Id": 3,
             "Breed": "RandomString97",
@@ -3574,7 +3574,7 @@
         },
         {
           "MethodName": "GetWeatherForecast_http_get_Async",
-          "Order": 4,
+          "ApiCallOrderId": 4,
           "Response": [
             {
               "Date": "DateTimeOffset_52",
@@ -3587,13 +3587,13 @@
         }
       ],
       "TestCoveragePercentage": 0.0,
-      "Order": 51
+      "TestSuiteOrderId": 51
     },
     {
       "ApiCalls": [
         {
           "MethodName": "PetsGET_http_get_Async",
-          "Order": 0,
+          "ApiCallOrderId": 0,
           "Request": 2,
           "Response": {
             "StatusCode": 404,
@@ -3604,13 +3604,13 @@
         },
         {
           "MethodName": "PetsAll_http_get_Async",
-          "Order": 1,
+          "ApiCallOrderId": 1,
           "Response": [],
           "HttpMethod": "get"
         },
         {
           "MethodName": "PetsPUT_http_put_Async",
-          "Order": 2,
+          "ApiCallOrderId": 2,
           "Request": {
             "Id": 1,
             "Breed": "RandomString11",
@@ -3626,7 +3626,7 @@
         },
         {
           "MethodName": "PetsPOST_http_post_Async",
-          "Order": 3,
+          "ApiCallOrderId": 3,
           "Request": {
             "Id": 1,
             "Breed": "RandomString793",
@@ -3643,7 +3643,7 @@
         },
         {
           "MethodName": "GetWeatherForecast_http_get_Async",
-          "Order": 4,
+          "ApiCallOrderId": 4,
           "Response": [
             {
               "Date": "DateTimeOffset_53",
@@ -3656,13 +3656,13 @@
         }
       ],
       "TestCoveragePercentage": 0.0,
-      "Order": 52
+      "TestSuiteOrderId": 52
     },
     {
       "ApiCalls": [
         {
           "MethodName": "PetsGET_http_get_Async",
-          "Order": 0,
+          "ApiCallOrderId": 0,
           "Request": 2,
           "Response": {
             "StatusCode": 404,
@@ -3673,13 +3673,13 @@
         },
         {
           "MethodName": "PetsAll_http_get_Async",
-          "Order": 1,
+          "ApiCallOrderId": 1,
           "Response": [],
           "HttpMethod": "get"
         },
         {
           "MethodName": "PetsPUT_http_put_Async",
-          "Order": 2,
+          "ApiCallOrderId": 2,
           "Request": {
             "Id": 1,
             "Breed": "RandomString99",
@@ -3695,7 +3695,7 @@
         },
         {
           "MethodName": "GetWeatherForecast_http_get_Async",
-          "Order": 3,
+          "ApiCallOrderId": 3,
           "Response": [
             {
               "Date": "DateTimeOffset_54",
@@ -3708,7 +3708,7 @@
         },
         {
           "MethodName": "PetsPOST_http_post_Async",
-          "Order": 4,
+          "ApiCallOrderId": 4,
           "Request": {
             "Id": 1,
             "Breed": "RandomString441",
@@ -3725,13 +3725,13 @@
         }
       ],
       "TestCoveragePercentage": 0.0,
-      "Order": 53
+      "TestSuiteOrderId": 53
     },
     {
       "ApiCalls": [
         {
           "MethodName": "PetsGET_http_get_Async",
-          "Order": 0,
+          "ApiCallOrderId": 0,
           "Request": 3,
           "Response": {
             "StatusCode": 404,
@@ -3742,7 +3742,7 @@
         },
         {
           "MethodName": "GetWeatherForecast_http_get_Async",
-          "Order": 1,
+          "ApiCallOrderId": 1,
           "Response": [
             {
               "Date": "DateTimeOffset_55",
@@ -3755,13 +3755,13 @@
         },
         {
           "MethodName": "PetsAll_http_get_Async",
-          "Order": 2,
+          "ApiCallOrderId": 2,
           "Response": [],
           "HttpMethod": "get"
         },
         {
           "MethodName": "PetsPOST_http_post_Async",
-          "Order": 3,
+          "ApiCallOrderId": 3,
           "Request": {
             "Id": 1,
             "Breed": "RandomString475",
@@ -3778,7 +3778,7 @@
         },
         {
           "MethodName": "PetsPUT_http_put_Async",
-          "Order": 4,
+          "ApiCallOrderId": 4,
           "Request": {
             "Id": 4,
             "Breed": "RandomString557",
@@ -3794,13 +3794,13 @@
         }
       ],
       "TestCoveragePercentage": 0.0,
-      "Order": 54
+      "TestSuiteOrderId": 54
     },
     {
       "ApiCalls": [
         {
           "MethodName": "PetsGET_http_get_Async",
-          "Order": 0,
+          "ApiCallOrderId": 0,
           "Request": 2,
           "Response": {
             "StatusCode": 404,
@@ -3811,7 +3811,7 @@
         },
         {
           "MethodName": "GetWeatherForecast_http_get_Async",
-          "Order": 1,
+          "ApiCallOrderId": 1,
           "Response": [
             {
               "Date": "DateTimeOffset_56",
@@ -3824,13 +3824,13 @@
         },
         {
           "MethodName": "PetsAll_http_get_Async",
-          "Order": 2,
+          "ApiCallOrderId": 2,
           "Response": [],
           "HttpMethod": "get"
         },
         {
           "MethodName": "PetsPUT_http_put_Async",
-          "Order": 3,
+          "ApiCallOrderId": 3,
           "Request": {
             "Id": 4,
             "Breed": "RandomString753",
@@ -3846,7 +3846,7 @@
         },
         {
           "MethodName": "PetsPOST_http_post_Async",
-          "Order": 4,
+          "ApiCallOrderId": 4,
           "Request": {
             "Id": 1,
             "Breed": "RandomString468",
@@ -3863,13 +3863,13 @@
         }
       ],
       "TestCoveragePercentage": 0.0,
-      "Order": 55
+      "TestSuiteOrderId": 55
     },
     {
       "ApiCalls": [
         {
           "MethodName": "PetsGET_http_get_Async",
-          "Order": 0,
+          "ApiCallOrderId": 0,
           "Request": 2,
           "Response": {
             "StatusCode": 404,
@@ -3880,7 +3880,7 @@
         },
         {
           "MethodName": "GetWeatherForecast_http_get_Async",
-          "Order": 1,
+          "ApiCallOrderId": 1,
           "Response": [
             {
               "Date": "DateTimeOffset_57",
@@ -3893,7 +3893,7 @@
         },
         {
           "MethodName": "PetsPOST_http_post_Async",
-          "Order": 2,
+          "ApiCallOrderId": 2,
           "Request": {
             "Id": 4,
             "Breed": "RandomString718",
@@ -3910,13 +3910,13 @@
         },
         {
           "MethodName": "PetsAll_http_get_Async",
-          "Order": 3,
+          "ApiCallOrderId": 3,
           "Response": [],
           "HttpMethod": "get"
         },
         {
           "MethodName": "PetsPUT_http_put_Async",
-          "Order": 4,
+          "ApiCallOrderId": 4,
           "Request": {
             "Id": 3,
             "Breed": "RandomString225",
@@ -3932,13 +3932,13 @@
         }
       ],
       "TestCoveragePercentage": 0.0,
-      "Order": 56
+      "TestSuiteOrderId": 56
     },
     {
       "ApiCalls": [
         {
           "MethodName": "PetsGET_http_get_Async",
-          "Order": 0,
+          "ApiCallOrderId": 0,
           "Request": 4,
           "Response": {
             "StatusCode": 404,
@@ -3949,7 +3949,7 @@
         },
         {
           "MethodName": "GetWeatherForecast_http_get_Async",
-          "Order": 1,
+          "ApiCallOrderId": 1,
           "Response": [
             {
               "Date": "DateTimeOffset_58",
@@ -3962,7 +3962,7 @@
         },
         {
           "MethodName": "PetsPOST_http_post_Async",
-          "Order": 2,
+          "ApiCallOrderId": 2,
           "Request": {
             "Id": 4,
             "Breed": "RandomString309",
@@ -3979,7 +3979,7 @@
         },
         {
           "MethodName": "PetsPUT_http_put_Async",
-          "Order": 3,
+          "ApiCallOrderId": 3,
           "Request": {
             "Id": 4,
             "Breed": "RandomString627",
@@ -3995,19 +3995,19 @@
         },
         {
           "MethodName": "PetsAll_http_get_Async",
-          "Order": 4,
+          "ApiCallOrderId": 4,
           "Response": [],
           "HttpMethod": "get"
         }
       ],
       "TestCoveragePercentage": 0.0,
-      "Order": 57
+      "TestSuiteOrderId": 57
     },
     {
       "ApiCalls": [
         {
           "MethodName": "PetsGET_http_get_Async",
-          "Order": 0,
+          "ApiCallOrderId": 0,
           "Request": 3,
           "Response": {
             "StatusCode": 404,
@@ -4018,7 +4018,7 @@
         },
         {
           "MethodName": "GetWeatherForecast_http_get_Async",
-          "Order": 1,
+          "ApiCallOrderId": 1,
           "Response": [
             {
               "Date": "DateTimeOffset_59",
@@ -4031,7 +4031,7 @@
         },
         {
           "MethodName": "PetsPUT_http_put_Async",
-          "Order": 2,
+          "ApiCallOrderId": 2,
           "Request": {
             "Id": 4,
             "Breed": "RandomString201",
@@ -4047,7 +4047,7 @@
         },
         {
           "MethodName": "PetsPOST_http_post_Async",
-          "Order": 3,
+          "ApiCallOrderId": 3,
           "Request": {
             "Id": 3,
             "Breed": "RandomString350",
@@ -4064,19 +4064,19 @@
         },
         {
           "MethodName": "PetsAll_http_get_Async",
-          "Order": 4,
+          "ApiCallOrderId": 4,
           "Response": [],
           "HttpMethod": "get"
         }
       ],
       "TestCoveragePercentage": 0.0,
-      "Order": 58
+      "TestSuiteOrderId": 58
     },
     {
       "ApiCalls": [
         {
           "MethodName": "PetsGET_http_get_Async",
-          "Order": 0,
+          "ApiCallOrderId": 0,
           "Request": 1,
           "Response": {
             "StatusCode": 404,
@@ -4087,7 +4087,7 @@
         },
         {
           "MethodName": "GetWeatherForecast_http_get_Async",
-          "Order": 1,
+          "ApiCallOrderId": 1,
           "Response": [
             {
               "Date": "DateTimeOffset_60",
@@ -4100,7 +4100,7 @@
         },
         {
           "MethodName": "PetsPUT_http_put_Async",
-          "Order": 2,
+          "ApiCallOrderId": 2,
           "Request": {
             "Id": 1,
             "Breed": "RandomString253",
@@ -4116,13 +4116,13 @@
         },
         {
           "MethodName": "PetsAll_http_get_Async",
-          "Order": 3,
+          "ApiCallOrderId": 3,
           "Response": [],
           "HttpMethod": "get"
         },
         {
           "MethodName": "PetsPOST_http_post_Async",
-          "Order": 4,
+          "ApiCallOrderId": 4,
           "Request": {
             "Id": 3,
             "Breed": "RandomString310",
@@ -4139,13 +4139,13 @@
         }
       ],
       "TestCoveragePercentage": 0.0,
-      "Order": 59
+      "TestSuiteOrderId": 59
     },
     {
       "ApiCalls": [
         {
           "MethodName": "PetsGET_http_get_Async",
-          "Order": 0,
+          "ApiCallOrderId": 0,
           "Request": 1,
           "Response": {
             "StatusCode": 404,
@@ -4156,7 +4156,7 @@
         },
         {
           "MethodName": "PetsPOST_http_post_Async",
-          "Order": 1,
+          "ApiCallOrderId": 1,
           "Request": {
             "Id": 1,
             "Breed": "RandomString816",
@@ -4173,7 +4173,7 @@
         },
         {
           "MethodName": "GetWeatherForecast_http_get_Async",
-          "Order": 2,
+          "ApiCallOrderId": 2,
           "Response": [
             {
               "Date": "DateTimeOffset_61",
@@ -4186,13 +4186,13 @@
         },
         {
           "MethodName": "PetsAll_http_get_Async",
-          "Order": 3,
+          "ApiCallOrderId": 3,
           "Response": [],
           "HttpMethod": "get"
         },
         {
           "MethodName": "PetsPUT_http_put_Async",
-          "Order": 4,
+          "ApiCallOrderId": 4,
           "Request": {
             "Id": 3,
             "Breed": "RandomString672",
@@ -4208,13 +4208,13 @@
         }
       ],
       "TestCoveragePercentage": 0.0,
-      "Order": 60
+      "TestSuiteOrderId": 60
     },
     {
       "ApiCalls": [
         {
           "MethodName": "PetsGET_http_get_Async",
-          "Order": 0,
+          "ApiCallOrderId": 0,
           "Request": 2,
           "Response": {
             "StatusCode": 404,
@@ -4225,7 +4225,7 @@
         },
         {
           "MethodName": "PetsPOST_http_post_Async",
-          "Order": 1,
+          "ApiCallOrderId": 1,
           "Request": {
             "Id": 1,
             "Breed": "RandomString763",
@@ -4242,7 +4242,7 @@
         },
         {
           "MethodName": "GetWeatherForecast_http_get_Async",
-          "Order": 2,
+          "ApiCallOrderId": 2,
           "Response": [
             {
               "Date": "DateTimeOffset_62",
@@ -4255,7 +4255,7 @@
         },
         {
           "MethodName": "PetsPUT_http_put_Async",
-          "Order": 3,
+          "ApiCallOrderId": 3,
           "Request": {
             "Id": 2,
             "Breed": "RandomString173",
@@ -4271,19 +4271,19 @@
         },
         {
           "MethodName": "PetsAll_http_get_Async",
-          "Order": 4,
+          "ApiCallOrderId": 4,
           "Response": [],
           "HttpMethod": "get"
         }
       ],
       "TestCoveragePercentage": 0.0,
-      "Order": 61
+      "TestSuiteOrderId": 61
     },
     {
       "ApiCalls": [
         {
           "MethodName": "PetsGET_http_get_Async",
-          "Order": 0,
+          "ApiCallOrderId": 0,
           "Request": 3,
           "Response": {
             "StatusCode": 404,
@@ -4294,7 +4294,7 @@
         },
         {
           "MethodName": "PetsPOST_http_post_Async",
-          "Order": 1,
+          "ApiCallOrderId": 1,
           "Request": {
             "Id": 1,
             "Breed": "RandomString632",
@@ -4311,13 +4311,13 @@
         },
         {
           "MethodName": "PetsAll_http_get_Async",
-          "Order": 2,
+          "ApiCallOrderId": 2,
           "Response": [],
           "HttpMethod": "get"
         },
         {
           "MethodName": "GetWeatherForecast_http_get_Async",
-          "Order": 3,
+          "ApiCallOrderId": 3,
           "Response": [
             {
               "Date": "DateTimeOffset_63",
@@ -4330,7 +4330,7 @@
         },
         {
           "MethodName": "PetsPUT_http_put_Async",
-          "Order": 4,
+          "ApiCallOrderId": 4,
           "Request": {
             "Id": 1,
             "Breed": "RandomString263",
@@ -4346,13 +4346,13 @@
         }
       ],
       "TestCoveragePercentage": 0.0,
-      "Order": 62
+      "TestSuiteOrderId": 62
     },
     {
       "ApiCalls": [
         {
           "MethodName": "PetsGET_http_get_Async",
-          "Order": 0,
+          "ApiCallOrderId": 0,
           "Request": 4,
           "Response": {
             "StatusCode": 404,
@@ -4363,7 +4363,7 @@
         },
         {
           "MethodName": "PetsPOST_http_post_Async",
-          "Order": 1,
+          "ApiCallOrderId": 1,
           "Request": {
             "Id": 4,
             "Breed": "RandomString851",
@@ -4380,13 +4380,13 @@
         },
         {
           "MethodName": "PetsAll_http_get_Async",
-          "Order": 2,
+          "ApiCallOrderId": 2,
           "Response": [],
           "HttpMethod": "get"
         },
         {
           "MethodName": "PetsPUT_http_put_Async",
-          "Order": 3,
+          "ApiCallOrderId": 3,
           "Request": {
             "Id": 4,
             "Breed": "RandomString936",
@@ -4402,7 +4402,7 @@
         },
         {
           "MethodName": "GetWeatherForecast_http_get_Async",
-          "Order": 4,
+          "ApiCallOrderId": 4,
           "Response": [
             {
               "Date": "DateTimeOffset_64",
@@ -4415,13 +4415,13 @@
         }
       ],
       "TestCoveragePercentage": 0.0,
-      "Order": 63
+      "TestSuiteOrderId": 63
     },
     {
       "ApiCalls": [
         {
           "MethodName": "PetsGET_http_get_Async",
-          "Order": 0,
+          "ApiCallOrderId": 0,
           "Request": 1,
           "Response": {
             "StatusCode": 404,
@@ -4432,7 +4432,7 @@
         },
         {
           "MethodName": "PetsPOST_http_post_Async",
-          "Order": 1,
+          "ApiCallOrderId": 1,
           "Request": {
             "Id": 3,
             "Breed": "RandomString364",
@@ -4449,7 +4449,7 @@
         },
         {
           "MethodName": "PetsPUT_http_put_Async",
-          "Order": 2,
+          "ApiCallOrderId": 2,
           "Request": {
             "Id": 3,
             "Breed": "RandomString393",
@@ -4465,13 +4465,13 @@
         },
         {
           "MethodName": "PetsAll_http_get_Async",
-          "Order": 3,
+          "ApiCallOrderId": 3,
           "Response": [],
           "HttpMethod": "get"
         },
         {
           "MethodName": "GetWeatherForecast_http_get_Async",
-          "Order": 4,
+          "ApiCallOrderId": 4,
           "Response": [
             {
               "Date": "DateTimeOffset_65",
@@ -4484,13 +4484,13 @@
         }
       ],
       "TestCoveragePercentage": 0.0,
-      "Order": 64
+      "TestSuiteOrderId": 64
     },
     {
       "ApiCalls": [
         {
           "MethodName": "PetsGET_http_get_Async",
-          "Order": 0,
+          "ApiCallOrderId": 0,
           "Request": 3,
           "Response": {
             "StatusCode": 404,
@@ -4501,7 +4501,7 @@
         },
         {
           "MethodName": "PetsPOST_http_post_Async",
-          "Order": 1,
+          "ApiCallOrderId": 1,
           "Request": {
             "Id": 2,
             "Breed": "RandomString702",
@@ -4518,7 +4518,7 @@
         },
         {
           "MethodName": "PetsPUT_http_put_Async",
-          "Order": 2,
+          "ApiCallOrderId": 2,
           "Request": {
             "Id": 2,
             "Breed": "RandomString340",
@@ -4534,7 +4534,7 @@
         },
         {
           "MethodName": "GetWeatherForecast_http_get_Async",
-          "Order": 3,
+          "ApiCallOrderId": 3,
           "Response": [
             {
               "Date": "DateTimeOffset_66",
@@ -4547,19 +4547,19 @@
         },
         {
           "MethodName": "PetsAll_http_get_Async",
-          "Order": 4,
+          "ApiCallOrderId": 4,
           "Response": [],
           "HttpMethod": "get"
         }
       ],
       "TestCoveragePercentage": 0.0,
-      "Order": 65
+      "TestSuiteOrderId": 65
     },
     {
       "ApiCalls": [
         {
           "MethodName": "PetsGET_http_get_Async",
-          "Order": 0,
+          "ApiCallOrderId": 0,
           "Request": 2,
           "Response": {
             "StatusCode": 404,
@@ -4570,7 +4570,7 @@
         },
         {
           "MethodName": "PetsPUT_http_put_Async",
-          "Order": 1,
+          "ApiCallOrderId": 1,
           "Request": {
             "Id": 1,
             "Breed": "RandomString972",
@@ -4586,7 +4586,7 @@
         },
         {
           "MethodName": "GetWeatherForecast_http_get_Async",
-          "Order": 2,
+          "ApiCallOrderId": 2,
           "Response": [
             {
               "Date": "DateTimeOffset_67",
@@ -4599,7 +4599,7 @@
         },
         {
           "MethodName": "PetsPOST_http_post_Async",
-          "Order": 3,
+          "ApiCallOrderId": 3,
           "Request": {
             "Id": 2,
             "Breed": "RandomString526",
@@ -4616,19 +4616,19 @@
         },
         {
           "MethodName": "PetsAll_http_get_Async",
-          "Order": 4,
+          "ApiCallOrderId": 4,
           "Response": [],
           "HttpMethod": "get"
         }
       ],
       "TestCoveragePercentage": 0.0,
-      "Order": 66
+      "TestSuiteOrderId": 66
     },
     {
       "ApiCalls": [
         {
           "MethodName": "PetsGET_http_get_Async",
-          "Order": 0,
+          "ApiCallOrderId": 0,
           "Request": 2,
           "Response": {
             "StatusCode": 404,
@@ -4639,7 +4639,7 @@
         },
         {
           "MethodName": "PetsPUT_http_put_Async",
-          "Order": 1,
+          "ApiCallOrderId": 1,
           "Request": {
             "Id": 3,
             "Breed": "RandomString290",
@@ -4655,7 +4655,7 @@
         },
         {
           "MethodName": "GetWeatherForecast_http_get_Async",
-          "Order": 2,
+          "ApiCallOrderId": 2,
           "Response": [
             {
               "Date": "DateTimeOffset_68",
@@ -4668,13 +4668,13 @@
         },
         {
           "MethodName": "PetsAll_http_get_Async",
-          "Order": 3,
+          "ApiCallOrderId": 3,
           "Response": [],
           "HttpMethod": "get"
         },
         {
           "MethodName": "PetsPOST_http_post_Async",
-          "Order": 4,
+          "ApiCallOrderId": 4,
           "Request": {
             "Id": 1,
             "Breed": "RandomString998",
@@ -4691,13 +4691,13 @@
         }
       ],
       "TestCoveragePercentage": 0.0,
-      "Order": 67
+      "TestSuiteOrderId": 67
     },
     {
       "ApiCalls": [
         {
           "MethodName": "PetsGET_http_get_Async",
-          "Order": 0,
+          "ApiCallOrderId": 0,
           "Request": 4,
           "Response": {
             "StatusCode": 404,
@@ -4708,7 +4708,7 @@
         },
         {
           "MethodName": "PetsPUT_http_put_Async",
-          "Order": 1,
+          "ApiCallOrderId": 1,
           "Request": {
             "Id": 4,
             "Breed": "RandomString481",
@@ -4724,7 +4724,7 @@
         },
         {
           "MethodName": "PetsPOST_http_post_Async",
-          "Order": 2,
+          "ApiCallOrderId": 2,
           "Request": {
             "Id": 1,
             "Breed": "RandomString934",
@@ -4741,7 +4741,7 @@
         },
         {
           "MethodName": "GetWeatherForecast_http_get_Async",
-          "Order": 3,
+          "ApiCallOrderId": 3,
           "Response": [
             {
               "Date": "DateTimeOffset_69",
@@ -4754,19 +4754,19 @@
         },
         {
           "MethodName": "PetsAll_http_get_Async",
-          "Order": 4,
+          "ApiCallOrderId": 4,
           "Response": [],
           "HttpMethod": "get"
         }
       ],
       "TestCoveragePercentage": 0.0,
-      "Order": 68
+      "TestSuiteOrderId": 68
     },
     {
       "ApiCalls": [
         {
           "MethodName": "PetsGET_http_get_Async",
-          "Order": 0,
+          "ApiCallOrderId": 0,
           "Request": 2,
           "Response": {
             "StatusCode": 404,
@@ -4777,7 +4777,7 @@
         },
         {
           "MethodName": "PetsPUT_http_put_Async",
-          "Order": 1,
+          "ApiCallOrderId": 1,
           "Request": {
             "Id": 1,
             "Breed": "RandomString277",
@@ -4793,7 +4793,7 @@
         },
         {
           "MethodName": "PetsPOST_http_post_Async",
-          "Order": 2,
+          "ApiCallOrderId": 2,
           "Request": {
             "Id": 1,
             "Breed": "RandomString853",
@@ -4810,13 +4810,13 @@
         },
         {
           "MethodName": "PetsAll_http_get_Async",
-          "Order": 3,
+          "ApiCallOrderId": 3,
           "Response": [],
           "HttpMethod": "get"
         },
         {
           "MethodName": "GetWeatherForecast_http_get_Async",
-          "Order": 4,
+          "ApiCallOrderId": 4,
           "Response": [
             {
               "Date": "DateTimeOffset_70",
@@ -4829,13 +4829,13 @@
         }
       ],
       "TestCoveragePercentage": 0.0,
-      "Order": 69
+      "TestSuiteOrderId": 69
     },
     {
       "ApiCalls": [
         {
           "MethodName": "PetsGET_http_get_Async",
-          "Order": 0,
+          "ApiCallOrderId": 0,
           "Request": 2,
           "Response": {
             "StatusCode": 404,
@@ -4846,7 +4846,7 @@
         },
         {
           "MethodName": "PetsPUT_http_put_Async",
-          "Order": 1,
+          "ApiCallOrderId": 1,
           "Request": {
             "Id": 2,
             "Breed": "RandomString19",
@@ -4862,13 +4862,13 @@
         },
         {
           "MethodName": "PetsAll_http_get_Async",
-          "Order": 2,
+          "ApiCallOrderId": 2,
           "Response": [],
           "HttpMethod": "get"
         },
         {
           "MethodName": "PetsPOST_http_post_Async",
-          "Order": 3,
+          "ApiCallOrderId": 3,
           "Request": {
             "Id": 3,
             "Breed": "RandomString806",
@@ -4885,7 +4885,7 @@
         },
         {
           "MethodName": "GetWeatherForecast_http_get_Async",
-          "Order": 4,
+          "ApiCallOrderId": 4,
           "Response": [
             {
               "Date": "DateTimeOffset_71",
@@ -4898,13 +4898,13 @@
         }
       ],
       "TestCoveragePercentage": 0.0,
-      "Order": 70
+      "TestSuiteOrderId": 70
     },
     {
       "ApiCalls": [
         {
           "MethodName": "PetsGET_http_get_Async",
-          "Order": 0,
+          "ApiCallOrderId": 0,
           "Request": 4,
           "Response": {
             "StatusCode": 404,
@@ -4915,7 +4915,7 @@
         },
         {
           "MethodName": "PetsPUT_http_put_Async",
-          "Order": 1,
+          "ApiCallOrderId": 1,
           "Request": {
             "Id": 3,
             "Breed": "RandomString515",
@@ -4931,13 +4931,13 @@
         },
         {
           "MethodName": "PetsAll_http_get_Async",
-          "Order": 2,
+          "ApiCallOrderId": 2,
           "Response": [],
           "HttpMethod": "get"
         },
         {
           "MethodName": "GetWeatherForecast_http_get_Async",
-          "Order": 3,
+          "ApiCallOrderId": 3,
           "Response": [
             {
               "Date": "DateTimeOffset_72",
@@ -4950,7 +4950,7 @@
         },
         {
           "MethodName": "PetsPOST_http_post_Async",
-          "Order": 4,
+          "ApiCallOrderId": 4,
           "Request": {
             "Id": 4,
             "Breed": "RandomString92",
@@ -4967,13 +4967,13 @@
         }
       ],
       "TestCoveragePercentage": 0.0,
-      "Order": 71
+      "TestSuiteOrderId": 71
     },
     {
       "ApiCalls": [
         {
           "MethodName": "PetsPOST_http_post_Async",
-          "Order": 0,
+          "ApiCallOrderId": 0,
           "Request": {
             "Id": 3,
             "Breed": "RandomString336",
@@ -4990,13 +4990,13 @@
         },
         {
           "MethodName": "PetsAll_http_get_Async",
-          "Order": 1,
+          "ApiCallOrderId": 1,
           "Response": [],
           "HttpMethod": "get"
         },
         {
           "MethodName": "PetsGET_http_get_Async",
-          "Order": 2,
+          "ApiCallOrderId": 2,
           "Request": 4,
           "Response": {
             "StatusCode": 404,
@@ -5007,7 +5007,7 @@
         },
         {
           "MethodName": "GetWeatherForecast_http_get_Async",
-          "Order": 3,
+          "ApiCallOrderId": 3,
           "Response": [
             {
               "Date": "DateTimeOffset_73",
@@ -5020,7 +5020,7 @@
         },
         {
           "MethodName": "PetsPUT_http_put_Async",
-          "Order": 4,
+          "ApiCallOrderId": 4,
           "Request": {
             "Id": 4,
             "Breed": "RandomString608",
@@ -5036,13 +5036,13 @@
         }
       ],
       "TestCoveragePercentage": 0.0,
-      "Order": 72
+      "TestSuiteOrderId": 72
     },
     {
       "ApiCalls": [
         {
           "MethodName": "PetsPOST_http_post_Async",
-          "Order": 0,
+          "ApiCallOrderId": 0,
           "Request": {
             "Id": 2,
             "Breed": "RandomString684",
@@ -5059,13 +5059,13 @@
         },
         {
           "MethodName": "PetsAll_http_get_Async",
-          "Order": 1,
+          "ApiCallOrderId": 1,
           "Response": [],
           "HttpMethod": "get"
         },
         {
           "MethodName": "PetsGET_http_get_Async",
-          "Order": 2,
+          "ApiCallOrderId": 2,
           "Request": 4,
           "Response": {
             "StatusCode": 404,
@@ -5076,7 +5076,7 @@
         },
         {
           "MethodName": "PetsPUT_http_put_Async",
-          "Order": 3,
+          "ApiCallOrderId": 3,
           "Request": {
             "Id": 2,
             "Breed": "RandomString748",
@@ -5092,7 +5092,7 @@
         },
         {
           "MethodName": "GetWeatherForecast_http_get_Async",
-          "Order": 4,
+          "ApiCallOrderId": 4,
           "Response": [
             {
               "Date": "DateTimeOffset_74",
@@ -5105,13 +5105,13 @@
         }
       ],
       "TestCoveragePercentage": 0.0,
-      "Order": 73
+      "TestSuiteOrderId": 73
     },
     {
       "ApiCalls": [
         {
           "MethodName": "PetsPOST_http_post_Async",
-          "Order": 0,
+          "ApiCallOrderId": 0,
           "Request": {
             "Id": 1,
             "Breed": "RandomString854",
@@ -5128,13 +5128,13 @@
         },
         {
           "MethodName": "PetsAll_http_get_Async",
-          "Order": 1,
+          "ApiCallOrderId": 1,
           "Response": [],
           "HttpMethod": "get"
         },
         {
           "MethodName": "GetWeatherForecast_http_get_Async",
-          "Order": 2,
+          "ApiCallOrderId": 2,
           "Response": [
             {
               "Date": "DateTimeOffset_75",
@@ -5147,7 +5147,7 @@
         },
         {
           "MethodName": "PetsGET_http_get_Async",
-          "Order": 3,
+          "ApiCallOrderId": 3,
           "Request": 2,
           "Response": {
             "StatusCode": 404,
@@ -5158,7 +5158,7 @@
         },
         {
           "MethodName": "PetsPUT_http_put_Async",
-          "Order": 4,
+          "ApiCallOrderId": 4,
           "Request": {
             "Id": 3,
             "Breed": "RandomString727",
@@ -5174,13 +5174,13 @@
         }
       ],
       "TestCoveragePercentage": 0.0,
-      "Order": 74
+      "TestSuiteOrderId": 74
     },
     {
       "ApiCalls": [
         {
           "MethodName": "PetsPOST_http_post_Async",
-          "Order": 0,
+          "ApiCallOrderId": 0,
           "Request": {
             "Id": 1,
             "Breed": "RandomString808",
@@ -5197,13 +5197,13 @@
         },
         {
           "MethodName": "PetsAll_http_get_Async",
-          "Order": 1,
+          "ApiCallOrderId": 1,
           "Response": [],
           "HttpMethod": "get"
         },
         {
           "MethodName": "GetWeatherForecast_http_get_Async",
-          "Order": 2,
+          "ApiCallOrderId": 2,
           "Response": [
             {
               "Date": "DateTimeOffset_76",
@@ -5216,7 +5216,7 @@
         },
         {
           "MethodName": "PetsPUT_http_put_Async",
-          "Order": 3,
+          "ApiCallOrderId": 3,
           "Request": {
             "Id": 2,
             "Breed": "RandomString925",
@@ -5232,7 +5232,7 @@
         },
         {
           "MethodName": "PetsGET_http_get_Async",
-          "Order": 4,
+          "ApiCallOrderId": 4,
           "Request": 1,
           "Response": {
             "StatusCode": 404,
@@ -5243,13 +5243,13 @@
         }
       ],
       "TestCoveragePercentage": 0.0,
-      "Order": 75
+      "TestSuiteOrderId": 75
     },
     {
       "ApiCalls": [
         {
           "MethodName": "PetsPOST_http_post_Async",
-          "Order": 0,
+          "ApiCallOrderId": 0,
           "Request": {
             "Id": 1,
             "Breed": "RandomString608",
@@ -5266,13 +5266,13 @@
         },
         {
           "MethodName": "PetsAll_http_get_Async",
-          "Order": 1,
+          "ApiCallOrderId": 1,
           "Response": [],
           "HttpMethod": "get"
         },
         {
           "MethodName": "PetsPUT_http_put_Async",
-          "Order": 2,
+          "ApiCallOrderId": 2,
           "Request": {
             "Id": 2,
             "Breed": "RandomString919",
@@ -5288,7 +5288,7 @@
         },
         {
           "MethodName": "GetWeatherForecast_http_get_Async",
-          "Order": 3,
+          "ApiCallOrderId": 3,
           "Response": [
             {
               "Date": "DateTimeOffset_77",
@@ -5301,7 +5301,7 @@
         },
         {
           "MethodName": "PetsGET_http_get_Async",
-          "Order": 4,
+          "ApiCallOrderId": 4,
           "Request": 2,
           "Response": {
             "StatusCode": 404,
@@ -5312,13 +5312,13 @@
         }
       ],
       "TestCoveragePercentage": 0.0,
-      "Order": 76
+      "TestSuiteOrderId": 76
     },
     {
       "ApiCalls": [
         {
           "MethodName": "PetsPOST_http_post_Async",
-          "Order": 0,
+          "ApiCallOrderId": 0,
           "Request": {
             "Id": 1,
             "Breed": "RandomString697",
@@ -5335,13 +5335,13 @@
         },
         {
           "MethodName": "PetsAll_http_get_Async",
-          "Order": 1,
+          "ApiCallOrderId": 1,
           "Response": [],
           "HttpMethod": "get"
         },
         {
           "MethodName": "PetsPUT_http_put_Async",
-          "Order": 2,
+          "ApiCallOrderId": 2,
           "Request": {
             "Id": 4,
             "Breed": "RandomString285",
@@ -5357,7 +5357,7 @@
         },
         {
           "MethodName": "PetsGET_http_get_Async",
-          "Order": 3,
+          "ApiCallOrderId": 3,
           "Request": 3,
           "Response": {
             "StatusCode": 404,
@@ -5368,7 +5368,7 @@
         },
         {
           "MethodName": "GetWeatherForecast_http_get_Async",
-          "Order": 4,
+          "ApiCallOrderId": 4,
           "Response": [
             {
               "Date": "DateTimeOffset_78",
@@ -5381,13 +5381,13 @@
         }
       ],
       "TestCoveragePercentage": 0.0,
-      "Order": 77
+      "TestSuiteOrderId": 77
     },
     {
       "ApiCalls": [
         {
           "MethodName": "PetsPOST_http_post_Async",
-          "Order": 0,
+          "ApiCallOrderId": 0,
           "Request": {
             "Id": 4,
             "Breed": "RandomString907",
@@ -5404,7 +5404,7 @@
         },
         {
           "MethodName": "PetsGET_http_get_Async",
-          "Order": 1,
+          "ApiCallOrderId": 1,
           "Request": 1,
           "Response": {
             "StatusCode": 404,
@@ -5415,13 +5415,13 @@
         },
         {
           "MethodName": "PetsAll_http_get_Async",
-          "Order": 2,
+          "ApiCallOrderId": 2,
           "Response": [],
           "HttpMethod": "get"
         },
         {
           "MethodName": "GetWeatherForecast_http_get_Async",
-          "Order": 3,
+          "ApiCallOrderId": 3,
           "Response": [
             {
               "Date": "DateTimeOffset_79",
@@ -5434,7 +5434,7 @@
         },
         {
           "MethodName": "PetsPUT_http_put_Async",
-          "Order": 4,
+          "ApiCallOrderId": 4,
           "Request": {
             "Id": 3,
             "Breed": "RandomString921",
@@ -5450,13 +5450,13 @@
         }
       ],
       "TestCoveragePercentage": 0.0,
-      "Order": 78
+      "TestSuiteOrderId": 78
     },
     {
       "ApiCalls": [
         {
           "MethodName": "PetsPOST_http_post_Async",
-          "Order": 0,
+          "ApiCallOrderId": 0,
           "Request": {
             "Id": 3,
             "Breed": "RandomString970",
@@ -5473,7 +5473,7 @@
         },
         {
           "MethodName": "PetsGET_http_get_Async",
-          "Order": 1,
+          "ApiCallOrderId": 1,
           "Request": 3,
           "Response": {
             "StatusCode": 404,
@@ -5484,13 +5484,13 @@
         },
         {
           "MethodName": "PetsAll_http_get_Async",
-          "Order": 2,
+          "ApiCallOrderId": 2,
           "Response": [],
           "HttpMethod": "get"
         },
         {
           "MethodName": "PetsPUT_http_put_Async",
-          "Order": 3,
+          "ApiCallOrderId": 3,
           "Request": {
             "Id": 3,
             "Breed": "RandomString115",
@@ -5506,7 +5506,7 @@
         },
         {
           "MethodName": "GetWeatherForecast_http_get_Async",
-          "Order": 4,
+          "ApiCallOrderId": 4,
           "Response": [
             {
               "Date": "DateTimeOffset_80",
@@ -5519,13 +5519,13 @@
         }
       ],
       "TestCoveragePercentage": 0.0,
-      "Order": 79
+      "TestSuiteOrderId": 79
     },
     {
       "ApiCalls": [
         {
           "MethodName": "PetsPOST_http_post_Async",
-          "Order": 0,
+          "ApiCallOrderId": 0,
           "Request": {
             "Id": 4,
             "Breed": "RandomString61",
@@ -5542,7 +5542,7 @@
         },
         {
           "MethodName": "PetsGET_http_get_Async",
-          "Order": 1,
+          "ApiCallOrderId": 1,
           "Request": 4,
           "Response": {
             "StatusCode": 404,
@@ -5553,7 +5553,7 @@
         },
         {
           "MethodName": "GetWeatherForecast_http_get_Async",
-          "Order": 2,
+          "ApiCallOrderId": 2,
           "Response": [
             {
               "Date": "DateTimeOffset_81",
@@ -5566,13 +5566,13 @@
         },
         {
           "MethodName": "PetsAll_http_get_Async",
-          "Order": 3,
+          "ApiCallOrderId": 3,
           "Response": [],
           "HttpMethod": "get"
         },
         {
           "MethodName": "PetsPUT_http_put_Async",
-          "Order": 4,
+          "ApiCallOrderId": 4,
           "Request": {
             "Id": 4,
             "Breed": "RandomString251",
@@ -5588,13 +5588,13 @@
         }
       ],
       "TestCoveragePercentage": 0.0,
-      "Order": 80
+      "TestSuiteOrderId": 80
     },
     {
       "ApiCalls": [
         {
           "MethodName": "PetsPOST_http_post_Async",
-          "Order": 0,
+          "ApiCallOrderId": 0,
           "Request": {
             "Id": 1,
             "Breed": "RandomString5",
@@ -5611,7 +5611,7 @@
         },
         {
           "MethodName": "PetsGET_http_get_Async",
-          "Order": 1,
+          "ApiCallOrderId": 1,
           "Request": 1,
           "Response": {
             "StatusCode": 404,
@@ -5622,7 +5622,7 @@
         },
         {
           "MethodName": "GetWeatherForecast_http_get_Async",
-          "Order": 2,
+          "ApiCallOrderId": 2,
           "Response": [
             {
               "Date": "DateTimeOffset_82",
@@ -5635,7 +5635,7 @@
         },
         {
           "MethodName": "PetsPUT_http_put_Async",
-          "Order": 3,
+          "ApiCallOrderId": 3,
           "Request": {
             "Id": 3,
             "Breed": "RandomString330",
@@ -5651,19 +5651,19 @@
         },
         {
           "MethodName": "PetsAll_http_get_Async",
-          "Order": 4,
+          "ApiCallOrderId": 4,
           "Response": [],
           "HttpMethod": "get"
         }
       ],
       "TestCoveragePercentage": 0.0,
-      "Order": 81
+      "TestSuiteOrderId": 81
     },
     {
       "ApiCalls": [
         {
           "MethodName": "PetsPOST_http_post_Async",
-          "Order": 0,
+          "ApiCallOrderId": 0,
           "Request": {
             "Id": 1,
             "Breed": "RandomString604",
@@ -5680,7 +5680,7 @@
         },
         {
           "MethodName": "PetsGET_http_get_Async",
-          "Order": 1,
+          "ApiCallOrderId": 1,
           "Request": 1,
           "Response": {
             "StatusCode": 404,
@@ -5691,7 +5691,7 @@
         },
         {
           "MethodName": "PetsPUT_http_put_Async",
-          "Order": 2,
+          "ApiCallOrderId": 2,
           "Request": {
             "Id": 1,
             "Breed": "RandomString606",
@@ -5707,7 +5707,7 @@
         },
         {
           "MethodName": "GetWeatherForecast_http_get_Async",
-          "Order": 3,
+          "ApiCallOrderId": 3,
           "Response": [
             {
               "Date": "DateTimeOffset_83",
@@ -5720,19 +5720,19 @@
         },
         {
           "MethodName": "PetsAll_http_get_Async",
-          "Order": 4,
+          "ApiCallOrderId": 4,
           "Response": [],
           "HttpMethod": "get"
         }
       ],
       "TestCoveragePercentage": 0.0,
-      "Order": 82
+      "TestSuiteOrderId": 82
     },
     {
       "ApiCalls": [
         {
           "MethodName": "PetsPOST_http_post_Async",
-          "Order": 0,
+          "ApiCallOrderId": 0,
           "Request": {
             "Id": 1,
             "Breed": "RandomString810",
@@ -5749,7 +5749,7 @@
         },
         {
           "MethodName": "PetsGET_http_get_Async",
-          "Order": 1,
+          "ApiCallOrderId": 1,
           "Request": 1,
           "Response": {
             "StatusCode": 404,
@@ -5760,7 +5760,7 @@
         },
         {
           "MethodName": "PetsPUT_http_put_Async",
-          "Order": 2,
+          "ApiCallOrderId": 2,
           "Request": {
             "Id": 1,
             "Breed": "RandomString365",
@@ -5776,13 +5776,13 @@
         },
         {
           "MethodName": "PetsAll_http_get_Async",
-          "Order": 3,
+          "ApiCallOrderId": 3,
           "Response": [],
           "HttpMethod": "get"
         },
         {
           "MethodName": "GetWeatherForecast_http_get_Async",
-          "Order": 4,
+          "ApiCallOrderId": 4,
           "Response": [
             {
               "Date": "DateTimeOffset_84",
@@ -5795,13 +5795,13 @@
         }
       ],
       "TestCoveragePercentage": 0.0,
-      "Order": 83
+      "TestSuiteOrderId": 83
     },
     {
       "ApiCalls": [
         {
           "MethodName": "PetsPOST_http_post_Async",
-          "Order": 0,
+          "ApiCallOrderId": 0,
           "Request": {
             "Id": 1,
             "Breed": "RandomString802",
@@ -5818,7 +5818,7 @@
         },
         {
           "MethodName": "GetWeatherForecast_http_get_Async",
-          "Order": 1,
+          "ApiCallOrderId": 1,
           "Response": [
             {
               "Date": "DateTimeOffset_85",
@@ -5831,7 +5831,7 @@
         },
         {
           "MethodName": "PetsGET_http_get_Async",
-          "Order": 2,
+          "ApiCallOrderId": 2,
           "Request": 2,
           "Response": {
             "StatusCode": 404,
@@ -5842,13 +5842,13 @@
         },
         {
           "MethodName": "PetsAll_http_get_Async",
-          "Order": 3,
+          "ApiCallOrderId": 3,
           "Response": [],
           "HttpMethod": "get"
         },
         {
           "MethodName": "PetsPUT_http_put_Async",
-          "Order": 4,
+          "ApiCallOrderId": 4,
           "Request": {
             "Id": 3,
             "Breed": "RandomString292",
@@ -5864,13 +5864,13 @@
         }
       ],
       "TestCoveragePercentage": 0.0,
-      "Order": 84
+      "TestSuiteOrderId": 84
     },
     {
       "ApiCalls": [
         {
           "MethodName": "PetsPOST_http_post_Async",
-          "Order": 0,
+          "ApiCallOrderId": 0,
           "Request": {
             "Id": 2,
             "Breed": "RandomString600",
@@ -5887,7 +5887,7 @@
         },
         {
           "MethodName": "GetWeatherForecast_http_get_Async",
-          "Order": 1,
+          "ApiCallOrderId": 1,
           "Response": [
             {
               "Date": "DateTimeOffset_86",
@@ -5900,7 +5900,7 @@
         },
         {
           "MethodName": "PetsGET_http_get_Async",
-          "Order": 2,
+          "ApiCallOrderId": 2,
           "Request": 4,
           "Response": {
             "StatusCode": 404,
@@ -5911,7 +5911,7 @@
         },
         {
           "MethodName": "PetsPUT_http_put_Async",
-          "Order": 3,
+          "ApiCallOrderId": 3,
           "Request": {
             "Id": 1,
             "Breed": "RandomString425",
@@ -5927,19 +5927,19 @@
         },
         {
           "MethodName": "PetsAll_http_get_Async",
-          "Order": 4,
+          "ApiCallOrderId": 4,
           "Response": [],
           "HttpMethod": "get"
         }
       ],
       "TestCoveragePercentage": 0.0,
-      "Order": 85
+      "TestSuiteOrderId": 85
     },
     {
       "ApiCalls": [
         {
           "MethodName": "PetsPOST_http_post_Async",
-          "Order": 0,
+          "ApiCallOrderId": 0,
           "Request": {
             "Id": 2,
             "Breed": "RandomString972",
@@ -5956,7 +5956,7 @@
         },
         {
           "MethodName": "GetWeatherForecast_http_get_Async",
-          "Order": 1,
+          "ApiCallOrderId": 1,
           "Response": [
             {
               "Date": "DateTimeOffset_87",
@@ -5969,13 +5969,13 @@
         },
         {
           "MethodName": "PetsAll_http_get_Async",
-          "Order": 2,
+          "ApiCallOrderId": 2,
           "Response": [],
           "HttpMethod": "get"
         },
         {
           "MethodName": "PetsGET_http_get_Async",
-          "Order": 3,
+          "ApiCallOrderId": 3,
           "Request": 2,
           "Response": {
             "StatusCode": 404,
@@ -5986,7 +5986,7 @@
         },
         {
           "MethodName": "PetsPUT_http_put_Async",
-          "Order": 4,
+          "ApiCallOrderId": 4,
           "Request": {
             "Id": 2,
             "Breed": "RandomString582",
@@ -6002,13 +6002,13 @@
         }
       ],
       "TestCoveragePercentage": 0.0,
-      "Order": 86
+      "TestSuiteOrderId": 86
     },
     {
       "ApiCalls": [
         {
           "MethodName": "PetsPOST_http_post_Async",
-          "Order": 0,
+          "ApiCallOrderId": 0,
           "Request": {
             "Id": 2,
             "Breed": "RandomString108",
@@ -6025,7 +6025,7 @@
         },
         {
           "MethodName": "GetWeatherForecast_http_get_Async",
-          "Order": 1,
+          "ApiCallOrderId": 1,
           "Response": [
             {
               "Date": "DateTimeOffset_88",
@@ -6038,13 +6038,13 @@
         },
         {
           "MethodName": "PetsAll_http_get_Async",
-          "Order": 2,
+          "ApiCallOrderId": 2,
           "Response": [],
           "HttpMethod": "get"
         },
         {
           "MethodName": "PetsPUT_http_put_Async",
-          "Order": 3,
+          "ApiCallOrderId": 3,
           "Request": {
             "Id": 3,
             "Breed": "RandomString774",
@@ -6060,7 +6060,7 @@
         },
         {
           "MethodName": "PetsGET_http_get_Async",
-          "Order": 4,
+          "ApiCallOrderId": 4,
           "Request": 4,
           "Response": {
             "StatusCode": 404,
@@ -6071,13 +6071,13 @@
         }
       ],
       "TestCoveragePercentage": 0.0,
-      "Order": 87
+      "TestSuiteOrderId": 87
     },
     {
       "ApiCalls": [
         {
           "MethodName": "PetsPOST_http_post_Async",
-          "Order": 0,
+          "ApiCallOrderId": 0,
           "Request": {
             "Id": 1,
             "Breed": "RandomString981",
@@ -6094,7 +6094,7 @@
         },
         {
           "MethodName": "GetWeatherForecast_http_get_Async",
-          "Order": 1,
+          "ApiCallOrderId": 1,
           "Response": [
             {
               "Date": "DateTimeOffset_89",
@@ -6107,7 +6107,7 @@
         },
         {
           "MethodName": "PetsPUT_http_put_Async",
-          "Order": 2,
+          "ApiCallOrderId": 2,
           "Request": {
             "Id": 3,
             "Breed": "RandomString445",
@@ -6123,13 +6123,13 @@
         },
         {
           "MethodName": "PetsAll_http_get_Async",
-          "Order": 3,
+          "ApiCallOrderId": 3,
           "Response": [],
           "HttpMethod": "get"
         },
         {
           "MethodName": "PetsGET_http_get_Async",
-          "Order": 4,
+          "ApiCallOrderId": 4,
           "Request": 4,
           "Response": {
             "StatusCode": 404,
@@ -6140,13 +6140,13 @@
         }
       ],
       "TestCoveragePercentage": 0.0,
-      "Order": 88
+      "TestSuiteOrderId": 88
     },
     {
       "ApiCalls": [
         {
           "MethodName": "PetsPOST_http_post_Async",
-          "Order": 0,
+          "ApiCallOrderId": 0,
           "Request": {
             "Id": 3,
             "Breed": "RandomString619",
@@ -6163,7 +6163,7 @@
         },
         {
           "MethodName": "GetWeatherForecast_http_get_Async",
-          "Order": 1,
+          "ApiCallOrderId": 1,
           "Response": [
             {
               "Date": "DateTimeOffset_90",
@@ -6176,7 +6176,7 @@
         },
         {
           "MethodName": "PetsPUT_http_put_Async",
-          "Order": 2,
+          "ApiCallOrderId": 2,
           "Request": {
             "Id": 3,
             "Breed": "RandomString94",
@@ -6192,7 +6192,7 @@
         },
         {
           "MethodName": "PetsGET_http_get_Async",
-          "Order": 3,
+          "ApiCallOrderId": 3,
           "Request": 2,
           "Response": {
             "StatusCode": 404,
@@ -6203,19 +6203,19 @@
         },
         {
           "MethodName": "PetsAll_http_get_Async",
-          "Order": 4,
+          "ApiCallOrderId": 4,
           "Response": [],
           "HttpMethod": "get"
         }
       ],
       "TestCoveragePercentage": 0.0,
-      "Order": 89
+      "TestSuiteOrderId": 89
     },
     {
       "ApiCalls": [
         {
           "MethodName": "PetsPOST_http_post_Async",
-          "Order": 0,
+          "ApiCallOrderId": 0,
           "Request": {
             "Id": 4,
             "Breed": "RandomString768",
@@ -6232,7 +6232,7 @@
         },
         {
           "MethodName": "PetsPUT_http_put_Async",
-          "Order": 1,
+          "ApiCallOrderId": 1,
           "Request": {
             "Id": 3,
             "Breed": "RandomString280",
@@ -6248,7 +6248,7 @@
         },
         {
           "MethodName": "PetsGET_http_get_Async",
-          "Order": 2,
+          "ApiCallOrderId": 2,
           "Request": 3,
           "Response": {
             "StatusCode": 404,
@@ -6259,7 +6259,7 @@
         },
         {
           "MethodName": "GetWeatherForecast_http_get_Async",
-          "Order": 3,
+          "ApiCallOrderId": 3,
           "Response": [
             {
               "Date": "DateTimeOffset_91",
@@ -6272,19 +6272,19 @@
         },
         {
           "MethodName": "PetsAll_http_get_Async",
-          "Order": 4,
+          "ApiCallOrderId": 4,
           "Response": [],
           "HttpMethod": "get"
         }
       ],
       "TestCoveragePercentage": 0.0,
-      "Order": 90
+      "TestSuiteOrderId": 90
     },
     {
       "ApiCalls": [
         {
           "MethodName": "PetsPOST_http_post_Async",
-          "Order": 0,
+          "ApiCallOrderId": 0,
           "Request": {
             "Id": 2,
             "Breed": "RandomString627",
@@ -6301,7 +6301,7 @@
         },
         {
           "MethodName": "PetsPUT_http_put_Async",
-          "Order": 1,
+          "ApiCallOrderId": 1,
           "Request": {
             "Id": 4,
             "Breed": "RandomString833",
@@ -6317,7 +6317,7 @@
         },
         {
           "MethodName": "PetsGET_http_get_Async",
-          "Order": 2,
+          "ApiCallOrderId": 2,
           "Request": 1,
           "Response": {
             "StatusCode": 404,
@@ -6328,13 +6328,13 @@
         },
         {
           "MethodName": "PetsAll_http_get_Async",
-          "Order": 3,
+          "ApiCallOrderId": 3,
           "Response": [],
           "HttpMethod": "get"
         },
         {
           "MethodName": "GetWeatherForecast_http_get_Async",
-          "Order": 4,
+          "ApiCallOrderId": 4,
           "Response": [
             {
               "Date": "DateTimeOffset_92",
@@ -6347,13 +6347,13 @@
         }
       ],
       "TestCoveragePercentage": 0.0,
-      "Order": 91
+      "TestSuiteOrderId": 91
     },
     {
       "ApiCalls": [
         {
           "MethodName": "PetsPOST_http_post_Async",
-          "Order": 0,
+          "ApiCallOrderId": 0,
           "Request": {
             "Id": 3,
             "Breed": "RandomString515",
@@ -6370,7 +6370,7 @@
         },
         {
           "MethodName": "PetsPUT_http_put_Async",
-          "Order": 1,
+          "ApiCallOrderId": 1,
           "Request": {
             "Id": 4,
             "Breed": "RandomString166",
@@ -6386,7 +6386,7 @@
         },
         {
           "MethodName": "GetWeatherForecast_http_get_Async",
-          "Order": 2,
+          "ApiCallOrderId": 2,
           "Response": [
             {
               "Date": "DateTimeOffset_93",
@@ -6399,7 +6399,7 @@
         },
         {
           "MethodName": "PetsGET_http_get_Async",
-          "Order": 3,
+          "ApiCallOrderId": 3,
           "Request": 2,
           "Response": {
             "StatusCode": 404,
@@ -6410,19 +6410,19 @@
         },
         {
           "MethodName": "PetsAll_http_get_Async",
-          "Order": 4,
+          "ApiCallOrderId": 4,
           "Response": [],
           "HttpMethod": "get"
         }
       ],
       "TestCoveragePercentage": 0.0,
-      "Order": 92
+      "TestSuiteOrderId": 92
     },
     {
       "ApiCalls": [
         {
           "MethodName": "PetsPOST_http_post_Async",
-          "Order": 0,
+          "ApiCallOrderId": 0,
           "Request": {
             "Id": 4,
             "Breed": "RandomString549",
@@ -6439,7 +6439,7 @@
         },
         {
           "MethodName": "PetsPUT_http_put_Async",
-          "Order": 1,
+          "ApiCallOrderId": 1,
           "Request": {
             "Id": 2,
             "Breed": "RandomString663",
@@ -6455,7 +6455,7 @@
         },
         {
           "MethodName": "GetWeatherForecast_http_get_Async",
-          "Order": 2,
+          "ApiCallOrderId": 2,
           "Response": [
             {
               "Date": "DateTimeOffset_94",
@@ -6468,13 +6468,13 @@
         },
         {
           "MethodName": "PetsAll_http_get_Async",
-          "Order": 3,
+          "ApiCallOrderId": 3,
           "Response": [],
           "HttpMethod": "get"
         },
         {
           "MethodName": "PetsGET_http_get_Async",
-          "Order": 4,
+          "ApiCallOrderId": 4,
           "Request": 2,
           "Response": {
             "StatusCode": 404,
@@ -6485,13 +6485,13 @@
         }
       ],
       "TestCoveragePercentage": 0.0,
-      "Order": 93
+      "TestSuiteOrderId": 93
     },
     {
       "ApiCalls": [
         {
           "MethodName": "PetsPOST_http_post_Async",
-          "Order": 0,
+          "ApiCallOrderId": 0,
           "Request": {
             "Id": 2,
             "Breed": "RandomString390",
@@ -6508,7 +6508,7 @@
         },
         {
           "MethodName": "PetsPUT_http_put_Async",
-          "Order": 1,
+          "ApiCallOrderId": 1,
           "Request": {
             "Id": 1,
             "Breed": "RandomString735",
@@ -6524,13 +6524,13 @@
         },
         {
           "MethodName": "PetsAll_http_get_Async",
-          "Order": 2,
+          "ApiCallOrderId": 2,
           "Response": [],
           "HttpMethod": "get"
         },
         {
           "MethodName": "GetWeatherForecast_http_get_Async",
-          "Order": 3,
+          "ApiCallOrderId": 3,
           "Response": [
             {
               "Date": "DateTimeOffset_95",
@@ -6543,7 +6543,7 @@
         },
         {
           "MethodName": "PetsGET_http_get_Async",
-          "Order": 4,
+          "ApiCallOrderId": 4,
           "Request": 3,
           "Response": {
             "StatusCode": 404,
@@ -6554,13 +6554,13 @@
         }
       ],
       "TestCoveragePercentage": 0.0,
-      "Order": 94
+      "TestSuiteOrderId": 94
     },
     {
       "ApiCalls": [
         {
           "MethodName": "PetsPOST_http_post_Async",
-          "Order": 0,
+          "ApiCallOrderId": 0,
           "Request": {
             "Id": 4,
             "Breed": "RandomString617",
@@ -6577,7 +6577,7 @@
         },
         {
           "MethodName": "PetsPUT_http_put_Async",
-          "Order": 1,
+          "ApiCallOrderId": 1,
           "Request": {
             "Id": 3,
             "Breed": "RandomString402",
@@ -6593,13 +6593,13 @@
         },
         {
           "MethodName": "PetsAll_http_get_Async",
-          "Order": 2,
+          "ApiCallOrderId": 2,
           "Response": [],
           "HttpMethod": "get"
         },
         {
           "MethodName": "PetsGET_http_get_Async",
-          "Order": 3,
+          "ApiCallOrderId": 3,
           "Request": 2,
           "Response": {
             "StatusCode": 404,
@@ -6610,7 +6610,7 @@
         },
         {
           "MethodName": "GetWeatherForecast_http_get_Async",
-          "Order": 4,
+          "ApiCallOrderId": 4,
           "Response": [
             {
               "Date": "DateTimeOffset_96",
@@ -6623,13 +6623,13 @@
         }
       ],
       "TestCoveragePercentage": 0.0,
-      "Order": 95
+      "TestSuiteOrderId": 95
     },
     {
       "ApiCalls": [
         {
           "MethodName": "PetsPUT_http_put_Async",
-          "Order": 0,
+          "ApiCallOrderId": 0,
           "Request": {
             "Id": 1,
             "Breed": "RandomString545",
@@ -6645,13 +6645,13 @@
         },
         {
           "MethodName": "PetsAll_http_get_Async",
-          "Order": 1,
+          "ApiCallOrderId": 1,
           "Response": [],
           "HttpMethod": "get"
         },
         {
           "MethodName": "PetsGET_http_get_Async",
-          "Order": 2,
+          "ApiCallOrderId": 2,
           "Request": 1,
           "Response": {
             "StatusCode": 404,
@@ -6662,7 +6662,7 @@
         },
         {
           "MethodName": "PetsPOST_http_post_Async",
-          "Order": 3,
+          "ApiCallOrderId": 3,
           "Request": {
             "Id": 3,
             "Breed": "RandomString896",
@@ -6679,7 +6679,7 @@
         },
         {
           "MethodName": "GetWeatherForecast_http_get_Async",
-          "Order": 4,
+          "ApiCallOrderId": 4,
           "Response": [
             {
               "Date": "DateTimeOffset_97",
@@ -6692,13 +6692,13 @@
         }
       ],
       "TestCoveragePercentage": 0.0,
-      "Order": 96
+      "TestSuiteOrderId": 96
     },
     {
       "ApiCalls": [
         {
           "MethodName": "PetsPUT_http_put_Async",
-          "Order": 0,
+          "ApiCallOrderId": 0,
           "Request": {
             "Id": 1,
             "Breed": "RandomString654",
@@ -6714,13 +6714,13 @@
         },
         {
           "MethodName": "PetsAll_http_get_Async",
-          "Order": 1,
+          "ApiCallOrderId": 1,
           "Response": [],
           "HttpMethod": "get"
         },
         {
           "MethodName": "PetsGET_http_get_Async",
-          "Order": 2,
+          "ApiCallOrderId": 2,
           "Request": 3,
           "Response": {
             "StatusCode": 404,
@@ -6731,7 +6731,7 @@
         },
         {
           "MethodName": "GetWeatherForecast_http_get_Async",
-          "Order": 3,
+          "ApiCallOrderId": 3,
           "Response": [
             {
               "Date": "DateTimeOffset_98",
@@ -6744,7 +6744,7 @@
         },
         {
           "MethodName": "PetsPOST_http_post_Async",
-          "Order": 4,
+          "ApiCallOrderId": 4,
           "Request": {
             "Id": 2,
             "Breed": "RandomString442",
@@ -6761,13 +6761,13 @@
         }
       ],
       "TestCoveragePercentage": 0.0,
-      "Order": 97
+      "TestSuiteOrderId": 97
     },
     {
       "ApiCalls": [
         {
           "MethodName": "PetsPUT_http_put_Async",
-          "Order": 0,
+          "ApiCallOrderId": 0,
           "Request": {
             "Id": 3,
             "Breed": "RandomString642",
@@ -6783,13 +6783,13 @@
         },
         {
           "MethodName": "PetsAll_http_get_Async",
-          "Order": 1,
+          "ApiCallOrderId": 1,
           "Response": [],
           "HttpMethod": "get"
         },
         {
           "MethodName": "PetsPOST_http_post_Async",
-          "Order": 2,
+          "ApiCallOrderId": 2,
           "Request": {
             "Id": 3,
             "Breed": "RandomString621",
@@ -6806,7 +6806,7 @@
         },
         {
           "MethodName": "PetsGET_http_get_Async",
-          "Order": 3,
+          "ApiCallOrderId": 3,
           "Request": 2,
           "Response": {
             "StatusCode": 404,
@@ -6817,7 +6817,7 @@
         },
         {
           "MethodName": "GetWeatherForecast_http_get_Async",
-          "Order": 4,
+          "ApiCallOrderId": 4,
           "Response": [
             {
               "Date": "DateTimeOffset_99",
@@ -6830,13 +6830,13 @@
         }
       ],
       "TestCoveragePercentage": 0.0,
-      "Order": 98
+      "TestSuiteOrderId": 98
     },
     {
       "ApiCalls": [
         {
           "MethodName": "PetsPUT_http_put_Async",
-          "Order": 0,
+          "ApiCallOrderId": 0,
           "Request": {
             "Id": 3,
             "Breed": "RandomString984",
@@ -6852,13 +6852,13 @@
         },
         {
           "MethodName": "PetsAll_http_get_Async",
-          "Order": 1,
+          "ApiCallOrderId": 1,
           "Response": [],
           "HttpMethod": "get"
         },
         {
           "MethodName": "PetsPOST_http_post_Async",
-          "Order": 2,
+          "ApiCallOrderId": 2,
           "Request": {
             "Id": 3,
             "Breed": "RandomString952",
@@ -6875,7 +6875,7 @@
         },
         {
           "MethodName": "GetWeatherForecast_http_get_Async",
-          "Order": 3,
+          "ApiCallOrderId": 3,
           "Response": [
             {
               "Date": "DateTimeOffset_100",
@@ -6888,7 +6888,7 @@
         },
         {
           "MethodName": "PetsGET_http_get_Async",
-          "Order": 4,
+          "ApiCallOrderId": 4,
           "Request": 1,
           "Response": {
             "StatusCode": 404,
@@ -6899,13 +6899,13 @@
         }
       ],
       "TestCoveragePercentage": 0.0,
-      "Order": 99
+      "TestSuiteOrderId": 99
     },
     {
       "ApiCalls": [
         {
           "MethodName": "PetsPUT_http_put_Async",
-          "Order": 0,
+          "ApiCallOrderId": 0,
           "Request": {
             "Id": 2,
             "Breed": "RandomString181",
@@ -6921,13 +6921,13 @@
         },
         {
           "MethodName": "PetsAll_http_get_Async",
-          "Order": 1,
+          "ApiCallOrderId": 1,
           "Response": [],
           "HttpMethod": "get"
         },
         {
           "MethodName": "GetWeatherForecast_http_get_Async",
-          "Order": 2,
+          "ApiCallOrderId": 2,
           "Response": [
             {
               "Date": "DateTimeOffset_101",
@@ -6940,7 +6940,7 @@
         },
         {
           "MethodName": "PetsPOST_http_post_Async",
-          "Order": 3,
+          "ApiCallOrderId": 3,
           "Request": {
             "Id": 1,
             "Breed": "RandomString383",
@@ -6957,7 +6957,7 @@
         },
         {
           "MethodName": "PetsGET_http_get_Async",
-          "Order": 4,
+          "ApiCallOrderId": 4,
           "Request": 2,
           "Response": {
             "StatusCode": 404,
@@ -6968,13 +6968,13 @@
         }
       ],
       "TestCoveragePercentage": 0.0,
-      "Order": 100
+      "TestSuiteOrderId": 100
     },
     {
       "ApiCalls": [
         {
           "MethodName": "PetsPUT_http_put_Async",
-          "Order": 0,
+          "ApiCallOrderId": 0,
           "Request": {
             "Id": 2,
             "Breed": "RandomString443",
@@ -6990,13 +6990,13 @@
         },
         {
           "MethodName": "PetsAll_http_get_Async",
-          "Order": 1,
+          "ApiCallOrderId": 1,
           "Response": [],
           "HttpMethod": "get"
         },
         {
           "MethodName": "GetWeatherForecast_http_get_Async",
-          "Order": 2,
+          "ApiCallOrderId": 2,
           "Response": [
             {
               "Date": "DateTimeOffset_102",
@@ -7009,7 +7009,7 @@
         },
         {
           "MethodName": "PetsGET_http_get_Async",
-          "Order": 3,
+          "ApiCallOrderId": 3,
           "Request": 3,
           "Response": {
             "StatusCode": 404,
@@ -7020,7 +7020,7 @@
         },
         {
           "MethodName": "PetsPOST_http_post_Async",
-          "Order": 4,
+          "ApiCallOrderId": 4,
           "Request": {
             "Id": 3,
             "Breed": "RandomString533",
@@ -7037,13 +7037,13 @@
         }
       ],
       "TestCoveragePercentage": 0.0,
-      "Order": 101
+      "TestSuiteOrderId": 101
     },
     {
       "ApiCalls": [
         {
           "MethodName": "PetsPUT_http_put_Async",
-          "Order": 0,
+          "ApiCallOrderId": 0,
           "Request": {
             "Id": 1,
             "Breed": "RandomString446",
@@ -7059,7 +7059,7 @@
         },
         {
           "MethodName": "PetsGET_http_get_Async",
-          "Order": 1,
+          "ApiCallOrderId": 1,
           "Request": 3,
           "Response": {
             "StatusCode": 404,
@@ -7070,13 +7070,13 @@
         },
         {
           "MethodName": "PetsAll_http_get_Async",
-          "Order": 2,
+          "ApiCallOrderId": 2,
           "Response": [],
           "HttpMethod": "get"
         },
         {
           "MethodName": "PetsPOST_http_post_Async",
-          "Order": 3,
+          "ApiCallOrderId": 3,
           "Request": {
             "Id": 2,
             "Breed": "RandomString207",
@@ -7093,7 +7093,7 @@
         },
         {
           "MethodName": "GetWeatherForecast_http_get_Async",
-          "Order": 4,
+          "ApiCallOrderId": 4,
           "Response": [
             {
               "Date": "DateTimeOffset_103",
@@ -7106,13 +7106,13 @@
         }
       ],
       "TestCoveragePercentage": 0.0,
-      "Order": 102
+      "TestSuiteOrderId": 102
     },
     {
       "ApiCalls": [
         {
           "MethodName": "PetsPUT_http_put_Async",
-          "Order": 0,
+          "ApiCallOrderId": 0,
           "Request": {
             "Id": 2,
             "Breed": "RandomString127",
@@ -7128,7 +7128,7 @@
         },
         {
           "MethodName": "PetsGET_http_get_Async",
-          "Order": 1,
+          "ApiCallOrderId": 1,
           "Request": 1,
           "Response": {
             "StatusCode": 404,
@@ -7139,13 +7139,13 @@
         },
         {
           "MethodName": "PetsAll_http_get_Async",
-          "Order": 2,
+          "ApiCallOrderId": 2,
           "Response": [],
           "HttpMethod": "get"
         },
         {
           "MethodName": "GetWeatherForecast_http_get_Async",
-          "Order": 3,
+          "ApiCallOrderId": 3,
           "Response": [
             {
               "Date": "DateTimeOffset_104",
@@ -7158,7 +7158,7 @@
         },
         {
           "MethodName": "PetsPOST_http_post_Async",
-          "Order": 4,
+          "ApiCallOrderId": 4,
           "Request": {
             "Id": 2,
             "Breed": "RandomString100",
@@ -7175,13 +7175,13 @@
         }
       ],
       "TestCoveragePercentage": 0.0,
-      "Order": 103
+      "TestSuiteOrderId": 103
     },
     {
       "ApiCalls": [
         {
           "MethodName": "PetsPUT_http_put_Async",
-          "Order": 0,
+          "ApiCallOrderId": 0,
           "Request": {
             "Id": 3,
             "Breed": "RandomString739",
@@ -7197,7 +7197,7 @@
         },
         {
           "MethodName": "PetsGET_http_get_Async",
-          "Order": 1,
+          "ApiCallOrderId": 1,
           "Request": 1,
           "Response": {
             "StatusCode": 404,
@@ -7208,7 +7208,7 @@
         },
         {
           "MethodName": "PetsPOST_http_post_Async",
-          "Order": 2,
+          "ApiCallOrderId": 2,
           "Request": {
             "Id": 4,
             "Breed": "RandomString125",
@@ -7225,13 +7225,13 @@
         },
         {
           "MethodName": "PetsAll_http_get_Async",
-          "Order": 3,
+          "ApiCallOrderId": 3,
           "Response": [],
           "HttpMethod": "get"
         },
         {
           "MethodName": "GetWeatherForecast_http_get_Async",
-          "Order": 4,
+          "ApiCallOrderId": 4,
           "Response": [
             {
               "Date": "DateTimeOffset_105",
@@ -7244,13 +7244,13 @@
         }
       ],
       "TestCoveragePercentage": 0.0,
-      "Order": 104
+      "TestSuiteOrderId": 104
     },
     {
       "ApiCalls": [
         {
           "MethodName": "PetsPUT_http_put_Async",
-          "Order": 0,
+          "ApiCallOrderId": 0,
           "Request": {
             "Id": 2,
             "Breed": "RandomString289",
@@ -7266,7 +7266,7 @@
         },
         {
           "MethodName": "PetsGET_http_get_Async",
-          "Order": 1,
+          "ApiCallOrderId": 1,
           "Request": 3,
           "Response": {
             "StatusCode": 404,
@@ -7277,7 +7277,7 @@
         },
         {
           "MethodName": "PetsPOST_http_post_Async",
-          "Order": 2,
+          "ApiCallOrderId": 2,
           "Request": {
             "Id": 2,
             "Breed": "RandomString50",
@@ -7294,7 +7294,7 @@
         },
         {
           "MethodName": "GetWeatherForecast_http_get_Async",
-          "Order": 3,
+          "ApiCallOrderId": 3,
           "Response": [
             {
               "Date": "DateTimeOffset_106",
@@ -7307,19 +7307,19 @@
         },
         {
           "MethodName": "PetsAll_http_get_Async",
-          "Order": 4,
+          "ApiCallOrderId": 4,
           "Response": [],
           "HttpMethod": "get"
         }
       ],
       "TestCoveragePercentage": 0.0,
-      "Order": 105
+      "TestSuiteOrderId": 105
     },
     {
       "ApiCalls": [
         {
           "MethodName": "PetsPUT_http_put_Async",
-          "Order": 0,
+          "ApiCallOrderId": 0,
           "Request": {
             "Id": 1,
             "Breed": "RandomString20",
@@ -7335,7 +7335,7 @@
         },
         {
           "MethodName": "PetsGET_http_get_Async",
-          "Order": 1,
+          "ApiCallOrderId": 1,
           "Request": 3,
           "Response": {
             "StatusCode": 404,
@@ -7346,7 +7346,7 @@
         },
         {
           "MethodName": "GetWeatherForecast_http_get_Async",
-          "Order": 2,
+          "ApiCallOrderId": 2,
           "Response": [
             {
               "Date": "DateTimeOffset_107",
@@ -7359,7 +7359,7 @@
         },
         {
           "MethodName": "PetsPOST_http_post_Async",
-          "Order": 3,
+          "ApiCallOrderId": 3,
           "Request": {
             "Id": 4,
             "Breed": "RandomString577",
@@ -7376,19 +7376,19 @@
         },
         {
           "MethodName": "PetsAll_http_get_Async",
-          "Order": 4,
+          "ApiCallOrderId": 4,
           "Response": [],
           "HttpMethod": "get"
         }
       ],
       "TestCoveragePercentage": 0.0,
-      "Order": 106
+      "TestSuiteOrderId": 106
     },
     {
       "ApiCalls": [
         {
           "MethodName": "PetsPUT_http_put_Async",
-          "Order": 0,
+          "ApiCallOrderId": 0,
           "Request": {
             "Id": 3,
             "Breed": "RandomString315",
@@ -7404,7 +7404,7 @@
         },
         {
           "MethodName": "PetsGET_http_get_Async",
-          "Order": 1,
+          "ApiCallOrderId": 1,
           "Request": 2,
           "Response": {
             "StatusCode": 404,
@@ -7415,7 +7415,7 @@
         },
         {
           "MethodName": "GetWeatherForecast_http_get_Async",
-          "Order": 2,
+          "ApiCallOrderId": 2,
           "Response": [
             {
               "Date": "DateTimeOffset_108",
@@ -7428,13 +7428,13 @@
         },
         {
           "MethodName": "PetsAll_http_get_Async",
-          "Order": 3,
+          "ApiCallOrderId": 3,
           "Response": [],
           "HttpMethod": "get"
         },
         {
           "MethodName": "PetsPOST_http_post_Async",
-          "Order": 4,
+          "ApiCallOrderId": 4,
           "Request": {
             "Id": 2,
             "Breed": "RandomString869",
@@ -7451,13 +7451,13 @@
         }
       ],
       "TestCoveragePercentage": 0.0,
-      "Order": 107
+      "TestSuiteOrderId": 107
     },
     {
       "ApiCalls": [
         {
           "MethodName": "PetsPUT_http_put_Async",
-          "Order": 0,
+          "ApiCallOrderId": 0,
           "Request": {
             "Id": 2,
             "Breed": "RandomString106",
@@ -7473,7 +7473,7 @@
         },
         {
           "MethodName": "PetsPOST_http_post_Async",
-          "Order": 1,
+          "ApiCallOrderId": 1,
           "Request": {
             "Id": 2,
             "Breed": "RandomString632",
@@ -7490,7 +7490,7 @@
         },
         {
           "MethodName": "PetsGET_http_get_Async",
-          "Order": 2,
+          "ApiCallOrderId": 2,
           "Request": 4,
           "Response": {
             "StatusCode": 404,
@@ -7501,13 +7501,13 @@
         },
         {
           "MethodName": "PetsAll_http_get_Async",
-          "Order": 3,
+          "ApiCallOrderId": 3,
           "Response": [],
           "HttpMethod": "get"
         },
         {
           "MethodName": "GetWeatherForecast_http_get_Async",
-          "Order": 4,
+          "ApiCallOrderId": 4,
           "Response": [
             {
               "Date": "DateTimeOffset_109",
@@ -7520,13 +7520,13 @@
         }
       ],
       "TestCoveragePercentage": 0.0,
-      "Order": 108
+      "TestSuiteOrderId": 108
     },
     {
       "ApiCalls": [
         {
           "MethodName": "PetsPUT_http_put_Async",
-          "Order": 0,
+          "ApiCallOrderId": 0,
           "Request": {
             "Id": 2,
             "Breed": "RandomString936",
@@ -7542,7 +7542,7 @@
         },
         {
           "MethodName": "PetsPOST_http_post_Async",
-          "Order": 1,
+          "ApiCallOrderId": 1,
           "Request": {
             "Id": 1,
             "Breed": "RandomString896",
@@ -7559,7 +7559,7 @@
         },
         {
           "MethodName": "PetsGET_http_get_Async",
-          "Order": 2,
+          "ApiCallOrderId": 2,
           "Request": 1,
           "Response": {
             "StatusCode": 404,
@@ -7570,7 +7570,7 @@
         },
         {
           "MethodName": "GetWeatherForecast_http_get_Async",
-          "Order": 3,
+          "ApiCallOrderId": 3,
           "Response": [
             {
               "Date": "DateTimeOffset_110",
@@ -7583,19 +7583,19 @@
         },
         {
           "MethodName": "PetsAll_http_get_Async",
-          "Order": 4,
+          "ApiCallOrderId": 4,
           "Response": [],
           "HttpMethod": "get"
         }
       ],
       "TestCoveragePercentage": 0.0,
-      "Order": 109
+      "TestSuiteOrderId": 109
     },
     {
       "ApiCalls": [
         {
           "MethodName": "PetsPUT_http_put_Async",
-          "Order": 0,
+          "ApiCallOrderId": 0,
           "Request": {
             "Id": 1,
             "Breed": "RandomString64",
@@ -7611,7 +7611,7 @@
         },
         {
           "MethodName": "PetsPOST_http_post_Async",
-          "Order": 1,
+          "ApiCallOrderId": 1,
           "Request": {
             "Id": 2,
             "Breed": "RandomString104",
@@ -7628,13 +7628,13 @@
         },
         {
           "MethodName": "PetsAll_http_get_Async",
-          "Order": 2,
+          "ApiCallOrderId": 2,
           "Response": [],
           "HttpMethod": "get"
         },
         {
           "MethodName": "PetsGET_http_get_Async",
-          "Order": 3,
+          "ApiCallOrderId": 3,
           "Request": 3,
           "Response": {
             "StatusCode": 404,
@@ -7645,7 +7645,7 @@
         },
         {
           "MethodName": "GetWeatherForecast_http_get_Async",
-          "Order": 4,
+          "ApiCallOrderId": 4,
           "Response": [
             {
               "Date": "DateTimeOffset_111",
@@ -7658,13 +7658,13 @@
         }
       ],
       "TestCoveragePercentage": 0.0,
-      "Order": 110
+      "TestSuiteOrderId": 110
     },
     {
       "ApiCalls": [
         {
           "MethodName": "PetsPUT_http_put_Async",
-          "Order": 0,
+          "ApiCallOrderId": 0,
           "Request": {
             "Id": 4,
             "Breed": "RandomString937",
@@ -7680,7 +7680,7 @@
         },
         {
           "MethodName": "PetsPOST_http_post_Async",
-          "Order": 1,
+          "ApiCallOrderId": 1,
           "Request": {
             "Id": 3,
             "Breed": "RandomString696",
@@ -7697,13 +7697,13 @@
         },
         {
           "MethodName": "PetsAll_http_get_Async",
-          "Order": 2,
+          "ApiCallOrderId": 2,
           "Response": [],
           "HttpMethod": "get"
         },
         {
           "MethodName": "GetWeatherForecast_http_get_Async",
-          "Order": 3,
+          "ApiCallOrderId": 3,
           "Response": [
             {
               "Date": "DateTimeOffset_112",
@@ -7716,7 +7716,7 @@
         },
         {
           "MethodName": "PetsGET_http_get_Async",
-          "Order": 4,
+          "ApiCallOrderId": 4,
           "Request": 1,
           "Response": {
             "StatusCode": 404,
@@ -7727,13 +7727,13 @@
         }
       ],
       "TestCoveragePercentage": 0.0,
-      "Order": 111
+      "TestSuiteOrderId": 111
     },
     {
       "ApiCalls": [
         {
           "MethodName": "PetsPUT_http_put_Async",
-          "Order": 0,
+          "ApiCallOrderId": 0,
           "Request": {
             "Id": 3,
             "Breed": "RandomString265",
@@ -7749,7 +7749,7 @@
         },
         {
           "MethodName": "PetsPOST_http_post_Async",
-          "Order": 1,
+          "ApiCallOrderId": 1,
           "Request": {
             "Id": 2,
             "Breed": "RandomString860",
@@ -7766,7 +7766,7 @@
         },
         {
           "MethodName": "GetWeatherForecast_http_get_Async",
-          "Order": 2,
+          "ApiCallOrderId": 2,
           "Response": [
             {
               "Date": "DateTimeOffset_113",
@@ -7779,13 +7779,13 @@
         },
         {
           "MethodName": "PetsAll_http_get_Async",
-          "Order": 3,
+          "ApiCallOrderId": 3,
           "Response": [],
           "HttpMethod": "get"
         },
         {
           "MethodName": "PetsGET_http_get_Async",
-          "Order": 4,
+          "ApiCallOrderId": 4,
           "Request": 1,
           "Response": {
             "StatusCode": 404,
@@ -7796,13 +7796,13 @@
         }
       ],
       "TestCoveragePercentage": 0.0,
-      "Order": 112
+      "TestSuiteOrderId": 112
     },
     {
       "ApiCalls": [
         {
           "MethodName": "PetsPUT_http_put_Async",
-          "Order": 0,
+          "ApiCallOrderId": 0,
           "Request": {
             "Id": 4,
             "Breed": "RandomString925",
@@ -7818,7 +7818,7 @@
         },
         {
           "MethodName": "PetsPOST_http_post_Async",
-          "Order": 1,
+          "ApiCallOrderId": 1,
           "Request": {
             "Id": 4,
             "Breed": "RandomString446",
@@ -7835,7 +7835,7 @@
         },
         {
           "MethodName": "GetWeatherForecast_http_get_Async",
-          "Order": 2,
+          "ApiCallOrderId": 2,
           "Response": [
             {
               "Date": "DateTimeOffset_114",
@@ -7848,7 +7848,7 @@
         },
         {
           "MethodName": "PetsGET_http_get_Async",
-          "Order": 3,
+          "ApiCallOrderId": 3,
           "Request": 4,
           "Response": {
             "StatusCode": 404,
@@ -7859,19 +7859,19 @@
         },
         {
           "MethodName": "PetsAll_http_get_Async",
-          "Order": 4,
+          "ApiCallOrderId": 4,
           "Response": [],
           "HttpMethod": "get"
         }
       ],
       "TestCoveragePercentage": 0.0,
-      "Order": 113
+      "TestSuiteOrderId": 113
     },
     {
       "ApiCalls": [
         {
           "MethodName": "PetsPUT_http_put_Async",
-          "Order": 0,
+          "ApiCallOrderId": 0,
           "Request": {
             "Id": 3,
             "Breed": "RandomString870",
@@ -7887,7 +7887,7 @@
         },
         {
           "MethodName": "GetWeatherForecast_http_get_Async",
-          "Order": 1,
+          "ApiCallOrderId": 1,
           "Response": [
             {
               "Date": "DateTimeOffset_115",
@@ -7900,7 +7900,7 @@
         },
         {
           "MethodName": "PetsGET_http_get_Async",
-          "Order": 2,
+          "ApiCallOrderId": 2,
           "Request": 3,
           "Response": {
             "StatusCode": 404,
@@ -7911,7 +7911,7 @@
         },
         {
           "MethodName": "PetsPOST_http_post_Async",
-          "Order": 3,
+          "ApiCallOrderId": 3,
           "Request": {
             "Id": 3,
             "Breed": "RandomString900",
@@ -7928,19 +7928,19 @@
         },
         {
           "MethodName": "PetsAll_http_get_Async",
-          "Order": 4,
+          "ApiCallOrderId": 4,
           "Response": [],
           "HttpMethod": "get"
         }
       ],
       "TestCoveragePercentage": 0.0,
-      "Order": 114
+      "TestSuiteOrderId": 114
     },
     {
       "ApiCalls": [
         {
           "MethodName": "PetsPUT_http_put_Async",
-          "Order": 0,
+          "ApiCallOrderId": 0,
           "Request": {
             "Id": 4,
             "Breed": "RandomString415",
@@ -7956,7 +7956,7 @@
         },
         {
           "MethodName": "GetWeatherForecast_http_get_Async",
-          "Order": 1,
+          "ApiCallOrderId": 1,
           "Response": [
             {
               "Date": "DateTimeOffset_116",
@@ -7969,7 +7969,7 @@
         },
         {
           "MethodName": "PetsGET_http_get_Async",
-          "Order": 2,
+          "ApiCallOrderId": 2,
           "Request": 1,
           "Response": {
             "StatusCode": 404,
@@ -7980,13 +7980,13 @@
         },
         {
           "MethodName": "PetsAll_http_get_Async",
-          "Order": 3,
+          "ApiCallOrderId": 3,
           "Response": [],
           "HttpMethod": "get"
         },
         {
           "MethodName": "PetsPOST_http_post_Async",
-          "Order": 4,
+          "ApiCallOrderId": 4,
           "Request": {
             "Id": 2,
             "Breed": "RandomString803",
@@ -8003,13 +8003,13 @@
         }
       ],
       "TestCoveragePercentage": 0.0,
-      "Order": 115
+      "TestSuiteOrderId": 115
     },
     {
       "ApiCalls": [
         {
           "MethodName": "PetsPUT_http_put_Async",
-          "Order": 0,
+          "ApiCallOrderId": 0,
           "Request": {
             "Id": 2,
             "Breed": "RandomString377",
@@ -8025,7 +8025,7 @@
         },
         {
           "MethodName": "GetWeatherForecast_http_get_Async",
-          "Order": 1,
+          "ApiCallOrderId": 1,
           "Response": [
             {
               "Date": "DateTimeOffset_117",
@@ -8038,7 +8038,7 @@
         },
         {
           "MethodName": "PetsPOST_http_post_Async",
-          "Order": 2,
+          "ApiCallOrderId": 2,
           "Request": {
             "Id": 2,
             "Breed": "RandomString167",
@@ -8055,7 +8055,7 @@
         },
         {
           "MethodName": "PetsGET_http_get_Async",
-          "Order": 3,
+          "ApiCallOrderId": 3,
           "Request": 3,
           "Response": {
             "StatusCode": 404,
@@ -8066,19 +8066,19 @@
         },
         {
           "MethodName": "PetsAll_http_get_Async",
-          "Order": 4,
+          "ApiCallOrderId": 4,
           "Response": [],
           "HttpMethod": "get"
         }
       ],
       "TestCoveragePercentage": 0.0,
-      "Order": 116
+      "TestSuiteOrderId": 116
     },
     {
       "ApiCalls": [
         {
           "MethodName": "PetsPUT_http_put_Async",
-          "Order": 0,
+          "ApiCallOrderId": 0,
           "Request": {
             "Id": 3,
             "Breed": "RandomString496",
@@ -8094,7 +8094,7 @@
         },
         {
           "MethodName": "GetWeatherForecast_http_get_Async",
-          "Order": 1,
+          "ApiCallOrderId": 1,
           "Response": [
             {
               "Date": "DateTimeOffset_118",
@@ -8107,7 +8107,7 @@
         },
         {
           "MethodName": "PetsPOST_http_post_Async",
-          "Order": 2,
+          "ApiCallOrderId": 2,
           "Request": {
             "Id": 2,
             "Breed": "RandomString886",
@@ -8124,13 +8124,13 @@
         },
         {
           "MethodName": "PetsAll_http_get_Async",
-          "Order": 3,
+          "ApiCallOrderId": 3,
           "Response": [],
           "HttpMethod": "get"
         },
         {
           "MethodName": "PetsGET_http_get_Async",
-          "Order": 4,
+          "ApiCallOrderId": 4,
           "Request": 4,
           "Response": {
             "StatusCode": 404,
@@ -8141,13 +8141,13 @@
         }
       ],
       "TestCoveragePercentage": 0.0,
-      "Order": 117
+      "TestSuiteOrderId": 117
     },
     {
       "ApiCalls": [
         {
           "MethodName": "PetsPUT_http_put_Async",
-          "Order": 0,
+          "ApiCallOrderId": 0,
           "Request": {
             "Id": 2,
             "Breed": "RandomString417",
@@ -8163,7 +8163,7 @@
         },
         {
           "MethodName": "GetWeatherForecast_http_get_Async",
-          "Order": 1,
+          "ApiCallOrderId": 1,
           "Response": [
             {
               "Date": "DateTimeOffset_119",
@@ -8176,13 +8176,13 @@
         },
         {
           "MethodName": "PetsAll_http_get_Async",
-          "Order": 2,
+          "ApiCallOrderId": 2,
           "Response": [],
           "HttpMethod": "get"
         },
         {
           "MethodName": "PetsPOST_http_post_Async",
-          "Order": 3,
+          "ApiCallOrderId": 3,
           "Request": {
             "Id": 4,
             "Breed": "RandomString194",
@@ -8199,7 +8199,7 @@
         },
         {
           "MethodName": "PetsGET_http_get_Async",
-          "Order": 4,
+          "ApiCallOrderId": 4,
           "Request": 4,
           "Response": {
             "StatusCode": 404,
@@ -8210,13 +8210,13 @@
         }
       ],
       "TestCoveragePercentage": 0.0,
-      "Order": 118
+      "TestSuiteOrderId": 118
     },
     {
       "ApiCalls": [
         {
           "MethodName": "PetsPUT_http_put_Async",
-          "Order": 0,
+          "ApiCallOrderId": 0,
           "Request": {
             "Id": 3,
             "Breed": "RandomString993",
@@ -8232,7 +8232,7 @@
         },
         {
           "MethodName": "GetWeatherForecast_http_get_Async",
-          "Order": 1,
+          "ApiCallOrderId": 1,
           "Response": [
             {
               "Date": "DateTimeOffset_120",
@@ -8245,13 +8245,13 @@
         },
         {
           "MethodName": "PetsAll_http_get_Async",
-          "Order": 2,
+          "ApiCallOrderId": 2,
           "Response": [],
           "HttpMethod": "get"
         },
         {
           "MethodName": "PetsGET_http_get_Async",
-          "Order": 3,
+          "ApiCallOrderId": 3,
           "Request": 3,
           "Response": {
             "StatusCode": 404,
@@ -8262,7 +8262,7 @@
         },
         {
           "MethodName": "PetsPOST_http_post_Async",
-          "Order": 4,
+          "ApiCallOrderId": 4,
           "Request": {
             "Id": 3,
             "Breed": "RandomString835",
@@ -8279,7 +8279,7 @@
         }
       ],
       "TestCoveragePercentage": 0.0,
-      "Order": 119
+      "TestSuiteOrderId": 119
     }
   ]
 }

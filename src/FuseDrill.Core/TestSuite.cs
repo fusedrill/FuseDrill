@@ -13,7 +13,7 @@ public class TestSuite
 {
     public List<ApiCall> ApiCalls { get; set; } = [];
     public double TestCoveragePercentage { get; set; } = 0;
-    public int Order { get; set; } = 0;
+    public int TestSuiteOrderId { get; set; } = 0;
 
     public override string ToString()
     {

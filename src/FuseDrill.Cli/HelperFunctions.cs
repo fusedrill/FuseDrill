@@ -69,17 +69,23 @@ public static class HelperFunctions
 
         if (!int.TryParse(pullRequestNumber, out var pullRequestNumberParsed))
         {
-            Console.WriteLine("Pull request number does not exists");
+            Console.WriteLine("Pull request number does not exists.");
             return false;
         }
 
         if (string.IsNullOrEmpty(geminiToken))
         {
-            Console.WriteLine("Gemini token is not provided, continuing without AI summarization");
+            Console.WriteLine("Gemini token is not provided, continuing without AI summarization.");
             return false;
         }
 
         string llmResponse = await CompareFuzzingsWithLLM(newSnapshotString, existingSnapshotString);
+
+        if (string.IsNullOrEmpty(llmResponse))
+        {
+            Console.WriteLine("LLM response is empty there is no differences.");
+            return false;
+        }
 
         await PostCommentToPullRequestAsync(owner, repoName, pullRequestNumberParsed, llmResponse, githubClient);
 
@@ -87,13 +93,11 @@ public static class HelperFunctions
         return true;
     }
 
-
     private static async Task PostCommentToPullRequestAsync(string owner, string repoName, int pullRequestNumber, string comment, GitHubClient githubClient)
     {
         Console.WriteLine($"Creating comment at PR:{pullRequestNumber}");
         await githubClient.Issue.Comment.Create(owner, repoName, pullRequestNumber, comment);
     }
-
 
     public static async Task<string> AnalyzeFuzzingDiffWithLLM(Kernel kernel, string fuzzingOutputDiff)
     {
@@ -128,7 +132,7 @@ You are an expert in reviewing API contracts and changes for adherence to best p
 **Your task:**  
 1. Provide a summary of the changes in the API Contract Difference. It should be list.  
 2. Use simple and concise language and Paul Graham's tone.
-3. Think deeply about the API method and request/response data does it make sense? Does values pass through the request  and belongs to responses?,
+3. Think deeply about the API method and request/response data does it make sense? Does values pass through the request and belongs to responses?,
 4. Provide only information that i asked for.
 5. Produce a concise markdown-formatted list of the analysis.  
 6. Always use checklist - [ ] for every action point that is one property difference at a time.
@@ -239,14 +243,19 @@ Heres is the real API Contract Difference you should work on this:
 
     public static async Task<string> CompareFuzzingsWithLLM(string newText, string oldText)
     {
+        if (newText == oldText)
+            return string.Empty;
+
         //use difplex string comparison 
         var actualDiff = SimpleDiffer.GenerateDiff(oldText, newText);
+
+        if (string.IsNullOrEmpty(actualDiff))
+            return string.Empty;
 
         //use semantic kernel 
         var kernel = Kernel.CreateBuilder()
         .AddLMStudioChatCompletionGemini()
         .Build();
-
 
         var llmResponse = await AnalyzeFuzzingDiffWithLLM(kernel, actualDiff);
         return llmResponse;
