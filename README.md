@@ -5,6 +5,20 @@
 
 FuseDrill is a tool for **fuzzing** and **simulation** testing of **OpenAPIs** using snapshots. It helps you identify open API contract changes from the previous version to the current one. 
 
+### C# example
+```cs
+    [Fact]
+    public async Task TestMinimumConfiguration()
+    {
+        //if you are using top-level statements in web api you need to add :
+        //public partial class Program { } in Program.cs class
+
+        var fuzzer = new ApiFuzzerWithVerifier<Program>();
+        await fuzzer.TestWholeApi();
+    }
+```
+
+
 ### Try it out (No Github integration)
 ```cmd
 docker run --network host --rm \
