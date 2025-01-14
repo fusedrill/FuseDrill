@@ -6,7 +6,7 @@ using DiffPlex.DiffBuilder.Model;
 
 public static class SimpleDiffer
 {
-    public static string GenerateDiff(string oldText, string newText)
+    public static string GenerateDiff(string newText, string oldText)
     {
         // Create a Differ object
         var differ = new Differ();
@@ -15,7 +15,7 @@ public static class SimpleDiffer
         var diffBuilder = new InlineDiffBuilder(differ);
 
         // Generate the diff result
-        var diffResult = diffBuilder.BuildDiffModel(oldText, newText);
+        var diffResult = diffBuilder.BuildDiffModel(oldText: oldText, newText: newText);
 
         // Create a StringBuilder to accumulate the diff output
         var sb = new StringBuilder();
@@ -36,6 +36,12 @@ public static class SimpleDiffer
                 ChangeType.Unchanged => $"  {line.Text}", // Unchanged lines (no prefix)
                 _ => throw new ArgumentOutOfRangeException()  // Default case for unknown types
             });
+        }
+
+        // If no changes were found, return an empty string
+        if (diffResult.Lines.All(item=>item.Type == ChangeType.Unchanged))
+        {
+            return string.Empty;
         }
 
         return sb.ToString(); // Return the diff as a string

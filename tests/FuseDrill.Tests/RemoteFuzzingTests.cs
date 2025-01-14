@@ -25,31 +25,29 @@ public class RemoteFuzzingTests
         await tester.TestWholeApi();
     }
 
-    //#if DEBUG
-    //    [Fact] // calling external api guru endpoint, good for debugging.
-    //#endif
-    //////https://openapi-v2.exoscale.com/source.json
-    //public async Task ExoscaleTest()
-    //{
-    //    var key = Environment.GetEnvironmentVariable("exoscale", EnvironmentVariableTarget.User);
-    //    var innerHandler = new ExoscaleAuthHandler("EXOccf871a2aae570ba3998f09c", key)
-    //    {
-    //        InnerHandler = new HttpClientHandler()
-    //    };
+    #if DEBUG
+        [Fact(Skip = "Calls remote apis")]// calling external api guru endpoint, good for debugging.
+    #endif
+    public async Task ExoscaleTest()
+    {
+        var key = Environment.GetEnvironmentVariable("exoscale", EnvironmentVariableTarget.User);
+        var innerHandler = new ExoscaleAuthHandler("EXOccf871a2aae570ba3998f09c", key)
+        {
+            InnerHandler = new HttpClientHandler()
+        };
 
-    //    var httpClient = new HttpClient(innerHandler)
-    //    {
-    //        BaseAddress = new Uri("https://api-ch-gva-2.exoscale.com/v2")
-    //    };
+        var httpClient = new HttpClient(innerHandler)
+        {
+            BaseAddress = new Uri("https://api-ch-gva-2.exoscale.com/v2")
+        };
 
-    //    var tester = new ApiFuzzerWithVerifier(httpClient, "https://openapi-v2.exoscale.com/source.json");
-    //    await tester.TestWholeApi(apiCall => apiCall.HttpMethod=="get");
-    //}
+        var tester = new ApiFuzzerWithVerifier(httpClient, "https://openapi-v2.exoscale.com/source.json");
+        await tester.TestWholeApi(apiCall => apiCall.HttpMethod=="get");
+    }
 
-#if DEBUG
-    [Fact(Skip = "Calls remote apis")]// calling external api guru endpoint, good for debugging.
-#endif
-    //https://api.apis.guru/v2/list.json
+    #if DEBUG
+        [Fact(Skip = "Calls remote apis")]// calling external api guru endpoint, good for debugging.
+    #endif
     public async Task TestAllAlotOfApis()
     {
         var seed = 1234567;
@@ -113,6 +111,8 @@ public class RemoteFuzzingTests
         settings.UseStrictJson();
         settings.DontScrubGuids();
         settings.DontIgnoreEmptyCollections();
+        settings.IncludePrimitiveMembers();
+
         await Verifier.Verify(openApi3VersionData, settings);
     }
 
@@ -281,6 +281,7 @@ public class OriginInfo
     [JsonPropertyName("version")]
     public string Version { get; set; }
 }
+
 //{
 //  ""1forge.com"": {
 //    ""added"": ""2017-05-30T08:34:14.000Z"",

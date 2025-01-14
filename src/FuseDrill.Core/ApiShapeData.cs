@@ -1,6 +1,5 @@
 ﻿using OneOf;
 
-
 namespace FuseDrill.Core;
 
 public class ApiShapeData
