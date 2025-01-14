@@ -31,10 +31,9 @@ namespace WebApiSample.Controllers
         public int Id { get; set; }
 
         [Required]
-        public required string Breed { get; set; }
+        public required string Type { get; set; }
 
-
-        public required string Name { get; set; }
+        public required string FullName { get; set; }
 
         [Required]
         public PetType PetType { get; set; }
@@ -106,8 +105,8 @@ namespace WebApiSample.Controllers
                 return NotFound();
 
             toModify.PetType = pet.PetType;
-            toModify.Breed = pet.Breed;
-            toModify.Name = pet.Name;
+            toModify.Type = pet.Type;
+            toModify.FullName = pet.FullName;
 
             return Ok();
         }

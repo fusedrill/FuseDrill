@@ -40,14 +40,14 @@
           "Order": 4,
           "Request": {
             "Id": 4,
-            "Breed": "RandomString275",
-            "Name": "RandomString157",
+            "Type": "RandomString275",
+            "FullName": "RandomString157",
             "PetType": 1
           },
           "Response": {
             "Id": 1,
-            "Breed": "RandomString275",
-            "Name": "RandomString157",
+            "Type": "RandomString275",
+            "FullName": "RandomString157",
             "PetType": 1
           },
           "HttpMethod": "post"
@@ -57,8 +57,8 @@
           "Order": 5,
           "Request": {
             "Id": 4,
-            "Breed": "RandomString919",
-            "Name": "RandomString450",
+            "Type": "RandomString919",
+            "FullName": "RandomString450",
             "PetType": 1
           },
           "Response": {
@@ -110,8 +110,8 @@
           "Order": 4,
           "Request": {
             "Id": 1,
-            "Breed": "RandomString919",
-            "Name": "RandomString299",
+            "Type": "RandomString919",
+            "FullName": "RandomString299",
             "PetType": 1
           },
           "Response": {
@@ -126,14 +126,14 @@
           "Order": 5,
           "Request": {
             "Id": 2,
-            "Breed": "RandomString757",
-            "Name": "RandomString25",
+            "Type": "RandomString757",
+            "FullName": "RandomString25",
             "PetType": 0
           },
           "Response": {
             "Id": 1,
-            "Breed": "RandomString757",
-            "Name": "RandomString25",
+            "Type": "RandomString757",
+            "FullName": "RandomString25",
             "PetType": 0
           },
           "HttpMethod": "post"
@@ -169,14 +169,14 @@
           "Order": 3,
           "Request": {
             "Id": 3,
-            "Breed": "RandomString399",
-            "Name": "RandomString439",
+            "Type": "RandomString399",
+            "FullName": "RandomString439",
             "PetType": 0
           },
           "Response": {
             "Id": 1,
-            "Breed": "RandomString399",
-            "Name": "RandomString439",
+            "Type": "RandomString399",
+            "FullName": "RandomString439",
             "PetType": 0
           },
           "HttpMethod": "post"
@@ -197,8 +197,8 @@
           "Order": 5,
           "Request": {
             "Id": 4,
-            "Breed": "RandomString320",
-            "Name": "RandomString46",
+            "Type": "RandomString320",
+            "FullName": "RandomString46",
             "PetType": 0
           },
           "Response": {
@@ -239,8 +239,8 @@
           "Order": 3,
           "Request": {
             "Id": 2,
-            "Breed": "RandomString353",
-            "Name": "RandomString49",
+            "Type": "RandomString353",
+            "FullName": "RandomString49",
             "PetType": 0
           },
           "Response": {
@@ -266,14 +266,14 @@
           "Order": 5,
           "Request": {
             "Id": 4,
-            "Breed": "RandomString455",
-            "Name": "RandomString844",
+            "Type": "RandomString455",
+            "FullName": "RandomString844",
             "PetType": 1
           },
           "Response": {
             "Id": 1,
-            "Breed": "RandomString455",
-            "Name": "RandomString844",
+            "Type": "RandomString455",
+            "FullName": "RandomString844",
             "PetType": 1
           },
           "HttpMethod": "post"
@@ -309,8 +309,8 @@
           "Order": 3,
           "Request": {
             "Id": 4,
-            "Breed": "RandomString552",
-            "Name": "RandomString814",
+            "Type": "RandomString552",
+            "FullName": "RandomString814",
             "PetType": 0
           },
           "Response": {
@@ -325,14 +325,14 @@
           "Order": 4,
           "Request": {
             "Id": 2,
-            "Breed": "RandomString299",
-            "Name": "RandomString900",
+            "Type": "RandomString299",
+            "FullName": "RandomString900",
             "PetType": 1
           },
           "Response": {
             "Id": 1,
-            "Breed": "RandomString299",
-            "Name": "RandomString900",
+            "Type": "RandomString299",
+            "FullName": "RandomString900",
             "PetType": 1
           },
           "HttpMethod": "post"
@@ -379,14 +379,14 @@
           "Order": 3,
           "Request": {
             "Id": 2,
-            "Breed": "RandomString54",
-            "Name": "RandomString576",
+            "Type": "RandomString54",
+            "FullName": "RandomString576",
             "PetType": 0
           },
           "Response": {
             "Id": 1,
-            "Breed": "RandomString54",
-            "Name": "RandomString576",
+            "Type": "RandomString54",
+            "FullName": "RandomString576",
             "PetType": 0
           },
           "HttpMethod": "post"
@@ -396,8 +396,8 @@
           "Order": 4,
           "Request": {
             "Id": 3,
-            "Breed": "RandomString626",
-            "Name": "RandomString482",
+            "Type": "RandomString626",
+            "FullName": "RandomString482",
             "PetType": 0
           },
           "Response": {
@@ -417,76 +417,6 @@
             "TypeName": "ApiException\u00601"
           },
           "HttpMethod": "get"
-        }
-      ],
-      "TestCoveragePercentage": 0
-    },
-    {
-      "ApiCalls": [
-        {
-          "MethodName": "GetWeatherForecast_http_get_Async",
-          "Order": 1,
-          "Request": null,
-          "Response": [
-            {
-              "Date": "ScrubbedDateTimeOffset",
-              "TemperatureC": 11,
-              "TemperatureF": 51,
-              "Summary": "Freezing"
-            }
-          ],
-          "HttpMethod": "get"
-        },
-        {
-          "MethodName": "PetsGET_http_get_Async",
-          "Order": 2,
-          "Request": 1,
-          "Response": {
-            "StatusCode": 404,
-            "Message": "Not Found  Status: 404 Response:",
-            "TypeName": "ApiException\u00601"
-          },
-          "HttpMethod": "get"
-        },
-        {
-          "MethodName": "PetsAll_http_get_Async",
-          "Order": 3,
-          "Request": null,
-          "Response": [],
-          "HttpMethod": "get"
-        },
-        {
-          "MethodName": "PetsPOST_http_post_Async",
-          "Order": 4,
-          "Request": {
-            "Id": 2,
-            "Breed": "RandomString759",
-            "Name": "RandomString348",
-            "PetType": 1
-          },
-          "Response": {
-            "Id": 1,
-            "Breed": "RandomString759",
-            "Name": "RandomString348",
-            "PetType": 1
-          },
-          "HttpMethod": "post"
-        },
-        {
-          "MethodName": "PetsPUT_http_put_Async",
-          "Order": 5,
-          "Request": {
-            "Id": 3,
-            "Breed": "RandomString566",
-            "Name": "RandomString691",
-            "PetType": 0
-          },
-          "Response": {
-            "StatusCode": 404,
-            "Message": "The HTTP status code of the response was not expected (404).  Status: 404 Response:  {\u0022type\u0022:\u0022https://tools.ietf.org/html/rfc9110#section-15.5.5\u0022,\u0022title\u0022:\u0022Not Found\u0022,\u0022status\u0022:404,}",
-            "TypeName": "ApiException"
-          },
-          "HttpMethod": "put"
         }
       ],
       "TestCoveragePercentage": 0
@@ -526,12 +456,82 @@
           "HttpMethod": "get"
         },
         {
+          "MethodName": "PetsPOST_http_post_Async",
+          "Order": 4,
+          "Request": {
+            "Id": 2,
+            "Type": "RandomString759",
+            "FullName": "RandomString348",
+            "PetType": 1
+          },
+          "Response": {
+            "Id": 1,
+            "Type": "RandomString759",
+            "FullName": "RandomString348",
+            "PetType": 1
+          },
+          "HttpMethod": "post"
+        },
+        {
+          "MethodName": "PetsPUT_http_put_Async",
+          "Order": 5,
+          "Request": {
+            "Id": 3,
+            "Type": "RandomString566",
+            "FullName": "RandomString691",
+            "PetType": 0
+          },
+          "Response": {
+            "StatusCode": 404,
+            "Message": "The HTTP status code of the response was not expected (404).  Status: 404 Response:  {\u0022type\u0022:\u0022https://tools.ietf.org/html/rfc9110#section-15.5.5\u0022,\u0022title\u0022:\u0022Not Found\u0022,\u0022status\u0022:404,}",
+            "TypeName": "ApiException"
+          },
+          "HttpMethod": "put"
+        }
+      ],
+      "TestCoveragePercentage": 0
+    },
+    {
+      "ApiCalls": [
+        {
+          "MethodName": "GetWeatherForecast_http_get_Async",
+          "Order": 1,
+          "Request": null,
+          "Response": [
+            {
+              "Date": "ScrubbedDateTimeOffset",
+              "TemperatureC": 11,
+              "TemperatureF": 51,
+              "Summary": "Freezing"
+            }
+          ],
+          "HttpMethod": "get"
+        },
+        {
+          "MethodName": "PetsGET_http_get_Async",
+          "Order": 2,
+          "Request": 1,
+          "Response": {
+            "StatusCode": 404,
+            "Message": "Not Found  Status: 404 Response:",
+            "TypeName": "ApiException\u00601"
+          },
+          "HttpMethod": "get"
+        },
+        {
+          "MethodName": "PetsAll_http_get_Async",
+          "Order": 3,
+          "Request": null,
+          "Response": [],
+          "HttpMethod": "get"
+        },
+        {
           "MethodName": "PetsPUT_http_put_Async",
           "Order": 4,
           "Request": {
             "Id": 2,
-            "Breed": "RandomString700",
-            "Name": "RandomString172",
+            "Type": "RandomString700",
+            "FullName": "RandomString172",
             "PetType": 1
           },
           "Response": {
@@ -546,14 +546,14 @@
           "Order": 5,
           "Request": {
             "Id": 2,
-            "Breed": "RandomString666",
-            "Name": "RandomString482",
+            "Type": "RandomString666",
+            "FullName": "RandomString482",
             "PetType": 1
           },
           "Response": {
             "Id": 1,
-            "Breed": "RandomString666",
-            "Name": "RandomString482",
+            "Type": "RandomString666",
+            "FullName": "RandomString482",
             "PetType": 1
           },
           "HttpMethod": "post"
@@ -582,14 +582,14 @@
           "Order": 2,
           "Request": {
             "Id": 4,
-            "Breed": "RandomString99",
-            "Name": "RandomString541",
+            "Type": "RandomString99",
+            "FullName": "RandomString541",
             "PetType": 1
           },
           "Response": {
             "Id": 1,
-            "Breed": "RandomString99",
-            "Name": "RandomString541",
+            "Type": "RandomString99",
+            "FullName": "RandomString541",
             "PetType": 1
           },
           "HttpMethod": "post"
@@ -617,8 +617,8 @@
           "Order": 5,
           "Request": {
             "Id": 1,
-            "Breed": "RandomString880",
-            "Name": "RandomString521",
+            "Type": "RandomString880",
+            "FullName": "RandomString521",
             "PetType": 1
           },
           "Response": {
@@ -652,8 +652,8 @@
           "Order": 2,
           "Request": {
             "Id": 2,
-            "Breed": "RandomString266",
-            "Name": "RandomString224",
+            "Type": "RandomString266",
+            "FullName": "RandomString224",
             "PetType": 1
           },
           "Response": {
@@ -686,14 +686,14 @@
           "Order": 5,
           "Request": {
             "Id": 3,
-            "Breed": "RandomString831",
-            "Name": "RandomString832",
+            "Type": "RandomString831",
+            "FullName": "RandomString832",
             "PetType": 0
           },
           "Response": {
             "Id": 1,
-            "Breed": "RandomString831",
-            "Name": "RandomString832",
+            "Type": "RandomString831",
+            "FullName": "RandomString832",
             "PetType": 0
           },
           "HttpMethod": "post"
@@ -722,8 +722,8 @@
           "Order": 2,
           "Request": {
             "Id": 4,
-            "Breed": "RandomString404",
-            "Name": "RandomString474",
+            "Type": "RandomString404",
+            "FullName": "RandomString474",
             "PetType": 0
           },
           "Response": {
@@ -745,14 +745,14 @@
           "Order": 4,
           "Request": {
             "Id": 2,
-            "Breed": "RandomString495",
-            "Name": "RandomString743",
+            "Type": "RandomString495",
+            "FullName": "RandomString743",
             "PetType": 0
           },
           "Response": {
             "Id": 1,
-            "Breed": "RandomString495",
-            "Name": "RandomString743",
+            "Type": "RandomString495",
+            "FullName": "RandomString743",
             "PetType": 0
           },
           "HttpMethod": "post"
@@ -792,14 +792,14 @@
           "Order": 2,
           "Request": {
             "Id": 2,
-            "Breed": "RandomString698",
-            "Name": "RandomString646",
+            "Type": "RandomString698",
+            "FullName": "RandomString646",
             "PetType": 1
           },
           "Response": {
             "Id": 1,
-            "Breed": "RandomString698",
-            "Name": "RandomString646",
+            "Type": "RandomString698",
+            "FullName": "RandomString646",
             "PetType": 1
           },
           "HttpMethod": "post"
@@ -816,8 +816,8 @@
           "Order": 4,
           "Request": {
             "Id": 4,
-            "Breed": "RandomString656",
-            "Name": "RandomString221",
+            "Type": "RandomString656",
+            "FullName": "RandomString221",
             "PetType": 0
           },
           "Response": {
@@ -862,14 +862,14 @@
           "Order": 2,
           "Request": {
             "Id": 3,
-            "Breed": "RandomString454",
-            "Name": "RandomString573",
+            "Type": "RandomString454",
+            "FullName": "RandomString573",
             "PetType": 0
           },
           "Response": {
             "Id": 1,
-            "Breed": "RandomString454",
-            "Name": "RandomString573",
+            "Type": "RandomString454",
+            "FullName": "RandomString573",
             "PetType": 0
           },
           "HttpMethod": "post"
@@ -897,8 +897,8 @@
           "Order": 5,
           "Request": {
             "Id": 2,
-            "Breed": "RandomString878",
-            "Name": "RandomString235",
+            "Type": "RandomString878",
+            "FullName": "RandomString235",
             "PetType": 0
           },
           "Response": {
@@ -932,8 +932,8 @@
           "Order": 2,
           "Request": {
             "Id": 2,
-            "Breed": "RandomString700",
-            "Name": "RandomString12",
+            "Type": "RandomString700",
+            "FullName": "RandomString12",
             "PetType": 1
           },
           "Response": {
@@ -966,14 +966,14 @@
           "Order": 5,
           "Request": {
             "Id": 1,
-            "Breed": "RandomString149",
-            "Name": "RandomString324",
+            "Type": "RandomString149",
+            "FullName": "RandomString324",
             "PetType": 0
           },
           "Response": {
             "Id": 1,
-            "Breed": "RandomString149",
-            "Name": "RandomString324",
+            "Type": "RandomString149",
+            "FullName": "RandomString324",
             "PetType": 0
           },
           "HttpMethod": "post"
@@ -1013,14 +1013,14 @@
           "Order": 3,
           "Request": {
             "Id": 3,
-            "Breed": "RandomString647",
-            "Name": "RandomString205",
+            "Type": "RandomString647",
+            "FullName": "RandomString205",
             "PetType": 0
           },
           "Response": {
             "Id": 1,
-            "Breed": "RandomString647",
-            "Name": "RandomString205",
+            "Type": "RandomString647",
+            "FullName": "RandomString205",
             "PetType": 0
           },
           "HttpMethod": "post"
@@ -1037,8 +1037,8 @@
           "Order": 5,
           "Request": {
             "Id": 2,
-            "Breed": "RandomString738",
-            "Name": "RandomString500",
+            "Type": "RandomString738",
+            "FullName": "RandomString500",
             "PetType": 0
           },
           "Response": {
@@ -1083,8 +1083,8 @@
           "Order": 3,
           "Request": {
             "Id": 4,
-            "Breed": "RandomString842",
-            "Name": "RandomString354",
+            "Type": "RandomString842",
+            "FullName": "RandomString354",
             "PetType": 1
           },
           "Response": {
@@ -1106,14 +1106,14 @@
           "Order": 5,
           "Request": {
             "Id": 3,
-            "Breed": "RandomString775",
-            "Name": "RandomString837",
+            "Type": "RandomString775",
+            "FullName": "RandomString837",
             "PetType": 0
           },
           "Response": {
             "Id": 1,
-            "Breed": "RandomString775",
-            "Name": "RandomString837",
+            "Type": "RandomString775",
+            "FullName": "RandomString837",
             "PetType": 0
           },
           "HttpMethod": "post"
@@ -1142,14 +1142,14 @@
           "Order": 2,
           "Request": {
             "Id": 1,
-            "Breed": "RandomString933",
-            "Name": "RandomString179",
+            "Type": "RandomString933",
+            "FullName": "RandomString179",
             "PetType": 1
           },
           "Response": {
             "Id": 1,
-            "Breed": "RandomString933",
-            "Name": "RandomString179",
+            "Type": "RandomString933",
+            "FullName": "RandomString179",
             "PetType": 1
           },
           "HttpMethod": "post"
@@ -1159,8 +1159,8 @@
           "Order": 3,
           "Request": {
             "Id": 1,
-            "Breed": "RandomString854",
-            "Name": "RandomString781",
+            "Type": "RandomString854",
+            "FullName": "RandomString781",
             "PetType": 0
           },
           "Response": {
@@ -1212,8 +1212,8 @@
           "Order": 2,
           "Request": {
             "Id": 4,
-            "Breed": "RandomString223",
-            "Name": "RandomString185",
+            "Type": "RandomString223",
+            "FullName": "RandomString185",
             "PetType": 1
           },
           "Response": {
@@ -1228,14 +1228,14 @@
           "Order": 3,
           "Request": {
             "Id": 1,
-            "Breed": "RandomString101",
-            "Name": "RandomString251",
+            "Type": "RandomString101",
+            "FullName": "RandomString251",
             "PetType": 1
           },
           "Response": {
             "Id": 1,
-            "Breed": "RandomString101",
-            "Name": "RandomString251",
+            "Type": "RandomString101",
+            "FullName": "RandomString251",
             "PetType": 1
           },
           "HttpMethod": "post"
@@ -1282,8 +1282,8 @@
           "Order": 2,
           "Request": {
             "Id": 4,
-            "Breed": "RandomString113",
-            "Name": "RandomString900",
+            "Type": "RandomString113",
+            "FullName": "RandomString900",
             "PetType": 1
           },
           "Response": {
@@ -1309,14 +1309,14 @@
           "Order": 4,
           "Request": {
             "Id": 3,
-            "Breed": "RandomString451",
-            "Name": "RandomString42",
+            "Type": "RandomString451",
+            "FullName": "RandomString42",
             "PetType": 1
           },
           "Response": {
             "Id": 1,
-            "Breed": "RandomString451",
-            "Name": "RandomString42",
+            "Type": "RandomString451",
+            "FullName": "RandomString42",
             "PetType": 1
           },
           "HttpMethod": "post"
@@ -1352,14 +1352,14 @@
           "Order": 2,
           "Request": {
             "Id": 4,
-            "Breed": "RandomString69",
-            "Name": "RandomString151",
+            "Type": "RandomString69",
+            "FullName": "RandomString151",
             "PetType": 0
           },
           "Response": {
             "Id": 1,
-            "Breed": "RandomString69",
-            "Name": "RandomString151",
+            "Type": "RandomString69",
+            "FullName": "RandomString151",
             "PetType": 0
           },
           "HttpMethod": "post"
@@ -1380,8 +1380,8 @@
           "Order": 4,
           "Request": {
             "Id": 4,
-            "Breed": "RandomString812",
-            "Name": "RandomString446",
+            "Type": "RandomString812",
+            "FullName": "RandomString446",
             "PetType": 1
           },
           "Response": {
@@ -1422,8 +1422,8 @@
           "Order": 2,
           "Request": {
             "Id": 2,
-            "Breed": "RandomString184",
-            "Name": "RandomString438",
+            "Type": "RandomString184",
+            "FullName": "RandomString438",
             "PetType": 0
           },
           "Response": {
@@ -1438,14 +1438,14 @@
           "Order": 3,
           "Request": {
             "Id": 2,
-            "Breed": "RandomString798",
-            "Name": "RandomString547",
+            "Type": "RandomString798",
+            "FullName": "RandomString547",
             "PetType": 0
           },
           "Response": {
             "Id": 1,
-            "Breed": "RandomString798",
-            "Name": "RandomString547",
+            "Type": "RandomString798",
+            "FullName": "RandomString547",
             "PetType": 0
           },
           "HttpMethod": "post"
@@ -1492,14 +1492,14 @@
           "Order": 2,
           "Request": {
             "Id": 3,
-            "Breed": "RandomString740",
-            "Name": "RandomString910",
+            "Type": "RandomString740",
+            "FullName": "RandomString910",
             "PetType": 1
           },
           "Response": {
             "Id": 1,
-            "Breed": "RandomString740",
-            "Name": "RandomString910",
+            "Type": "RandomString740",
+            "FullName": "RandomString910",
             "PetType": 1
           },
           "HttpMethod": "post"
@@ -1509,8 +1509,8 @@
           "Order": 3,
           "Request": {
             "Id": 4,
-            "Breed": "RandomString440",
-            "Name": "RandomString990",
+            "Type": "RandomString440",
+            "FullName": "RandomString990",
             "PetType": 1
           },
           "Response": {
@@ -1573,8 +1573,8 @@
           "Order": 3,
           "Request": {
             "Id": 4,
-            "Breed": "RandomString552",
-            "Name": "RandomString589",
+            "Type": "RandomString552",
+            "FullName": "RandomString589",
             "PetType": 1
           },
           "Response": {
@@ -1589,14 +1589,14 @@
           "Order": 4,
           "Request": {
             "Id": 1,
-            "Breed": "RandomString281",
-            "Name": "RandomString966",
+            "Type": "RandomString281",
+            "FullName": "RandomString966",
             "PetType": 0
           },
           "Response": {
             "Id": 1,
-            "Breed": "RandomString281",
-            "Name": "RandomString966",
+            "Type": "RandomString281",
+            "FullName": "RandomString966",
             "PetType": 0
           },
           "HttpMethod": "post"
@@ -1643,14 +1643,14 @@
           "Order": 3,
           "Request": {
             "Id": 1,
-            "Breed": "RandomString574",
-            "Name": "RandomString239",
+            "Type": "RandomString574",
+            "FullName": "RandomString239",
             "PetType": 0
           },
           "Response": {
             "Id": 1,
-            "Breed": "RandomString574",
-            "Name": "RandomString239",
+            "Type": "RandomString574",
+            "FullName": "RandomString239",
             "PetType": 0
           },
           "HttpMethod": "post"
@@ -1660,8 +1660,8 @@
           "Order": 4,
           "Request": {
             "Id": 3,
-            "Breed": "RandomString968",
-            "Name": "RandomString386",
+            "Type": "RandomString968",
+            "FullName": "RandomString386",
             "PetType": 1
           },
           "Response": {
@@ -1720,14 +1720,14 @@
           "Order": 4,
           "Request": {
             "Id": 2,
-            "Breed": "RandomString356",
-            "Name": "RandomString97",
+            "Type": "RandomString356",
+            "FullName": "RandomString97",
             "PetType": 1
           },
           "Response": {
             "Id": 1,
-            "Breed": "RandomString356",
-            "Name": "RandomString97",
+            "Type": "RandomString356",
+            "FullName": "RandomString97",
             "PetType": 1
           },
           "HttpMethod": "post"
@@ -1737,8 +1737,8 @@
           "Order": 5,
           "Request": {
             "Id": 2,
-            "Breed": "RandomString522",
-            "Name": "RandomString11",
+            "Type": "RandomString522",
+            "FullName": "RandomString11",
             "PetType": 0
           },
           "Response": {
@@ -1790,8 +1790,8 @@
           "Order": 4,
           "Request": {
             "Id": 2,
-            "Breed": "RandomString215",
-            "Name": "RandomString628",
+            "Type": "RandomString215",
+            "FullName": "RandomString628",
             "PetType": 0
           },
           "Response": {
@@ -1806,14 +1806,14 @@
           "Order": 5,
           "Request": {
             "Id": 2,
-            "Breed": "RandomString170",
-            "Name": "RandomString77",
+            "Type": "RandomString170",
+            "FullName": "RandomString77",
             "PetType": 1
           },
           "Response": {
             "Id": 1,
-            "Breed": "RandomString170",
-            "Name": "RandomString77",
+            "Type": "RandomString170",
+            "FullName": "RandomString77",
             "PetType": 1
           },
           "HttpMethod": "post"
@@ -1849,14 +1849,14 @@
           "Order": 3,
           "Request": {
             "Id": 4,
-            "Breed": "RandomString227",
-            "Name": "RandomString834",
+            "Type": "RandomString227",
+            "FullName": "RandomString834",
             "PetType": 1
           },
           "Response": {
             "Id": 1,
-            "Breed": "RandomString227",
-            "Name": "RandomString834",
+            "Type": "RandomString227",
+            "FullName": "RandomString834",
             "PetType": 1
           },
           "HttpMethod": "post"
@@ -1877,8 +1877,8 @@
           "Order": 5,
           "Request": {
             "Id": 4,
-            "Breed": "RandomString358",
-            "Name": "RandomString25",
+            "Type": "RandomString358",
+            "FullName": "RandomString25",
             "PetType": 0
           },
           "Response": {
@@ -1919,8 +1919,8 @@
           "Order": 3,
           "Request": {
             "Id": 1,
-            "Breed": "RandomString100",
-            "Name": "RandomString680",
+            "Type": "RandomString100",
+            "FullName": "RandomString680",
             "PetType": 1
           },
           "Response": {
@@ -1946,14 +1946,14 @@
           "Order": 5,
           "Request": {
             "Id": 4,
-            "Breed": "RandomString289",
-            "Name": "RandomString240",
+            "Type": "RandomString289",
+            "FullName": "RandomString240",
             "PetType": 1
           },
           "Response": {
             "Id": 1,
-            "Breed": "RandomString289",
-            "Name": "RandomString240",
+            "Type": "RandomString289",
+            "FullName": "RandomString240",
             "PetType": 1
           },
           "HttpMethod": "post"
@@ -1989,8 +1989,8 @@
           "Order": 3,
           "Request": {
             "Id": 1,
-            "Breed": "RandomString791",
-            "Name": "RandomString744",
+            "Type": "RandomString791",
+            "FullName": "RandomString744",
             "PetType": 0
           },
           "Response": {
@@ -2005,14 +2005,14 @@
           "Order": 4,
           "Request": {
             "Id": 1,
-            "Breed": "RandomString356",
-            "Name": "RandomString883",
+            "Type": "RandomString356",
+            "FullName": "RandomString883",
             "PetType": 0
           },
           "Response": {
             "Id": 1,
-            "Breed": "RandomString356",
-            "Name": "RandomString883",
+            "Type": "RandomString356",
+            "FullName": "RandomString883",
             "PetType": 0
           },
           "HttpMethod": "post"
@@ -2059,14 +2059,14 @@
           "Order": 3,
           "Request": {
             "Id": 1,
-            "Breed": "RandomString438",
-            "Name": "RandomString83",
+            "Type": "RandomString438",
+            "FullName": "RandomString83",
             "PetType": 0
           },
           "Response": {
             "Id": 1,
-            "Breed": "RandomString438",
-            "Name": "RandomString83",
+            "Type": "RandomString438",
+            "FullName": "RandomString83",
             "PetType": 0
           },
           "HttpMethod": "post"
@@ -2076,8 +2076,8 @@
           "Order": 4,
           "Request": {
             "Id": 4,
-            "Breed": "RandomString268",
-            "Name": "RandomString354",
+            "Type": "RandomString268",
+            "FullName": "RandomString354",
             "PetType": 1
           },
           "Response": {
@@ -2140,14 +2140,14 @@
           "Order": 4,
           "Request": {
             "Id": 4,
-            "Breed": "RandomString309",
-            "Name": "RandomString594",
+            "Type": "RandomString309",
+            "FullName": "RandomString594",
             "PetType": 1
           },
           "Response": {
             "Id": 1,
-            "Breed": "RandomString309",
-            "Name": "RandomString594",
+            "Type": "RandomString309",
+            "FullName": "RandomString594",
             "PetType": 1
           },
           "HttpMethod": "post"
@@ -2157,8 +2157,8 @@
           "Order": 5,
           "Request": {
             "Id": 4,
-            "Breed": "RandomString110",
-            "Name": "RandomString651",
+            "Type": "RandomString110",
+            "FullName": "RandomString651",
             "PetType": 0
           },
           "Response": {
@@ -2210,8 +2210,8 @@
           "Order": 4,
           "Request": {
             "Id": 1,
-            "Breed": "RandomString806",
-            "Name": "RandomString923",
+            "Type": "RandomString806",
+            "FullName": "RandomString923",
             "PetType": 1
           },
           "Response": {
@@ -2226,14 +2226,14 @@
           "Order": 5,
           "Request": {
             "Id": 3,
-            "Breed": "RandomString412",
-            "Name": "RandomString940",
+            "Type": "RandomString412",
+            "FullName": "RandomString940",
             "PetType": 1
           },
           "Response": {
             "Id": 1,
-            "Breed": "RandomString412",
-            "Name": "RandomString940",
+            "Type": "RandomString412",
+            "FullName": "RandomString940",
             "PetType": 1
           },
           "HttpMethod": "post"
@@ -2248,14 +2248,14 @@
           "Order": 1,
           "Request": {
             "Id": 3,
-            "Breed": "RandomString426",
-            "Name": "RandomString172",
+            "Type": "RandomString426",
+            "FullName": "RandomString172",
             "PetType": 0
           },
           "Response": {
             "Id": 1,
-            "Breed": "RandomString426",
-            "Name": "RandomString172",
+            "Type": "RandomString426",
+            "FullName": "RandomString172",
             "PetType": 0
           },
           "HttpMethod": "post"
@@ -2297,8 +2297,8 @@
           "Order": 5,
           "Request": {
             "Id": 2,
-            "Breed": "RandomString527",
-            "Name": "RandomString531",
+            "Type": "RandomString527",
+            "FullName": "RandomString531",
             "PetType": 1
           },
           "Response": {
@@ -2318,8 +2318,8 @@
           "Order": 1,
           "Request": {
             "Id": 3,
-            "Breed": "RandomString714",
-            "Name": "RandomString434",
+            "Type": "RandomString714",
+            "FullName": "RandomString434",
             "PetType": 1
           },
           "Response": {
@@ -2366,14 +2366,14 @@
           "Order": 5,
           "Request": {
             "Id": 4,
-            "Breed": "RandomString839",
-            "Name": "RandomString478",
+            "Type": "RandomString839",
+            "FullName": "RandomString478",
             "PetType": 1
           },
           "Response": {
             "Id": 1,
-            "Breed": "RandomString839",
-            "Name": "RandomString478",
+            "Type": "RandomString839",
+            "FullName": "RandomString478",
             "PetType": 1
           },
           "HttpMethod": "post"
@@ -2388,8 +2388,8 @@
           "Order": 1,
           "Request": {
             "Id": 4,
-            "Breed": "RandomString908",
-            "Name": "RandomString907",
+            "Type": "RandomString908",
+            "FullName": "RandomString907",
             "PetType": 0
           },
           "Response": {
@@ -2425,14 +2425,14 @@
           "Order": 4,
           "Request": {
             "Id": 3,
-            "Breed": "RandomString350",
-            "Name": "RandomString523",
+            "Type": "RandomString350",
+            "FullName": "RandomString523",
             "PetType": 1
           },
           "Response": {
             "Id": 1,
-            "Breed": "RandomString350",
-            "Name": "RandomString523",
+            "Type": "RandomString350",
+            "FullName": "RandomString523",
             "PetType": 1
           },
           "HttpMethod": "post"
@@ -2458,14 +2458,14 @@
           "Order": 1,
           "Request": {
             "Id": 4,
-            "Breed": "RandomString107",
-            "Name": "RandomString407",
+            "Type": "RandomString107",
+            "FullName": "RandomString407",
             "PetType": 0
           },
           "Response": {
             "Id": 1,
-            "Breed": "RandomString107",
-            "Name": "RandomString407",
+            "Type": "RandomString107",
+            "FullName": "RandomString407",
             "PetType": 0
           },
           "HttpMethod": "post"
@@ -2496,8 +2496,8 @@
           "Order": 4,
           "Request": {
             "Id": 1,
-            "Breed": "RandomString271",
-            "Name": "RandomString390",
+            "Type": "RandomString271",
+            "FullName": "RandomString390",
             "PetType": 1
           },
           "Response": {
@@ -2528,14 +2528,14 @@
           "Order": 1,
           "Request": {
             "Id": 2,
-            "Breed": "RandomString883",
-            "Name": "RandomString58",
+            "Type": "RandomString883",
+            "FullName": "RandomString58",
             "PetType": 0
           },
           "Response": {
             "Id": 1,
-            "Breed": "RandomString883",
-            "Name": "RandomString58",
+            "Type": "RandomString883",
+            "FullName": "RandomString58",
             "PetType": 0
           },
           "HttpMethod": "post"
@@ -2577,8 +2577,8 @@
           "Order": 5,
           "Request": {
             "Id": 1,
-            "Breed": "RandomString891",
-            "Name": "RandomString259",
+            "Type": "RandomString891",
+            "FullName": "RandomString259",
             "PetType": 1
           },
           "Response": {
@@ -2598,8 +2598,8 @@
           "Order": 1,
           "Request": {
             "Id": 3,
-            "Breed": "RandomString277",
-            "Name": "RandomString430",
+            "Type": "RandomString277",
+            "FullName": "RandomString430",
             "PetType": 0
           },
           "Response": {
@@ -2646,14 +2646,14 @@
           "Order": 5,
           "Request": {
             "Id": 2,
-            "Breed": "RandomString596",
-            "Name": "RandomString824",
+            "Type": "RandomString596",
+            "FullName": "RandomString824",
             "PetType": 0
           },
           "Response": {
             "Id": 1,
-            "Breed": "RandomString596",
-            "Name": "RandomString824",
+            "Type": "RandomString596",
+            "FullName": "RandomString824",
             "PetType": 0
           },
           "HttpMethod": "post"
@@ -2693,14 +2693,14 @@
           "Order": 3,
           "Request": {
             "Id": 2,
-            "Breed": "RandomString958",
-            "Name": "RandomString632",
+            "Type": "RandomString958",
+            "FullName": "RandomString632",
             "PetType": 0
           },
           "Response": {
             "Id": 1,
-            "Breed": "RandomString958",
-            "Name": "RandomString632",
+            "Type": "RandomString958",
+            "FullName": "RandomString632",
             "PetType": 0
           },
           "HttpMethod": "post"
@@ -2717,8 +2717,8 @@
           "Order": 5,
           "Request": {
             "Id": 1,
-            "Breed": "RandomString76",
-            "Name": "RandomString704",
+            "Type": "RandomString76",
+            "FullName": "RandomString704",
             "PetType": 1
           },
           "Response": {
@@ -2763,8 +2763,8 @@
           "Order": 3,
           "Request": {
             "Id": 3,
-            "Breed": "RandomString967",
-            "Name": "RandomString624",
+            "Type": "RandomString967",
+            "FullName": "RandomString624",
             "PetType": 1
           },
           "Response": {
@@ -2786,14 +2786,14 @@
           "Order": 5,
           "Request": {
             "Id": 2,
-            "Breed": "RandomString512",
-            "Name": "RandomString738",
+            "Type": "RandomString512",
+            "FullName": "RandomString738",
             "PetType": 0
           },
           "Response": {
             "Id": 1,
-            "Breed": "RandomString512",
-            "Name": "RandomString738",
+            "Type": "RandomString512",
+            "FullName": "RandomString738",
             "PetType": 0
           },
           "HttpMethod": "post"
@@ -2808,14 +2808,14 @@
           "Order": 1,
           "Request": {
             "Id": 2,
-            "Breed": "RandomString630",
-            "Name": "RandomString142",
+            "Type": "RandomString630",
+            "FullName": "RandomString142",
             "PetType": 1
           },
           "Response": {
             "Id": 1,
-            "Breed": "RandomString630",
-            "Name": "RandomString142",
+            "Type": "RandomString630",
+            "FullName": "RandomString142",
             "PetType": 1
           },
           "HttpMethod": "post"
@@ -2839,8 +2839,8 @@
           "Order": 3,
           "Request": {
             "Id": 3,
-            "Breed": "RandomString930",
-            "Name": "RandomString601",
+            "Type": "RandomString930",
+            "FullName": "RandomString601",
             "PetType": 1
           },
           "Response": {
@@ -2878,8 +2878,8 @@
           "Order": 1,
           "Request": {
             "Id": 4,
-            "Breed": "RandomString875",
-            "Name": "RandomString80",
+            "Type": "RandomString875",
+            "FullName": "RandomString80",
             "PetType": 0
           },
           "Response": {
@@ -2908,14 +2908,14 @@
           "Order": 3,
           "Request": {
             "Id": 4,
-            "Breed": "RandomString659",
-            "Name": "RandomString563",
+            "Type": "RandomString659",
+            "FullName": "RandomString563",
             "PetType": 0
           },
           "Response": {
             "Id": 1,
-            "Breed": "RandomString659",
-            "Name": "RandomString563",
+            "Type": "RandomString659",
+            "FullName": "RandomString563",
             "PetType": 0
           },
           "HttpMethod": "post"
@@ -2948,8 +2948,8 @@
           "Order": 1,
           "Request": {
             "Id": 2,
-            "Breed": "RandomString563",
-            "Name": "RandomString56",
+            "Type": "RandomString563",
+            "FullName": "RandomString56",
             "PetType": 1
           },
           "Response": {
@@ -2989,14 +2989,14 @@
           "Order": 4,
           "Request": {
             "Id": 2,
-            "Breed": "RandomString232",
-            "Name": "RandomString748",
+            "Type": "RandomString232",
+            "FullName": "RandomString748",
             "PetType": 1
           },
           "Response": {
             "Id": 1,
-            "Breed": "RandomString232",
-            "Name": "RandomString748",
+            "Type": "RandomString232",
+            "FullName": "RandomString748",
             "PetType": 1
           },
           "HttpMethod": "post"
@@ -3018,14 +3018,14 @@
           "Order": 1,
           "Request": {
             "Id": 3,
-            "Breed": "RandomString200",
-            "Name": "RandomString14",
+            "Type": "RandomString200",
+            "FullName": "RandomString14",
             "PetType": 1
           },
           "Response": {
             "Id": 1,
-            "Breed": "RandomString200",
-            "Name": "RandomString14",
+            "Type": "RandomString200",
+            "FullName": "RandomString14",
             "PetType": 1
           },
           "HttpMethod": "post"
@@ -3060,8 +3060,8 @@
           "Order": 4,
           "Request": {
             "Id": 3,
-            "Breed": "RandomString603",
-            "Name": "RandomString406",
+            "Type": "RandomString603",
+            "FullName": "RandomString406",
             "PetType": 0
           },
           "Response": {
@@ -3088,8 +3088,8 @@
           "Order": 1,
           "Request": {
             "Id": 3,
-            "Breed": "RandomString635",
-            "Name": "RandomString496",
+            "Type": "RandomString635",
+            "FullName": "RandomString496",
             "PetType": 1
           },
           "Response": {
@@ -3118,14 +3118,14 @@
           "Order": 3,
           "Request": {
             "Id": 1,
-            "Breed": "RandomString722",
-            "Name": "RandomString444",
+            "Type": "RandomString722",
+            "FullName": "RandomString444",
             "PetType": 1
           },
           "Response": {
             "Id": 1,
-            "Breed": "RandomString722",
-            "Name": "RandomString444",
+            "Type": "RandomString722",
+            "FullName": "RandomString444",
             "PetType": 1
           },
           "HttpMethod": "post"
@@ -3158,14 +3158,14 @@
           "Order": 1,
           "Request": {
             "Id": 2,
-            "Breed": "RandomString314",
-            "Name": "RandomString666",
+            "Type": "RandomString314",
+            "FullName": "RandomString666",
             "PetType": 1
           },
           "Response": {
             "Id": 1,
-            "Breed": "RandomString314",
-            "Name": "RandomString666",
+            "Type": "RandomString314",
+            "FullName": "RandomString666",
             "PetType": 1
           },
           "HttpMethod": "post"
@@ -3189,8 +3189,8 @@
           "Order": 3,
           "Request": {
             "Id": 1,
-            "Breed": "RandomString546",
-            "Name": "RandomString304",
+            "Type": "RandomString546",
+            "FullName": "RandomString304",
             "PetType": 0
           },
           "Response": {
@@ -3253,8 +3253,8 @@
           "Order": 3,
           "Request": {
             "Id": 3,
-            "Breed": "RandomString699",
-            "Name": "RandomString580",
+            "Type": "RandomString699",
+            "FullName": "RandomString580",
             "PetType": 0
           },
           "Response": {
@@ -3269,14 +3269,14 @@
           "Order": 4,
           "Request": {
             "Id": 1,
-            "Breed": "RandomString336",
-            "Name": "RandomString268",
+            "Type": "RandomString336",
+            "FullName": "RandomString268",
             "PetType": 1
           },
           "Response": {
             "Id": 1,
-            "Breed": "RandomString336",
-            "Name": "RandomString268",
+            "Type": "RandomString336",
+            "FullName": "RandomString268",
             "PetType": 1
           },
           "HttpMethod": "post"
@@ -3323,14 +3323,14 @@
           "Order": 3,
           "Request": {
             "Id": 3,
-            "Breed": "RandomString142",
-            "Name": "RandomString57",
+            "Type": "RandomString142",
+            "FullName": "RandomString57",
             "PetType": 1
           },
           "Response": {
             "Id": 1,
-            "Breed": "RandomString142",
-            "Name": "RandomString57",
+            "Type": "RandomString142",
+            "FullName": "RandomString57",
             "PetType": 1
           },
           "HttpMethod": "post"
@@ -3340,8 +3340,8 @@
           "Order": 4,
           "Request": {
             "Id": 3,
-            "Breed": "RandomString735",
-            "Name": "RandomString281",
+            "Type": "RandomString735",
+            "FullName": "RandomString281",
             "PetType": 0
           },
           "Response": {
@@ -3400,14 +3400,14 @@
           "Order": 4,
           "Request": {
             "Id": 1,
-            "Breed": "RandomString756",
-            "Name": "RandomString569",
+            "Type": "RandomString756",
+            "FullName": "RandomString569",
             "PetType": 0
           },
           "Response": {
             "Id": 1,
-            "Breed": "RandomString756",
-            "Name": "RandomString569",
+            "Type": "RandomString756",
+            "FullName": "RandomString569",
             "PetType": 0
           },
           "HttpMethod": "post"
@@ -3417,8 +3417,8 @@
           "Order": 5,
           "Request": {
             "Id": 2,
-            "Breed": "RandomString658",
-            "Name": "RandomString578",
+            "Type": "RandomString658",
+            "FullName": "RandomString578",
             "PetType": 1
           },
           "Response": {
@@ -3470,8 +3470,8 @@
           "Order": 4,
           "Request": {
             "Id": 3,
-            "Breed": "RandomString437",
-            "Name": "RandomString894",
+            "Type": "RandomString437",
+            "FullName": "RandomString894",
             "PetType": 0
           },
           "Response": {
@@ -3486,14 +3486,14 @@
           "Order": 5,
           "Request": {
             "Id": 3,
-            "Breed": "RandomString706",
-            "Name": "RandomString73",
+            "Type": "RandomString706",
+            "FullName": "RandomString73",
             "PetType": 0
           },
           "Response": {
             "Id": 1,
-            "Breed": "RandomString706",
-            "Name": "RandomString73",
+            "Type": "RandomString706",
+            "FullName": "RandomString73",
             "PetType": 0
           },
           "HttpMethod": "post"
@@ -3508,14 +3508,14 @@
           "Order": 1,
           "Request": {
             "Id": 2,
-            "Breed": "RandomString470",
-            "Name": "RandomString146",
+            "Type": "RandomString470",
+            "FullName": "RandomString146",
             "PetType": 1
           },
           "Response": {
             "Id": 1,
-            "Breed": "RandomString470",
-            "Name": "RandomString146",
+            "Type": "RandomString470",
+            "FullName": "RandomString146",
             "PetType": 1
           },
           "HttpMethod": "post"
@@ -3557,8 +3557,8 @@
           "Order": 5,
           "Request": {
             "Id": 1,
-            "Breed": "RandomString631",
-            "Name": "RandomString335",
+            "Type": "RandomString631",
+            "FullName": "RandomString335",
             "PetType": 1
           },
           "Response": {
@@ -3578,8 +3578,8 @@
           "Order": 1,
           "Request": {
             "Id": 3,
-            "Breed": "RandomString97",
-            "Name": "RandomString232",
+            "Type": "RandomString97",
+            "FullName": "RandomString232",
             "PetType": 0
           },
           "Response": {
@@ -3626,14 +3626,14 @@
           "Order": 5,
           "Request": {
             "Id": 4,
-            "Breed": "RandomString312",
-            "Name": "RandomString590",
+            "Type": "RandomString312",
+            "FullName": "RandomString590",
             "PetType": 1
           },
           "Response": {
             "Id": 1,
-            "Breed": "RandomString312",
-            "Name": "RandomString590",
+            "Type": "RandomString312",
+            "FullName": "RandomString590",
             "PetType": 1
           },
           "HttpMethod": "post"
@@ -3648,8 +3648,8 @@
           "Order": 1,
           "Request": {
             "Id": 1,
-            "Breed": "RandomString793",
-            "Name": "RandomString197",
+            "Type": "RandomString793",
+            "FullName": "RandomString197",
             "PetType": 1
           },
           "Response": {
@@ -3685,14 +3685,14 @@
           "Order": 4,
           "Request": {
             "Id": 1,
-            "Breed": "RandomString11",
-            "Name": "RandomString849",
+            "Type": "RandomString11",
+            "FullName": "RandomString849",
             "PetType": 1
           },
           "Response": {
             "Id": 1,
-            "Breed": "RandomString11",
-            "Name": "RandomString849",
+            "Type": "RandomString11",
+            "FullName": "RandomString849",
             "PetType": 1
           },
           "HttpMethod": "post"
@@ -3718,14 +3718,14 @@
           "Order": 1,
           "Request": {
             "Id": 1,
-            "Breed": "RandomString99",
-            "Name": "RandomString589",
+            "Type": "RandomString99",
+            "FullName": "RandomString589",
             "PetType": 1
           },
           "Response": {
             "Id": 1,
-            "Breed": "RandomString99",
-            "Name": "RandomString589",
+            "Type": "RandomString99",
+            "FullName": "RandomString589",
             "PetType": 1
           },
           "HttpMethod": "post"
@@ -3756,8 +3756,8 @@
           "Order": 4,
           "Request": {
             "Id": 1,
-            "Breed": "RandomString441",
-            "Name": "RandomString960",
+            "Type": "RandomString441",
+            "FullName": "RandomString960",
             "PetType": 1
           },
           "Response": {
@@ -3820,14 +3820,14 @@
           "Order": 4,
           "Request": {
             "Id": 1,
-            "Breed": "RandomString475",
-            "Name": "RandomString635",
+            "Type": "RandomString475",
+            "FullName": "RandomString635",
             "PetType": 1
           },
           "Response": {
             "Id": 1,
-            "Breed": "RandomString475",
-            "Name": "RandomString635",
+            "Type": "RandomString475",
+            "FullName": "RandomString635",
             "PetType": 1
           },
           "HttpMethod": "post"
@@ -3837,8 +3837,8 @@
           "Order": 5,
           "Request": {
             "Id": 4,
-            "Breed": "RandomString557",
-            "Name": "RandomString96",
+            "Type": "RandomString557",
+            "FullName": "RandomString96",
             "PetType": 1
           },
           "Response": {
@@ -3890,8 +3890,8 @@
           "Order": 4,
           "Request": {
             "Id": 1,
-            "Breed": "RandomString468",
-            "Name": "RandomString28",
+            "Type": "RandomString468",
+            "FullName": "RandomString28",
             "PetType": 1
           },
           "Response": {
@@ -3906,14 +3906,14 @@
           "Order": 5,
           "Request": {
             "Id": 4,
-            "Breed": "RandomString753",
-            "Name": "RandomString126",
+            "Type": "RandomString753",
+            "FullName": "RandomString126",
             "PetType": 1
           },
           "Response": {
             "Id": 1,
-            "Breed": "RandomString753",
-            "Name": "RandomString126",
+            "Type": "RandomString753",
+            "FullName": "RandomString126",
             "PetType": 1
           },
           "HttpMethod": "post"
@@ -3935,14 +3935,14 @@
           "Order": 2,
           "Request": {
             "Id": 4,
-            "Breed": "RandomString718",
-            "Name": "RandomString469",
+            "Type": "RandomString718",
+            "FullName": "RandomString469",
             "PetType": 0
           },
           "Response": {
             "Id": 1,
-            "Breed": "RandomString718",
-            "Name": "RandomString469",
+            "Type": "RandomString718",
+            "FullName": "RandomString469",
             "PetType": 0
           },
           "HttpMethod": "post"
@@ -3977,8 +3977,8 @@
           "Order": 5,
           "Request": {
             "Id": 3,
-            "Breed": "RandomString225",
-            "Name": "RandomString306",
+            "Type": "RandomString225",
+            "FullName": "RandomString306",
             "PetType": 0
           },
           "Response": {
@@ -4005,8 +4005,8 @@
           "Order": 2,
           "Request": {
             "Id": 4,
-            "Breed": "RandomString627",
-            "Name": "RandomString535",
+            "Type": "RandomString627",
+            "FullName": "RandomString535",
             "PetType": 0
           },
           "Response": {
@@ -4046,14 +4046,14 @@
           "Order": 5,
           "Request": {
             "Id": 4,
-            "Breed": "RandomString309",
-            "Name": "RandomString246",
+            "Type": "RandomString309",
+            "FullName": "RandomString246",
             "PetType": 0
           },
           "Response": {
             "Id": 1,
-            "Breed": "RandomString309",
-            "Name": "RandomString246",
+            "Type": "RandomString309",
+            "FullName": "RandomString246",
             "PetType": 0
           },
           "HttpMethod": "post"
@@ -4075,8 +4075,8 @@
           "Order": 2,
           "Request": {
             "Id": 3,
-            "Breed": "RandomString350",
-            "Name": "RandomString322",
+            "Type": "RandomString350",
+            "FullName": "RandomString322",
             "PetType": 0
           },
           "Response": {
@@ -4105,14 +4105,14 @@
           "Order": 4,
           "Request": {
             "Id": 4,
-            "Breed": "RandomString201",
-            "Name": "RandomString232",
+            "Type": "RandomString201",
+            "FullName": "RandomString232",
             "PetType": 0
           },
           "Response": {
             "Id": 1,
-            "Breed": "RandomString201",
-            "Name": "RandomString232",
+            "Type": "RandomString201",
+            "FullName": "RandomString232",
             "PetType": 0
           },
           "HttpMethod": "post"
@@ -4145,14 +4145,14 @@
           "Order": 2,
           "Request": {
             "Id": 1,
-            "Breed": "RandomString253",
-            "Name": "RandomString863",
+            "Type": "RandomString253",
+            "FullName": "RandomString863",
             "PetType": 0
           },
           "Response": {
             "Id": 1,
-            "Breed": "RandomString253",
-            "Name": "RandomString863",
+            "Type": "RandomString253",
+            "FullName": "RandomString863",
             "PetType": 0
           },
           "HttpMethod": "post"
@@ -4176,8 +4176,8 @@
           "Order": 4,
           "Request": {
             "Id": 3,
-            "Breed": "RandomString310",
-            "Name": "RandomString169",
+            "Type": "RandomString310",
+            "FullName": "RandomString169",
             "PetType": 0
           },
           "Response": {
@@ -4219,14 +4219,14 @@
           "Order": 2,
           "Request": {
             "Id": 1,
-            "Breed": "RandomString816",
-            "Name": "RandomString927",
+            "Type": "RandomString816",
+            "FullName": "RandomString927",
             "PetType": 0
           },
           "Response": {
             "Id": 1,
-            "Breed": "RandomString816",
-            "Name": "RandomString927",
+            "Type": "RandomString816",
+            "FullName": "RandomString927",
             "PetType": 0
           },
           "HttpMethod": "post"
@@ -4257,8 +4257,8 @@
           "Order": 5,
           "Request": {
             "Id": 3,
-            "Breed": "RandomString672",
-            "Name": "RandomString726",
+            "Type": "RandomString672",
+            "FullName": "RandomString726",
             "PetType": 0
           },
           "Response": {
@@ -4289,8 +4289,8 @@
           "Order": 2,
           "Request": {
             "Id": 2,
-            "Breed": "RandomString173",
-            "Name": "RandomString857",
+            "Type": "RandomString173",
+            "FullName": "RandomString857",
             "PetType": 0
           },
           "Response": {
@@ -4326,14 +4326,14 @@
           "Order": 5,
           "Request": {
             "Id": 1,
-            "Breed": "RandomString763",
-            "Name": "RandomString782",
+            "Type": "RandomString763",
+            "FullName": "RandomString782",
             "PetType": 0
           },
           "Response": {
             "Id": 1,
-            "Breed": "RandomString763",
-            "Name": "RandomString782",
+            "Type": "RandomString763",
+            "FullName": "RandomString782",
             "PetType": 0
           },
           "HttpMethod": "post"
@@ -4348,14 +4348,14 @@
           "Order": 1,
           "Request": {
             "Id": 1,
-            "Breed": "RandomString632",
-            "Name": "RandomString204",
+            "Type": "RandomString632",
+            "FullName": "RandomString204",
             "PetType": 0
           },
           "Response": {
             "Id": 1,
-            "Breed": "RandomString632",
-            "Name": "RandomString204",
+            "Type": "RandomString632",
+            "FullName": "RandomString204",
             "PetType": 0
           },
           "HttpMethod": "post"
@@ -4397,8 +4397,8 @@
           "Order": 5,
           "Request": {
             "Id": 1,
-            "Breed": "RandomString263",
-            "Name": "RandomString82",
+            "Type": "RandomString263",
+            "FullName": "RandomString82",
             "PetType": 0
           },
           "Response": {
@@ -4418,8 +4418,8 @@
           "Order": 1,
           "Request": {
             "Id": 4,
-            "Breed": "RandomString936",
-            "Name": "RandomString391",
+            "Type": "RandomString936",
+            "FullName": "RandomString391",
             "PetType": 0
           },
           "Response": {
@@ -4466,14 +4466,14 @@
           "Order": 5,
           "Request": {
             "Id": 4,
-            "Breed": "RandomString851",
-            "Name": "RandomString716",
+            "Type": "RandomString851",
+            "FullName": "RandomString716",
             "PetType": 1
           },
           "Response": {
             "Id": 1,
-            "Breed": "RandomString851",
-            "Name": "RandomString716",
+            "Type": "RandomString851",
+            "FullName": "RandomString716",
             "PetType": 1
           },
           "HttpMethod": "post"
@@ -4488,8 +4488,8 @@
           "Order": 1,
           "Request": {
             "Id": 3,
-            "Breed": "RandomString393",
-            "Name": "RandomString9",
+            "Type": "RandomString393",
+            "FullName": "RandomString9",
             "PetType": 0
           },
           "Response": {
@@ -4504,14 +4504,14 @@
           "Order": 2,
           "Request": {
             "Id": 3,
-            "Breed": "RandomString364",
-            "Name": "RandomString568",
+            "Type": "RandomString364",
+            "FullName": "RandomString568",
             "PetType": 1
           },
           "Response": {
             "Id": 1,
-            "Breed": "RandomString364",
-            "Name": "RandomString568",
+            "Type": "RandomString364",
+            "FullName": "RandomString568",
             "PetType": 1
           },
           "HttpMethod": "post"
@@ -4558,14 +4558,14 @@
           "Order": 1,
           "Request": {
             "Id": 2,
-            "Breed": "RandomString702",
-            "Name": "RandomString811",
+            "Type": "RandomString702",
+            "FullName": "RandomString811",
             "PetType": 1
           },
           "Response": {
             "Id": 1,
-            "Breed": "RandomString702",
-            "Name": "RandomString811",
+            "Type": "RandomString702",
+            "FullName": "RandomString811",
             "PetType": 1
           },
           "HttpMethod": "post"
@@ -4575,8 +4575,8 @@
           "Order": 2,
           "Request": {
             "Id": 2,
-            "Breed": "RandomString340",
-            "Name": "RandomString755",
+            "Type": "RandomString340",
+            "FullName": "RandomString755",
             "PetType": 0
           },
           "Response": {
@@ -4639,8 +4639,8 @@
           "Order": 2,
           "Request": {
             "Id": 2,
-            "Breed": "RandomString526",
-            "Name": "RandomString818",
+            "Type": "RandomString526",
+            "FullName": "RandomString818",
             "PetType": 1
           },
           "Response": {
@@ -4669,14 +4669,14 @@
           "Order": 4,
           "Request": {
             "Id": 1,
-            "Breed": "RandomString972",
-            "Name": "RandomString786",
+            "Type": "RandomString972",
+            "FullName": "RandomString786",
             "PetType": 1
           },
           "Response": {
             "Id": 1,
-            "Breed": "RandomString972",
-            "Name": "RandomString786",
+            "Type": "RandomString972",
+            "FullName": "RandomString786",
             "PetType": 1
           },
           "HttpMethod": "post"
@@ -4709,14 +4709,14 @@
           "Order": 2,
           "Request": {
             "Id": 3,
-            "Breed": "RandomString290",
-            "Name": "RandomString782",
+            "Type": "RandomString290",
+            "FullName": "RandomString782",
             "PetType": 1
           },
           "Response": {
             "Id": 1,
-            "Breed": "RandomString290",
-            "Name": "RandomString782",
+            "Type": "RandomString290",
+            "FullName": "RandomString782",
             "PetType": 1
           },
           "HttpMethod": "post"
@@ -4740,8 +4740,8 @@
           "Order": 4,
           "Request": {
             "Id": 1,
-            "Breed": "RandomString998",
-            "Name": "RandomString926",
+            "Type": "RandomString998",
+            "FullName": "RandomString926",
             "PetType": 0
           },
           "Response": {
@@ -4768,14 +4768,14 @@
           "Order": 1,
           "Request": {
             "Id": 4,
-            "Breed": "RandomString481",
-            "Name": "RandomString67",
+            "Type": "RandomString481",
+            "FullName": "RandomString67",
             "PetType": 1
           },
           "Response": {
             "Id": 1,
-            "Breed": "RandomString481",
-            "Name": "RandomString67",
+            "Type": "RandomString481",
+            "FullName": "RandomString67",
             "PetType": 1
           },
           "HttpMethod": "post"
@@ -4785,8 +4785,8 @@
           "Order": 2,
           "Request": {
             "Id": 1,
-            "Breed": "RandomString934",
-            "Name": "RandomString741",
+            "Type": "RandomString934",
+            "FullName": "RandomString741",
             "PetType": 1
           },
           "Response": {
@@ -4838,8 +4838,8 @@
           "Order": 1,
           "Request": {
             "Id": 1,
-            "Breed": "RandomString853",
-            "Name": "RandomString534",
+            "Type": "RandomString853",
+            "FullName": "RandomString534",
             "PetType": 0
           },
           "Response": {
@@ -4854,14 +4854,14 @@
           "Order": 2,
           "Request": {
             "Id": 1,
-            "Breed": "RandomString277",
-            "Name": "RandomString586",
+            "Type": "RandomString277",
+            "FullName": "RandomString586",
             "PetType": 0
           },
           "Response": {
             "Id": 1,
-            "Breed": "RandomString277",
-            "Name": "RandomString586",
+            "Type": "RandomString277",
+            "FullName": "RandomString586",
             "PetType": 0
           },
           "HttpMethod": "post"
@@ -4908,8 +4908,8 @@
           "Order": 1,
           "Request": {
             "Id": 3,
-            "Breed": "RandomString806",
-            "Name": "RandomString122",
+            "Type": "RandomString806",
+            "FullName": "RandomString122",
             "PetType": 0
           },
           "Response": {
@@ -4949,14 +4949,14 @@
           "Order": 4,
           "Request": {
             "Id": 2,
-            "Breed": "RandomString19",
-            "Name": "RandomString35",
+            "Type": "RandomString19",
+            "FullName": "RandomString35",
             "PetType": 0
           },
           "Response": {
             "Id": 1,
-            "Breed": "RandomString19",
-            "Name": "RandomString35",
+            "Type": "RandomString19",
+            "FullName": "RandomString35",
             "PetType": 0
           },
           "HttpMethod": "post"
@@ -4978,14 +4978,14 @@
           "Order": 1,
           "Request": {
             "Id": 3,
-            "Breed": "RandomString515",
-            "Name": "RandomString595",
+            "Type": "RandomString515",
+            "FullName": "RandomString595",
             "PetType": 1
           },
           "Response": {
             "Id": 1,
-            "Breed": "RandomString515",
-            "Name": "RandomString595",
+            "Type": "RandomString515",
+            "FullName": "RandomString595",
             "PetType": 1
           },
           "HttpMethod": "post"
@@ -5020,8 +5020,8 @@
           "Order": 4,
           "Request": {
             "Id": 4,
-            "Breed": "RandomString92",
-            "Name": "RandomString451",
+            "Type": "RandomString92",
+            "FullName": "RandomString451",
             "PetType": 1
           },
           "Response": {
@@ -5048,14 +5048,14 @@
           "Order": 1,
           "Request": {
             "Id": 2,
-            "Breed": "RandomString222",
-            "Name": "RandomString862",
+            "Type": "RandomString222",
+            "FullName": "RandomString862",
             "PetType": 1
           },
           "Response": {
             "Id": 1,
-            "Breed": "RandomString222",
-            "Name": "RandomString862",
+            "Type": "RandomString222",
+            "FullName": "RandomString862",
             "PetType": 1
           },
           "HttpMethod": "post"
@@ -5097,8 +5097,8 @@
           "Order": 5,
           "Request": {
             "Id": 4,
-            "Breed": "RandomString608",
-            "Name": "RandomString123",
+            "Type": "RandomString608",
+            "FullName": "RandomString123",
             "PetType": 1
           },
           "Response": {
@@ -5118,8 +5118,8 @@
           "Order": 1,
           "Request": {
             "Id": 2,
-            "Breed": "RandomString748",
-            "Name": "RandomString528",
+            "Type": "RandomString748",
+            "FullName": "RandomString528",
             "PetType": 0
           },
           "Response": {
@@ -5166,14 +5166,14 @@
           "Order": 5,
           "Request": {
             "Id": 3,
-            "Breed": "RandomString250",
-            "Name": "RandomString110",
+            "Type": "RandomString250",
+            "FullName": "RandomString110",
             "PetType": 1
           },
           "Response": {
             "Id": 1,
-            "Breed": "RandomString250",
-            "Name": "RandomString110",
+            "Type": "RandomString250",
+            "FullName": "RandomString110",
             "PetType": 1
           },
           "HttpMethod": "post"
@@ -5206,14 +5206,14 @@
           "Order": 3,
           "Request": {
             "Id": 4,
-            "Breed": "RandomString943",
-            "Name": "RandomString740",
+            "Type": "RandomString943",
+            "FullName": "RandomString740",
             "PetType": 0
           },
           "Response": {
             "Id": 1,
-            "Breed": "RandomString943",
-            "Name": "RandomString740",
+            "Type": "RandomString943",
+            "FullName": "RandomString740",
             "PetType": 0
           },
           "HttpMethod": "post"
@@ -5237,8 +5237,8 @@
           "Order": 5,
           "Request": {
             "Id": 3,
-            "Breed": "RandomString727",
-            "Name": "RandomString129",
+            "Type": "RandomString727",
+            "FullName": "RandomString129",
             "PetType": 0
           },
           "Response": {
@@ -5276,8 +5276,8 @@
           "Order": 3,
           "Request": {
             "Id": 4,
-            "Breed": "RandomString411",
-            "Name": "RandomString206",
+            "Type": "RandomString411",
+            "FullName": "RandomString206",
             "PetType": 0
           },
           "Response": {
@@ -5306,14 +5306,14 @@
           "Order": 5,
           "Request": {
             "Id": 4,
-            "Breed": "RandomString230",
-            "Name": "RandomString512",
+            "Type": "RandomString230",
+            "FullName": "RandomString512",
             "PetType": 0
           },
           "Response": {
             "Id": 1,
-            "Breed": "RandomString230",
-            "Name": "RandomString512",
+            "Type": "RandomString230",
+            "FullName": "RandomString512",
             "PetType": 0
           },
           "HttpMethod": "post"
@@ -5328,14 +5328,14 @@
           "Order": 1,
           "Request": {
             "Id": 3,
-            "Breed": "RandomString608",
-            "Name": "RandomString95",
+            "Type": "RandomString608",
+            "FullName": "RandomString95",
             "PetType": 0
           },
           "Response": {
             "Id": 1,
-            "Breed": "RandomString608",
-            "Name": "RandomString95",
+            "Type": "RandomString608",
+            "FullName": "RandomString95",
             "PetType": 0
           },
           "HttpMethod": "post"
@@ -5352,8 +5352,8 @@
           "Order": 3,
           "Request": {
             "Id": 4,
-            "Breed": "RandomString964",
-            "Name": "RandomString324",
+            "Type": "RandomString964",
+            "FullName": "RandomString324",
             "PetType": 0
           },
           "Response": {
@@ -5398,8 +5398,8 @@
           "Order": 1,
           "Request": {
             "Id": 2,
-            "Breed": "RandomString298",
-            "Name": "RandomString936",
+            "Type": "RandomString298",
+            "FullName": "RandomString936",
             "PetType": 1
           },
           "Response": {
@@ -5421,14 +5421,14 @@
           "Order": 3,
           "Request": {
             "Id": 3,
-            "Breed": "RandomString809",
-            "Name": "RandomString202",
+            "Type": "RandomString809",
+            "FullName": "RandomString202",
             "PetType": 1
           },
           "Response": {
             "Id": 1,
-            "Breed": "RandomString809",
-            "Name": "RandomString202",
+            "Type": "RandomString809",
+            "FullName": "RandomString202",
             "PetType": 1
           },
           "HttpMethod": "post"
@@ -5468,14 +5468,14 @@
           "Order": 1,
           "Request": {
             "Id": 4,
-            "Breed": "RandomString76",
-            "Name": "RandomString533",
+            "Type": "RandomString76",
+            "FullName": "RandomString533",
             "PetType": 0
           },
           "Response": {
             "Id": 1,
-            "Breed": "RandomString76",
-            "Name": "RandomString533",
+            "Type": "RandomString76",
+            "FullName": "RandomString533",
             "PetType": 0
           },
           "HttpMethod": "post"
@@ -5517,8 +5517,8 @@
           "Order": 5,
           "Request": {
             "Id": 3,
-            "Breed": "RandomString921",
-            "Name": "RandomString401",
+            "Type": "RandomString921",
+            "FullName": "RandomString401",
             "PetType": 0
           },
           "Response": {
@@ -5538,8 +5538,8 @@
           "Order": 1,
           "Request": {
             "Id": 3,
-            "Breed": "RandomString115",
-            "Name": "RandomString611",
+            "Type": "RandomString115",
+            "FullName": "RandomString611",
             "PetType": 1
           },
           "Response": {
@@ -5586,14 +5586,14 @@
           "Order": 5,
           "Request": {
             "Id": 4,
-            "Breed": "RandomString189",
-            "Name": "RandomString324",
+            "Type": "RandomString189",
+            "FullName": "RandomString324",
             "PetType": 1
           },
           "Response": {
             "Id": 1,
-            "Breed": "RandomString189",
-            "Name": "RandomString324",
+            "Type": "RandomString189",
+            "FullName": "RandomString324",
             "PetType": 1
           },
           "HttpMethod": "post"
@@ -5619,14 +5619,14 @@
           "Order": 2,
           "Request": {
             "Id": 1,
-            "Breed": "RandomString427",
-            "Name": "RandomString25",
+            "Type": "RandomString427",
+            "FullName": "RandomString25",
             "PetType": 1
           },
           "Response": {
             "Id": 1,
-            "Breed": "RandomString427",
-            "Name": "RandomString25",
+            "Type": "RandomString427",
+            "FullName": "RandomString25",
             "PetType": 1
           },
           "HttpMethod": "post"
@@ -5657,8 +5657,8 @@
           "Order": 5,
           "Request": {
             "Id": 4,
-            "Breed": "RandomString251",
-            "Name": "RandomString594",
+            "Type": "RandomString251",
+            "FullName": "RandomString594",
             "PetType": 0
           },
           "Response": {
@@ -5689,8 +5689,8 @@
           "Order": 2,
           "Request": {
             "Id": 3,
-            "Breed": "RandomString330",
-            "Name": "RandomString584",
+            "Type": "RandomString330",
+            "FullName": "RandomString584",
             "PetType": 0
           },
           "Response": {
@@ -5726,14 +5726,14 @@
           "Order": 5,
           "Request": {
             "Id": 1,
-            "Breed": "RandomString961",
-            "Name": "RandomString945",
+            "Type": "RandomString961",
+            "FullName": "RandomString945",
             "PetType": 0
           },
           "Response": {
             "Id": 1,
-            "Breed": "RandomString961",
-            "Name": "RandomString945",
+            "Type": "RandomString961",
+            "FullName": "RandomString945",
             "PetType": 0
           },
           "HttpMethod": "post"
@@ -5748,14 +5748,14 @@
           "Order": 1,
           "Request": {
             "Id": 3,
-            "Breed": "RandomString473",
-            "Name": "RandomString885",
+            "Type": "RandomString473",
+            "FullName": "RandomString885",
             "PetType": 0
           },
           "Response": {
             "Id": 1,
-            "Breed": "RandomString473",
-            "Name": "RandomString885",
+            "Type": "RandomString473",
+            "FullName": "RandomString885",
             "PetType": 0
           },
           "HttpMethod": "post"
@@ -5765,8 +5765,8 @@
           "Order": 2,
           "Request": {
             "Id": 1,
-            "Breed": "RandomString606",
-            "Name": "RandomString419",
+            "Type": "RandomString606",
+            "FullName": "RandomString419",
             "PetType": 0
           },
           "Response": {
@@ -5818,8 +5818,8 @@
           "Order": 1,
           "Request": {
             "Id": 1,
-            "Breed": "RandomString365",
-            "Name": "RandomString440",
+            "Type": "RandomString365",
+            "FullName": "RandomString440",
             "PetType": 1
           },
           "Response": {
@@ -5834,14 +5834,14 @@
           "Order": 2,
           "Request": {
             "Id": 4,
-            "Breed": "RandomString998",
-            "Name": "RandomString86",
+            "Type": "RandomString998",
+            "FullName": "RandomString86",
             "PetType": 0
           },
           "Response": {
             "Id": 1,
-            "Breed": "RandomString998",
-            "Name": "RandomString86",
+            "Type": "RandomString998",
+            "FullName": "RandomString86",
             "PetType": 0
           },
           "HttpMethod": "post"
@@ -5895,14 +5895,14 @@
           "Order": 2,
           "Request": {
             "Id": 4,
-            "Breed": "RandomString133",
-            "Name": "RandomString141",
+            "Type": "RandomString133",
+            "FullName": "RandomString141",
             "PetType": 0
           },
           "Response": {
             "Id": 1,
-            "Breed": "RandomString133",
-            "Name": "RandomString141",
+            "Type": "RandomString133",
+            "FullName": "RandomString141",
             "PetType": 0
           },
           "HttpMethod": "post"
@@ -5937,8 +5937,8 @@
           "Order": 5,
           "Request": {
             "Id": 3,
-            "Breed": "RandomString292",
-            "Name": "RandomString728",
+            "Type": "RandomString292",
+            "FullName": "RandomString728",
             "PetType": 0
           },
           "Response": {
@@ -5965,8 +5965,8 @@
           "Order": 2,
           "Request": {
             "Id": 1,
-            "Breed": "RandomString425",
-            "Name": "RandomString993",
+            "Type": "RandomString425",
+            "FullName": "RandomString993",
             "PetType": 0
           },
           "Response": {
@@ -6006,14 +6006,14 @@
           "Order": 5,
           "Request": {
             "Id": 3,
-            "Breed": "RandomString755",
-            "Name": "RandomString630",
+            "Type": "RandomString755",
+            "FullName": "RandomString630",
             "PetType": 1
           },
           "Response": {
             "Id": 1,
-            "Breed": "RandomString755",
-            "Name": "RandomString630",
+            "Type": "RandomString755",
+            "FullName": "RandomString630",
             "PetType": 1
           },
           "HttpMethod": "post"
@@ -6046,14 +6046,14 @@
           "Order": 3,
           "Request": {
             "Id": 4,
-            "Breed": "RandomString887",
-            "Name": "RandomString401",
+            "Type": "RandomString887",
+            "FullName": "RandomString401",
             "PetType": 0
           },
           "Response": {
             "Id": 1,
-            "Breed": "RandomString887",
-            "Name": "RandomString401",
+            "Type": "RandomString887",
+            "FullName": "RandomString401",
             "PetType": 0
           },
           "HttpMethod": "post"
@@ -6077,8 +6077,8 @@
           "Order": 5,
           "Request": {
             "Id": 2,
-            "Breed": "RandomString582",
-            "Name": "RandomString2",
+            "Type": "RandomString582",
+            "FullName": "RandomString2",
             "PetType": 1
           },
           "Response": {
@@ -6116,8 +6116,8 @@
           "Order": 3,
           "Request": {
             "Id": 4,
-            "Breed": "RandomString683",
-            "Name": "RandomString161",
+            "Type": "RandomString683",
+            "FullName": "RandomString161",
             "PetType": 1
           },
           "Response": {
@@ -6146,14 +6146,14 @@
           "Order": 5,
           "Request": {
             "Id": 1,
-            "Breed": "RandomString917",
-            "Name": "RandomString725",
+            "Type": "RandomString917",
+            "FullName": "RandomString725",
             "PetType": 1
           },
           "Response": {
             "Id": 1,
-            "Breed": "RandomString917",
-            "Name": "RandomString725",
+            "Type": "RandomString917",
+            "FullName": "RandomString725",
             "PetType": 1
           },
           "HttpMethod": "post"
@@ -6175,14 +6175,14 @@
           "Order": 2,
           "Request": {
             "Id": 4,
-            "Breed": "RandomString323",
-            "Name": "RandomString932",
+            "Type": "RandomString323",
+            "FullName": "RandomString932",
             "PetType": 1
           },
           "Response": {
             "Id": 1,
-            "Breed": "RandomString323",
-            "Name": "RandomString932",
+            "Type": "RandomString323",
+            "FullName": "RandomString932",
             "PetType": 1
           },
           "HttpMethod": "post"
@@ -6192,8 +6192,8 @@
           "Order": 3,
           "Request": {
             "Id": 2,
-            "Breed": "RandomString629",
-            "Name": "RandomString253",
+            "Type": "RandomString629",
+            "FullName": "RandomString253",
             "PetType": 1
           },
           "Response": {
@@ -6245,8 +6245,8 @@
           "Order": 2,
           "Request": {
             "Id": 1,
-            "Breed": "RandomString229",
-            "Name": "RandomString917",
+            "Type": "RandomString229",
+            "FullName": "RandomString917",
             "PetType": 0
           },
           "Response": {
@@ -6261,14 +6261,14 @@
           "Order": 3,
           "Request": {
             "Id": 3,
-            "Breed": "RandomString816",
-            "Name": "RandomString884",
+            "Type": "RandomString816",
+            "FullName": "RandomString884",
             "PetType": 1
           },
           "Response": {
             "Id": 1,
-            "Breed": "RandomString816",
-            "Name": "RandomString884",
+            "Type": "RandomString816",
+            "FullName": "RandomString884",
             "PetType": 1
           },
           "HttpMethod": "post"
@@ -6308,14 +6308,14 @@
           "Order": 1,
           "Request": {
             "Id": 4,
-            "Breed": "RandomString384",
-            "Name": "RandomString776",
+            "Type": "RandomString384",
+            "FullName": "RandomString776",
             "PetType": 1
           },
           "Response": {
             "Id": 1,
-            "Breed": "RandomString384",
-            "Name": "RandomString776",
+            "Type": "RandomString384",
+            "FullName": "RandomString776",
             "PetType": 1
           },
           "HttpMethod": "post"
@@ -6325,8 +6325,8 @@
           "Order": 2,
           "Request": {
             "Id": 2,
-            "Breed": "RandomString758",
-            "Name": "RandomString858",
+            "Type": "RandomString758",
+            "FullName": "RandomString858",
             "PetType": 1
           },
           "Response": {
@@ -6378,8 +6378,8 @@
           "Order": 1,
           "Request": {
             "Id": 4,
-            "Breed": "RandomString332",
-            "Name": "RandomString259",
+            "Type": "RandomString332",
+            "FullName": "RandomString259",
             "PetType": 0
           },
           "Response": {
@@ -6394,14 +6394,14 @@
           "Order": 2,
           "Request": {
             "Id": 3,
-            "Breed": "RandomString20",
-            "Name": "RandomString981",
+            "Type": "RandomString20",
+            "FullName": "RandomString981",
             "PetType": 1
           },
           "Response": {
             "Id": 1,
-            "Breed": "RandomString20",
-            "Name": "RandomString981",
+            "Type": "RandomString20",
+            "FullName": "RandomString981",
             "PetType": 1
           },
           "HttpMethod": "post"
@@ -6459,8 +6459,8 @@
           "Order": 2,
           "Request": {
             "Id": 1,
-            "Breed": "RandomString538",
-            "Name": "RandomString984",
+            "Type": "RandomString538",
+            "FullName": "RandomString984",
             "PetType": 0
           },
           "Response": {
@@ -6475,14 +6475,14 @@
           "Order": 3,
           "Request": {
             "Id": 3,
-            "Breed": "RandomString379",
-            "Name": "RandomString443",
+            "Type": "RandomString379",
+            "FullName": "RandomString443",
             "PetType": 1
           },
           "Response": {
             "Id": 1,
-            "Breed": "RandomString379",
-            "Name": "RandomString443",
+            "Type": "RandomString379",
+            "FullName": "RandomString443",
             "PetType": 1
           },
           "HttpMethod": "post"
@@ -6529,14 +6529,14 @@
           "Order": 2,
           "Request": {
             "Id": 3,
-            "Breed": "RandomString448",
-            "Name": "RandomString824",
+            "Type": "RandomString448",
+            "FullName": "RandomString824",
             "PetType": 0
           },
           "Response": {
             "Id": 1,
-            "Breed": "RandomString448",
-            "Name": "RandomString824",
+            "Type": "RandomString448",
+            "FullName": "RandomString824",
             "PetType": 0
           },
           "HttpMethod": "post"
@@ -6546,8 +6546,8 @@
           "Order": 3,
           "Request": {
             "Id": 3,
-            "Breed": "RandomString307",
-            "Name": "RandomString696",
+            "Type": "RandomString307",
+            "FullName": "RandomString696",
             "PetType": 0
           },
           "Response": {
@@ -6588,14 +6588,14 @@
           "Order": 1,
           "Request": {
             "Id": 2,
-            "Breed": "RandomString424",
-            "Name": "RandomString43",
+            "Type": "RandomString424",
+            "FullName": "RandomString43",
             "PetType": 0
           },
           "Response": {
             "Id": 1,
-            "Breed": "RandomString424",
-            "Name": "RandomString43",
+            "Type": "RandomString424",
+            "FullName": "RandomString43",
             "PetType": 0
           },
           "HttpMethod": "post"
@@ -6616,8 +6616,8 @@
           "Order": 3,
           "Request": {
             "Id": 3,
-            "Breed": "RandomString824",
-            "Name": "RandomString151",
+            "Type": "RandomString824",
+            "FullName": "RandomString151",
             "PetType": 1
           },
           "Response": {
@@ -6658,8 +6658,8 @@
           "Order": 1,
           "Request": {
             "Id": 2,
-            "Breed": "RandomString82",
-            "Name": "RandomString544",
+            "Type": "RandomString82",
+            "FullName": "RandomString544",
             "PetType": 0
           },
           "Response": {
@@ -6685,14 +6685,14 @@
           "Order": 3,
           "Request": {
             "Id": 3,
-            "Breed": "RandomString672",
-            "Name": "RandomString982",
+            "Type": "RandomString672",
+            "FullName": "RandomString982",
             "PetType": 1
           },
           "Response": {
             "Id": 1,
-            "Breed": "RandomString672",
-            "Name": "RandomString982",
+            "Type": "RandomString672",
+            "FullName": "RandomString982",
             "PetType": 1
           },
           "HttpMethod": "post"
@@ -6728,8 +6728,8 @@
           "Order": 1,
           "Request": {
             "Id": 3,
-            "Breed": "RandomString896",
-            "Name": "RandomString791",
+            "Type": "RandomString896",
+            "FullName": "RandomString791",
             "PetType": 0
           },
           "Response": {
@@ -6762,14 +6762,14 @@
           "Order": 4,
           "Request": {
             "Id": 3,
-            "Breed": "RandomString996",
-            "Name": "RandomString218",
+            "Type": "RandomString996",
+            "FullName": "RandomString218",
             "PetType": 0
           },
           "Response": {
             "Id": 1,
-            "Breed": "RandomString996",
-            "Name": "RandomString218",
+            "Type": "RandomString996",
+            "FullName": "RandomString218",
             "PetType": 0
           },
           "HttpMethod": "post"
@@ -6798,14 +6798,14 @@
           "Order": 1,
           "Request": {
             "Id": 3,
-            "Breed": "RandomString132",
-            "Name": "RandomString356",
+            "Type": "RandomString132",
+            "FullName": "RandomString356",
             "PetType": 1
           },
           "Response": {
             "Id": 1,
-            "Breed": "RandomString132",
-            "Name": "RandomString356",
+            "Type": "RandomString132",
+            "FullName": "RandomString356",
             "PetType": 1
           },
           "HttpMethod": "post"
@@ -6833,8 +6833,8 @@
           "Order": 4,
           "Request": {
             "Id": 2,
-            "Breed": "RandomString442",
-            "Name": "RandomString932",
+            "Type": "RandomString442",
+            "FullName": "RandomString932",
             "PetType": 1
           },
           "Response": {
@@ -6868,8 +6868,8 @@
           "Order": 1,
           "Request": {
             "Id": 3,
-            "Breed": "RandomString540",
-            "Name": "RandomString739",
+            "Type": "RandomString540",
+            "FullName": "RandomString739",
             "PetType": 0
           },
           "Response": {
@@ -6891,14 +6891,14 @@
           "Order": 3,
           "Request": {
             "Id": 3,
-            "Breed": "RandomString341",
-            "Name": "RandomString643",
+            "Type": "RandomString341",
+            "FullName": "RandomString643",
             "PetType": 1
           },
           "Response": {
             "Id": 1,
-            "Breed": "RandomString341",
-            "Name": "RandomString643",
+            "Type": "RandomString341",
+            "FullName": "RandomString643",
             "PetType": 1
           },
           "HttpMethod": "post"
@@ -6938,14 +6938,14 @@
           "Order": 1,
           "Request": {
             "Id": 4,
-            "Breed": "RandomString996",
-            "Name": "RandomString47",
+            "Type": "RandomString996",
+            "FullName": "RandomString47",
             "PetType": 1
           },
           "Response": {
             "Id": 1,
-            "Breed": "RandomString996",
-            "Name": "RandomString47",
+            "Type": "RandomString996",
+            "FullName": "RandomString47",
             "PetType": 1
           },
           "HttpMethod": "post"
@@ -6962,8 +6962,8 @@
           "Order": 3,
           "Request": {
             "Id": 4,
-            "Breed": "RandomString261",
-            "Name": "RandomString218",
+            "Type": "RandomString261",
+            "FullName": "RandomString218",
             "PetType": 0
           },
           "Response": {
@@ -7026,8 +7026,8 @@
           "Order": 3,
           "Request": {
             "Id": 2,
-            "Breed": "RandomString426",
-            "Name": "RandomString651",
+            "Type": "RandomString426",
+            "FullName": "RandomString651",
             "PetType": 0
           },
           "Response": {
@@ -7042,14 +7042,14 @@
           "Order": 4,
           "Request": {
             "Id": 1,
-            "Breed": "RandomString153",
-            "Name": "RandomString849",
+            "Type": "RandomString153",
+            "FullName": "RandomString849",
             "PetType": 0
           },
           "Response": {
             "Id": 1,
-            "Breed": "RandomString153",
-            "Name": "RandomString849",
+            "Type": "RandomString153",
+            "FullName": "RandomString849",
             "PetType": 0
           },
           "HttpMethod": "post"
@@ -7096,14 +7096,14 @@
           "Order": 3,
           "Request": {
             "Id": 2,
-            "Breed": "RandomString943",
-            "Name": "RandomString422",
+            "Type": "RandomString943",
+            "FullName": "RandomString422",
             "PetType": 1
           },
           "Response": {
             "Id": 1,
-            "Breed": "RandomString943",
-            "Name": "RandomString422",
+            "Type": "RandomString943",
+            "FullName": "RandomString422",
             "PetType": 1
           },
           "HttpMethod": "post"
@@ -7113,8 +7113,8 @@
           "Order": 4,
           "Request": {
             "Id": 3,
-            "Breed": "RandomString533",
-            "Name": "RandomString493",
+            "Type": "RandomString533",
+            "FullName": "RandomString493",
             "PetType": 1
           },
           "Response": {
@@ -7148,8 +7148,8 @@
           "Order": 1,
           "Request": {
             "Id": 2,
-            "Breed": "RandomString207",
-            "Name": "RandomString186",
+            "Type": "RandomString207",
+            "FullName": "RandomString186",
             "PetType": 1
           },
           "Response": {
@@ -7182,14 +7182,14 @@
           "Order": 4,
           "Request": {
             "Id": 2,
-            "Breed": "RandomString926",
-            "Name": "RandomString376",
+            "Type": "RandomString926",
+            "FullName": "RandomString376",
             "PetType": 1
           },
           "Response": {
             "Id": 1,
-            "Breed": "RandomString926",
-            "Name": "RandomString376",
+            "Type": "RandomString926",
+            "FullName": "RandomString376",
             "PetType": 1
           },
           "HttpMethod": "post"
@@ -7218,14 +7218,14 @@
           "Order": 1,
           "Request": {
             "Id": 1,
-            "Breed": "RandomString910",
-            "Name": "RandomString179",
+            "Type": "RandomString910",
+            "FullName": "RandomString179",
             "PetType": 0
           },
           "Response": {
             "Id": 1,
-            "Breed": "RandomString910",
-            "Name": "RandomString179",
+            "Type": "RandomString910",
+            "FullName": "RandomString179",
             "PetType": 0
           },
           "HttpMethod": "post"
@@ -7253,8 +7253,8 @@
           "Order": 4,
           "Request": {
             "Id": 2,
-            "Breed": "RandomString100",
-            "Name": "RandomString47",
+            "Type": "RandomString100",
+            "FullName": "RandomString47",
             "PetType": 1
           },
           "Response": {
@@ -7288,8 +7288,8 @@
           "Order": 1,
           "Request": {
             "Id": 4,
-            "Breed": "RandomString125",
-            "Name": "RandomString46",
+            "Type": "RandomString125",
+            "FullName": "RandomString46",
             "PetType": 0
           },
           "Response": {
@@ -7304,14 +7304,14 @@
           "Order": 2,
           "Request": {
             "Id": 3,
-            "Breed": "RandomString496",
-            "Name": "RandomString957",
+            "Type": "RandomString496",
+            "FullName": "RandomString957",
             "PetType": 0
           },
           "Response": {
             "Id": 1,
-            "Breed": "RandomString496",
-            "Name": "RandomString957",
+            "Type": "RandomString496",
+            "FullName": "RandomString957",
             "PetType": 0
           },
           "HttpMethod": "post"
@@ -7358,14 +7358,14 @@
           "Order": 1,
           "Request": {
             "Id": 2,
-            "Breed": "RandomString443",
-            "Name": "RandomString376",
+            "Type": "RandomString443",
+            "FullName": "RandomString376",
             "PetType": 1
           },
           "Response": {
             "Id": 1,
-            "Breed": "RandomString443",
-            "Name": "RandomString376",
+            "Type": "RandomString443",
+            "FullName": "RandomString376",
             "PetType": 1
           },
           "HttpMethod": "post"
@@ -7375,8 +7375,8 @@
           "Order": 2,
           "Request": {
             "Id": 2,
-            "Breed": "RandomString50",
-            "Name": "RandomString199",
+            "Type": "RandomString50",
+            "FullName": "RandomString199",
             "PetType": 1
           },
           "Response": {
@@ -7439,8 +7439,8 @@
           "Order": 2,
           "Request": {
             "Id": 4,
-            "Breed": "RandomString577",
-            "Name": "RandomString114",
+            "Type": "RandomString577",
+            "FullName": "RandomString114",
             "PetType": 1
           },
           "Response": {
@@ -7462,14 +7462,14 @@
           "Order": 4,
           "Request": {
             "Id": 1,
-            "Breed": "RandomString503",
-            "Name": "RandomString653",
+            "Type": "RandomString503",
+            "FullName": "RandomString653",
             "PetType": 1
           },
           "Response": {
             "Id": 1,
-            "Breed": "RandomString503",
-            "Name": "RandomString653",
+            "Type": "RandomString503",
+            "FullName": "RandomString653",
             "PetType": 1
           },
           "HttpMethod": "post"
@@ -7509,14 +7509,14 @@
           "Order": 2,
           "Request": {
             "Id": 2,
-            "Breed": "RandomString348",
-            "Name": "RandomString487",
+            "Type": "RandomString348",
+            "FullName": "RandomString487",
             "PetType": 0
           },
           "Response": {
             "Id": 1,
-            "Breed": "RandomString348",
-            "Name": "RandomString487",
+            "Type": "RandomString348",
+            "FullName": "RandomString487",
             "PetType": 0
           },
           "HttpMethod": "post"
@@ -7533,8 +7533,8 @@
           "Order": 4,
           "Request": {
             "Id": 2,
-            "Breed": "RandomString869",
-            "Name": "RandomString816",
+            "Type": "RandomString869",
+            "FullName": "RandomString816",
             "PetType": 1
           },
           "Response": {
@@ -7568,8 +7568,8 @@
           "Order": 1,
           "Request": {
             "Id": 3,
-            "Breed": "RandomString204",
-            "Name": "RandomString782",
+            "Type": "RandomString204",
+            "FullName": "RandomString782",
             "PetType": 1
           },
           "Response": {
@@ -7584,14 +7584,14 @@
           "Order": 2,
           "Request": {
             "Id": 1,
-            "Breed": "RandomString229",
-            "Name": "RandomString959",
+            "Type": "RandomString229",
+            "FullName": "RandomString959",
             "PetType": 0
           },
           "Response": {
             "Id": 1,
-            "Breed": "RandomString229",
-            "Name": "RandomString959",
+            "Type": "RandomString229",
+            "FullName": "RandomString959",
             "PetType": 0
           },
           "HttpMethod": "post"
@@ -7638,14 +7638,14 @@
           "Order": 1,
           "Request": {
             "Id": 4,
-            "Breed": "RandomString614",
-            "Name": "RandomString660",
+            "Type": "RandomString614",
+            "FullName": "RandomString660",
             "PetType": 0
           },
           "Response": {
             "Id": 1,
-            "Breed": "RandomString614",
-            "Name": "RandomString660",
+            "Type": "RandomString614",
+            "FullName": "RandomString660",
             "PetType": 0
           },
           "HttpMethod": "post"
@@ -7655,8 +7655,8 @@
           "Order": 2,
           "Request": {
             "Id": 4,
-            "Breed": "RandomString684",
-            "Name": "RandomString875",
+            "Type": "RandomString684",
+            "FullName": "RandomString875",
             "PetType": 0
           },
           "Response": {
@@ -7708,8 +7708,8 @@
           "Order": 1,
           "Request": {
             "Id": 1,
-            "Breed": "RandomString443",
-            "Name": "RandomString538",
+            "Type": "RandomString443",
+            "FullName": "RandomString538",
             "PetType": 1
           },
           "Response": {
@@ -7735,14 +7735,14 @@
           "Order": 3,
           "Request": {
             "Id": 1,
-            "Breed": "RandomString97",
-            "Name": "RandomString536",
+            "Type": "RandomString97",
+            "FullName": "RandomString536",
             "PetType": 0
           },
           "Response": {
             "Id": 1,
-            "Breed": "RandomString97",
-            "Name": "RandomString536",
+            "Type": "RandomString97",
+            "FullName": "RandomString536",
             "PetType": 0
           },
           "HttpMethod": "post"
@@ -7778,14 +7778,14 @@
           "Order": 1,
           "Request": {
             "Id": 4,
-            "Breed": "RandomString966",
-            "Name": "RandomString948",
+            "Type": "RandomString966",
+            "FullName": "RandomString948",
             "PetType": 1
           },
           "Response": {
             "Id": 1,
-            "Breed": "RandomString966",
-            "Name": "RandomString948",
+            "Type": "RandomString966",
+            "FullName": "RandomString948",
             "PetType": 1
           },
           "HttpMethod": "post"
@@ -7806,8 +7806,8 @@
           "Order": 3,
           "Request": {
             "Id": 3,
-            "Breed": "RandomString497",
-            "Name": "RandomString644",
+            "Type": "RandomString497",
+            "FullName": "RandomString644",
             "PetType": 0
           },
           "Response": {
@@ -7859,14 +7859,14 @@
           "Order": 2,
           "Request": {
             "Id": 2,
-            "Breed": "RandomString768",
-            "Name": "RandomString871",
+            "Type": "RandomString768",
+            "FullName": "RandomString871",
             "PetType": 0
           },
           "Response": {
             "Id": 1,
-            "Breed": "RandomString768",
-            "Name": "RandomString871",
+            "Type": "RandomString768",
+            "FullName": "RandomString871",
             "PetType": 0
           },
           "HttpMethod": "post"
@@ -7876,8 +7876,8 @@
           "Order": 3,
           "Request": {
             "Id": 4,
-            "Breed": "RandomString63",
-            "Name": "RandomString214",
+            "Type": "RandomString63",
+            "FullName": "RandomString214",
             "PetType": 0
           },
           "Response": {
@@ -7929,8 +7929,8 @@
           "Order": 2,
           "Request": {
             "Id": 2,
-            "Breed": "RandomString468",
-            "Name": "RandomString621",
+            "Type": "RandomString468",
+            "FullName": "RandomString621",
             "PetType": 1
           },
           "Response": {
@@ -7945,14 +7945,14 @@
           "Order": 3,
           "Request": {
             "Id": 4,
-            "Breed": "RandomString186",
-            "Name": "RandomString452",
+            "Type": "RandomString186",
+            "FullName": "RandomString452",
             "PetType": 1
           },
           "Response": {
             "Id": 1,
-            "Breed": "RandomString186",
-            "Name": "RandomString452",
+            "Type": "RandomString186",
+            "FullName": "RandomString452",
             "PetType": 1
           },
           "HttpMethod": "post"
@@ -7995,8 +7995,8 @@
           "Order": 2,
           "Request": {
             "Id": 3,
-            "Breed": "RandomString900",
-            "Name": "RandomString256",
+            "Type": "RandomString900",
+            "FullName": "RandomString256",
             "PetType": 1
           },
           "Response": {
@@ -8022,14 +8022,14 @@
           "Order": 4,
           "Request": {
             "Id": 4,
-            "Breed": "RandomString725",
-            "Name": "RandomString126",
+            "Type": "RandomString725",
+            "FullName": "RandomString126",
             "PetType": 1
           },
           "Response": {
             "Id": 1,
-            "Breed": "RandomString725",
-            "Name": "RandomString126",
+            "Type": "RandomString725",
+            "FullName": "RandomString126",
             "PetType": 1
           },
           "HttpMethod": "post"
@@ -8065,14 +8065,14 @@
           "Order": 2,
           "Request": {
             "Id": 2,
-            "Breed": "RandomString429",
-            "Name": "RandomString917",
+            "Type": "RandomString429",
+            "FullName": "RandomString917",
             "PetType": 0
           },
           "Response": {
             "Id": 1,
-            "Breed": "RandomString429",
-            "Name": "RandomString917",
+            "Type": "RandomString429",
+            "FullName": "RandomString917",
             "PetType": 0
           },
           "HttpMethod": "post"
@@ -8093,8 +8093,8 @@
           "Order": 4,
           "Request": {
             "Id": 2,
-            "Breed": "RandomString803",
-            "Name": "RandomString142",
+            "Type": "RandomString803",
+            "FullName": "RandomString142",
             "PetType": 1
           },
           "Response": {
@@ -8135,8 +8135,8 @@
           "Order": 2,
           "Request": {
             "Id": 1,
-            "Breed": "RandomString926",
-            "Name": "RandomString532",
+            "Type": "RandomString926",
+            "FullName": "RandomString532",
             "PetType": 1
           },
           "Response": {
@@ -8151,14 +8151,14 @@
           "Order": 3,
           "Request": {
             "Id": 2,
-            "Breed": "RandomString613",
-            "Name": "RandomString236",
+            "Type": "RandomString613",
+            "FullName": "RandomString236",
             "PetType": 0
           },
           "Response": {
             "Id": 1,
-            "Breed": "RandomString613",
-            "Name": "RandomString236",
+            "Type": "RandomString613",
+            "FullName": "RandomString236",
             "PetType": 0
           },
           "HttpMethod": "post"
@@ -8205,14 +8205,14 @@
           "Order": 2,
           "Request": {
             "Id": 2,
-            "Breed": "RandomString135",
-            "Name": "RandomString521",
+            "Type": "RandomString135",
+            "FullName": "RandomString521",
             "PetType": 0
           },
           "Response": {
             "Id": 1,
-            "Breed": "RandomString135",
-            "Name": "RandomString521",
+            "Type": "RandomString135",
+            "FullName": "RandomString521",
             "PetType": 0
           },
           "HttpMethod": "post"
@@ -8222,8 +8222,8 @@
           "Order": 3,
           "Request": {
             "Id": 4,
-            "Breed": "RandomString942",
-            "Name": "RandomString839",
+            "Type": "RandomString942",
+            "FullName": "RandomString839",
             "PetType": 1
           },
           "Response": {
@@ -8286,8 +8286,8 @@
           "Order": 3,
           "Request": {
             "Id": 1,
-            "Breed": "RandomString15",
-            "Name": "RandomString132",
+            "Type": "RandomString15",
+            "FullName": "RandomString132",
             "PetType": 1
           },
           "Response": {
@@ -8302,14 +8302,14 @@
           "Order": 4,
           "Request": {
             "Id": 2,
-            "Breed": "RandomString749",
-            "Name": "RandomString56",
+            "Type": "RandomString749",
+            "FullName": "RandomString56",
             "PetType": 1
           },
           "Response": {
             "Id": 1,
-            "Breed": "RandomString749",
-            "Name": "RandomString56",
+            "Type": "RandomString749",
+            "FullName": "RandomString56",
             "PetType": 1
           },
           "HttpMethod": "post"
@@ -8356,14 +8356,14 @@
           "Order": 3,
           "Request": {
             "Id": 4,
-            "Breed": "RandomString762",
-            "Name": "RandomString700",
+            "Type": "RandomString762",
+            "FullName": "RandomString700",
             "PetType": 1
           },
           "Response": {
             "Id": 1,
-            "Breed": "RandomString762",
-            "Name": "RandomString700",
+            "Type": "RandomString762",
+            "FullName": "RandomString700",
             "PetType": 1
           },
           "HttpMethod": "post"
@@ -8373,8 +8373,8 @@
           "Order": 4,
           "Request": {
             "Id": 3,
-            "Breed": "RandomString835",
-            "Name": "RandomString210",
+            "Type": "RandomString835",
+            "FullName": "RandomString210",
             "PetType": 0
           },
           "Response": {
