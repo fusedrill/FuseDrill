@@ -1,4 +1,4 @@
-﻿using FuseDrill.Core;
+using FuseDrill.Core;
 using Microsoft.SemanticKernel;
 using Microsoft.SemanticKernel.Connectors.OpenAI;
 using Octokit;
@@ -7,7 +7,7 @@ using System.Text.Json;
 
 public static class HelperFunctions
 {
-    public static async Task<bool> CliFlow(string? owner, string? repoName, string? branch, string? githubToken, string? fuseDrillBaseAddres, string? fuseDrillOpenApiUrl, string? fuseDrillTestAccountOAuthHeaderValue, bool smokeFlag)
+    public static async Task<bool> CliFlow(string? owner, string? repoName, string? branch, string? githubToken, string? fuseDrillBaseAddres, string? fuseDrillOpenApiUrl, string? fuseDrillTestAccountOAuthHeaderValue, bool smokeFlag, string? pullRequestNumber, string? geminiToken)
     {
         // Fuzz testing the API
         var httpClient = new HttpClient
@@ -67,102 +67,95 @@ public static class HelperFunctions
             return false;
         }
 
-        string llmResponse = await CompareFuzzingsWithLLM(newSnapshotString, existingSnapshotString);
-
-        // Post the LLM response as a comment on the PR
-        var pullRequest = await GetPullRequestForBranchAsync(owner, repoName, branch, githubClient);
-        if (pullRequest == null)
+        if (!int.TryParse(pullRequestNumber, out var pullRequestNumberParsed))
         {
-            Console.WriteLine("No open pull request found for the branch.");
+            Console.WriteLine("Pull request number does not exists.");
             return false;
         }
 
-        await PostCommentToPullRequestAsync(owner, repoName, pullRequest.Number, llmResponse, githubClient);
+        if (string.IsNullOrEmpty(geminiToken))
+        {
+            Console.WriteLine("Gemini token is not provided, continuing without AI summarization.");
+            return false;
+        }
+
+        string llmResponse = await CompareFuzzingsWithLLM(newSnapshotString, existingSnapshotString);
+
+        if (string.IsNullOrEmpty(llmResponse))
+        {
+            Console.WriteLine("LLM response is empty there is no differences.");
+            return false;
+        }
+
+        await PostCommentToPullRequestAsync(owner, repoName, pullRequestNumberParsed, llmResponse, githubClient);
 
         Console.WriteLine(llmResponse);
         return true;
     }
 
-    private static async Task<PullRequest?> GetPullRequestForBranchAsync(string owner, string repoName, string branch, GitHubClient githubClient)
-    {
-        var pullRequests = await githubClient.PullRequest.GetAllForRepository(owner, repoName);
-        return pullRequests.FirstOrDefault(pr => pr.Head.Ref == branch);
-    }
-
     private static async Task PostCommentToPullRequestAsync(string owner, string repoName, int pullRequestNumber, string comment, GitHubClient githubClient)
     {
-        //var issueComment = new NewIssueComment(comment);
+        Console.WriteLine($"Creating comment at PR:{pullRequestNumber}");
         await githubClient.Issue.Comment.Create(owner, repoName, pullRequestNumber, comment);
     }
-
 
     public static async Task<string> AnalyzeFuzzingDiffWithLLM(Kernel kernel, string fuzzingOutputDiff)
     {
         var prompt =
     """
-Here’s an improved version of your prompt that incorporates markdown checkboxes for actionable items in the output:
-
----
-
 ### Prompt for API Contract Reviews
 **Context:**  
-You are an expert in reviewing API contracts and changes for adherence to best practices, compatibility, and potential breaking changes. The API contracts use JSON structures, and I provide you with the differences between the previous version and the current version of the contract. Your task is to:  
-1. Identify and explain the nature of changes.  
-2. Analyze potential impacts on compatibility and clients using the API.  
-3. Suggest improvements or highlight issues in the changes.  
+You are an expert in reviewing API contracts and changes for adherence to best practices, compatibility, and potential breaking changes. The API contracts use JSON structures, and I provide you with the differences between the previous version and the current version of the contract. 
 
-**Example Contract Difference:**  
-```json
-"Request": {
-  "Id": 4,
-- "Breed": "RandomString275",
-- "Name": "RandomString157",
-+ "Type": "RandomString275",
-+ "FullName": "RandomString157",
-+ "Surname": "RandomString601",
-+ "Age": 4,
-  "PetType": 1
-}
-```
+**Example API Contract Difference:**  
+--- oldText
++++ newText
+  {
+    "MethodName": "UserPOSTAsync",
+    "Order": 4,
+    "Request": {
+      "Id": 4,
+      "Name": "John",
+      "Surname": "Doe",
+      "Grade": "B"
+    },
+    "Response": {
+      "Id": 4,
+-     "FullName": "John Doe",
+-     "Grades": ["B","A"]
++     "Name": "John",
++     "Surname": "Doe",
++     "Grade": "B"
+    }
+  }
 
 **Your task:**  
-1. Provide a detailed summary of the changes in the API contract.  
-2. Evaluate if the changes break backward compatibility.  
-3. Suggest any improvements or identify issues based on best practices for API design.  
-4. Output actionable feedback using markdown, with a focus on checkboxes for clear action items.
-5. Look into other issues in the diff, meybe status codes is changed, maybe request fails with 500 and others.
+1. Provide a summary of the changes in the API Contract Difference. It should be list.  
+2. Use simple and concise language and Paul Graham's tone.
+3. Think deeply about the API method and request/response data does it make sense? Does values pass through the request and belongs to responses?,
+4. Provide only information that i asked for.
+5. Produce a concise markdown-formatted list of the analysis.  
+6. Always use checklist - [ ] for every action point that is one property difference at a time.
+7. Produce valid markdown.
 
-**Deliver the response as:**  
-- A concise but detailed summary of the analysis.  
-- A one property dif at a time.
-- A markdown-formatted list of backward compatibility concerns.  
-- A markdown-formatted checklist of actionable recommendations for improving the contract.
-- Always use checklist - [ ] for every action point.
-- Produce valid markdown.
 ---
 
 ### Expected Example of the LLM's Output
 **Summary of Changes:**  
 - The field `Breed` has been replaced with `Type`.  
-- The field `Name` has been replaced with `FullName`, and new fields `Surname` and `Age` have been added.  
+- The field `Name` has been replaced with `FullName`.
+- New field `FullName` added.
+- New field `Surname` added.
+- New field `Age` added.
 - No changes have been made to the `PetType` field.  
 
-**Backward Compatibility Concerns:**  
-- The removal of `Breed` and `Name` fields is a breaking change for clients relying on these fields.  
-- Clients using the API must update their integrations to accommodate `Type` and `FullName`.  
-
 **Actionable Recommendations:**  
-- [ ] **Deprecate fields instead of immediate removal:** Keep `Breed` and `Name` temporarily with a warning about their future removal.  
-- [ ] **Provide clear migration documentation:** Explain how clients should map `Breed` to `Type` and `Name` to `FullName`.  
-- [ ] **Ensure default values for new fields:** Add sensible defaults for `Surname` and `Age` to minimize client-side errors.  
-- [ ] **Test the changes thoroughly:** Validate the new contract with sample clients to identify potential issues early.  
+- [ ] **Request property value passed should be the same as in response:**  When you send a request property `value`, you should expect a response property with be the same. (Not always applicable, use context and common sence).
+- [ ] **Request property value should be processed and different in response:**  When you send a request property `value`, you should expect a response property to be different. (Not always applicable, use context and common sence).
 
 ---
 
-This version ensures actionable items are clearly outlined for easy tracking and implementation.
-
-Heres is Contract Difference :
-----
+Heres is the real API Contract Difference you should work on this:
 {{$fuzzingOutputDiff}}
 ----
 """;
@@ -248,10 +241,16 @@ Heres is Contract Difference :
         Console.WriteLine($"Snapshot committed to branch {branch} in repository {owner}/{repoName}");
     }
 
-    public static async Task<string> CompareFuzzingsWithLLM(string newSnapshotString, string existingSnapshotString)
+    public static async Task<string> CompareFuzzingsWithLLM(string newText, string oldText)
     {
+        if (newText == oldText)
+            return string.Empty;
+
         //use difplex string comparison 
-        var actualDiff = SimpleDiffer.GenerateDiff(existingSnapshotString, newSnapshotString);
+        var actualDiff = SimpleDiffer.GenerateDiff(oldText, newText);
+
+        if (string.IsNullOrEmpty(actualDiff))
+            return string.Empty;
 
         //use semantic kernel 
         var kernel = Kernel.CreateBuilder()

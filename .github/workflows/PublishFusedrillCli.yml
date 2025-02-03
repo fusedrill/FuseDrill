@@ -15,6 +15,8 @@ permissions:
   contents: write
   packages: write  # Allow pushing to GHCR
   id-token: write  # This is required for actions interacting with GitHub Packages
+  issues: write
+  pull-requests: write
 
 jobs:
   release:
@@ -31,6 +33,9 @@ jobs:
     - name: Restore dependencies
       run: dotnet restore
 
+    - name: Print Environment Variables
+      run: printenv
+
     - name: Dotnet publish image
       run: dotnet publish /t:PublishContainer -c Release --runtime linux-x64
 
@@ -38,32 +43,32 @@ jobs:
       run: dotnet test
 
     - name: Tag image cli
-      run: docker tag fusedrill-cli:latest ghcr.io/martasp/fusedrill/fusedrill-cli:latest
+      run: docker tag fusedrill-cli:latest ghcr.io/fusedrill/fusedrill-cli:latest
 
     - name: Tag image test api
-      run: docker tag fusedrill/testapi:latest ghcr.io/martasp/fusedrill/testapi:latest
+      run: docker tag fusedrill/testapi:latest ghcr.io/fusedrill/fusedrill/testapi:latest
 
     - name: Log in to GitHub Container Registry
       run: echo ${{ secrets.GITHUB_TOKEN }} | docker login ghcr.io -u ${{ github.actor }} --password-stdin
 
     - name: Push Docker Image to GHCR
-      run: docker push ghcr.io/martasp/fusedrill/fusedrill-cli:latest
+      run: docker push ghcr.io/fusedrill/fusedrill-cli:latest
 
     - name: Push Docker test api Image to GHCR
-      run: docker push ghcr.io/martasp/fusedrill/testapi:latest
+      run: docker push ghcr.io/fusedrill/fusedrill/testapi:latest
 
     - name: Remove local Docker image
       run: docker rmi fusedrill-cli:latest
 
     - name: Pull FuseDrill Docker Image
-      run: docker pull ghcr.io/martasp/fusedrill/fusedrill-cli:latest
+      run: docker pull ghcr.io/fusedrill/fusedrill-cli:latest
 
     - name: Run Test API
       run: |
         docker run -d \
           -e ASPNETCORE_ENVIRONMENT="Development" \
           -p 8080:8080 \
-          ghcr.io/martasp/fusedrill/testapi:latest
+          ghcr.io/fusedrill/fusedrill/testapi:latest
         
     - name: Wait for Test API to be Ready
       run: |
@@ -83,8 +88,9 @@ jobs:
           -e GITHUB_REPOSITORY_OWNER="${{ github.repository_owner }}" \
           -e GITHUB_REPOSITORY="${{ github.repository }}" \
           -e GITHUB_HEAD_REF="${{ github.head_ref }}" \
+          -e GITHUB_REF_NAME="${{ github.ref_name }}" \
           -e GEMINI_API_KEY="${{ secrets.GEMINI_API_KEY }}" \
-          ghcr.io/martasp/fusedrill/fusedrill-cli:latest
+          ghcr.io/fusedrill/fusedrill-cli:latest
 
   # old way
     # - name: Build Single-File Executable

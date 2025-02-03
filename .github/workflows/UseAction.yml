@@ -1,0 +1,49 @@
+# name: FuseDrill Fuzzing/Simulation Testing
+
+# on:
+#   push:
+#     branches:
+#       - main  # Runs on push to the main branch
+#   pull_request:
+#     branches:
+#       - main  # Runs on pull requests to the main branch
+
+# jobs:
+#   fuzz-test:
+#     runs-on: ubuntu-latest
+
+#     steps:
+# # ----Deploy or run your app inside GitHub.
+#       - name: Log in to GitHub Container Registry
+#         run: echo ${{ secrets.GITHUB_TOKEN }} | docker login ghcr.io -u ${{ github.actor }} --password-stdin
+
+#       - name: Pull FuseDrill test api Docker Image
+#         run: docker pull ghcr.io/martasp/fusedrill/testapi:latest
+        
+#       - name: Run Test API
+#         run: |
+#           docker run -d \
+#             -e ASPNETCORE_ENVIRONMENT="Development" \
+#             -p 8080:8080 \
+#             ghcr.io/martasp/fusedrill/testapi:latest
+          
+#       - name: Wait for Test API to be Ready
+#         run: |
+#           # Wait for the API to start and be reachable on port 8080
+#           until curl -s http://localhost:8080/swagger/v1/swagger.json; do
+#             echo "Waiting for Test API to start..."
+#             sleep 5
+#           done
+# # --------------------------------
+          
+#       - name: Run FuseDrill Fuzzing
+#         uses: martasp/FuseDrill@main
+#         with:
+#           fuseDrillBaseAddress: "http://localhost:8080"  # Replace with your actual FuseDrill API base URL
+#           fuseDrillOpenApiUrl: "http://localhost:8080/swagger/v1/swagger.json"  # Replace with your actual OpenAPI URL
+#           fuseDrillTestAccountOAuthHeaderValue: "Bearer your-oauth-token"  # OAuth token for the fuzzing test account
+
+#       - name: Post-run step
+#         run: |
+#           echo "Fuzzing test completed"
+*Not working because of secrets passing, Ok lets just use plain docker

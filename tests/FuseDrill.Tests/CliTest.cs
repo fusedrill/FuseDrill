@@ -15,10 +15,8 @@ public class CliFlowTests
         var repoName = envars["GITHUB_REPOSITORY"]?.ToString()?.Split('/')?[1]; // e.g., "repo-name"
         var branch = envars["GITHUB_HEAD_REF"]?.ToString(); // e.g., "refs/heads/branch-name"
         var githubToken = envars["GITHUB_TOKEN"]?.ToString();
-        var fuseDrillBaseAddres = (envars["FUSEDRILL_BASE_ADDRESS"]?.ToString());
-        var fuseDrillOpenApiUrl = (envars["FUSEDRILL_OPENAPI_URL"]?.ToString());
-        var fuseDrillTestAccountOAuthHeaderValue = envars["FUSEDRILL_TEST_ACCOUNT_OAUTH_HEADER_VALUE"]?.ToString();
-        var smokeFlag = envars["SMOKE_FLAG"]?.ToString() == "true";
+        var geminiToken = envars["GEMINI_API_KEY"]?.ToString();
+        var pullReqestNumber = envars["GITHUB_REF_NAME"]?.ToString()?.Split('/')?[0]; // e.g., 20/merge => 20
 
         // Search for "TestApi.csproj" starting from the current directory
         var apiProjectFileName = "TestApi.csproj";
@@ -26,18 +24,25 @@ public class CliFlowTests
         // Start the project using dotnet run
         var apiProcessManager = new ApiProcessManager();
         await apiProcessManager.DotnetRun(apiProjectFileName);
+        var fuseDrillBaseAddres = envars["FUSEDRILL_BASE_ADDRESS"]?.ToString();
+        var fuseDrillOpenApiUrl = envars["FUSEDRILL_OPENAPI_URL"]?.ToString();
+        var fuseDrillTestAccountOAuthHeaderValue = envars["FUSEDRILL_TEST_ACCOUNT_OAUTH_HEADER_VALUE"]?.ToString();
+        var smokeFlag = envars["SMOKE_FLAG"]?.ToString() == "true";
 
+#if DEBUG
+        // just dotnet run in D:\main\FuseDrill\tests\TestApi\TestApi.csproj
+        //"http://localhost:5184/swagger/v1/swagger.json"
         fuseDrillBaseAddres = "http://localhost:5184/";
         fuseDrillOpenApiUrl = "http://localhost:5184/swagger/v1/swagger.json";
+        githubToken = Environment.GetEnvironmentVariable("GITHUB_TOKEN");
+        geminiToken = Environment.GetEnvironmentVariable("GEMINI_API_KEY");
+        branch = "Ordering_bug";
+        repoName = "FuseDrill";
+        owner = "martasp";
+        pullReqestNumber = "26";
+#endif
 
-        #if DEBUG
-                githubToken = Environment.GetEnvironmentVariable("GITHUB_TOKEN");
-                branch = "feedToAiDiff";
-                repoName = "FuseDrill";
-                owner = "martasp";
-        #endif
-
-        await CliFlow(owner, repoName, branch, githubToken, fuseDrillBaseAddres, fuseDrillOpenApiUrl, fuseDrillTestAccountOAuthHeaderValue, smokeFlag);
+        await CliFlow(owner, repoName, branch, githubToken, fuseDrillBaseAddres, fuseDrillOpenApiUrl, fuseDrillTestAccountOAuthHeaderValue, smokeFlag, pullReqestNumber, geminiToken);
         await apiProcessManager.DisposeAsync();
     }
 }

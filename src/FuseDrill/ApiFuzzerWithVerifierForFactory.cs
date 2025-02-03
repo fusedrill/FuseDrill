@@ -18,7 +18,9 @@ public class ApiFuzzerWithVerifier<TEntryPoint> : IApiFuzzer where TEntryPoint :
     {
         var settings = new VerifySettings();
         settings.UseStrictJson();
+        settings.DontScrubGuids();
         settings.DontIgnoreEmptyCollections();
+        settings.IncludePrimitiveMembers();
 
         var testSuitesProcessed = await _apiFuzzer.TestWholeApi(filter);
 

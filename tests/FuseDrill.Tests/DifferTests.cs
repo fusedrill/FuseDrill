@@ -18,7 +18,7 @@ public class SimpleDifferTests
                     }
                     """;
 
-        string newText = 
+        string newText =
                     """
                     {
                       "Name": "John",
@@ -43,7 +43,7 @@ public class SimpleDifferTests
 
 
         // Generate the actual diff and normalize line endings
-        string actualDiff = SimpleDiffer.GenerateDiff(oldText.Trim(), newText.Trim());
+        string actualDiff = SimpleDiffer.GenerateDiff(newText: newText.Trim(), oldText: oldText.Trim());
 
         // Normalize both the expected and actual diffs to use the same line endings
         string normalizedExpectedDiff = expectedDiff.Replace("\r\n", "\n").TrimEnd();
