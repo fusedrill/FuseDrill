@@ -255,7 +255,7 @@ Heres is the real API Contract Difference you should work on this:
         //use semantic kernel 
         var kernel = Kernel.CreateBuilder()
         //.AddGeminiChatCompletion() //Todo make config switch here
-        .AddGithubChatCompletion() // Free for all github accounts but with limits;
+        .AddDeepSeekR1ChatCompletion() // Free for all github accounts but with limits;
         .Build();
 
         var llmResponse = await AnalyzeFuzzingDiffWithLLM(kernel, actualDiff);

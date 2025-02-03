@@ -20,13 +20,13 @@ public static class KernelBuilderExtensions
         return builder;
     }
 
-    public static IKernelBuilder AddGithubChatCompletion(this IKernelBuilder builder)
+    public static IKernelBuilder AddDeepSeekR1ChatCompletion(this IKernelBuilder builder)
     {
         var endpoint = new Uri("https://models.inference.ai.azure.com").ToString();
-        var credential = System.Environment.GetEnvironmentVariable("GITHUB_TOKEN");
-        var model = "gpt-4o-mini";
+        var credential = Environment.GetEnvironmentVariable("PERSONAL_GITHUB_TOKEN");
+        var model = "DeepSeek-R1";
 
-        builder.AddAzureOpenAIChatCompletion("gpt-4o-mini", endpoint, credential, modelId: model);
+        builder.AddAzureOpenAIChatCompletion("DeepSeek-R1", endpoint, credential, modelId: model);
         return builder;
     }
 
