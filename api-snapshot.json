@@ -40,14 +40,14 @@
           "ApiCallOrderId": 3,
           "Request": {
             "Id": 4,
-            "Type": "RandomString275",
-            "FullName": "RandomString157",
+            "Breed": "RandomString275",
+            "Name": "RandomString157",
             "PetType": 1
           },
           "Response": {
             "Id": 1,
-            "Type": "RandomString275",
-            "FullName": "RandomString157",
+            "Breed": "RandomString275",
+            "Name": "RandomString157",
             "PetType": 1
           },
           "HttpMethod": "post"
@@ -57,8 +57,8 @@
           "ApiCallOrderId": 4,
           "Request": {
             "Id": 4,
-            "Type": "RandomString919",
-            "FullName": "RandomString450",
+            "Breed": "RandomString919",
+            "Name": "RandomString450",
             "PetType": 1
           },
           "Response": {
@@ -111,9 +111,9 @@
           "ApiCallOrderId": 3,
           "Request": {
             "Id": 2,
-            "Type": "RandomString757",
-            "FullName": "RandomString25",
-            "PetType": 1
+            "Breed": "RandomString757",
+            "Name": "RandomString25",
+            "PetType": 0
           },
           "Response": {
             "StatusCode": 404,
@@ -127,15 +127,15 @@
           "ApiCallOrderId": 4,
           "Request": {
             "Id": 1,
-            "Type": "RandomString919",
-            "FullName": "RandomString299",
-            "PetType": 2
+            "Breed": "RandomString919",
+            "Name": "RandomString299",
+            "PetType": 1
           },
           "Response": {
             "Id": 1,
-            "Type": "RandomString919",
-            "FullName": "RandomString299",
-            "PetType": 2
+            "Breed": "RandomString919",
+            "Name": "RandomString299",
+            "PetType": 1
           },
           "HttpMethod": "post"
         }
@@ -171,15 +171,15 @@
           "ApiCallOrderId": 2,
           "Request": {
             "Id": 4,
-            "Type": "RandomString684",
-            "FullName": "RandomString399",
-            "PetType": 1
+            "Breed": "RandomString684",
+            "Name": "RandomString399",
+            "PetType": 0
           },
           "Response": {
             "Id": 1,
-            "Type": "RandomString684",
-            "FullName": "RandomString399",
-            "PetType": 1
+            "Breed": "RandomString684",
+            "Name": "RandomString399",
+            "PetType": 0
           },
           "HttpMethod": "post"
         },
@@ -199,9 +199,9 @@
           "ApiCallOrderId": 4,
           "Request": {
             "Id": 4,
-            "Type": "RandomString320",
-            "FullName": "RandomString46",
-            "PetType": 1
+            "Breed": "RandomString320",
+            "Name": "RandomString46",
+            "PetType": 0
           },
           "Response": {
             "StatusCode": 404,
@@ -242,15 +242,15 @@
           "ApiCallOrderId": 2,
           "Request": {
             "Id": 1,
-            "Type": "RandomString996",
-            "FullName": "RandomString455",
-            "PetType": 2
+            "Breed": "RandomString996",
+            "Name": "RandomString455",
+            "PetType": 1
           },
           "Response": {
             "Id": 1,
-            "Type": "RandomString996",
-            "FullName": "RandomString455",
-            "PetType": 2
+            "Breed": "RandomString996",
+            "Name": "RandomString455",
+            "PetType": 1
           },
           "HttpMethod": "post"
         },
@@ -259,8 +259,8 @@
           "ApiCallOrderId": 3,
           "Request": {
             "Id": 4,
-            "Type": "RandomString276",
-            "FullName": "RandomString353",
+            "Breed": "RandomString276",
+            "Name": "RandomString353",
             "PetType": 0
           },
           "Response": {
@@ -313,9 +313,9 @@
           "ApiCallOrderId": 2,
           "Request": {
             "Id": 3,
-            "Type": "RandomString332",
-            "FullName": "RandomString299",
-            "PetType": 2
+            "Breed": "RandomString332",
+            "Name": "RandomString299",
+            "PetType": 1
           },
           "Response": {
             "StatusCode": 404,
@@ -329,15 +329,15 @@
           "ApiCallOrderId": 3,
           "Request": {
             "Id": 3,
-            "Type": "RandomString857",
-            "FullName": "RandomString552",
-            "PetType": 2
+            "Breed": "RandomString857",
+            "Name": "RandomString552",
+            "PetType": 1
           },
           "Response": {
             "Id": 1,
-            "Type": "RandomString857",
-            "FullName": "RandomString552",
-            "PetType": 2
+            "Breed": "RandomString857",
+            "Name": "RandomString552",
+            "PetType": 1
           },
           "HttpMethod": "post"
         },
@@ -384,8 +384,8 @@
           "ApiCallOrderId": 2,
           "Request": {
             "Id": 4,
-            "Type": "RandomString369",
-            "FullName": "RandomString54",
+            "Breed": "RandomString369",
+            "Name": "RandomString54",
             "PetType": 1
           },
           "Response": {
@@ -411,14 +411,14 @@
           "ApiCallOrderId": 4,
           "Request": {
             "Id": 3,
-            "Type": "RandomString626",
-            "FullName": "RandomString482",
+            "Breed": "RandomString626",
+            "Name": "RandomString482",
             "PetType": 0
           },
           "Response": {
             "Id": 1,
-            "Type": "RandomString626",
-            "FullName": "RandomString482",
+            "Breed": "RandomString626",
+            "Name": "RandomString482",
             "PetType": 0
           },
           "HttpMethod": "post"
@@ -466,15 +466,15 @@
           "ApiCallOrderId": 3,
           "Request": {
             "Id": 2,
-            "Type": "RandomString759",
-            "FullName": "RandomString348",
-            "PetType": 2
+            "Breed": "RandomString759",
+            "Name": "RandomString348",
+            "PetType": 1
           },
           "Response": {
             "Id": 1,
-            "Type": "RandomString759",
-            "FullName": "RandomString348",
-            "PetType": 2
+            "Breed": "RandomString759",
+            "Name": "RandomString348",
+            "PetType": 1
           },
           "HttpMethod": "post"
         },
@@ -483,9 +483,9 @@
           "ApiCallOrderId": 4,
           "Request": {
             "Id": 3,
-            "Type": "RandomString566",
-            "FullName": "RandomString691",
-            "PetType": 1
+            "Breed": "RandomString566",
+            "Name": "RandomString691",
+            "PetType": 0
           },
           "Response": {
             "StatusCode": 404,
@@ -537,9 +537,9 @@
           "ApiCallOrderId": 3,
           "Request": {
             "Id": 2,
-            "Type": "RandomString666",
-            "FullName": "RandomString482",
-            "PetType": 2
+            "Breed": "RandomString666",
+            "Name": "RandomString482",
+            "PetType": 1
           },
           "Response": {
             "StatusCode": 404,
@@ -553,15 +553,15 @@
           "ApiCallOrderId": 4,
           "Request": {
             "Id": 2,
-            "Type": "RandomString700",
-            "FullName": "RandomString172",
-            "PetType": 2
+            "Breed": "RandomString700",
+            "Name": "RandomString172",
+            "PetType": 1
           },
           "Response": {
             "Id": 1,
-            "Type": "RandomString700",
-            "FullName": "RandomString172",
-            "PetType": 2
+            "Breed": "RandomString700",
+            "Name": "RandomString172",
+            "PetType": 1
           },
           "HttpMethod": "post"
         }
@@ -601,15 +601,15 @@
           "ApiCallOrderId": 2,
           "Request": {
             "Id": 4,
-            "Type": "RandomString99",
-            "FullName": "RandomString541",
-            "PetType": 2
+            "Breed": "RandomString99",
+            "Name": "RandomString541",
+            "PetType": 1
           },
           "Response": {
             "Id": 1,
-            "Type": "RandomString99",
-            "FullName": "RandomString541",
-            "PetType": 2
+            "Breed": "RandomString99",
+            "Name": "RandomString541",
+            "PetType": 1
           },
           "HttpMethod": "post"
         },
@@ -625,9 +625,9 @@
           "ApiCallOrderId": 4,
           "Request": {
             "Id": 1,
-            "Type": "RandomString880",
-            "FullName": "RandomString521",
-            "PetType": 2
+            "Breed": "RandomString880",
+            "Name": "RandomString521",
+            "PetType": 1
           },
           "Response": {
             "StatusCode": 404,
@@ -672,14 +672,14 @@
           "ApiCallOrderId": 2,
           "Request": {
             "Id": 3,
-            "Type": "RandomString831",
-            "FullName": "RandomString832",
+            "Breed": "RandomString831",
+            "Name": "RandomString832",
             "PetType": 0
           },
           "Response": {
             "Id": 1,
-            "Type": "RandomString831",
-            "FullName": "RandomString832",
+            "Breed": "RandomString831",
+            "Name": "RandomString832",
             "PetType": 0
           },
           "HttpMethod": "post"
@@ -689,9 +689,9 @@
           "ApiCallOrderId": 3,
           "Request": {
             "Id": 2,
-            "Type": "RandomString266",
-            "FullName": "RandomString224",
-            "PetType": 2
+            "Breed": "RandomString266",
+            "Name": "RandomString224",
+            "PetType": 1
           },
           "Response": {
             "StatusCode": 404,
@@ -743,9 +743,9 @@
           "ApiCallOrderId": 2,
           "Request": {
             "Id": 2,
-            "Type": "RandomString495",
-            "FullName": "RandomString743",
-            "PetType": 1
+            "Breed": "RandomString495",
+            "Name": "RandomString743",
+            "PetType": 0
           },
           "Response": {
             "StatusCode": 404,
@@ -759,15 +759,15 @@
           "ApiCallOrderId": 3,
           "Request": {
             "Id": 4,
-            "Type": "RandomString404",
-            "FullName": "RandomString474",
-            "PetType": 1
+            "Breed": "RandomString404",
+            "Name": "RandomString474",
+            "PetType": 0
           },
           "Response": {
             "Id": 1,
-            "Type": "RandomString404",
-            "FullName": "RandomString474",
-            "PetType": 1
+            "Breed": "RandomString404",
+            "Name": "RandomString474",
+            "PetType": 0
           },
           "HttpMethod": "post"
         },
@@ -814,9 +814,9 @@
           "ApiCallOrderId": 2,
           "Request": {
             "Id": 2,
-            "Type": "RandomString698",
-            "FullName": "RandomString646",
-            "PetType": 2
+            "Breed": "RandomString698",
+            "Name": "RandomString646",
+            "PetType": 1
           },
           "Response": {
             "StatusCode": 404,
@@ -837,15 +837,15 @@
           "ApiCallOrderId": 4,
           "Request": {
             "Id": 4,
-            "Type": "RandomString656",
-            "FullName": "RandomString221",
-            "PetType": 1
+            "Breed": "RandomString656",
+            "Name": "RandomString221",
+            "PetType": 0
           },
           "Response": {
             "Id": 1,
-            "Type": "RandomString656",
-            "FullName": "RandomString221",
-            "PetType": 1
+            "Breed": "RandomString656",
+            "Name": "RandomString221",
+            "PetType": 0
           },
           "HttpMethod": "post"
         }
@@ -874,14 +874,14 @@
           "ApiCallOrderId": 1,
           "Request": {
             "Id": 4,
-            "Type": "RandomString588",
-            "FullName": "RandomString454",
+            "Breed": "RandomString588",
+            "Name": "RandomString454",
             "PetType": 1
           },
           "Response": {
             "Id": 1,
-            "Type": "RandomString588",
-            "FullName": "RandomString454",
+            "Breed": "RandomString588",
+            "Name": "RandomString454",
             "PetType": 1
           },
           "HttpMethod": "post"
@@ -909,8 +909,8 @@
           "ApiCallOrderId": 4,
           "Request": {
             "Id": 2,
-            "Type": "RandomString878",
-            "FullName": "RandomString235",
+            "Breed": "RandomString878",
+            "Name": "RandomString235",
             "PetType": 0
           },
           "Response": {
@@ -945,14 +945,14 @@
           "ApiCallOrderId": 1,
           "Request": {
             "Id": 3,
-            "Type": "RandomString246",
-            "FullName": "RandomString149",
+            "Breed": "RandomString246",
+            "Name": "RandomString149",
             "PetType": 0
           },
           "Response": {
             "Id": 1,
-            "Type": "RandomString246",
-            "FullName": "RandomString149",
+            "Breed": "RandomString246",
+            "Name": "RandomString149",
             "PetType": 0
           },
           "HttpMethod": "post"
@@ -973,9 +973,9 @@
           "ApiCallOrderId": 3,
           "Request": {
             "Id": 2,
-            "Type": "RandomString700",
-            "FullName": "RandomString12",
-            "PetType": 2
+            "Breed": "RandomString700",
+            "Name": "RandomString12",
+            "PetType": 1
           },
           "Response": {
             "StatusCode": 404,
@@ -1016,14 +1016,14 @@
           "ApiCallOrderId": 1,
           "Request": {
             "Id": 2,
-            "Type": "RandomString662",
-            "FullName": "RandomString647",
+            "Breed": "RandomString662",
+            "Name": "RandomString647",
             "PetType": 0
           },
           "Response": {
             "Id": 1,
-            "Type": "RandomString662",
-            "FullName": "RandomString647",
+            "Breed": "RandomString662",
+            "Name": "RandomString647",
             "PetType": 0
           },
           "HttpMethod": "post"
@@ -1051,8 +1051,8 @@
           "ApiCallOrderId": 4,
           "Request": {
             "Id": 2,
-            "Type": "RandomString738",
-            "FullName": "RandomString500",
+            "Breed": "RandomString738",
+            "Name": "RandomString500",
             "PetType": 0
           },
           "Response": {
@@ -1087,15 +1087,15 @@
           "ApiCallOrderId": 1,
           "Request": {
             "Id": 4,
-            "Type": "RandomString686",
-            "FullName": "RandomString775",
-            "PetType": 2
+            "Breed": "RandomString686",
+            "Name": "RandomString775",
+            "PetType": 1
           },
           "Response": {
             "Id": 1,
-            "Type": "RandomString686",
-            "FullName": "RandomString775",
-            "PetType": 2
+            "Breed": "RandomString686",
+            "Name": "RandomString775",
+            "PetType": 1
           },
           "HttpMethod": "post"
         },
@@ -1111,9 +1111,9 @@
           "ApiCallOrderId": 3,
           "Request": {
             "Id": 1,
-            "Type": "RandomString997",
-            "FullName": "RandomString842",
-            "PetType": 1
+            "Breed": "RandomString997",
+            "Name": "RandomString842",
+            "PetType": 0
           },
           "Response": {
             "StatusCode": 404,
@@ -1158,14 +1158,14 @@
           "ApiCallOrderId": 1,
           "Request": {
             "Id": 2,
-            "Type": "RandomString116",
-            "FullName": "RandomString933",
+            "Breed": "RandomString116",
+            "Name": "RandomString933",
             "PetType": 0
           },
           "Response": {
             "Id": 1,
-            "Type": "RandomString116",
-            "FullName": "RandomString933",
+            "Breed": "RandomString116",
+            "Name": "RandomString933",
             "PetType": 0
           },
           "HttpMethod": "post"
@@ -1175,9 +1175,9 @@
           "ApiCallOrderId": 2,
           "Request": {
             "Id": 4,
-            "Type": "RandomString101",
-            "FullName": "RandomString854",
-            "PetType": 2
+            "Breed": "RandomString101",
+            "Name": "RandomString854",
+            "PetType": 1
           },
           "Response": {
             "StatusCode": 404,
@@ -1229,14 +1229,14 @@
           "ApiCallOrderId": 1,
           "Request": {
             "Id": 2,
-            "Type": "RandomString56",
-            "FullName": "RandomString101",
+            "Breed": "RandomString56",
+            "Name": "RandomString101",
             "PetType": 0
           },
           "Response": {
             "Id": 1,
-            "Type": "RandomString56",
-            "FullName": "RandomString101",
+            "Breed": "RandomString56",
+            "Name": "RandomString101",
             "PetType": 0
           },
           "HttpMethod": "post"
@@ -1246,8 +1246,8 @@
           "ApiCallOrderId": 2,
           "Request": {
             "Id": 4,
-            "Type": "RandomString864",
-            "FullName": "RandomString223",
+            "Breed": "RandomString864",
+            "Name": "RandomString223",
             "PetType": 0
           },
           "Response": {
@@ -1300,8 +1300,8 @@
           "ApiCallOrderId": 1,
           "Request": {
             "Id": 4,
-            "Type": "RandomString706",
-            "FullName": "RandomString451",
+            "Breed": "RandomString706",
+            "Name": "RandomString451",
             "PetType": 0
           },
           "Response": {
@@ -1327,14 +1327,14 @@
           "ApiCallOrderId": 3,
           "Request": {
             "Id": 4,
-            "Type": "RandomString113",
-            "FullName": "RandomString900",
+            "Breed": "RandomString113",
+            "Name": "RandomString900",
             "PetType": 1
           },
           "Response": {
             "Id": 1,
-            "Type": "RandomString113",
-            "FullName": "RandomString900",
+            "Breed": "RandomString113",
+            "Name": "RandomString900",
             "PetType": 1
           },
           "HttpMethod": "post"
@@ -1371,8 +1371,8 @@
           "ApiCallOrderId": 1,
           "Request": {
             "Id": 2,
-            "Type": "RandomString784",
-            "FullName": "RandomString69",
+            "Breed": "RandomString784",
+            "Name": "RandomString69",
             "PetType": 0
           },
           "Response": {
@@ -1405,15 +1405,15 @@
           "ApiCallOrderId": 4,
           "Request": {
             "Id": 4,
-            "Type": "RandomString812",
-            "FullName": "RandomString446",
-            "PetType": 2
+            "Breed": "RandomString812",
+            "Name": "RandomString446",
+            "PetType": 1
           },
           "Response": {
             "Id": 1,
-            "Type": "RandomString812",
-            "FullName": "RandomString446",
-            "PetType": 2
+            "Breed": "RandomString812",
+            "Name": "RandomString446",
+            "PetType": 1
           },
           "HttpMethod": "post"
         }
@@ -1442,8 +1442,8 @@
           "ApiCallOrderId": 1,
           "Request": {
             "Id": 4,
-            "Type": "RandomString293",
-            "FullName": "RandomString798",
+            "Breed": "RandomString293",
+            "Name": "RandomString798",
             "PetType": 1
           },
           "Response": {
@@ -1458,15 +1458,15 @@
           "ApiCallOrderId": 2,
           "Request": {
             "Id": 2,
-            "Type": "RandomString355",
-            "FullName": "RandomString184",
-            "PetType": 1
+            "Breed": "RandomString355",
+            "Name": "RandomString184",
+            "PetType": 0
           },
           "Response": {
             "Id": 1,
-            "Type": "RandomString355",
-            "FullName": "RandomString184",
-            "PetType": 1
+            "Breed": "RandomString355",
+            "Name": "RandomString184",
+            "PetType": 0
           },
           "HttpMethod": "post"
         },
@@ -1513,9 +1513,9 @@
           "ApiCallOrderId": 1,
           "Request": {
             "Id": 1,
-            "Type": "RandomString727",
-            "FullName": "RandomString740",
-            "PetType": 2
+            "Breed": "RandomString727",
+            "Name": "RandomString740",
+            "PetType": 1
           },
           "Response": {
             "StatusCode": 404,
@@ -1529,15 +1529,15 @@
           "ApiCallOrderId": 2,
           "Request": {
             "Id": 3,
-            "Type": "RandomString992",
-            "FullName": "RandomString440",
-            "PetType": 2
+            "Breed": "RandomString992",
+            "Name": "RandomString440",
+            "PetType": 1
           },
           "Response": {
             "Id": 1,
-            "Type": "RandomString992",
-            "FullName": "RandomString440",
-            "PetType": 2
+            "Breed": "RandomString992",
+            "Name": "RandomString440",
+            "PetType": 1
           },
           "HttpMethod": "post"
         },
@@ -1584,9 +1584,9 @@
           "ApiCallOrderId": 1,
           "Request": {
             "Id": 1,
-            "Type": "RandomString213",
-            "FullName": "RandomString281",
-            "PetType": 2
+            "Breed": "RandomString213",
+            "Name": "RandomString281",
+            "PetType": 1
           },
           "Response": {
             "StatusCode": 404,
@@ -1607,14 +1607,14 @@
           "ApiCallOrderId": 3,
           "Request": {
             "Id": 1,
-            "Type": "RandomString964",
-            "FullName": "RandomString552",
+            "Breed": "RandomString964",
+            "Name": "RandomString552",
             "PetType": 1
           },
           "Response": {
             "Id": 1,
-            "Type": "RandomString964",
-            "FullName": "RandomString552",
+            "Breed": "RandomString964",
+            "Name": "RandomString552",
             "PetType": 1
           },
           "HttpMethod": "post"
@@ -1655,8 +1655,8 @@
           "ApiCallOrderId": 1,
           "Request": {
             "Id": 1,
-            "Type": "RandomString150",
-            "FullName": "RandomString574",
+            "Breed": "RandomString150",
+            "Name": "RandomString574",
             "PetType": 0
           },
           "Response": {
@@ -1689,15 +1689,15 @@
           "ApiCallOrderId": 4,
           "Request": {
             "Id": 3,
-            "Type": "RandomString968",
-            "FullName": "RandomString386",
-            "PetType": 2
+            "Breed": "RandomString968",
+            "Name": "RandomString386",
+            "PetType": 1
           },
           "Response": {
             "Id": 1,
-            "Type": "RandomString968",
-            "FullName": "RandomString386",
-            "PetType": 2
+            "Breed": "RandomString968",
+            "Name": "RandomString386",
+            "PetType": 1
           },
           "HttpMethod": "post"
         }
@@ -1744,15 +1744,15 @@
           "ApiCallOrderId": 3,
           "Request": {
             "Id": 2,
-            "Type": "RandomString356",
-            "FullName": "RandomString97",
-            "PetType": 2
+            "Breed": "RandomString356",
+            "Name": "RandomString97",
+            "PetType": 1
           },
           "Response": {
             "Id": 1,
-            "Type": "RandomString356",
-            "FullName": "RandomString97",
-            "PetType": 2
+            "Breed": "RandomString356",
+            "Name": "RandomString97",
+            "PetType": 1
           },
           "HttpMethod": "post"
         },
@@ -1761,8 +1761,8 @@
           "ApiCallOrderId": 4,
           "Request": {
             "Id": 2,
-            "Type": "RandomString522",
-            "FullName": "RandomString11",
+            "Breed": "RandomString522",
+            "Name": "RandomString11",
             "PetType": 0
           },
           "Response": {
@@ -1815,9 +1815,9 @@
           "ApiCallOrderId": 3,
           "Request": {
             "Id": 2,
-            "Type": "RandomString170",
-            "FullName": "RandomString77",
-            "PetType": 2
+            "Breed": "RandomString170",
+            "Name": "RandomString77",
+            "PetType": 1
           },
           "Response": {
             "StatusCode": 404,
@@ -1831,14 +1831,14 @@
           "ApiCallOrderId": 4,
           "Request": {
             "Id": 2,
-            "Type": "RandomString215",
-            "FullName": "RandomString628",
+            "Breed": "RandomString215",
+            "Name": "RandomString628",
             "PetType": 0
           },
           "Response": {
             "Id": 1,
-            "Type": "RandomString215",
-            "FullName": "RandomString628",
+            "Breed": "RandomString215",
+            "Name": "RandomString628",
             "PetType": 0
           },
           "HttpMethod": "post"
@@ -1875,15 +1875,15 @@
           "ApiCallOrderId": 2,
           "Request": {
             "Id": 3,
-            "Type": "RandomString870",
-            "FullName": "RandomString227",
-            "PetType": 2
+            "Breed": "RandomString870",
+            "Name": "RandomString227",
+            "PetType": 1
           },
           "Response": {
             "Id": 1,
-            "Type": "RandomString870",
-            "FullName": "RandomString227",
-            "PetType": 2
+            "Breed": "RandomString870",
+            "Name": "RandomString227",
+            "PetType": 1
           },
           "HttpMethod": "post"
         },
@@ -1903,8 +1903,8 @@
           "ApiCallOrderId": 4,
           "Request": {
             "Id": 4,
-            "Type": "RandomString358",
-            "FullName": "RandomString25",
+            "Breed": "RandomString358",
+            "Name": "RandomString25",
             "PetType": 0
           },
           "Response": {
@@ -1946,14 +1946,14 @@
           "ApiCallOrderId": 2,
           "Request": {
             "Id": 4,
-            "Type": "RandomString863",
-            "FullName": "RandomString289",
+            "Breed": "RandomString863",
+            "Name": "RandomString289",
             "PetType": 0
           },
           "Response": {
             "Id": 1,
-            "Type": "RandomString863",
-            "FullName": "RandomString289",
+            "Breed": "RandomString863",
+            "Name": "RandomString289",
             "PetType": 0
           },
           "HttpMethod": "post"
@@ -1963,9 +1963,9 @@
           "ApiCallOrderId": 3,
           "Request": {
             "Id": 4,
-            "Type": "RandomString229",
-            "FullName": "RandomString100",
-            "PetType": 2
+            "Breed": "RandomString229",
+            "Name": "RandomString100",
+            "PetType": 1
           },
           "Response": {
             "StatusCode": 404,
@@ -2017,9 +2017,9 @@
           "ApiCallOrderId": 2,
           "Request": {
             "Id": 2,
-            "Type": "RandomString88",
-            "FullName": "RandomString356",
-            "PetType": 2
+            "Breed": "RandomString88",
+            "Name": "RandomString356",
+            "PetType": 1
           },
           "Response": {
             "StatusCode": 404,
@@ -2033,15 +2033,15 @@
           "ApiCallOrderId": 3,
           "Request": {
             "Id": 2,
-            "Type": "RandomString56",
-            "FullName": "RandomString791",
-            "PetType": 2
+            "Breed": "RandomString56",
+            "Name": "RandomString791",
+            "PetType": 1
           },
           "Response": {
             "Id": 1,
-            "Type": "RandomString56",
-            "FullName": "RandomString791",
-            "PetType": 2
+            "Breed": "RandomString56",
+            "Name": "RandomString791",
+            "PetType": 1
           },
           "HttpMethod": "post"
         },
@@ -2088,8 +2088,8 @@
           "ApiCallOrderId": 2,
           "Request": {
             "Id": 4,
-            "Type": "RandomString83",
-            "FullName": "RandomString438",
+            "Breed": "RandomString83",
+            "Name": "RandomString438",
             "PetType": 0
           },
           "Response": {
@@ -2115,14 +2115,14 @@
           "ApiCallOrderId": 4,
           "Request": {
             "Id": 4,
-            "Type": "RandomString268",
-            "FullName": "RandomString354",
+            "Breed": "RandomString268",
+            "Name": "RandomString354",
             "PetType": 1
           },
           "Response": {
             "Id": 1,
-            "Type": "RandomString268",
-            "FullName": "RandomString354",
+            "Breed": "RandomString268",
+            "Name": "RandomString354",
             "PetType": 1
           },
           "HttpMethod": "post"
@@ -2170,15 +2170,15 @@
           "ApiCallOrderId": 3,
           "Request": {
             "Id": 4,
-            "Type": "RandomString309",
-            "FullName": "RandomString594",
-            "PetType": 2
+            "Breed": "RandomString309",
+            "Name": "RandomString594",
+            "PetType": 1
           },
           "Response": {
             "Id": 1,
-            "Type": "RandomString309",
-            "FullName": "RandomString594",
-            "PetType": 2
+            "Breed": "RandomString309",
+            "Name": "RandomString594",
+            "PetType": 1
           },
           "HttpMethod": "post"
         },
@@ -2187,8 +2187,8 @@
           "ApiCallOrderId": 4,
           "Request": {
             "Id": 4,
-            "Type": "RandomString110",
-            "FullName": "RandomString651",
+            "Breed": "RandomString110",
+            "Name": "RandomString651",
             "PetType": 0
           },
           "Response": {
@@ -2241,9 +2241,9 @@
           "ApiCallOrderId": 3,
           "Request": {
             "Id": 3,
-            "Type": "RandomString412",
-            "FullName": "RandomString940",
-            "PetType": 2
+            "Breed": "RandomString412",
+            "Name": "RandomString940",
+            "PetType": 1
           },
           "Response": {
             "StatusCode": 404,
@@ -2257,14 +2257,14 @@
           "ApiCallOrderId": 4,
           "Request": {
             "Id": 1,
-            "Type": "RandomString806",
-            "FullName": "RandomString923",
+            "Breed": "RandomString806",
+            "Name": "RandomString923",
             "PetType": 1
           },
           "Response": {
             "Id": 1,
-            "Type": "RandomString806",
-            "FullName": "RandomString923",
+            "Breed": "RandomString806",
+            "Name": "RandomString923",
             "PetType": 1
           },
           "HttpMethod": "post"
@@ -2298,14 +2298,14 @@
           "ApiCallOrderId": 2,
           "Request": {
             "Id": 3,
-            "Type": "RandomString426",
-            "FullName": "RandomString172",
+            "Breed": "RandomString426",
+            "Name": "RandomString172",
             "PetType": 0
           },
           "Response": {
             "Id": 1,
-            "Type": "RandomString426",
-            "FullName": "RandomString172",
+            "Breed": "RandomString426",
+            "Name": "RandomString172",
             "PetType": 0
           },
           "HttpMethod": "post"
@@ -2329,9 +2329,9 @@
           "ApiCallOrderId": 4,
           "Request": {
             "Id": 2,
-            "Type": "RandomString527",
-            "FullName": "RandomString531",
-            "PetType": 2
+            "Breed": "RandomString527",
+            "Name": "RandomString531",
+            "PetType": 1
           },
           "Response": {
             "StatusCode": 404,
@@ -2369,15 +2369,15 @@
           "ApiCallOrderId": 2,
           "Request": {
             "Id": 4,
-            "Type": "RandomString839",
-            "FullName": "RandomString478",
-            "PetType": 2
+            "Breed": "RandomString839",
+            "Name": "RandomString478",
+            "PetType": 1
           },
           "Response": {
             "Id": 1,
-            "Type": "RandomString839",
-            "FullName": "RandomString478",
-            "PetType": 2
+            "Breed": "RandomString839",
+            "Name": "RandomString478",
+            "PetType": 1
           },
           "HttpMethod": "post"
         },
@@ -2386,9 +2386,9 @@
           "ApiCallOrderId": 3,
           "Request": {
             "Id": 3,
-            "Type": "RandomString714",
-            "FullName": "RandomString434",
-            "PetType": 2
+            "Breed": "RandomString714",
+            "Name": "RandomString434",
+            "PetType": 1
           },
           "Response": {
             "StatusCode": 404,
@@ -2440,9 +2440,9 @@
           "ApiCallOrderId": 2,
           "Request": {
             "Id": 3,
-            "Type": "RandomString350",
-            "FullName": "RandomString523",
-            "PetType": 2
+            "Breed": "RandomString350",
+            "Name": "RandomString523",
+            "PetType": 1
           },
           "Response": {
             "StatusCode": 404,
@@ -2456,14 +2456,14 @@
           "ApiCallOrderId": 3,
           "Request": {
             "Id": 4,
-            "Type": "RandomString908",
-            "FullName": "RandomString907",
+            "Breed": "RandomString908",
+            "Name": "RandomString907",
             "PetType": 0
           },
           "Response": {
             "Id": 1,
-            "Type": "RandomString908",
-            "FullName": "RandomString907",
+            "Breed": "RandomString908",
+            "Name": "RandomString907",
             "PetType": 0
           },
           "HttpMethod": "post"
@@ -2511,8 +2511,8 @@
           "ApiCallOrderId": 2,
           "Request": {
             "Id": 4,
-            "Type": "RandomString107",
-            "FullName": "RandomString407",
+            "Breed": "RandomString107",
+            "Name": "RandomString407",
             "PetType": 0
           },
           "Response": {
@@ -2541,14 +2541,14 @@
           "ApiCallOrderId": 4,
           "Request": {
             "Id": 1,
-            "Type": "RandomString271",
-            "FullName": "RandomString390",
+            "Breed": "RandomString271",
+            "Name": "RandomString390",
             "PetType": 1
           },
           "Response": {
             "Id": 1,
-            "Type": "RandomString271",
-            "FullName": "RandomString390",
+            "Breed": "RandomString271",
+            "Name": "RandomString390",
             "PetType": 1
           },
           "HttpMethod": "post"
@@ -2571,14 +2571,14 @@
           "ApiCallOrderId": 1,
           "Request": {
             "Id": 1,
-            "Type": "RandomString494",
-            "FullName": "RandomString883",
+            "Breed": "RandomString494",
+            "Name": "RandomString883",
             "PetType": 0
           },
           "Response": {
             "Id": 1,
-            "Type": "RandomString494",
-            "FullName": "RandomString883",
+            "Breed": "RandomString494",
+            "Name": "RandomString883",
             "PetType": 0
           },
           "HttpMethod": "post"
@@ -2613,9 +2613,9 @@
           "ApiCallOrderId": 4,
           "Request": {
             "Id": 1,
-            "Type": "RandomString891",
-            "FullName": "RandomString259",
-            "PetType": 2
+            "Breed": "RandomString891",
+            "Name": "RandomString259",
+            "PetType": 1
           },
           "Response": {
             "StatusCode": 404,
@@ -2642,15 +2642,15 @@
           "ApiCallOrderId": 1,
           "Request": {
             "Id": 2,
-            "Type": "RandomString407",
-            "FullName": "RandomString596",
-            "PetType": 2
+            "Breed": "RandomString407",
+            "Name": "RandomString596",
+            "PetType": 1
           },
           "Response": {
             "Id": 1,
-            "Type": "RandomString407",
-            "FullName": "RandomString596",
-            "PetType": 2
+            "Breed": "RandomString407",
+            "Name": "RandomString596",
+            "PetType": 1
           },
           "HttpMethod": "post"
         },
@@ -2670,8 +2670,8 @@
           "ApiCallOrderId": 3,
           "Request": {
             "Id": 3,
-            "Type": "RandomString277",
-            "FullName": "RandomString430",
+            "Breed": "RandomString277",
+            "Name": "RandomString430",
             "PetType": 0
           },
           "Response": {
@@ -2713,14 +2713,14 @@
           "ApiCallOrderId": 1,
           "Request": {
             "Id": 1,
-            "Type": "RandomString354",
-            "FullName": "RandomString958",
+            "Breed": "RandomString354",
+            "Name": "RandomString958",
             "PetType": 1
           },
           "Response": {
             "Id": 1,
-            "Type": "RandomString354",
-            "FullName": "RandomString958",
+            "Breed": "RandomString354",
+            "Name": "RandomString958",
             "PetType": 1
           },
           "HttpMethod": "post"
@@ -2755,8 +2755,8 @@
           "ApiCallOrderId": 4,
           "Request": {
             "Id": 1,
-            "Type": "RandomString76",
-            "FullName": "RandomString704",
+            "Breed": "RandomString76",
+            "Name": "RandomString704",
             "PetType": 1
           },
           "Response": {
@@ -2784,15 +2784,15 @@
           "ApiCallOrderId": 1,
           "Request": {
             "Id": 4,
-            "Type": "RandomString443",
-            "FullName": "RandomString512",
-            "PetType": 2
+            "Breed": "RandomString443",
+            "Name": "RandomString512",
+            "PetType": 1
           },
           "Response": {
             "Id": 1,
-            "Type": "RandomString443",
-            "FullName": "RandomString512",
-            "PetType": 2
+            "Breed": "RandomString443",
+            "Name": "RandomString512",
+            "PetType": 1
           },
           "HttpMethod": "post"
         },
@@ -2815,8 +2815,8 @@
           "ApiCallOrderId": 3,
           "Request": {
             "Id": 1,
-            "Type": "RandomString582",
-            "FullName": "RandomString967",
+            "Breed": "RandomString582",
+            "Name": "RandomString967",
             "PetType": 1
           },
           "Response": {
@@ -2855,14 +2855,14 @@
           "ApiCallOrderId": 1,
           "Request": {
             "Id": 4,
-            "Type": "RandomString319",
-            "FullName": "RandomString630",
+            "Breed": "RandomString319",
+            "Name": "RandomString630",
             "PetType": 0
           },
           "Response": {
             "Id": 1,
-            "Type": "RandomString319",
-            "FullName": "RandomString630",
+            "Breed": "RandomString319",
+            "Name": "RandomString630",
             "PetType": 0
           },
           "HttpMethod": "post"
@@ -2872,8 +2872,8 @@
           "ApiCallOrderId": 2,
           "Request": {
             "Id": 3,
-            "Type": "RandomString515",
-            "FullName": "RandomString930",
+            "Breed": "RandomString515",
+            "Name": "RandomString930",
             "PetType": 1
           },
           "Response": {
@@ -2926,14 +2926,14 @@
           "ApiCallOrderId": 1,
           "Request": {
             "Id": 3,
-            "Type": "RandomString998",
-            "FullName": "RandomString659",
+            "Breed": "RandomString998",
+            "Name": "RandomString659",
             "PetType": 1
           },
           "Response": {
             "Id": 1,
-            "Type": "RandomString998",
-            "FullName": "RandomString659",
+            "Breed": "RandomString998",
+            "Name": "RandomString659",
             "PetType": 1
           },
           "HttpMethod": "post"
@@ -2943,8 +2943,8 @@
           "ApiCallOrderId": 2,
           "Request": {
             "Id": 1,
-            "Type": "RandomString846",
-            "FullName": "RandomString875",
+            "Breed": "RandomString846",
+            "Name": "RandomString875",
             "PetType": 0
           },
           "Response": {
@@ -2997,9 +2997,9 @@
           "ApiCallOrderId": 1,
           "Request": {
             "Id": 3,
-            "Type": "RandomString458",
-            "FullName": "RandomString232",
-            "PetType": 2
+            "Breed": "RandomString458",
+            "Name": "RandomString232",
+            "PetType": 1
           },
           "Response": {
             "StatusCode": 404,
@@ -3024,15 +3024,15 @@
           "ApiCallOrderId": 3,
           "Request": {
             "Id": 2,
-            "Type": "RandomString563",
-            "FullName": "RandomString56",
-            "PetType": 2
+            "Breed": "RandomString563",
+            "Name": "RandomString56",
+            "PetType": 1
           },
           "Response": {
             "Id": 1,
-            "Type": "RandomString563",
-            "FullName": "RandomString56",
-            "PetType": 2
+            "Breed": "RandomString563",
+            "Name": "RandomString56",
+            "PetType": 1
           },
           "HttpMethod": "post"
         },
@@ -3068,8 +3068,8 @@
           "ApiCallOrderId": 1,
           "Request": {
             "Id": 2,
-            "Type": "RandomString569",
-            "FullName": "RandomString200",
+            "Breed": "RandomString569",
+            "Name": "RandomString200",
             "PetType": 0
           },
           "Response": {
@@ -3109,14 +3109,14 @@
           "ApiCallOrderId": 4,
           "Request": {
             "Id": 3,
-            "Type": "RandomString603",
-            "FullName": "RandomString406",
+            "Breed": "RandomString603",
+            "Name": "RandomString406",
             "PetType": 0
           },
           "Response": {
             "Id": 1,
-            "Type": "RandomString603",
-            "FullName": "RandomString406",
+            "Breed": "RandomString603",
+            "Name": "RandomString406",
             "PetType": 0
           },
           "HttpMethod": "post"
@@ -3139,9 +3139,9 @@
           "ApiCallOrderId": 1,
           "Request": {
             "Id": 3,
-            "Type": "RandomString49",
-            "FullName": "RandomString722",
-            "PetType": 1
+            "Breed": "RandomString49",
+            "Name": "RandomString722",
+            "PetType": 0
           },
           "Response": {
             "StatusCode": 404,
@@ -3155,15 +3155,15 @@
           "ApiCallOrderId": 2,
           "Request": {
             "Id": 3,
-            "Type": "RandomString662",
-            "FullName": "RandomString635",
-            "PetType": 1
+            "Breed": "RandomString662",
+            "Name": "RandomString635",
+            "PetType": 0
           },
           "Response": {
             "Id": 1,
-            "Type": "RandomString662",
-            "FullName": "RandomString635",
-            "PetType": 1
+            "Breed": "RandomString662",
+            "Name": "RandomString635",
+            "PetType": 0
           },
           "HttpMethod": "post"
         },
@@ -3210,8 +3210,8 @@
           "ApiCallOrderId": 1,
           "Request": {
             "Id": 4,
-            "Type": "RandomString272",
-            "FullName": "RandomString314",
+            "Breed": "RandomString272",
+            "Name": "RandomString314",
             "PetType": 1
           },
           "Response": {
@@ -3226,14 +3226,14 @@
           "ApiCallOrderId": 2,
           "Request": {
             "Id": 4,
-            "Type": "RandomString128",
-            "FullName": "RandomString546",
+            "Breed": "RandomString128",
+            "Name": "RandomString546",
             "PetType": 0
           },
           "Response": {
             "Id": 1,
-            "Type": "RandomString128",
-            "FullName": "RandomString546",
+            "Breed": "RandomString128",
+            "Name": "RandomString546",
             "PetType": 0
           },
           "HttpMethod": "post"
@@ -3281,8 +3281,8 @@
           "ApiCallOrderId": 1,
           "Request": {
             "Id": 3,
-            "Type": "RandomString123",
-            "FullName": "RandomString336",
+            "Breed": "RandomString123",
+            "Name": "RandomString336",
             "PetType": 0
           },
           "Response": {
@@ -3311,14 +3311,14 @@
           "ApiCallOrderId": 3,
           "Request": {
             "Id": 3,
-            "Type": "RandomString577",
-            "FullName": "RandomString699",
+            "Breed": "RandomString577",
+            "Name": "RandomString699",
             "PetType": 1
           },
           "Response": {
             "Id": 1,
-            "Type": "RandomString577",
-            "FullName": "RandomString699",
+            "Breed": "RandomString577",
+            "Name": "RandomString699",
             "PetType": 1
           },
           "HttpMethod": "post"
@@ -3352,8 +3352,8 @@
           "ApiCallOrderId": 1,
           "Request": {
             "Id": 2,
-            "Type": "RandomString566",
-            "FullName": "RandomString142",
+            "Breed": "RandomString566",
+            "Name": "RandomString142",
             "PetType": 0
           },
           "Response": {
@@ -3393,14 +3393,14 @@
           "ApiCallOrderId": 4,
           "Request": {
             "Id": 3,
-            "Type": "RandomString735",
-            "FullName": "RandomString281",
+            "Breed": "RandomString735",
+            "Name": "RandomString281",
             "PetType": 0
           },
           "Response": {
             "Id": 1,
-            "Type": "RandomString735",
-            "FullName": "RandomString281",
+            "Breed": "RandomString735",
+            "Name": "RandomString281",
             "PetType": 0
           },
           "HttpMethod": "post"
@@ -3448,14 +3448,14 @@
           "ApiCallOrderId": 3,
           "Request": {
             "Id": 1,
-            "Type": "RandomString756",
-            "FullName": "RandomString569",
+            "Breed": "RandomString756",
+            "Name": "RandomString569",
             "PetType": 0
           },
           "Response": {
             "Id": 1,
-            "Type": "RandomString756",
-            "FullName": "RandomString569",
+            "Breed": "RandomString756",
+            "Name": "RandomString569",
             "PetType": 0
           },
           "HttpMethod": "post"
@@ -3465,9 +3465,9 @@
           "ApiCallOrderId": 4,
           "Request": {
             "Id": 2,
-            "Type": "RandomString658",
-            "FullName": "RandomString578",
-            "PetType": 2
+            "Breed": "RandomString658",
+            "Name": "RandomString578",
+            "PetType": 1
           },
           "Response": {
             "StatusCode": 404,
@@ -3519,9 +3519,9 @@
           "ApiCallOrderId": 3,
           "Request": {
             "Id": 3,
-            "Type": "RandomString706",
-            "FullName": "RandomString73",
-            "PetType": 1
+            "Breed": "RandomString706",
+            "Name": "RandomString73",
+            "PetType": 0
           },
           "Response": {
             "StatusCode": 404,
@@ -3535,14 +3535,14 @@
           "ApiCallOrderId": 4,
           "Request": {
             "Id": 3,
-            "Type": "RandomString437",
-            "FullName": "RandomString894",
+            "Breed": "RandomString437",
+            "Name": "RandomString894",
             "PetType": 0
           },
           "Response": {
             "Id": 1,
-            "Type": "RandomString437",
-            "FullName": "RandomString894",
+            "Breed": "RandomString437",
+            "Name": "RandomString894",
             "PetType": 0
           },
           "HttpMethod": "post"
@@ -3576,15 +3576,15 @@
           "ApiCallOrderId": 2,
           "Request": {
             "Id": 2,
-            "Type": "RandomString470",
-            "FullName": "RandomString146",
-            "PetType": 2
+            "Breed": "RandomString470",
+            "Name": "RandomString146",
+            "PetType": 1
           },
           "Response": {
             "Id": 1,
-            "Type": "RandomString470",
-            "FullName": "RandomString146",
-            "PetType": 2
+            "Breed": "RandomString470",
+            "Name": "RandomString146",
+            "PetType": 1
           },
           "HttpMethod": "post"
         },
@@ -3607,9 +3607,9 @@
           "ApiCallOrderId": 4,
           "Request": {
             "Id": 1,
-            "Type": "RandomString631",
-            "FullName": "RandomString335",
-            "PetType": 2
+            "Breed": "RandomString631",
+            "Name": "RandomString335",
+            "PetType": 1
           },
           "Response": {
             "StatusCode": 404,
@@ -3647,15 +3647,15 @@
           "ApiCallOrderId": 2,
           "Request": {
             "Id": 4,
-            "Type": "RandomString312",
-            "FullName": "RandomString590",
-            "PetType": 2
+            "Breed": "RandomString312",
+            "Name": "RandomString590",
+            "PetType": 1
           },
           "Response": {
             "Id": 1,
-            "Type": "RandomString312",
-            "FullName": "RandomString590",
-            "PetType": 2
+            "Breed": "RandomString312",
+            "Name": "RandomString590",
+            "PetType": 1
           },
           "HttpMethod": "post"
         },
@@ -3664,8 +3664,8 @@
           "ApiCallOrderId": 3,
           "Request": {
             "Id": 3,
-            "Type": "RandomString97",
-            "FullName": "RandomString232",
+            "Breed": "RandomString97",
+            "Name": "RandomString232",
             "PetType": 0
           },
           "Response": {
@@ -3718,8 +3718,8 @@
           "ApiCallOrderId": 2,
           "Request": {
             "Id": 1,
-            "Type": "RandomString11",
-            "FullName": "RandomString849",
+            "Breed": "RandomString11",
+            "Name": "RandomString849",
             "PetType": 1
           },
           "Response": {
@@ -3734,15 +3734,15 @@
           "ApiCallOrderId": 3,
           "Request": {
             "Id": 1,
-            "Type": "RandomString793",
-            "FullName": "RandomString197",
-            "PetType": 2
+            "Breed": "RandomString793",
+            "Name": "RandomString197",
+            "PetType": 1
           },
           "Response": {
             "Id": 1,
-            "Type": "RandomString793",
-            "FullName": "RandomString197",
-            "PetType": 2
+            "Breed": "RandomString793",
+            "Name": "RandomString197",
+            "PetType": 1
           },
           "HttpMethod": "post"
         },
@@ -3789,8 +3789,8 @@
           "ApiCallOrderId": 2,
           "Request": {
             "Id": 1,
-            "Type": "RandomString99",
-            "FullName": "RandomString589",
+            "Breed": "RandomString99",
+            "Name": "RandomString589",
             "PetType": 1
           },
           "Response": {
@@ -3819,15 +3819,15 @@
           "ApiCallOrderId": 4,
           "Request": {
             "Id": 1,
-            "Type": "RandomString441",
-            "FullName": "RandomString960",
-            "PetType": 2
+            "Breed": "RandomString441",
+            "Name": "RandomString960",
+            "PetType": 1
           },
           "Response": {
             "Id": 1,
-            "Type": "RandomString441",
-            "FullName": "RandomString960",
-            "PetType": 2
+            "Breed": "RandomString441",
+            "Name": "RandomString960",
+            "PetType": 1
           },
           "HttpMethod": "post"
         }
@@ -3874,15 +3874,15 @@
           "ApiCallOrderId": 3,
           "Request": {
             "Id": 1,
-            "Type": "RandomString475",
-            "FullName": "RandomString635",
-            "PetType": 2
+            "Breed": "RandomString475",
+            "Name": "RandomString635",
+            "PetType": 1
           },
           "Response": {
             "Id": 1,
-            "Type": "RandomString475",
-            "FullName": "RandomString635",
-            "PetType": 2
+            "Breed": "RandomString475",
+            "Name": "RandomString635",
+            "PetType": 1
           },
           "HttpMethod": "post"
         },
@@ -3891,8 +3891,8 @@
           "ApiCallOrderId": 4,
           "Request": {
             "Id": 4,
-            "Type": "RandomString557",
-            "FullName": "RandomString96",
+            "Breed": "RandomString557",
+            "Name": "RandomString96",
             "PetType": 1
           },
           "Response": {
@@ -3945,9 +3945,9 @@
           "ApiCallOrderId": 3,
           "Request": {
             "Id": 4,
-            "Type": "RandomString753",
-            "FullName": "RandomString126",
-            "PetType": 2
+            "Breed": "RandomString753",
+            "Name": "RandomString126",
+            "PetType": 1
           },
           "Response": {
             "StatusCode": 404,
@@ -3961,15 +3961,15 @@
           "ApiCallOrderId": 4,
           "Request": {
             "Id": 1,
-            "Type": "RandomString468",
-            "FullName": "RandomString28",
-            "PetType": 2
+            "Breed": "RandomString468",
+            "Name": "RandomString28",
+            "PetType": 1
           },
           "Response": {
             "Id": 1,
-            "Type": "RandomString468",
-            "FullName": "RandomString28",
-            "PetType": 2
+            "Breed": "RandomString468",
+            "Name": "RandomString28",
+            "PetType": 1
           },
           "HttpMethod": "post"
         }
@@ -4009,15 +4009,15 @@
           "ApiCallOrderId": 2,
           "Request": {
             "Id": 4,
-            "Type": "RandomString718",
-            "FullName": "RandomString469",
-            "PetType": 1
+            "Breed": "RandomString718",
+            "Name": "RandomString469",
+            "PetType": 0
           },
           "Response": {
             "Id": 1,
-            "Type": "RandomString718",
-            "FullName": "RandomString469",
-            "PetType": 1
+            "Breed": "RandomString718",
+            "Name": "RandomString469",
+            "PetType": 0
           },
           "HttpMethod": "post"
         },
@@ -4033,8 +4033,8 @@
           "ApiCallOrderId": 4,
           "Request": {
             "Id": 3,
-            "Type": "RandomString225",
-            "FullName": "RandomString306",
+            "Breed": "RandomString225",
+            "Name": "RandomString306",
             "PetType": 0
           },
           "Response": {
@@ -4080,14 +4080,14 @@
           "ApiCallOrderId": 2,
           "Request": {
             "Id": 4,
-            "Type": "RandomString309",
-            "FullName": "RandomString246",
+            "Breed": "RandomString309",
+            "Name": "RandomString246",
             "PetType": 0
           },
           "Response": {
             "Id": 1,
-            "Type": "RandomString309",
-            "FullName": "RandomString246",
+            "Breed": "RandomString309",
+            "Name": "RandomString246",
             "PetType": 0
           },
           "HttpMethod": "post"
@@ -4097,8 +4097,8 @@
           "ApiCallOrderId": 3,
           "Request": {
             "Id": 4,
-            "Type": "RandomString627",
-            "FullName": "RandomString535",
+            "Breed": "RandomString627",
+            "Name": "RandomString535",
             "PetType": 0
           },
           "Response": {
@@ -4151,8 +4151,8 @@
           "ApiCallOrderId": 2,
           "Request": {
             "Id": 4,
-            "Type": "RandomString201",
-            "FullName": "RandomString232",
+            "Breed": "RandomString201",
+            "Name": "RandomString232",
             "PetType": 0
           },
           "Response": {
@@ -4167,14 +4167,14 @@
           "ApiCallOrderId": 3,
           "Request": {
             "Id": 3,
-            "Type": "RandomString350",
-            "FullName": "RandomString322",
+            "Breed": "RandomString350",
+            "Name": "RandomString322",
             "PetType": 0
           },
           "Response": {
             "Id": 1,
-            "Type": "RandomString350",
-            "FullName": "RandomString322",
+            "Breed": "RandomString350",
+            "Name": "RandomString322",
             "PetType": 0
           },
           "HttpMethod": "post"
@@ -4222,8 +4222,8 @@
           "ApiCallOrderId": 2,
           "Request": {
             "Id": 1,
-            "Type": "RandomString253",
-            "FullName": "RandomString863",
+            "Breed": "RandomString253",
+            "Name": "RandomString863",
             "PetType": 0
           },
           "Response": {
@@ -4245,14 +4245,14 @@
           "ApiCallOrderId": 4,
           "Request": {
             "Id": 3,
-            "Type": "RandomString310",
-            "FullName": "RandomString169",
+            "Breed": "RandomString310",
+            "Name": "RandomString169",
             "PetType": 0
           },
           "Response": {
             "Id": 1,
-            "Type": "RandomString310",
-            "FullName": "RandomString169",
+            "Breed": "RandomString310",
+            "Name": "RandomString169",
             "PetType": 0
           },
           "HttpMethod": "post"
@@ -4279,15 +4279,15 @@
           "ApiCallOrderId": 1,
           "Request": {
             "Id": 1,
-            "Type": "RandomString816",
-            "FullName": "RandomString927",
-            "PetType": 1
+            "Breed": "RandomString816",
+            "Name": "RandomString927",
+            "PetType": 0
           },
           "Response": {
             "Id": 1,
-            "Type": "RandomString816",
-            "FullName": "RandomString927",
-            "PetType": 1
+            "Breed": "RandomString816",
+            "Name": "RandomString927",
+            "PetType": 0
           },
           "HttpMethod": "post"
         },
@@ -4317,8 +4317,8 @@
           "ApiCallOrderId": 4,
           "Request": {
             "Id": 3,
-            "Type": "RandomString672",
-            "FullName": "RandomString726",
+            "Breed": "RandomString672",
+            "Name": "RandomString726",
             "PetType": 0
           },
           "Response": {
@@ -4350,15 +4350,15 @@
           "ApiCallOrderId": 1,
           "Request": {
             "Id": 1,
-            "Type": "RandomString763",
-            "FullName": "RandomString782",
-            "PetType": 1
+            "Breed": "RandomString763",
+            "Name": "RandomString782",
+            "PetType": 0
           },
           "Response": {
             "Id": 1,
-            "Type": "RandomString763",
-            "FullName": "RandomString782",
-            "PetType": 1
+            "Breed": "RandomString763",
+            "Name": "RandomString782",
+            "PetType": 0
           },
           "HttpMethod": "post"
         },
@@ -4381,8 +4381,8 @@
           "ApiCallOrderId": 3,
           "Request": {
             "Id": 2,
-            "Type": "RandomString173",
-            "FullName": "RandomString857",
+            "Breed": "RandomString173",
+            "Name": "RandomString857",
             "PetType": 0
           },
           "Response": {
@@ -4421,14 +4421,14 @@
           "ApiCallOrderId": 1,
           "Request": {
             "Id": 1,
-            "Type": "RandomString632",
-            "FullName": "RandomString204",
+            "Breed": "RandomString632",
+            "Name": "RandomString204",
             "PetType": 0
           },
           "Response": {
             "Id": 1,
-            "Type": "RandomString632",
-            "FullName": "RandomString204",
+            "Breed": "RandomString632",
+            "Name": "RandomString204",
             "PetType": 0
           },
           "HttpMethod": "post"
@@ -4459,8 +4459,8 @@
           "ApiCallOrderId": 4,
           "Request": {
             "Id": 1,
-            "Type": "RandomString263",
-            "FullName": "RandomString82",
+            "Breed": "RandomString263",
+            "Name": "RandomString82",
             "PetType": 0
           },
           "Response": {
@@ -4492,15 +4492,15 @@
           "ApiCallOrderId": 1,
           "Request": {
             "Id": 4,
-            "Type": "RandomString851",
-            "FullName": "RandomString716",
-            "PetType": 2
+            "Breed": "RandomString851",
+            "Name": "RandomString716",
+            "PetType": 1
           },
           "Response": {
             "Id": 1,
-            "Type": "RandomString851",
-            "FullName": "RandomString716",
-            "PetType": 2
+            "Breed": "RandomString851",
+            "Name": "RandomString716",
+            "PetType": 1
           },
           "HttpMethod": "post"
         },
@@ -4516,9 +4516,9 @@
           "ApiCallOrderId": 3,
           "Request": {
             "Id": 4,
-            "Type": "RandomString936",
-            "FullName": "RandomString391",
-            "PetType": 1
+            "Breed": "RandomString936",
+            "Name": "RandomString391",
+            "PetType": 0
           },
           "Response": {
             "StatusCode": 404,
@@ -4563,14 +4563,14 @@
           "ApiCallOrderId": 1,
           "Request": {
             "Id": 3,
-            "Type": "RandomString364",
-            "FullName": "RandomString568",
+            "Breed": "RandomString364",
+            "Name": "RandomString568",
             "PetType": 1
           },
           "Response": {
             "Id": 1,
-            "Type": "RandomString364",
-            "FullName": "RandomString568",
+            "Breed": "RandomString364",
+            "Name": "RandomString568",
             "PetType": 1
           },
           "HttpMethod": "post"
@@ -4580,8 +4580,8 @@
           "ApiCallOrderId": 2,
           "Request": {
             "Id": 3,
-            "Type": "RandomString393",
-            "FullName": "RandomString9",
+            "Breed": "RandomString393",
+            "Name": "RandomString9",
             "PetType": 0
           },
           "Response": {
@@ -4634,15 +4634,15 @@
           "ApiCallOrderId": 1,
           "Request": {
             "Id": 2,
-            "Type": "RandomString702",
-            "FullName": "RandomString811",
-            "PetType": 2
+            "Breed": "RandomString702",
+            "Name": "RandomString811",
+            "PetType": 1
           },
           "Response": {
             "Id": 1,
-            "Type": "RandomString702",
-            "FullName": "RandomString811",
-            "PetType": 2
+            "Breed": "RandomString702",
+            "Name": "RandomString811",
+            "PetType": 1
           },
           "HttpMethod": "post"
         },
@@ -4651,8 +4651,8 @@
           "ApiCallOrderId": 2,
           "Request": {
             "Id": 2,
-            "Type": "RandomString340",
-            "FullName": "RandomString755",
+            "Breed": "RandomString340",
+            "Name": "RandomString755",
             "PetType": 0
           },
           "Response": {
@@ -4705,8 +4705,8 @@
           "ApiCallOrderId": 1,
           "Request": {
             "Id": 1,
-            "Type": "RandomString972",
-            "FullName": "RandomString786",
+            "Breed": "RandomString972",
+            "Name": "RandomString786",
             "PetType": 1
           },
           "Response": {
@@ -4735,15 +4735,15 @@
           "ApiCallOrderId": 3,
           "Request": {
             "Id": 2,
-            "Type": "RandomString526",
-            "FullName": "RandomString818",
-            "PetType": 2
+            "Breed": "RandomString526",
+            "Name": "RandomString818",
+            "PetType": 1
           },
           "Response": {
             "Id": 1,
-            "Type": "RandomString526",
-            "FullName": "RandomString818",
-            "PetType": 2
+            "Breed": "RandomString526",
+            "Name": "RandomString818",
+            "PetType": 1
           },
           "HttpMethod": "post"
         },
@@ -4776,9 +4776,9 @@
           "ApiCallOrderId": 1,
           "Request": {
             "Id": 3,
-            "Type": "RandomString290",
-            "FullName": "RandomString782",
-            "PetType": 2
+            "Breed": "RandomString290",
+            "Name": "RandomString782",
+            "PetType": 1
           },
           "Response": {
             "StatusCode": 404,
@@ -4813,14 +4813,14 @@
           "ApiCallOrderId": 4,
           "Request": {
             "Id": 1,
-            "Type": "RandomString998",
-            "FullName": "RandomString926",
+            "Breed": "RandomString998",
+            "Name": "RandomString926",
             "PetType": 0
           },
           "Response": {
             "Id": 1,
-            "Type": "RandomString998",
-            "FullName": "RandomString926",
+            "Breed": "RandomString998",
+            "Name": "RandomString926",
             "PetType": 0
           },
           "HttpMethod": "post"
@@ -4847,9 +4847,9 @@
           "ApiCallOrderId": 1,
           "Request": {
             "Id": 4,
-            "Type": "RandomString481",
-            "FullName": "RandomString67",
-            "PetType": 2
+            "Breed": "RandomString481",
+            "Name": "RandomString67",
+            "PetType": 1
           },
           "Response": {
             "StatusCode": 404,
@@ -4863,15 +4863,15 @@
           "ApiCallOrderId": 2,
           "Request": {
             "Id": 1,
-            "Type": "RandomString934",
-            "FullName": "RandomString741",
-            "PetType": 2
+            "Breed": "RandomString934",
+            "Name": "RandomString741",
+            "PetType": 1
           },
           "Response": {
             "Id": 1,
-            "Type": "RandomString934",
-            "FullName": "RandomString741",
-            "PetType": 2
+            "Breed": "RandomString934",
+            "Name": "RandomString741",
+            "PetType": 1
           },
           "HttpMethod": "post"
         },
@@ -4918,9 +4918,9 @@
           "ApiCallOrderId": 1,
           "Request": {
             "Id": 1,
-            "Type": "RandomString277",
-            "FullName": "RandomString586",
-            "PetType": 1
+            "Breed": "RandomString277",
+            "Name": "RandomString586",
+            "PetType": 0
           },
           "Response": {
             "StatusCode": 404,
@@ -4934,15 +4934,15 @@
           "ApiCallOrderId": 2,
           "Request": {
             "Id": 1,
-            "Type": "RandomString853",
-            "FullName": "RandomString534",
-            "PetType": 1
+            "Breed": "RandomString853",
+            "Name": "RandomString534",
+            "PetType": 0
           },
           "Response": {
             "Id": 1,
-            "Type": "RandomString853",
-            "FullName": "RandomString534",
-            "PetType": 1
+            "Breed": "RandomString853",
+            "Name": "RandomString534",
+            "PetType": 0
           },
           "HttpMethod": "post"
         },
@@ -4989,8 +4989,8 @@
           "ApiCallOrderId": 1,
           "Request": {
             "Id": 2,
-            "Type": "RandomString19",
-            "FullName": "RandomString35",
+            "Breed": "RandomString19",
+            "Name": "RandomString35",
             "PetType": 0
           },
           "Response": {
@@ -5012,15 +5012,15 @@
           "ApiCallOrderId": 3,
           "Request": {
             "Id": 3,
-            "Type": "RandomString806",
-            "FullName": "RandomString122",
-            "PetType": 1
+            "Breed": "RandomString806",
+            "Name": "RandomString122",
+            "PetType": 0
           },
           "Response": {
             "Id": 1,
-            "Type": "RandomString806",
-            "FullName": "RandomString122",
-            "PetType": 1
+            "Breed": "RandomString806",
+            "Name": "RandomString122",
+            "PetType": 0
           },
           "HttpMethod": "post"
         },
@@ -5060,9 +5060,9 @@
           "ApiCallOrderId": 1,
           "Request": {
             "Id": 3,
-            "Type": "RandomString515",
-            "FullName": "RandomString595",
-            "PetType": 2
+            "Breed": "RandomString515",
+            "Name": "RandomString595",
+            "PetType": 1
           },
           "Response": {
             "StatusCode": 404,
@@ -5097,15 +5097,15 @@
           "ApiCallOrderId": 4,
           "Request": {
             "Id": 4,
-            "Type": "RandomString92",
-            "FullName": "RandomString451",
-            "PetType": 2
+            "Breed": "RandomString92",
+            "Name": "RandomString451",
+            "PetType": 1
           },
           "Response": {
             "Id": 1,
-            "Type": "RandomString92",
-            "FullName": "RandomString451",
-            "PetType": 2
+            "Breed": "RandomString92",
+            "Name": "RandomString451",
+            "PetType": 1
           },
           "HttpMethod": "post"
         }
@@ -5120,15 +5120,15 @@
           "ApiCallOrderId": 0,
           "Request": {
             "Id": 3,
-            "Type": "RandomString336",
-            "FullName": "RandomString222",
-            "PetType": 2
+            "Breed": "RandomString336",
+            "Name": "RandomString222",
+            "PetType": 1
           },
           "Response": {
             "Id": 1,
-            "Type": "RandomString336",
-            "FullName": "RandomString222",
-            "PetType": 2
+            "Breed": "RandomString336",
+            "Name": "RandomString222",
+            "PetType": 1
           },
           "HttpMethod": "post"
         },
@@ -5169,9 +5169,9 @@
           "ApiCallOrderId": 4,
           "Request": {
             "Id": 4,
-            "Type": "RandomString608",
-            "FullName": "RandomString123",
-            "PetType": 2
+            "Breed": "RandomString608",
+            "Name": "RandomString123",
+            "PetType": 1
           },
           "Response": {
             "StatusCode": 404,
@@ -5191,14 +5191,14 @@
           "ApiCallOrderId": 0,
           "Request": {
             "Id": 2,
-            "Type": "RandomString684",
-            "FullName": "RandomString250",
+            "Breed": "RandomString684",
+            "Name": "RandomString250",
             "PetType": 0
           },
           "Response": {
             "Id": 1,
-            "Type": "RandomString684",
-            "FullName": "RandomString250",
+            "Breed": "RandomString684",
+            "Name": "RandomString250",
             "PetType": 0
           },
           "HttpMethod": "post"
@@ -5226,9 +5226,9 @@
           "ApiCallOrderId": 3,
           "Request": {
             "Id": 2,
-            "Type": "RandomString748",
-            "FullName": "RandomString528",
-            "PetType": 1
+            "Breed": "RandomString748",
+            "Name": "RandomString528",
+            "PetType": 0
           },
           "Response": {
             "StatusCode": 404,
@@ -5262,15 +5262,15 @@
           "ApiCallOrderId": 0,
           "Request": {
             "Id": 1,
-            "Type": "RandomString854",
-            "FullName": "RandomString943",
-            "PetType": 2
+            "Breed": "RandomString854",
+            "Name": "RandomString943",
+            "PetType": 1
           },
           "Response": {
             "Id": 1,
-            "Type": "RandomString854",
-            "FullName": "RandomString943",
-            "PetType": 2
+            "Breed": "RandomString854",
+            "Name": "RandomString943",
+            "PetType": 1
           },
           "HttpMethod": "post"
         },
@@ -5311,8 +5311,8 @@
           "ApiCallOrderId": 4,
           "Request": {
             "Id": 3,
-            "Type": "RandomString727",
-            "FullName": "RandomString129",
+            "Breed": "RandomString727",
+            "Name": "RandomString129",
             "PetType": 0
           },
           "Response": {
@@ -5333,14 +5333,14 @@
           "ApiCallOrderId": 0,
           "Request": {
             "Id": 1,
-            "Type": "RandomString808",
-            "FullName": "RandomString230",
+            "Breed": "RandomString808",
+            "Name": "RandomString230",
             "PetType": 1
           },
           "Response": {
             "Id": 1,
-            "Type": "RandomString808",
-            "FullName": "RandomString230",
+            "Breed": "RandomString808",
+            "Name": "RandomString230",
             "PetType": 1
           },
           "HttpMethod": "post"
@@ -5371,8 +5371,8 @@
           "ApiCallOrderId": 3,
           "Request": {
             "Id": 2,
-            "Type": "RandomString925",
-            "FullName": "RandomString411",
+            "Breed": "RandomString925",
+            "Name": "RandomString411",
             "PetType": 0
           },
           "Response": {
@@ -5404,14 +5404,14 @@
           "ApiCallOrderId": 0,
           "Request": {
             "Id": 1,
-            "Type": "RandomString608",
-            "FullName": "RandomString608",
+            "Breed": "RandomString608",
+            "Name": "RandomString608",
             "PetType": 0
           },
           "Response": {
             "Id": 1,
-            "Type": "RandomString608",
-            "FullName": "RandomString608",
+            "Breed": "RandomString608",
+            "Name": "RandomString608",
             "PetType": 0
           },
           "HttpMethod": "post"
@@ -5428,8 +5428,8 @@
           "ApiCallOrderId": 2,
           "Request": {
             "Id": 2,
-            "Type": "RandomString919",
-            "FullName": "RandomString964",
+            "Breed": "RandomString919",
+            "Name": "RandomString964",
             "PetType": 0
           },
           "Response": {
@@ -5475,14 +5475,14 @@
           "ApiCallOrderId": 0,
           "Request": {
             "Id": 1,
-            "Type": "RandomString697",
-            "FullName": "RandomString809",
+            "Breed": "RandomString697",
+            "Name": "RandomString809",
             "PetType": 0
           },
           "Response": {
             "Id": 1,
-            "Type": "RandomString697",
-            "FullName": "RandomString809",
+            "Breed": "RandomString697",
+            "Name": "RandomString809",
             "PetType": 0
           },
           "HttpMethod": "post"
@@ -5499,9 +5499,9 @@
           "ApiCallOrderId": 2,
           "Request": {
             "Id": 4,
-            "Type": "RandomString285",
-            "FullName": "RandomString298",
-            "PetType": 2
+            "Breed": "RandomString285",
+            "Name": "RandomString298",
+            "PetType": 1
           },
           "Response": {
             "StatusCode": 404,
@@ -5546,14 +5546,14 @@
           "ApiCallOrderId": 0,
           "Request": {
             "Id": 4,
-            "Type": "RandomString907",
-            "FullName": "RandomString76",
+            "Breed": "RandomString907",
+            "Name": "RandomString76",
             "PetType": 1
           },
           "Response": {
             "Id": 1,
-            "Type": "RandomString907",
-            "FullName": "RandomString76",
+            "Breed": "RandomString907",
+            "Name": "RandomString76",
             "PetType": 1
           },
           "HttpMethod": "post"
@@ -5595,8 +5595,8 @@
           "ApiCallOrderId": 4,
           "Request": {
             "Id": 3,
-            "Type": "RandomString921",
-            "FullName": "RandomString401",
+            "Breed": "RandomString921",
+            "Name": "RandomString401",
             "PetType": 0
           },
           "Response": {
@@ -5617,14 +5617,14 @@
           "ApiCallOrderId": 0,
           "Request": {
             "Id": 3,
-            "Type": "RandomString970",
-            "FullName": "RandomString189",
+            "Breed": "RandomString970",
+            "Name": "RandomString189",
             "PetType": 0
           },
           "Response": {
             "Id": 1,
-            "Type": "RandomString970",
-            "FullName": "RandomString189",
+            "Breed": "RandomString970",
+            "Name": "RandomString189",
             "PetType": 0
           },
           "HttpMethod": "post"
@@ -5652,9 +5652,9 @@
           "ApiCallOrderId": 3,
           "Request": {
             "Id": 3,
-            "Type": "RandomString115",
-            "FullName": "RandomString611",
-            "PetType": 2
+            "Breed": "RandomString115",
+            "Name": "RandomString611",
+            "PetType": 1
           },
           "Response": {
             "StatusCode": 404,
@@ -5688,14 +5688,14 @@
           "ApiCallOrderId": 0,
           "Request": {
             "Id": 4,
-            "Type": "RandomString61",
-            "FullName": "RandomString427",
+            "Breed": "RandomString61",
+            "Name": "RandomString427",
             "PetType": 0
           },
           "Response": {
             "Id": 1,
-            "Type": "RandomString61",
-            "FullName": "RandomString427",
+            "Breed": "RandomString61",
+            "Name": "RandomString427",
             "PetType": 0
           },
           "HttpMethod": "post"
@@ -5737,9 +5737,9 @@
           "ApiCallOrderId": 4,
           "Request": {
             "Id": 4,
-            "Type": "RandomString251",
-            "FullName": "RandomString594",
-            "PetType": 1
+            "Breed": "RandomString251",
+            "Name": "RandomString594",
+            "PetType": 0
           },
           "Response": {
             "StatusCode": 404,
@@ -5759,15 +5759,15 @@
           "ApiCallOrderId": 0,
           "Request": {
             "Id": 1,
-            "Type": "RandomString5",
-            "FullName": "RandomString961",
-            "PetType": 2
+            "Breed": "RandomString5",
+            "Name": "RandomString961",
+            "PetType": 1
           },
           "Response": {
             "Id": 1,
-            "Type": "RandomString5",
-            "FullName": "RandomString961",
-            "PetType": 2
+            "Breed": "RandomString5",
+            "Name": "RandomString961",
+            "PetType": 1
           },
           "HttpMethod": "post"
         },
@@ -5801,8 +5801,8 @@
           "ApiCallOrderId": 3,
           "Request": {
             "Id": 3,
-            "Type": "RandomString330",
-            "FullName": "RandomString584",
+            "Breed": "RandomString330",
+            "Name": "RandomString584",
             "PetType": 0
           },
           "Response": {
@@ -5830,15 +5830,15 @@
           "ApiCallOrderId": 0,
           "Request": {
             "Id": 1,
-            "Type": "RandomString604",
-            "FullName": "RandomString473",
-            "PetType": 2
+            "Breed": "RandomString604",
+            "Name": "RandomString473",
+            "PetType": 1
           },
           "Response": {
             "Id": 1,
-            "Type": "RandomString604",
-            "FullName": "RandomString473",
-            "PetType": 2
+            "Breed": "RandomString604",
+            "Name": "RandomString473",
+            "PetType": 1
           },
           "HttpMethod": "post"
         },
@@ -5858,9 +5858,9 @@
           "ApiCallOrderId": 2,
           "Request": {
             "Id": 1,
-            "Type": "RandomString606",
-            "FullName": "RandomString419",
-            "PetType": 1
+            "Breed": "RandomString606",
+            "Name": "RandomString419",
+            "PetType": 0
           },
           "Response": {
             "StatusCode": 404,
@@ -5901,14 +5901,14 @@
           "ApiCallOrderId": 0,
           "Request": {
             "Id": 1,
-            "Type": "RandomString810",
-            "FullName": "RandomString998",
+            "Breed": "RandomString810",
+            "Name": "RandomString998",
             "PetType": 0
           },
           "Response": {
             "Id": 1,
-            "Type": "RandomString810",
-            "FullName": "RandomString998",
+            "Breed": "RandomString810",
+            "Name": "RandomString998",
             "PetType": 0
           },
           "HttpMethod": "post"
@@ -5929,9 +5929,9 @@
           "ApiCallOrderId": 2,
           "Request": {
             "Id": 1,
-            "Type": "RandomString365",
-            "FullName": "RandomString440",
-            "PetType": 2
+            "Breed": "RandomString365",
+            "Name": "RandomString440",
+            "PetType": 1
           },
           "Response": {
             "StatusCode": 404,
@@ -5972,14 +5972,14 @@
           "ApiCallOrderId": 0,
           "Request": {
             "Id": 1,
-            "Type": "RandomString802",
-            "FullName": "RandomString133",
+            "Breed": "RandomString802",
+            "Name": "RandomString133",
             "PetType": 0
           },
           "Response": {
             "Id": 1,
-            "Type": "RandomString802",
-            "FullName": "RandomString133",
+            "Breed": "RandomString802",
+            "Name": "RandomString133",
             "PetType": 0
           },
           "HttpMethod": "post"
@@ -6021,9 +6021,9 @@
           "ApiCallOrderId": 4,
           "Request": {
             "Id": 3,
-            "Type": "RandomString292",
-            "FullName": "RandomString728",
-            "PetType": 1
+            "Breed": "RandomString292",
+            "Name": "RandomString728",
+            "PetType": 0
           },
           "Response": {
             "StatusCode": 404,
@@ -6043,14 +6043,14 @@
           "ApiCallOrderId": 0,
           "Request": {
             "Id": 2,
-            "Type": "RandomString600",
-            "FullName": "RandomString755",
+            "Breed": "RandomString600",
+            "Name": "RandomString755",
             "PetType": 1
           },
           "Response": {
             "Id": 1,
-            "Type": "RandomString600",
-            "FullName": "RandomString755",
+            "Breed": "RandomString600",
+            "Name": "RandomString755",
             "PetType": 1
           },
           "HttpMethod": "post"
@@ -6085,8 +6085,8 @@
           "ApiCallOrderId": 3,
           "Request": {
             "Id": 1,
-            "Type": "RandomString425",
-            "FullName": "RandomString993",
+            "Breed": "RandomString425",
+            "Name": "RandomString993",
             "PetType": 0
           },
           "Response": {
@@ -6114,15 +6114,15 @@
           "ApiCallOrderId": 0,
           "Request": {
             "Id": 2,
-            "Type": "RandomString972",
-            "FullName": "RandomString887",
-            "PetType": 1
+            "Breed": "RandomString972",
+            "Name": "RandomString887",
+            "PetType": 0
           },
           "Response": {
             "Id": 1,
-            "Type": "RandomString972",
-            "FullName": "RandomString887",
-            "PetType": 1
+            "Breed": "RandomString972",
+            "Name": "RandomString887",
+            "PetType": 0
           },
           "HttpMethod": "post"
         },
@@ -6163,9 +6163,9 @@
           "ApiCallOrderId": 4,
           "Request": {
             "Id": 2,
-            "Type": "RandomString582",
-            "FullName": "RandomString2",
-            "PetType": 2
+            "Breed": "RandomString582",
+            "Name": "RandomString2",
+            "PetType": 1
           },
           "Response": {
             "StatusCode": 404,
@@ -6185,15 +6185,15 @@
           "ApiCallOrderId": 0,
           "Request": {
             "Id": 2,
-            "Type": "RandomString108",
-            "FullName": "RandomString917",
-            "PetType": 2
+            "Breed": "RandomString108",
+            "Name": "RandomString917",
+            "PetType": 1
           },
           "Response": {
             "Id": 1,
-            "Type": "RandomString108",
-            "FullName": "RandomString917",
-            "PetType": 2
+            "Breed": "RandomString108",
+            "Name": "RandomString917",
+            "PetType": 1
           },
           "HttpMethod": "post"
         },
@@ -6223,8 +6223,8 @@
           "ApiCallOrderId": 3,
           "Request": {
             "Id": 3,
-            "Type": "RandomString774",
-            "FullName": "RandomString683",
+            "Breed": "RandomString774",
+            "Name": "RandomString683",
             "PetType": 0
           },
           "Response": {
@@ -6256,15 +6256,15 @@
           "ApiCallOrderId": 0,
           "Request": {
             "Id": 1,
-            "Type": "RandomString981",
-            "FullName": "RandomString323",
-            "PetType": 2
+            "Breed": "RandomString981",
+            "Name": "RandomString323",
+            "PetType": 1
           },
           "Response": {
             "Id": 1,
-            "Type": "RandomString981",
-            "FullName": "RandomString323",
-            "PetType": 2
+            "Breed": "RandomString981",
+            "Name": "RandomString323",
+            "PetType": 1
           },
           "HttpMethod": "post"
         },
@@ -6287,8 +6287,8 @@
           "ApiCallOrderId": 2,
           "Request": {
             "Id": 3,
-            "Type": "RandomString445",
-            "FullName": "RandomString629",
+            "Breed": "RandomString445",
+            "Name": "RandomString629",
             "PetType": 0
           },
           "Response": {
@@ -6327,15 +6327,15 @@
           "ApiCallOrderId": 0,
           "Request": {
             "Id": 3,
-            "Type": "RandomString619",
-            "FullName": "RandomString816",
-            "PetType": 2
+            "Breed": "RandomString619",
+            "Name": "RandomString816",
+            "PetType": 1
           },
           "Response": {
             "Id": 1,
-            "Type": "RandomString619",
-            "FullName": "RandomString816",
-            "PetType": 2
+            "Breed": "RandomString619",
+            "Name": "RandomString816",
+            "PetType": 1
           },
           "HttpMethod": "post"
         },
@@ -6358,9 +6358,9 @@
           "ApiCallOrderId": 2,
           "Request": {
             "Id": 3,
-            "Type": "RandomString94",
-            "FullName": "RandomString229",
-            "PetType": 2
+            "Breed": "RandomString94",
+            "Name": "RandomString229",
+            "PetType": 1
           },
           "Response": {
             "StatusCode": 404,
@@ -6398,15 +6398,15 @@
           "ApiCallOrderId": 0,
           "Request": {
             "Id": 4,
-            "Type": "RandomString768",
-            "FullName": "RandomString384",
-            "PetType": 2
+            "Breed": "RandomString768",
+            "Name": "RandomString384",
+            "PetType": 1
           },
           "Response": {
             "Id": 1,
-            "Type": "RandomString768",
-            "FullName": "RandomString384",
-            "PetType": 2
+            "Breed": "RandomString768",
+            "Name": "RandomString384",
+            "PetType": 1
           },
           "HttpMethod": "post"
         },
@@ -6415,9 +6415,9 @@
           "ApiCallOrderId": 1,
           "Request": {
             "Id": 3,
-            "Type": "RandomString280",
-            "FullName": "RandomString758",
-            "PetType": 2
+            "Breed": "RandomString280",
+            "Name": "RandomString758",
+            "PetType": 1
           },
           "Response": {
             "StatusCode": 404,
@@ -6469,15 +6469,15 @@
           "ApiCallOrderId": 0,
           "Request": {
             "Id": 2,
-            "Type": "RandomString627",
-            "FullName": "RandomString20",
-            "PetType": 2
+            "Breed": "RandomString627",
+            "Name": "RandomString20",
+            "PetType": 1
           },
           "Response": {
             "Id": 1,
-            "Type": "RandomString627",
-            "FullName": "RandomString20",
-            "PetType": 2
+            "Breed": "RandomString627",
+            "Name": "RandomString20",
+            "PetType": 1
           },
           "HttpMethod": "post"
         },
@@ -6486,8 +6486,8 @@
           "ApiCallOrderId": 1,
           "Request": {
             "Id": 4,
-            "Type": "RandomString833",
-            "FullName": "RandomString332",
+            "Breed": "RandomString833",
+            "Name": "RandomString332",
             "PetType": 0
           },
           "Response": {
@@ -6540,15 +6540,15 @@
           "ApiCallOrderId": 0,
           "Request": {
             "Id": 3,
-            "Type": "RandomString515",
-            "FullName": "RandomString379",
-            "PetType": 1
+            "Breed": "RandomString515",
+            "Name": "RandomString379",
+            "PetType": 0
           },
           "Response": {
             "Id": 1,
-            "Type": "RandomString515",
-            "FullName": "RandomString379",
-            "PetType": 1
+            "Breed": "RandomString515",
+            "Name": "RandomString379",
+            "PetType": 0
           },
           "HttpMethod": "post"
         },
@@ -6557,9 +6557,9 @@
           "ApiCallOrderId": 1,
           "Request": {
             "Id": 4,
-            "Type": "RandomString166",
-            "FullName": "RandomString538",
-            "PetType": 2
+            "Breed": "RandomString166",
+            "Name": "RandomString538",
+            "PetType": 1
           },
           "Response": {
             "StatusCode": 404,
@@ -6611,15 +6611,15 @@
           "ApiCallOrderId": 0,
           "Request": {
             "Id": 4,
-            "Type": "RandomString549",
-            "FullName": "RandomString448",
-            "PetType": 2
+            "Breed": "RandomString549",
+            "Name": "RandomString448",
+            "PetType": 1
           },
           "Response": {
             "Id": 1,
-            "Type": "RandomString549",
-            "FullName": "RandomString448",
-            "PetType": 2
+            "Breed": "RandomString549",
+            "Name": "RandomString448",
+            "PetType": 1
           },
           "HttpMethod": "post"
         },
@@ -6628,9 +6628,9 @@
           "ApiCallOrderId": 1,
           "Request": {
             "Id": 2,
-            "Type": "RandomString663",
-            "FullName": "RandomString307",
-            "PetType": 2
+            "Breed": "RandomString663",
+            "Name": "RandomString307",
+            "PetType": 1
           },
           "Response": {
             "StatusCode": 404,
@@ -6682,14 +6682,14 @@
           "ApiCallOrderId": 0,
           "Request": {
             "Id": 2,
-            "Type": "RandomString390",
-            "FullName": "RandomString424",
+            "Breed": "RandomString390",
+            "Name": "RandomString424",
             "PetType": 0
           },
           "Response": {
             "Id": 1,
-            "Type": "RandomString390",
-            "FullName": "RandomString424",
+            "Breed": "RandomString390",
+            "Name": "RandomString424",
             "PetType": 0
           },
           "HttpMethod": "post"
@@ -6699,8 +6699,8 @@
           "ApiCallOrderId": 1,
           "Request": {
             "Id": 1,
-            "Type": "RandomString735",
-            "FullName": "RandomString824",
+            "Breed": "RandomString735",
+            "Name": "RandomString824",
             "PetType": 0
           },
           "Response": {
@@ -6753,15 +6753,15 @@
           "ApiCallOrderId": 0,
           "Request": {
             "Id": 4,
-            "Type": "RandomString617",
-            "FullName": "RandomString672",
-            "PetType": 2
+            "Breed": "RandomString617",
+            "Name": "RandomString672",
+            "PetType": 1
           },
           "Response": {
             "Id": 1,
-            "Type": "RandomString617",
-            "FullName": "RandomString672",
-            "PetType": 2
+            "Breed": "RandomString617",
+            "Name": "RandomString672",
+            "PetType": 1
           },
           "HttpMethod": "post"
         },
@@ -6770,8 +6770,8 @@
           "ApiCallOrderId": 1,
           "Request": {
             "Id": 3,
-            "Type": "RandomString402",
-            "FullName": "RandomString82",
+            "Breed": "RandomString402",
+            "Name": "RandomString82",
             "PetType": 1
           },
           "Response": {
@@ -6824,8 +6824,8 @@
           "ApiCallOrderId": 0,
           "Request": {
             "Id": 1,
-            "Type": "RandomString545",
-            "FullName": "RandomString996",
+            "Breed": "RandomString545",
+            "Name": "RandomString996",
             "PetType": 0
           },
           "Response": {
@@ -6858,14 +6858,14 @@
           "ApiCallOrderId": 3,
           "Request": {
             "Id": 3,
-            "Type": "RandomString896",
-            "FullName": "RandomString791",
+            "Breed": "RandomString896",
+            "Name": "RandomString791",
             "PetType": 0
           },
           "Response": {
             "Id": 1,
-            "Type": "RandomString896",
-            "FullName": "RandomString791",
+            "Breed": "RandomString896",
+            "Name": "RandomString791",
             "PetType": 0
           },
           "HttpMethod": "post"
@@ -6895,9 +6895,9 @@
           "ApiCallOrderId": 0,
           "Request": {
             "Id": 1,
-            "Type": "RandomString654",
-            "FullName": "RandomString132",
-            "PetType": 1
+            "Breed": "RandomString654",
+            "Name": "RandomString132",
+            "PetType": 0
           },
           "Response": {
             "StatusCode": 404,
@@ -6943,15 +6943,15 @@
           "ApiCallOrderId": 4,
           "Request": {
             "Id": 2,
-            "Type": "RandomString442",
-            "FullName": "RandomString932",
-            "PetType": 2
+            "Breed": "RandomString442",
+            "Name": "RandomString932",
+            "PetType": 1
           },
           "Response": {
             "Id": 1,
-            "Type": "RandomString442",
-            "FullName": "RandomString932",
-            "PetType": 2
+            "Breed": "RandomString442",
+            "Name": "RandomString932",
+            "PetType": 1
           },
           "HttpMethod": "post"
         }
@@ -6966,8 +6966,8 @@
           "ApiCallOrderId": 0,
           "Request": {
             "Id": 3,
-            "Type": "RandomString642",
-            "FullName": "RandomString341",
+            "Breed": "RandomString642",
+            "Name": "RandomString341",
             "PetType": 1
           },
           "Response": {
@@ -6989,15 +6989,15 @@
           "ApiCallOrderId": 2,
           "Request": {
             "Id": 3,
-            "Type": "RandomString621",
-            "FullName": "RandomString540",
-            "PetType": 2
+            "Breed": "RandomString621",
+            "Name": "RandomString540",
+            "PetType": 1
           },
           "Response": {
             "Id": 1,
-            "Type": "RandomString621",
-            "FullName": "RandomString540",
-            "PetType": 2
+            "Breed": "RandomString621",
+            "Name": "RandomString540",
+            "PetType": 1
           },
           "HttpMethod": "post"
         },
@@ -7037,8 +7037,8 @@
           "ApiCallOrderId": 0,
           "Request": {
             "Id": 3,
-            "Type": "RandomString984",
-            "FullName": "RandomString996",
+            "Breed": "RandomString984",
+            "Name": "RandomString996",
             "PetType": 0
           },
           "Response": {
@@ -7060,14 +7060,14 @@
           "ApiCallOrderId": 2,
           "Request": {
             "Id": 3,
-            "Type": "RandomString952",
-            "FullName": "RandomString261",
+            "Breed": "RandomString952",
+            "Name": "RandomString261",
             "PetType": 0
           },
           "Response": {
             "Id": 1,
-            "Type": "RandomString952",
-            "FullName": "RandomString261",
+            "Breed": "RandomString952",
+            "Name": "RandomString261",
             "PetType": 0
           },
           "HttpMethod": "post"
@@ -7108,9 +7108,9 @@
           "ApiCallOrderId": 0,
           "Request": {
             "Id": 2,
-            "Type": "RandomString181",
-            "FullName": "RandomString153",
-            "PetType": 2
+            "Breed": "RandomString181",
+            "Name": "RandomString153",
+            "PetType": 1
           },
           "Response": {
             "StatusCode": 404,
@@ -7145,14 +7145,14 @@
           "ApiCallOrderId": 3,
           "Request": {
             "Id": 1,
-            "Type": "RandomString383",
-            "FullName": "RandomString426",
+            "Breed": "RandomString383",
+            "Name": "RandomString426",
             "PetType": 1
           },
           "Response": {
             "Id": 1,
-            "Type": "RandomString383",
-            "FullName": "RandomString426",
+            "Breed": "RandomString383",
+            "Name": "RandomString426",
             "PetType": 1
           },
           "HttpMethod": "post"
@@ -7179,9 +7179,9 @@
           "ApiCallOrderId": 0,
           "Request": {
             "Id": 2,
-            "Type": "RandomString443",
-            "FullName": "RandomString943",
-            "PetType": 1
+            "Breed": "RandomString443",
+            "Name": "RandomString943",
+            "PetType": 0
           },
           "Response": {
             "StatusCode": 404,
@@ -7227,15 +7227,15 @@
           "ApiCallOrderId": 4,
           "Request": {
             "Id": 3,
-            "Type": "RandomString533",
-            "FullName": "RandomString493",
-            "PetType": 2
+            "Breed": "RandomString533",
+            "Name": "RandomString493",
+            "PetType": 1
           },
           "Response": {
             "Id": 1,
-            "Type": "RandomString533",
-            "FullName": "RandomString493",
-            "PetType": 2
+            "Breed": "RandomString533",
+            "Name": "RandomString493",
+            "PetType": 1
           },
           "HttpMethod": "post"
         }
@@ -7250,9 +7250,9 @@
           "ApiCallOrderId": 0,
           "Request": {
             "Id": 1,
-            "Type": "RandomString446",
-            "FullName": "RandomString926",
-            "PetType": 1
+            "Breed": "RandomString446",
+            "Name": "RandomString926",
+            "PetType": 0
           },
           "Response": {
             "StatusCode": 404,
@@ -7284,15 +7284,15 @@
           "ApiCallOrderId": 3,
           "Request": {
             "Id": 2,
-            "Type": "RandomString207",
-            "FullName": "RandomString186",
-            "PetType": 2
+            "Breed": "RandomString207",
+            "Name": "RandomString186",
+            "PetType": 1
           },
           "Response": {
             "Id": 1,
-            "Type": "RandomString207",
-            "FullName": "RandomString186",
-            "PetType": 2
+            "Breed": "RandomString207",
+            "Name": "RandomString186",
+            "PetType": 1
           },
           "HttpMethod": "post"
         },
@@ -7321,8 +7321,8 @@
           "ApiCallOrderId": 0,
           "Request": {
             "Id": 2,
-            "Type": "RandomString127",
-            "FullName": "RandomString910",
+            "Breed": "RandomString127",
+            "Name": "RandomString910",
             "PetType": 0
           },
           "Response": {
@@ -7369,15 +7369,15 @@
           "ApiCallOrderId": 4,
           "Request": {
             "Id": 2,
-            "Type": "RandomString100",
-            "FullName": "RandomString47",
-            "PetType": 2
+            "Breed": "RandomString100",
+            "Name": "RandomString47",
+            "PetType": 1
           },
           "Response": {
             "Id": 1,
-            "Type": "RandomString100",
-            "FullName": "RandomString47",
-            "PetType": 2
+            "Breed": "RandomString100",
+            "Name": "RandomString47",
+            "PetType": 1
           },
           "HttpMethod": "post"
         }
@@ -7392,9 +7392,9 @@
           "ApiCallOrderId": 0,
           "Request": {
             "Id": 3,
-            "Type": "RandomString739",
-            "FullName": "RandomString496",
-            "PetType": 2
+            "Breed": "RandomString739",
+            "Name": "RandomString496",
+            "PetType": 1
           },
           "Response": {
             "StatusCode": 404,
@@ -7419,14 +7419,14 @@
           "ApiCallOrderId": 2,
           "Request": {
             "Id": 4,
-            "Type": "RandomString125",
-            "FullName": "RandomString46",
+            "Breed": "RandomString125",
+            "Name": "RandomString46",
             "PetType": 0
           },
           "Response": {
             "Id": 1,
-            "Type": "RandomString125",
-            "FullName": "RandomString46",
+            "Breed": "RandomString125",
+            "Name": "RandomString46",
             "PetType": 0
           },
           "HttpMethod": "post"
@@ -7463,9 +7463,9 @@
           "ApiCallOrderId": 0,
           "Request": {
             "Id": 2,
-            "Type": "RandomString289",
-            "FullName": "RandomString443",
-            "PetType": 1
+            "Breed": "RandomString289",
+            "Name": "RandomString443",
+            "PetType": 0
           },
           "Response": {
             "StatusCode": 404,
@@ -7490,15 +7490,15 @@
           "ApiCallOrderId": 2,
           "Request": {
             "Id": 2,
-            "Type": "RandomString50",
-            "FullName": "RandomString199",
-            "PetType": 2
+            "Breed": "RandomString50",
+            "Name": "RandomString199",
+            "PetType": 1
           },
           "Response": {
             "Id": 1,
-            "Type": "RandomString50",
-            "FullName": "RandomString199",
-            "PetType": 2
+            "Breed": "RandomString50",
+            "Name": "RandomString199",
+            "PetType": 1
           },
           "HttpMethod": "post"
         },
@@ -7534,8 +7534,8 @@
           "ApiCallOrderId": 0,
           "Request": {
             "Id": 1,
-            "Type": "RandomString20",
-            "FullName": "RandomString503",
+            "Breed": "RandomString20",
+            "Name": "RandomString503",
             "PetType": 1
           },
           "Response": {
@@ -7575,14 +7575,14 @@
           "ApiCallOrderId": 3,
           "Request": {
             "Id": 4,
-            "Type": "RandomString577",
-            "FullName": "RandomString114",
+            "Breed": "RandomString577",
+            "Name": "RandomString114",
             "PetType": 1
           },
           "Response": {
             "Id": 1,
-            "Type": "RandomString577",
-            "FullName": "RandomString114",
+            "Breed": "RandomString577",
+            "Name": "RandomString114",
             "PetType": 1
           },
           "HttpMethod": "post"
@@ -7605,9 +7605,9 @@
           "ApiCallOrderId": 0,
           "Request": {
             "Id": 3,
-            "Type": "RandomString315",
-            "FullName": "RandomString348",
-            "PetType": 1
+            "Breed": "RandomString315",
+            "Name": "RandomString348",
+            "PetType": 0
           },
           "Response": {
             "StatusCode": 404,
@@ -7653,15 +7653,15 @@
           "ApiCallOrderId": 4,
           "Request": {
             "Id": 2,
-            "Type": "RandomString869",
-            "FullName": "RandomString816",
-            "PetType": 2
+            "Breed": "RandomString869",
+            "Name": "RandomString816",
+            "PetType": 1
           },
           "Response": {
             "Id": 1,
-            "Type": "RandomString869",
-            "FullName": "RandomString816",
-            "PetType": 2
+            "Breed": "RandomString869",
+            "Name": "RandomString816",
+            "PetType": 1
           },
           "HttpMethod": "post"
         }
@@ -7676,9 +7676,9 @@
           "ApiCallOrderId": 0,
           "Request": {
             "Id": 2,
-            "Type": "RandomString106",
-            "FullName": "RandomString229",
-            "PetType": 2
+            "Breed": "RandomString106",
+            "Name": "RandomString229",
+            "PetType": 1
           },
           "Response": {
             "StatusCode": 404,
@@ -7692,15 +7692,15 @@
           "ApiCallOrderId": 1,
           "Request": {
             "Id": 2,
-            "Type": "RandomString632",
-            "FullName": "RandomString204",
-            "PetType": 2
+            "Breed": "RandomString632",
+            "Name": "RandomString204",
+            "PetType": 1
           },
           "Response": {
             "Id": 1,
-            "Type": "RandomString632",
-            "FullName": "RandomString204",
-            "PetType": 2
+            "Breed": "RandomString632",
+            "Name": "RandomString204",
+            "PetType": 1
           },
           "HttpMethod": "post"
         },
@@ -7747,8 +7747,8 @@
           "ApiCallOrderId": 0,
           "Request": {
             "Id": 2,
-            "Type": "RandomString936",
-            "FullName": "RandomString614",
+            "Breed": "RandomString936",
+            "Name": "RandomString614",
             "PetType": 1
           },
           "Response": {
@@ -7763,15 +7763,15 @@
           "ApiCallOrderId": 1,
           "Request": {
             "Id": 1,
-            "Type": "RandomString896",
-            "FullName": "RandomString684",
-            "PetType": 2
+            "Breed": "RandomString896",
+            "Name": "RandomString684",
+            "PetType": 1
           },
           "Response": {
             "Id": 1,
-            "Type": "RandomString896",
-            "FullName": "RandomString684",
-            "PetType": 2
+            "Breed": "RandomString896",
+            "Name": "RandomString684",
+            "PetType": 1
           },
           "HttpMethod": "post"
         },
@@ -7818,8 +7818,8 @@
           "ApiCallOrderId": 0,
           "Request": {
             "Id": 1,
-            "Type": "RandomString64",
-            "FullName": "RandomString97",
+            "Breed": "RandomString64",
+            "Name": "RandomString97",
             "PetType": 1
           },
           "Response": {
@@ -7834,14 +7834,14 @@
           "ApiCallOrderId": 1,
           "Request": {
             "Id": 2,
-            "Type": "RandomString104",
-            "FullName": "RandomString443",
+            "Breed": "RandomString104",
+            "Name": "RandomString443",
             "PetType": 1
           },
           "Response": {
             "Id": 1,
-            "Type": "RandomString104",
-            "FullName": "RandomString443",
+            "Breed": "RandomString104",
+            "Name": "RandomString443",
             "PetType": 1
           },
           "HttpMethod": "post"
@@ -7889,9 +7889,9 @@
           "ApiCallOrderId": 0,
           "Request": {
             "Id": 4,
-            "Type": "RandomString937",
-            "FullName": "RandomString966",
-            "PetType": 2
+            "Breed": "RandomString937",
+            "Name": "RandomString966",
+            "PetType": 1
           },
           "Response": {
             "StatusCode": 404,
@@ -7905,14 +7905,14 @@
           "ApiCallOrderId": 1,
           "Request": {
             "Id": 3,
-            "Type": "RandomString696",
-            "FullName": "RandomString497",
+            "Breed": "RandomString696",
+            "Name": "RandomString497",
             "PetType": 1
           },
           "Response": {
             "Id": 1,
-            "Type": "RandomString696",
-            "FullName": "RandomString497",
+            "Breed": "RandomString696",
+            "Name": "RandomString497",
             "PetType": 1
           },
           "HttpMethod": "post"
@@ -7960,9 +7960,9 @@
           "ApiCallOrderId": 0,
           "Request": {
             "Id": 3,
-            "Type": "RandomString265",
-            "FullName": "RandomString768",
-            "PetType": 2
+            "Breed": "RandomString265",
+            "Name": "RandomString768",
+            "PetType": 1
           },
           "Response": {
             "StatusCode": 404,
@@ -7976,14 +7976,14 @@
           "ApiCallOrderId": 1,
           "Request": {
             "Id": 2,
-            "Type": "RandomString860",
-            "FullName": "RandomString63",
+            "Breed": "RandomString860",
+            "Name": "RandomString63",
             "PetType": 0
           },
           "Response": {
             "Id": 1,
-            "Type": "RandomString860",
-            "FullName": "RandomString63",
+            "Breed": "RandomString860",
+            "Name": "RandomString63",
             "PetType": 0
           },
           "HttpMethod": "post"
@@ -8031,9 +8031,9 @@
           "ApiCallOrderId": 0,
           "Request": {
             "Id": 4,
-            "Type": "RandomString925",
-            "FullName": "RandomString186",
-            "PetType": 1
+            "Breed": "RandomString925",
+            "Name": "RandomString186",
+            "PetType": 0
           },
           "Response": {
             "StatusCode": 404,
@@ -8047,14 +8047,14 @@
           "ApiCallOrderId": 1,
           "Request": {
             "Id": 4,
-            "Type": "RandomString446",
-            "FullName": "RandomString468",
+            "Breed": "RandomString446",
+            "Name": "RandomString468",
             "PetType": 1
           },
           "Response": {
             "Id": 1,
-            "Type": "RandomString446",
-            "FullName": "RandomString468",
+            "Breed": "RandomString446",
+            "Name": "RandomString468",
             "PetType": 1
           },
           "HttpMethod": "post"
@@ -8102,8 +8102,8 @@
           "ApiCallOrderId": 0,
           "Request": {
             "Id": 3,
-            "Type": "RandomString870",
-            "FullName": "RandomString725",
+            "Breed": "RandomString870",
+            "Name": "RandomString725",
             "PetType": 0
           },
           "Response": {
@@ -8143,15 +8143,15 @@
           "ApiCallOrderId": 3,
           "Request": {
             "Id": 3,
-            "Type": "RandomString900",
-            "FullName": "RandomString256",
-            "PetType": 2
+            "Breed": "RandomString900",
+            "Name": "RandomString256",
+            "PetType": 1
           },
           "Response": {
             "Id": 1,
-            "Type": "RandomString900",
-            "FullName": "RandomString256",
-            "PetType": 2
+            "Breed": "RandomString900",
+            "Name": "RandomString256",
+            "PetType": 1
           },
           "HttpMethod": "post"
         },
@@ -8173,9 +8173,9 @@
           "ApiCallOrderId": 0,
           "Request": {
             "Id": 4,
-            "Type": "RandomString415",
-            "FullName": "RandomString429",
-            "PetType": 2
+            "Breed": "RandomString415",
+            "Name": "RandomString429",
+            "PetType": 1
           },
           "Response": {
             "StatusCode": 404,
@@ -8221,14 +8221,14 @@
           "ApiCallOrderId": 4,
           "Request": {
             "Id": 2,
-            "Type": "RandomString803",
-            "FullName": "RandomString142",
+            "Breed": "RandomString803",
+            "Name": "RandomString142",
             "PetType": 1
           },
           "Response": {
             "Id": 1,
-            "Type": "RandomString803",
-            "FullName": "RandomString142",
+            "Breed": "RandomString803",
+            "Name": "RandomString142",
             "PetType": 1
           },
           "HttpMethod": "post"
@@ -8244,8 +8244,8 @@
           "ApiCallOrderId": 0,
           "Request": {
             "Id": 2,
-            "Type": "RandomString377",
-            "FullName": "RandomString613",
+            "Breed": "RandomString377",
+            "Name": "RandomString613",
             "PetType": 0
           },
           "Response": {
@@ -8274,14 +8274,14 @@
           "ApiCallOrderId": 2,
           "Request": {
             "Id": 2,
-            "Type": "RandomString167",
-            "FullName": "RandomString926",
+            "Breed": "RandomString167",
+            "Name": "RandomString926",
             "PetType": 1
           },
           "Response": {
             "Id": 1,
-            "Type": "RandomString167",
-            "FullName": "RandomString926",
+            "Breed": "RandomString167",
+            "Name": "RandomString926",
             "PetType": 1
           },
           "HttpMethod": "post"
@@ -8315,8 +8315,8 @@
           "ApiCallOrderId": 0,
           "Request": {
             "Id": 3,
-            "Type": "RandomString496",
-            "FullName": "RandomString135",
+            "Breed": "RandomString496",
+            "Name": "RandomString135",
             "PetType": 1
           },
           "Response": {
@@ -8345,15 +8345,15 @@
           "ApiCallOrderId": 2,
           "Request": {
             "Id": 2,
-            "Type": "RandomString886",
-            "FullName": "RandomString942",
-            "PetType": 2
+            "Breed": "RandomString886",
+            "Name": "RandomString942",
+            "PetType": 1
           },
           "Response": {
             "Id": 1,
-            "Type": "RandomString886",
-            "FullName": "RandomString942",
-            "PetType": 2
+            "Breed": "RandomString886",
+            "Name": "RandomString942",
+            "PetType": 1
           },
           "HttpMethod": "post"
         },
@@ -8386,8 +8386,8 @@
           "ApiCallOrderId": 0,
           "Request": {
             "Id": 2,
-            "Type": "RandomString417",
-            "FullName": "RandomString749",
+            "Breed": "RandomString417",
+            "Name": "RandomString749",
             "PetType": 0
           },
           "Response": {
@@ -8423,14 +8423,14 @@
           "ApiCallOrderId": 3,
           "Request": {
             "Id": 4,
-            "Type": "RandomString194",
-            "FullName": "RandomString15",
+            "Breed": "RandomString194",
+            "Name": "RandomString15",
             "PetType": 0
           },
           "Response": {
             "Id": 1,
-            "Type": "RandomString194",
-            "FullName": "RandomString15",
+            "Breed": "RandomString194",
+            "Name": "RandomString15",
             "PetType": 0
           },
           "HttpMethod": "post"
@@ -8457,9 +8457,9 @@
           "ApiCallOrderId": 0,
           "Request": {
             "Id": 3,
-            "Type": "RandomString993",
-            "FullName": "RandomString762",
-            "PetType": 2
+            "Breed": "RandomString993",
+            "Name": "RandomString762",
+            "PetType": 1
           },
           "Response": {
             "StatusCode": 404,
@@ -8505,14 +8505,14 @@
           "ApiCallOrderId": 4,
           "Request": {
             "Id": 3,
-            "Type": "RandomString835",
-            "FullName": "RandomString210",
+            "Breed": "RandomString835",
+            "Name": "RandomString210",
             "PetType": 0
           },
           "Response": {
             "Id": 1,
-            "Type": "RandomString835",
-            "FullName": "RandomString210",
+            "Breed": "RandomString835",
+            "Name": "RandomString210",
             "PetType": 0
           },
           "HttpMethod": "post"
