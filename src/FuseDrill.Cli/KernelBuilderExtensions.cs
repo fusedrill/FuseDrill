@@ -20,13 +20,15 @@ public static class KernelBuilderExtensions
         return builder;
     }
 
-    public static IKernelBuilder AddDeepSeekR1ChatCompletion(this IKernelBuilder builder)
+    public static IKernelBuilder AddDeepSeekR1ChatCompletionV2(this IKernelBuilder builder)
     {
+        var client = new HttpClient(new MyHttpDeepSeekMessageHandler());
+        client.Timeout = TimeSpan.FromMinutes(5);
         var endpoint = new Uri("https://models.inference.ai.azure.com").ToString();
         var credential = Environment.GetEnvironmentVariable("PERSONAL_GITHUB_TOKEN");
         var model = "DeepSeek-R1";
 
-        builder.AddAzureOpenAIChatCompletion("DeepSeek-R1", endpoint, credential, modelId: model);
+        builder.AddOpenAIChatCompletion(model, credential, httpClient: client);
         return builder;
     }
 

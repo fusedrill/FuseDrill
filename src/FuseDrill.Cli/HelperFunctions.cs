@@ -2,7 +2,6 @@ using FuseDrill.Core;
 using Microsoft.SemanticKernel;
 using Microsoft.SemanticKernel.Connectors.OpenAI;
 using Octokit;
-using System.ClientModel.Primitives;
 using System.Text.Json;
 
 public static class HelperFunctions
@@ -159,7 +158,7 @@ Heres is the real API Contract Difference you should work on this:
 {{$fuzzingOutputDiff}}
 ----
 """;
-        var code = kernel.CreateFunctionFromPrompt(prompt, executionSettings: new OpenAIPromptExecutionSettings { MaxTokens = 16000 });
+        var code = kernel.CreateFunctionFromPrompt(prompt, executionSettings: new OpenAIPromptExecutionSettings { MaxTokens = 3900, });
 
         var markdownResponse = await kernel.InvokeAsync(code, new()
         {
@@ -241,6 +240,37 @@ Heres is the real API Contract Difference you should work on this:
         Console.WriteLine($"Snapshot committed to branch {branch} in repository {owner}/{repoName}");
     }
 
+    public static string GetMinimizedDiff(string actualDiff)
+    {
+        var lines = actualDiff.Split(Environment.NewLine);
+
+        var windowsOf5WithoutDuplication = lines
+            .Select((x, i) => new { x, i })
+            .GroupBy(e => e.i / 5)
+            .Select(g => g.Select(e => e.x).ToList())
+            .Where(w => w.Count == 5)
+            .ToList();
+
+        var windowOf5LinesChunk = windowsOf5WithoutDuplication
+            .Select(item => string.Join(Environment.NewLine, item.ToList()));
+
+        var chunksWithDifs = windowOf5LinesChunk
+            .Where(chunk => chunk.Contains("+ ") || chunk.Contains("- "))
+            .ToList();
+
+        var finalText = string.Join(Environment.NewLine, chunksWithDifs);
+
+        return finalText;
+    }
+
+    private static int[] FillFromMToNthNumber(int m, int n)
+    {
+        if (m > n)
+            return Array.Empty<int>(); // Return an empty array if the range is invalid.
+
+        return Enumerable.Range(m, n - m + 1).ToArray();
+    }
+
     public static async Task<string> CompareFuzzingsWithLLM(string newText, string oldText)
     {
         if (newText == oldText)
@@ -255,8 +285,10 @@ Heres is the real API Contract Difference you should work on this:
         //use semantic kernel 
         var kernel = Kernel.CreateBuilder()
         //.AddGeminiChatCompletion() //Todo make config switch here
-        .AddDeepSeekR1ChatCompletion() // Free for all github accounts but with limits;
+        .AddDeepSeekR1ChatCompletionV2() // Free for all github accounts but with limits;
         .Build();
+
+        var trimmed = GetMinimizedDiff(actualDiff);
 
         var llmResponse = await AnalyzeFuzzingDiffWithLLM(kernel, actualDiff);
         return llmResponse;

@@ -12,3 +12,12 @@
     }
 }
 
+public sealed class MyHttpDeepSeekMessageHandler : HttpClientHandler
+{
+    protected override Task<HttpResponseMessage> SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+    {
+        request.RequestUri = new Uri($"https://models.inference.ai.azure.com/chat/completions");
+        return base.SendAsync(request, cancellationToken);
+    }
+}
+

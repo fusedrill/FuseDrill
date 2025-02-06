@@ -36,10 +36,10 @@ public class CliFlowTests
         fuseDrillOpenApiUrl = "http://localhost:5184/swagger/v1/swagger.json";
         githubToken = Environment.GetEnvironmentVariable("GITHUB_TOKEN");
         geminiToken = Environment.GetEnvironmentVariable("GEMINI_API_KEY");
-        branch = "Ordering_bug";
+        branch = "ImplementDeepSeekR1";
         repoName = "FuseDrill";
         owner = "martasp";
-        pullReqestNumber = "26";
+        pullReqestNumber = "30";
 #endif
 
         await CliFlow(owner, repoName, branch, githubToken, fuseDrillBaseAddres, fuseDrillOpenApiUrl, fuseDrillTestAccountOAuthHeaderValue, smokeFlag, pullReqestNumber, geminiToken);
