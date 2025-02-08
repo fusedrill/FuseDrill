@@ -1,4 +1,5 @@
 ﻿using OneOf;
+using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Reflection;
 
@@ -122,6 +123,7 @@ public class DataGenerationHelper
             Type t when t == typeof(bool) => random.Next(0, 2) == 0,                                   // Random boolean
             Type t when t == typeof(double) => random.NextDouble() * 100,                              // Random double
             Type t when t == typeof(DateTime) => DateTime.Now.AddDays(random.Next(-100, 100)),         // Random date
+            Type t when t == typeof(TimeSpan) => TimeSpan.FromHours(random.Next(1, 100)),              // Random TimeSpan
             Type t when t == typeof(DateTimeOffset) => DateTimeOffset.Now.AddDays(random.Next(-100, 100)),         // Random date
             Type t when t == typeof(Guid) => GenerateGuidFromSeed(),
             Type t when t == typeof(long) => random.NextInt64(1, 10000),
@@ -144,6 +146,7 @@ public class DataGenerationHelper
             Type t when t == typeof(bool?) => random.Next(0, 2) == 0 ? (bool?)null : random.Next(0, 2) == 0,               // Random bool? (null or bool)
             Type t when t == typeof(double?) => random.Next(0, 2) == 0 ? (double?)null : random.NextDouble() * 100,          // Random double? (null or double)
             Type t when t == typeof(DateTime?) => random.Next(0, 2) == 0 ? (DateTime?)null : DateTime.Now.AddDays(random.Next(-100, 100)), // Random DateTime? (null or DateTime)
+            Type t when t == typeof(TimeSpan?) => random.Next(0, 2) == 0 ? (TimeSpan?)null : TimeSpan.FromHours(random.Next(1, 100)), // Random TimeSpan? (null or DateTime)
             Type t when t == typeof(DateTimeOffset?) => random.Next(0, 2) == 0 ? (DateTimeOffset?)null : DateTimeOffset.Now.AddDays(random.Next(-100, 100)), // Random DateTime? (null or DateTime)
             Type t when t == typeof(Guid?) => random.Next(0, 2) == 0 ? (Guid?)null : GenerateGuidFromSeed(),
             Type t when t == typeof(long?) => random.Next(0, 2) == 0 ? (long?)null : random.NextInt64(1, 10000),
@@ -180,6 +183,14 @@ public class DataGenerationHelper
 
             // Handle ICollection<T> types (always create 3 elements)
             Type t when t.IsGenericType && t.GetGenericTypeDefinition() == typeof(ICollection<>) =>
+                CreateICollectionWithThreeElements(t, permutationSizeCount),  // Delegate to a helper method
+
+            // Handle List<T> types (always create 3 elements)
+            Type t when t.IsGenericType && t.GetGenericTypeDefinition() == typeof(List<>) =>
+                CreateICollectionWithThreeElements(t, permutationSizeCount),  // Delegate to a helper method
+
+            // Handle Collection<T> types (always create 3 elements)
+            Type t when t.BaseType!=null && t.BaseType.IsGenericType && t.BaseType.GetGenericTypeDefinition() == typeof(Collection<>) => 
                 CreateCollectionWithThreeElements(t, permutationSizeCount),  // Delegate to a helper method
 
             // Handle IDictionary<TKey, TValue> types (always create 3 key-value pairs)
@@ -259,7 +270,7 @@ public class DataGenerationHelper
     }
 
     // Helper method to create a collection with exactly 3 random elements
-    private object CreateCollectionWithThreeElements(Type collectionType, int permutationSizeCount)
+    private object CreateICollectionWithThreeElements(Type collectionType, int permutationSizeCount)
     {
         try
         {
@@ -268,6 +279,33 @@ public class DataGenerationHelper
 
             // Create a List<T> with the correct element type
             var list = Activator.CreateInstance(typeof(List<>).MakeGenericType(elementType));
+
+            // Add exactly 3 random elements to the collection
+            for (int i = 0; i < 3; i++)
+            {
+                // Create a random value of the element type and add it to the collection
+                list.GetType().GetMethod("Add").Invoke(list, new object[] { CreateRandomValue(elementType, permutationSizeCount) });
+            }
+
+            return list;
+        }
+        catch (Exception)
+        {
+
+            throw;
+        }
+    }
+
+    // Helper method to create a collection with exactly 3 random elements
+    private object CreateCollectionWithThreeElements(Type collectionType, int permutationSizeCount)
+    {
+        try
+        {
+            // Get the element type (T) of the collection
+            Type elementType = collectionType.BaseType.GetGenericArguments()[0];
+
+            // Create a List<T> with the correct element type
+            var list = Activator.CreateInstance(collectionType);
 
             // Add exactly 3 random elements to the collection
             for (int i = 0; i < 3; i++)

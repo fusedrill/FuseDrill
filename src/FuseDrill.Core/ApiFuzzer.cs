@@ -193,7 +193,7 @@ public class ApiFuzzer : IApiFuzzer
     public string CreateSanitizedNamespace()
     {
         var name = "GeneratedClientMyNamespace";
-        var guid = Guid.NewGuid().ToString("N");
+        var guid = "RuntimeCompilationBuild" + new Random(_seed).Next();
 
         // Define a pattern for illegal characters
         var illegalCharactersPattern = @"[-:.\s_~!@#$%^&*()+=|\\{}[\]<>?/`';]";
@@ -305,7 +305,7 @@ public class ApiFuzzer : IApiFuzzer
             new CSharpCompilationOptions(OutputKind.DynamicallyLinkedLibrary));
 
         using var ms = new MemoryStream();
-        EmitResult result = compilation.Emit(ms);
+        EmitResult result = compilation.Emit(ms); // Slow part cost 1.7 seconds to compile every time.
 
         if (!result.Success)
         {
@@ -510,8 +510,7 @@ public class ApiFuzzer : IApiFuzzer
             {
                 if (parameter.ParameterType.IsGenericType && parameter.ParameterType.GetGenericTypeDefinition() == typeof(IEnumerable<>))
                 {
-                    var list = requestList[index] as IList<Guid>;
-                    Debug.Assert(list != null, "List should be of type IList<Guid>");
+                    var list = requestList[index];
                     input.Add(list);
                 }
                 else
@@ -557,6 +556,11 @@ public class CustomTypeNameGenerator : DefaultTypeNameGenerator
 
     public override string Generate(JsonSchema schema, string typeNameHint, IEnumerable<string> reservedTypeNames)
     {
+        if (typeNameHint == null)
+        {
+            return base.Generate(schema, typeNameHint, reservedTypeNames);
+        }
+
         if (RenameMap.ContainsKey(typeNameHint))
         {
             typeNameHint = RenameMap[typeNameHint];
