@@ -12,10 +12,11 @@ namespace tests;
 
 public class GrafanaFuzzingTests
 {
-    #if DEBUG
+#if DEBUG
         [Fact(Skip = "Need to run docker")]
-    #endif
+#endif
     //http://localhost:3000/public/openapi3.json
+    //docker remove grafana
     //docker run -d --name=grafana -p 3000:3000 grafana/grafana
     public async Task GrafanaJsonTest()
     {
@@ -28,6 +29,9 @@ public class GrafanaFuzzingTests
         httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Basic", Convert.ToBase64String(Encoding.ASCII.GetBytes("admin:admin")));
 
         var tester = new ApiFuzzerWithVerifier(httpClient, "http://localhost:3000/public/openapi3.json");
-        await tester.TestWholeApi();
+        await tester.TestWholeApi(apicall =>
+                apicall.MethodName != "ChangeUserPassword_http_put_Async" &&
+                apicall.MethodName != "UpdateSignedInUser_http_put_Async"
+                );
     }
 }

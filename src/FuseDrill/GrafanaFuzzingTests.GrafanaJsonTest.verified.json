@@ -236,6 +236,7 @@
           "MethodName": "AdminGetStats_http_get_Async",
           "ApiCallOrderId": 14,
           "Response": {
+            "ActiveAdmins": 1,
             "ActiveUsers": 1,
             "Admins": 1,
             "DailyActiveUsers": 1,
@@ -414,20 +415,6 @@
             "TypeName": "ApiException`1"
           },
           "HttpMethod": "post"
-        },
-        {
-          "MethodName": "ChangeUserPassword_http_put_Async",
-          "ApiCallOrderId": 28,
-          "Request": {
-            "NewPassword": "RandomString500",
-            "OldPassword": "RandomString204"
-          },
-          "Response": {
-            "StatusCode": 400,
-            "Message": "BadRequestError is returned when the request is invalid and it cannot be processed.  Status: 400 Response:",
-            "TypeName": "ApiException`1"
-          },
-          "HttpMethod": "put"
         },
         {
           "MethodName": "CheckDatasourceHealthByID_http_get_Async",
@@ -692,12 +679,12 @@
           "Response": {
             "Result": {
               "Comment": "",
-              "CreatedAt": 1739023348,
+              "CreatedAt": 1739102574,
               "CreatedBy": 1,
               "DatasourceUid": "RandomString292",
               "Queries": {},
               "Starred": false,
-              "Uid": "becg8ku76madca"
+              "Uid": "eecjid6xl7ev4a"
             }
           },
           "HttpMethod": "post"
@@ -896,7 +883,7 @@
             "Name": "RandomString601",
             "OrgId": 1,
             "Role": "Editor",
-            "Uid": "decg8kufasetcf"
+            "Uid": "becjid75pdjb4b"
           },
           "HttpMethod": "post"
         },
@@ -934,7 +921,7 @@
           "Response": {
             "Message": "Team created",
             "TeamId": 1,
-            "Uid": "aecg8kujy3lz4b"
+            "Uid": "cecjid7a078qoe"
           },
           "HttpMethod": "post"
         },
@@ -1977,7 +1964,7 @@
           "ApiCallOrderId": 137,
           "Response": [
             {
-              "Code": "Au1lY7Q8E8y5K3dyLLkSTa1V7Q5hYm",
+              "Code": "DaYwIKTQS3bfhC7JhNu9svwTrMUkRx",
               "CreatedOn": "DateTimeOffset_9",
               "Email": "RandomString704",
               "EmailSent": false,
@@ -1990,7 +1977,7 @@
               "OrgId": 1,
               "Role": "Editor",
               "Status": "InvitePending",
-              "Url": "http://localhost:3000/invite/Au1lY7Q8E8y5K3dyLLkSTa1V7Q5hYm"
+              "Url": "http://localhost:3000/invite/DaYwIKTQS3bfhC7JhNu9svwTrMUkRx"
             }
           ],
           "HttpMethod": "get"
@@ -2219,8 +2206,8 @@
             "Name": "",
             "OrgId": 1,
             "Theme": "",
-            "Uid": "fecg8i57ak8w0e",
-            "UpdatedAt": "DateTimeOffset_11"
+            "Uid": "becjia7pzlgxse",
+            "UpdatedAt": "DateTimeOffset_9"
           },
           "HttpMethod": "get"
         },
@@ -3078,7 +3065,7 @@
           "MethodName": "PostDashboard_http_post_Async",
           "ApiCallOrderId": 199,
           "Request": {
-            "UpdatedAt": "DateTimeOffset_12",
+            "UpdatedAt": "DateTimeOffset_11",
             "Dashboard": {},
             "FolderId": 7255,
             "FolderUid": "RandomString771",
@@ -3775,7 +3762,7 @@
               "RuleGroup": "RandomString558",
               "Title": "RandomString200",
               "Uid": "RandomString984",
-              "Updated": "DateTimeOffset_13"
+              "Updated": "DateTimeOffset_12"
             }
           ],
           "Response": {
@@ -3914,7 +3901,7 @@
               "RuleGroup": "RandomString195",
               "Title": "RandomString320",
               "Uid": "RandomString705",
-              "Updated": "DateTimeOffset_14"
+              "Updated": "DateTimeOffset_13"
             }
           ],
           "Response": {
@@ -3995,7 +3982,7 @@
                   "RuleGroup": "RandomString344",
                   "Title": "RandomString934",
                   "Uid": "RandomString884",
-                  "Updated": "DateTimeOffset_15"
+                  "Updated": "DateTimeOffset_14"
                 },
                 {
                   "Annotations": {
@@ -4057,7 +4044,7 @@
                   "RuleGroup": "RandomString754",
                   "Title": "RandomString131",
                   "Uid": "RandomString70",
-                  "Updated": "DateTimeOffset_16"
+                  "Updated": "DateTimeOffset_15"
                 },
                 {
                   "Annotations": {
@@ -4119,7 +4106,7 @@
                   "RuleGroup": "RandomString716",
                   "Title": "RandomString543",
                   "Uid": "RandomString123",
-                  "Updated": "DateTimeOffset_17"
+                  "Updated": "DateTimeOffset_16"
                 }
               ],
               "Title": "RandomString955"
@@ -4495,7 +4482,7 @@
               "LastSeenAtAge": "< 1 minute",
               "Login": "admin",
               "Name": "",
-              "Uid": "fecg8i57ak8w0e"
+              "Uid": "becjia7pzlgxse"
             }
           ],
           "HttpMethod": "get"
@@ -4519,7 +4506,7 @@
                 "LastSeenAtAge": "< 1 minute",
                 "Login": "admin",
                 "Name": "",
-                "Uid": "fecg8i57ak8w0e"
+                "Uid": "becjia7pzlgxse"
               }
             ]
           },
@@ -4606,11 +4593,11 @@
             "ScaleFactor": 9595,
             "Schedule": {
               "DayOfMonth": "RandomString291",
-              "EndDate": "DateTimeOffset_18",
+              "EndDate": "DateTimeOffset_17",
               "Frequency": "RandomString613",
               "IntervalAmount": 1462,
               "IntervalFrequency": "RandomString90",
-              "StartDate": "DateTimeOffset_19",
+              "StartDate": "DateTimeOffset_18",
               "TimeZone": "RandomString5",
               "WorkdaysOnly": false
             },
@@ -5581,11 +5568,11 @@
               "ScaleFactor": 6783,
               "Schedule": {
                 "DayOfMonth": "RandomString427",
-                "EndDate": "DateTimeOffset_20",
+                "EndDate": "DateTimeOffset_19",
                 "Frequency": "RandomString194",
                 "IntervalAmount": 9982,
                 "IntervalFrequency": "RandomString296",
-                "StartDate": "DateTimeOffset_21",
+                "StartDate": "DateTimeOffset_20",
                 "TimeZone": "RandomString159",
                 "WorkdaysOnly": false
               },
@@ -5614,21 +5601,21 @@
               "Permissions": [
                 {
                   "Action": "RandomString313",
-                  "Created": "DateTimeOffset_22",
+                  "Created": "DateTimeOffset_21",
                   "Scope": "RandomString335",
-                  "Updated": "DateTimeOffset_23"
+                  "Updated": "DateTimeOffset_22"
                 },
                 {
                   "Action": "RandomString936",
-                  "Created": "DateTimeOffset_24",
+                  "Created": "DateTimeOffset_23",
                   "Scope": "RandomString225",
-                  "Updated": "DateTimeOffset_25"
+                  "Updated": "DateTimeOffset_24"
                 },
                 {
                   "Action": "RandomString768",
-                  "Created": "DateTimeOffset_26",
+                  "Created": "DateTimeOffset_25",
                   "Scope": "RandomString265",
-                  "Updated": "DateTimeOffset_27"
+                  "Updated": "DateTimeOffset_26"
                 }
               ],
               "Version": 9530
@@ -5659,20 +5646,6 @@
             "TypeName": "ApiException`1"
           },
           "HttpMethod": "patch"
-        },
-        {
-          "MethodName": "UpdateSignedInUser_http_put_Async",
-          "ApiCallOrderId": 313,
-          "Request": {
-            "Email": "RandomString161",
-            "Login": "RandomString477",
-            "Name": "RandomString564",
-            "Theme": "RandomString482"
-          },
-          "Response": {
-            "Message": "User updated"
-          },
-          "HttpMethod": "put"
         },
         {
           "MethodName": "UpdateTeam_http_put_Async",
@@ -5730,8 +5703,8 @@
             }
           ],
           "Response": {
-            "StatusCode": 401,
-            "Message": "UnauthorizedError is returned when the request is not authenticated.  Status: 401 Response:",
+            "StatusCode": 404,
+            "Message": "NotFoundError is returned when the requested resource was not found.  Status: 404 Response:",
             "TypeName": "ApiException`1"
           },
           "HttpMethod": "put"
@@ -5802,8 +5775,8 @@
             }
           ],
           "Response": {
-            "StatusCode": 401,
-            "Message": "UnauthorizedError is returned when the request is not authenticated.  Status: 401 Response:",
+            "StatusCode": 500,
+            "Message": "InternalServerError is a general error indicating something went wrong internally.  Status: 500 Response:",
             "TypeName": "ApiException`1"
           },
           "HttpMethod": "put"
@@ -5812,8 +5785,8 @@
           "MethodName": "UpdateUserEmail_http_get_Async",
           "ApiCallOrderId": 319,
           "Response": {
-            "StatusCode": 401,
-            "Message": "The HTTP status code of the response was not expected (401).  Status: 401 Response:  {\"extra\":null,\"message\":\"Invalid username or password\",\"messageId\":\"password-auth.failed\",\"statusCode\":401,}",
+            "StatusCode": 404,
+            "Message": "The HTTP status code of the response was not expected (404).  Status: 404 Response:  {\"message\":\"Not found\"}",
             "TypeName": "ApiException"
           },
           "HttpMethod": "get"
@@ -5845,8 +5818,8 @@
             "WeekStart": "RandomString932"
           },
           "Response": {
-            "StatusCode": 401,
-            "Message": "UnauthorizedError is returned when the request is not authenticated.  Status: 401 Response:",
+            "StatusCode": 400,
+            "Message": "BadRequestError is returned when the request is invalid and it cannot be processed.  Status: 400 Response:",
             "TypeName": "ApiException`1"
           },
           "HttpMethod": "put"
@@ -5863,8 +5836,8 @@
             }
           ],
           "Response": {
-            "StatusCode": 401,
-            "Message": "UnauthorizedError is returned when the request is not authenticated.  Status: 401 Response:",
+            "StatusCode": 500,
+            "Message": "InternalServerError is a general error indicating something went wrong internally.  Status: 500 Response:",
             "TypeName": "ApiException`1"
           },
           "HttpMethod": "put"
@@ -5877,9 +5850,9 @@
             "RandomString271"
           ],
           "Response": {
-            "StatusCode": 401,
-            "Message": "UnauthorizedError is returned when the request is not authenticated.  Status: 401 Response:",
-            "TypeName": "ApiException`1"
+            "StatusCode": 404,
+            "Message": "The HTTP status code of the response was not expected (404).  Status: 404 Response:  {\"statusCode\":404,\"messageId\":\"cloudmigrations.sessionNotFound\",\"message\":\"NotFound\"}",
+            "TypeName": "ApiException"
           },
           "HttpMethod": "post"
         },
