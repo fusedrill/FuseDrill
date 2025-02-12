@@ -131,7 +131,7 @@ You are an expert in reviewing API contracts and changes for adherence to best p
 
 **Your task:**  
 1. Provide a summary of the changes in the API Contract Difference. It should be list.  
-2. Use simple and concise language and Paul Graham's tone.
+2. Use simple and concise language and Paul Graham's writing style.
 3. Think deeply about the API method and request/response data does it make sense? Does values pass through the request and belongs to responses?,
 4. Provide only information that i asked for.
 5. Produce a concise markdown-formatted list of the analysis.  
@@ -152,7 +152,8 @@ You are an expert in reviewing API contracts and changes for adherence to best p
 **Actionable Recommendations:**  
 - [ ] **Request property value passed should be the same as in response:**  When you send a request property `value`, you should expect a response property with be the same. (Not always applicable, use context and common sence).
 - [ ] **Request property value should be processed and different in response:**  When you send a request property `value`, you should expect a response property to be different. (Not always applicable, use context and common sence).
-
+- [ ] If there are not so great error messages, they should be clear and concise, try to suggest better error message if you know it will be better..
+--[ ] Count how many 500 errors are in fuzzing output, pick api names that have 500, suggest to improve error handling.
 ---
 
 Heres is the real API Contract Difference you should work on this:

@@ -36,33 +36,9 @@
             "WithCredentials": true
           },
           "Response": {
-            "Datasource": {
-              "Access": "RandomString779",
-              "BasicAuth": false,
-              "BasicAuthUser": "RandomString275",
-              "Database": "RandomString157",
-              "Id": 1,
-              "IsDefault": true,
-              "JsonData": {},
-              "Name": "RandomString952",
-              "OrgId": 1,
-              "ReadOnly": false,
-              "SecureJsonFields": {
-                "RandomString490": true,
-                "RandomString533": true,
-                "RandomString919": true
-              },
-              "Type": "RandomString25",
-              "TypeLogoUrl": "public/img/icn-datasource.svg",
-              "Uid": "RandomString457",
-              "Url": "RandomString149",
-              "User": "RandomString919",
-              "Version": 1,
-              "WithCredentials": true
-            },
-            "Id": 1,
-            "Message": "Datasource added",
-            "Name": "RandomString952"
+            "StatusCode": 409,
+            "Message": "ConflictError  Status: 409 Response:",
+            "TypeName": "ApiException`1"
           },
           "HttpMethod": "post"
         },
@@ -241,8 +217,9 @@
             "Admins": 1,
             "DailyActiveUsers": 1,
             "Datasources": 1,
+            "Editors": 1,
             "MonthlyActiveUsers": 1,
-            "Orgs": 1,
+            "Orgs": 2,
             "Users": 1
           },
           "HttpMethod": "get"
@@ -603,8 +580,9 @@
             "Name": "RandomString445"
           },
           "Response": {
-            "Message": "Organization created",
-            "OrgId": 2
+            "StatusCode": 409,
+            "Message": "ConflictError  Status: 409 Response:",
+            "TypeName": "ApiException`1"
           },
           "HttpMethod": "post"
         },
@@ -679,12 +657,12 @@
           "Response": {
             "Result": {
               "Comment": "",
-              "CreatedAt": 1739102574,
+              "CreatedAt": 1739107419,
               "CreatedBy": 1,
               "DatasourceUid": "RandomString292",
               "Queries": {},
               "Starred": false,
-              "Uid": "eecjid6xl7ev4a"
+              "Uid": "becjoalqi8zk0b"
             }
           },
           "HttpMethod": "post"
@@ -875,15 +853,9 @@
             "Role": "Editor"
           },
           "Response": {
-            "AvatarUrl": "",
-            "Id": 2,
-            "IsDisabled": false,
-            "IsExternal": false,
-            "Login": "sa-1-randomstring601",
-            "Name": "RandomString601",
-            "OrgId": 1,
-            "Role": "Editor",
-            "Uid": "becjid75pdjb4b"
+            "StatusCode": 400,
+            "Message": "BadRequestError is returned when the request is invalid and it cannot be processed.  Status: 400 Response:",
+            "TypeName": "ApiException`1"
           },
           "HttpMethod": "post"
         },
@@ -919,9 +891,9 @@
             "Name": "RandomString563"
           },
           "Response": {
-            "Message": "Team created",
-            "TeamId": 1,
-            "Uid": "cecjid7a078qoe"
+            "StatusCode": 409,
+            "Message": "ConflictError  Status: 409 Response:",
+            "TypeName": "ApiException`1"
           },
           "HttpMethod": "post"
         },
@@ -1481,15 +1453,15 @@
           "ApiCallOrderId": 95,
           "Response": {
             "Address": {
-              "Address1": "",
-              "Address2": "",
-              "City": "",
-              "Country": "",
-              "State": "",
-              "ZipCode": ""
+              "Address1": "RandomString269",
+              "Address2": "RandomString655",
+              "City": "RandomString956",
+              "Country": "RandomString343",
+              "State": "RandomString24",
+              "ZipCode": "RandomString883"
             },
             "Id": 1,
-            "Name": "Main Org."
+            "Name": "RandomString536"
           },
           "HttpMethod": "get"
         },
@@ -1964,11 +1936,59 @@
           "ApiCallOrderId": 137,
           "Response": [
             {
-              "Code": "DaYwIKTQS3bfhC7JhNu9svwTrMUkRx",
+              "Code": "Y6zscpqLQfiPKNhH1BtTeUHnbAyKDp",
               "CreatedOn": "DateTimeOffset_9",
               "Email": "RandomString704",
               "EmailSent": false,
               "EmailSentOn": "DateTimeOffset_9",
+              "Id": 4,
+              "InvitedByEmail": "admin@localhost",
+              "InvitedByLogin": "admin",
+              "InvitedByName": "",
+              "Name": "RandomString882",
+              "OrgId": 1,
+              "Role": "Editor",
+              "Status": "InvitePending",
+              "Url": "http://localhost:3000/invite/Y6zscpqLQfiPKNhH1BtTeUHnbAyKDp"
+            },
+            {
+              "Code": "MfC10qjAT9abYa9VgwCusNWIn8MaIF",
+              "CreatedOn": "DateTimeOffset_10",
+              "Email": "RandomString704",
+              "EmailSent": false,
+              "EmailSentOn": "DateTimeOffset_10",
+              "Id": 3,
+              "InvitedByEmail": "admin@localhost",
+              "InvitedByLogin": "admin",
+              "InvitedByName": "",
+              "Name": "RandomString882",
+              "OrgId": 1,
+              "Role": "Editor",
+              "Status": "InvitePending",
+              "Url": "http://localhost:3000/invite/MfC10qjAT9abYa9VgwCusNWIn8MaIF"
+            },
+            {
+              "Code": "GpALwS6rLxVfR2CYoA9eRHva4wyORE",
+              "CreatedOn": "DateTimeOffset_11",
+              "Email": "RandomString704",
+              "EmailSent": false,
+              "EmailSentOn": "DateTimeOffset_11",
+              "Id": 2,
+              "InvitedByEmail": "admin@localhost",
+              "InvitedByLogin": "admin",
+              "InvitedByName": "",
+              "Name": "RandomString882",
+              "OrgId": 1,
+              "Role": "Editor",
+              "Status": "InvitePending",
+              "Url": "http://localhost:3000/invite/GpALwS6rLxVfR2CYoA9eRHva4wyORE"
+            },
+            {
+              "Code": "jJEJ7tFFJ9Aym52w0Nplj4CpQesgFV",
+              "CreatedOn": "DateTimeOffset_12",
+              "Email": "RandomString704",
+              "EmailSent": false,
+              "EmailSentOn": "DateTimeOffset_12",
               "Id": 1,
               "InvitedByEmail": "admin@localhost",
               "InvitedByLogin": "admin",
@@ -1977,7 +1997,7 @@
               "OrgId": 1,
               "Role": "Editor",
               "Status": "InvitePending",
-              "Url": "http://localhost:3000/invite/DaYwIKTQS3bfhC7JhNu9svwTrMUkRx"
+              "Url": "http://localhost:3000/invite/jJEJ7tFFJ9Aym52w0Nplj4CpQesgFV"
             }
           ],
           "HttpMethod": "get"
@@ -2194,7 +2214,7 @@
           "Response": {
             "AuthLabels": [],
             "AvatarUrl": "/avatar/46d229b033af06a191ff2267bca9ae56",
-            "CreatedAt": "DateTimeOffset_10",
+            "CreatedAt": "DateTimeOffset_13",
             "Email": "admin@localhost",
             "Id": 1,
             "IsDisabled": false,
@@ -2206,7 +2226,7 @@
             "Name": "",
             "OrgId": 1,
             "Theme": "",
-            "Uid": "becjia7pzlgxse",
+            "Uid": "fecjigg8hfz0gf",
             "UpdatedAt": "DateTimeOffset_9"
           },
           "HttpMethod": "get"
@@ -2216,13 +2236,13 @@
           "ApiCallOrderId": 158,
           "Response": [
             {
-              "Name": "Main Org.",
-              "OrgId": 1,
+              "Name": "RandomString445",
+              "OrgId": 2,
               "Role": "Admin"
             },
             {
-              "Name": "RandomString445",
-              "OrgId": 2,
+              "Name": "RandomString536",
+              "OrgId": 1,
               "Role": "Admin"
             }
           ],
@@ -3065,7 +3085,7 @@
           "MethodName": "PostDashboard_http_post_Async",
           "ApiCallOrderId": 199,
           "Request": {
-            "UpdatedAt": "DateTimeOffset_11",
+            "UpdatedAt": "DateTimeOffset_14",
             "Dashboard": {},
             "FolderId": 7255,
             "FolderUid": "RandomString771",
@@ -3762,7 +3782,7 @@
               "RuleGroup": "RandomString558",
               "Title": "RandomString200",
               "Uid": "RandomString984",
-              "Updated": "DateTimeOffset_12"
+              "Updated": "DateTimeOffset_15"
             }
           ],
           "Response": {
@@ -3901,7 +3921,7 @@
               "RuleGroup": "RandomString195",
               "Title": "RandomString320",
               "Uid": "RandomString705",
-              "Updated": "DateTimeOffset_13"
+              "Updated": "DateTimeOffset_16"
             }
           ],
           "Response": {
@@ -3982,7 +4002,7 @@
                   "RuleGroup": "RandomString344",
                   "Title": "RandomString934",
                   "Uid": "RandomString884",
-                  "Updated": "DateTimeOffset_14"
+                  "Updated": "DateTimeOffset_17"
                 },
                 {
                   "Annotations": {
@@ -4044,7 +4064,7 @@
                   "RuleGroup": "RandomString754",
                   "Title": "RandomString131",
                   "Uid": "RandomString70",
-                  "Updated": "DateTimeOffset_15"
+                  "Updated": "DateTimeOffset_18"
                 },
                 {
                   "Annotations": {
@@ -4106,7 +4126,7 @@
                   "RuleGroup": "RandomString716",
                   "Title": "RandomString543",
                   "Uid": "RandomString123",
-                  "Updated": "DateTimeOffset_16"
+                  "Updated": "DateTimeOffset_19"
                 }
               ],
               "Title": "RandomString955"
@@ -4478,11 +4498,11 @@
               "Id": 1,
               "IsAdmin": true,
               "IsDisabled": false,
-              "LastSeenAt": "DateTimeOffset_9",
-              "LastSeenAtAge": "< 1 minute",
+              "LastSeenAt": "DateTimeOffset_11",
+              "LastSeenAtAge": "10 minutes",
               "Login": "admin",
               "Name": "",
-              "Uid": "becjia7pzlgxse"
+              "Uid": "fecjigg8hfz0gf"
             }
           ],
           "HttpMethod": "get"
@@ -4502,11 +4522,11 @@
                 "Id": 1,
                 "IsAdmin": true,
                 "IsDisabled": false,
-                "LastSeenAt": "DateTimeOffset_9",
-                "LastSeenAtAge": "< 1 minute",
+                "LastSeenAt": "DateTimeOffset_11",
+                "LastSeenAtAge": "10 minutes",
                 "Login": "admin",
                 "Name": "",
-                "Uid": "becjia7pzlgxse"
+                "Uid": "fecjigg8hfz0gf"
               }
             ]
           },
@@ -4593,11 +4613,11 @@
             "ScaleFactor": 9595,
             "Schedule": {
               "DayOfMonth": "RandomString291",
-              "EndDate": "DateTimeOffset_17",
+              "EndDate": "DateTimeOffset_20",
               "Frequency": "RandomString613",
               "IntervalAmount": 1462,
               "IntervalFrequency": "RandomString90",
-              "StartDate": "DateTimeOffset_18",
+              "StartDate": "DateTimeOffset_21",
               "TimeZone": "RandomString5",
               "WorkdaysOnly": false
             },
@@ -5568,11 +5588,11 @@
               "ScaleFactor": 6783,
               "Schedule": {
                 "DayOfMonth": "RandomString427",
-                "EndDate": "DateTimeOffset_19",
+                "EndDate": "DateTimeOffset_22",
                 "Frequency": "RandomString194",
                 "IntervalAmount": 9982,
                 "IntervalFrequency": "RandomString296",
-                "StartDate": "DateTimeOffset_20",
+                "StartDate": "DateTimeOffset_23",
                 "TimeZone": "RandomString159",
                 "WorkdaysOnly": false
               },
@@ -5601,21 +5621,21 @@
               "Permissions": [
                 {
                   "Action": "RandomString313",
-                  "Created": "DateTimeOffset_21",
+                  "Created": "DateTimeOffset_24",
                   "Scope": "RandomString335",
-                  "Updated": "DateTimeOffset_22"
+                  "Updated": "DateTimeOffset_25"
                 },
                 {
                   "Action": "RandomString936",
-                  "Created": "DateTimeOffset_23",
+                  "Created": "DateTimeOffset_26",
                   "Scope": "RandomString225",
-                  "Updated": "DateTimeOffset_24"
+                  "Updated": "DateTimeOffset_27"
                 },
                 {
                   "Action": "RandomString768",
-                  "Created": "DateTimeOffset_25",
+                  "Created": "DateTimeOffset_28",
                   "Scope": "RandomString265",
-                  "Updated": "DateTimeOffset_26"
+                  "Updated": "DateTimeOffset_29"
                 }
               ],
               "Version": 9530
