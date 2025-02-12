@@ -15,7 +15,7 @@ public static class KernelBuilderExtensions
     {
         //var client = new HttpClient(new MyHttpMessageHandlerGemini());
 #pragma warning disable SKEXP0070 // Type is for evaluation purposes only and is subject to change or removal in future updates. Suppress this diagnostic to proceed.
-        builder.AddGoogleAIGeminiChatCompletion("gemini-1.5-flash-latest", Environment.GetEnvironmentVariable("GEMINI_API_KEY"));
+        builder.AddGoogleAIGeminiChatCompletion("gemini-2.0-flash", Environment.GetEnvironmentVariable("GEMINI_API_KEY"));
 #pragma warning restore SKEXP0070 // Type is for evaluation purposes only and is subject to change or removal in future updates. Suppress this diagnostic to proceed.
         return builder;
     }
