@@ -107,6 +107,10 @@ public static class HelperFunctions
 **Context:**  
 You are an expert in reviewing API contracts and changes for adherence to best practices, compatibility, and potential breaking changes. The API contracts use JSON structures, and I provide you with the differences between the previous version and the current version of the contract. 
 
+**Explanation:**
+--- means code is deleted
++++ means code is added
+
 **Example API Contract Difference:**  
 --- oldText
 +++ newText
