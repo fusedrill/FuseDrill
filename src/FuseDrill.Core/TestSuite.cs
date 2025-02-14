@@ -25,10 +25,10 @@ public class TestSuite
             sb.AppendLine($"   ├── {GetEmojiForMethod(apiCall.MethodName)} {apiCall.MethodName}");
             sb.AppendLine($"   │    └── {GetResponseHeader(apiCall.Response)}");
             sb.AppendLine(RenderObject(apiCall.Response));
-            if (apiCall.Request != null)
+            if (apiCall.RequestParameters != null)
             {
-                sb.AppendLine($"   │    └── {GetRequestHeader(apiCall.Request)}");
-                sb.AppendLine(RenderObject(apiCall.Request));
+                sb.AppendLine($"   │    └── {GetRequestHeader(apiCall.RequestParameters)}");
+                sb.AppendLine(RenderObject(apiCall.RequestParameters));
             }
         }
 
@@ -104,8 +104,8 @@ public class TestSuite
     {
         return request switch
         {
-            Dictionary<string, object> => "📤 Request:",
-            _ => "📤 Request:"
+            Dictionary<string, object> => "📤 RequestParameters:",
+            _ => "📤 RequestParameters:"
         };
     }
 

@@ -1,7 +1,7 @@
-﻿using OneOf;
-using System.Collections.ObjectModel;
+﻿using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Reflection;
+using System.Reflection.Metadata;
 
 namespace FuseDrill.Core;
 
@@ -25,36 +25,23 @@ public class DataGenerationHelper
         return bytes;
     }
 
-    public object PickCorrectRequestReflectionBased(string methodName, List<OneOf<Type, VoidEmptyType>> methodParameterTypes, int permutationSizeCount)
+    public List<ParameterValue> PickCorrectRequestReflectionBased(string methodName, List<Parameter> methodParameters, int permutationSizeCount)
     {
-        //do select on methodParameterTypes and create instance with random values
-        var allRes = methodParameterTypes
-            .Select(type => CreateInstanceWithRandomValues(type, permutationSizeCount)).ToList();
-
-        if (allRes.Count == 1)
-        {
-            return allRes.First();
-        }
-
-        if (allRes.Count == 0)
-        {
-            return CreateInstanceWithRandomValues(OneOf<Type, VoidEmptyType>.FromT1(new VoidEmptyType()), permutationSizeCount);
-        }
+        var allRes = methodParameters.Select(parameter => CreateResposnseParameterWithValue(parameter, permutationSizeCount)).ToList();
 
         return allRes;
     }
 
-    private object CreateInstanceWithRandomValues(OneOf<Type, VoidEmptyType> methodtype, int permutationSizeCount)
+    private ParameterValue CreateResposnseParameterWithValue(Parameter methodParameter, int permutationSizeCount)
     {
-        var instance = methodtype.Match(type => createInstance(type, permutationSizeCount), voidType => null);
+        var instance = new ParameterValue
+        {
+            Value = CreateRandomValue(methodParameter.Type, permutationSizeCount),
+            Name = methodParameter.Name,
+            Type = methodParameter.Type,
+        };
 
         return instance;
-
-        object createInstance(Type type, int permutationSizeCount)
-        {
-            var randomValue = CreateRandomValue(type, permutationSizeCount);
-            return randomValue;
-        }
     }
 
     private object CreateClassInstance(Type type, int permutationSizeCount)
@@ -190,7 +177,7 @@ public class DataGenerationHelper
                 CreateICollectionWithThreeElements(t, permutationSizeCount),  // Delegate to a helper method
 
             // Handle Collection<T> types (always create 3 elements)
-            Type t when t.BaseType!=null && t.BaseType.IsGenericType && t.BaseType.GetGenericTypeDefinition() == typeof(Collection<>) => 
+            Type t when t.BaseType != null && t.BaseType.IsGenericType && t.BaseType.GetGenericTypeDefinition() == typeof(Collection<>) =>
                 CreateCollectionWithThreeElements(t, permutationSizeCount),  // Delegate to a helper method
 
             // Handle IDictionary<TKey, TValue> types (always create 3 key-value pairs)
@@ -355,8 +342,17 @@ public class DataGenerationHelper
             var key = CreateRandomValue(keyType, permutationSizeCount);
             var value = CreateRandomValue(valueType, permutationSizeCount);
 
-            // Use reflection to invoke the Add method on the dictionary
-            dictionary.GetType().GetMethod("Add").Invoke(dictionary, new object[] { key, value });
+            // Get dictionary type
+            var dictType = dictionary.GetType();
+            var containsMethod = dictType.GetMethod("ContainsKey");
+
+            bool keyExists = (bool)containsMethod.Invoke(dictionary, new object[] { key });
+
+            if (!keyExists)
+            {
+                // Use reflection to invoke the Add method on the dictionary
+                dictType.GetMethod("Add").Invoke(dictionary, new object[] { key, value });
+            }
         }
 
         return dictionary;
@@ -403,7 +399,8 @@ public class DataGenerationHelper
                 ApiCallOrderId = apiCallOrder,
                 HttpMethod = item.HttpMethod,
                 MethodName = item.MethodName,
-                Request = PickCorrectRequestReflectionBased(item.MethodName, item.MethodParameterTypes, dataModel.Methods.Count),
+                Method = item,
+                RequestParameters = PickCorrectRequestReflectionBased(item.MethodName, item.MethodParameters, dataModel.Methods.Count),
                 Response = null,
             }).ToList(),
             TestSuiteOrderId = testSuiteOrder,

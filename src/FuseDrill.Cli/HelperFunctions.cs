@@ -19,7 +19,7 @@ public static class HelperFunctions
 
         var tester = new ApiFuzzer(httpClient, fuseDrillOpenApiUrl);
         var snapshot = await tester.TestWholeApi();
-        var newSnapshotString = JsonSerializer.Serialize(snapshot, new JsonSerializerOptions { WriteIndented = true, Converters = { new DateTimeScrubbingConverter(), new GuidScrubbingConverter(), new DateTimeOffsetScrubbingConverter() }, });
+        var newSnapshotString = JsonSerializer.Serialize(snapshot, SerializerOptions.GetOptions());
 
         if (smokeFlag)
         {
@@ -79,7 +79,7 @@ public static class HelperFunctions
             return false;
         }
 
-        string llmResponse = await CompareFuzzingsWithLLM(newSnapshotString, existingSnapshotString);
+        string llmResponse = await CompareFuzzingsWithLLM(newText: newSnapshotString, oldText: existingSnapshotString);
 
         if (string.IsNullOrEmpty(llmResponse))
         {
@@ -106,6 +106,10 @@ public static class HelperFunctions
 ### Prompt for API Contract Reviews
 **Context:**  
 You are an expert in reviewing API contracts and changes for adherence to best practices, compatibility, and potential breaking changes. The API contracts use JSON structures, and I provide you with the differences between the previous version and the current version of the contract. 
+
+**Explanation:**
+--- means code is deleted
++++ means code is added
 
 **Example API Contract Difference:**  
 --- oldText
@@ -248,7 +252,7 @@ Heres is the real API Contract Difference you should work on this:
             return string.Empty;
 
         //use difplex string comparison 
-        var actualDiff = SimpleDiffer.GenerateDiff(oldText, newText);
+        var actualDiff = SimpleDiffer.GenerateDiff(newText: newText, oldText: oldText);
 
         if (string.IsNullOrEmpty(actualDiff))
             return string.Empty;

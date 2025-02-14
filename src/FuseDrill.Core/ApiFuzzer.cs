@@ -101,6 +101,7 @@ public class ApiFuzzer : IApiFuzzer
                 {
                     var api = await DoApiCall(genericClientInstance, apiCall);
                     apiCall.Response = ResolveResponse(api);
+                    apiCall.Method = null; //Need to clean up the method.because its not serializable, or you can create DTO
                 }
             }
 
@@ -116,8 +117,9 @@ public class ApiFuzzer : IApiFuzzer
         }
 
         //order api calls
-        testSuitesProcessed.ForEach(suite => { suite.ApiCalls = suite.ApiCalls.OrderBy(item => item.ApiCallOrderId).ThenBy(item=>item.MethodName).ToList(); });
+        testSuitesProcessed.ForEach(suite => { suite.ApiCalls = suite.ApiCalls.OrderBy(item => item.ApiCallOrderId).ThenBy(item => item.MethodName).ToList(); });
         testSuitesProcessed.OrderBy(item => item.TestSuiteOrderId);
+
 
         var tests = new FuzzerTests();
         tests.TestSuites = testSuitesProcessed;
@@ -388,32 +390,20 @@ public class ApiFuzzer : IApiFuzzer
     //    return clientInstance;
     //}
 
-    private static async Task<ApiCall> DoApiCall(object ClientInstance, ApiCall api) // object eventually can be discriminated union, response will be object same applies.
+    private static async Task<ApiCall> DoApiCall(object ClientInstance, ApiCall api) 
     {
         Debug.Assert(api?.MethodName is not null, "Method name should be always filled.");
 
         try
         {
-            var method = ReflectionHelper.GetPublicEndpointMethodByName(ClientInstance.GetType(), api.MethodName);
-
-            var parameters = method.GetParameters().ToList();
-
             var input = new object[] { };
-            if (parameters.Count == 0 || parameters.Count == 1)
-            {
-                var firstParameter = parameters.FirstOrDefault();
-                input = handleOneOrVoidParameter(api, firstParameter);
-            }
-            else
-            {
-                input = handleMultipleParameter(api, parameters);
-            }
+            input = handleMultipleParameter(api);
 
             Task task = null;
             try
             {
                 // Dynamically invoke the method on the instance
-                task = (Task)method.Invoke(ClientInstance, input);
+                task = (Task)api.Method.MethodForCall.Invoke(ClientInstance, input);
                 await task;
             }
             catch (Exception ex)
@@ -452,76 +442,11 @@ public class ApiFuzzer : IApiFuzzer
         return api;
     }
 
-    private static object[]? handleOneOrVoidParameter(ApiCall api, ParameterInfo parameter)
+    private static object[]? handleMultipleParameter(ApiCall api)
     {
-        var input = new object[] { };
-        if (parameter != null)
-        {
-            if (api.Request == null)
-            {
-                return new object[] { null };
-            }
+        var parameterArray = api.RequestParameters.Select(item => item.Value).ToArray();
 
-            if (MyTypeExtensions.IsNullableOfT(parameter.ParameterType))
-            {
-                var underlyingType = Nullable.GetUnderlyingType(parameter.ParameterType);
-                var request = Convert.ChangeType((dynamic)api.Request, underlyingType);
-                input = new object[] { request };
-            }
-            else
-            {
-                var request = Convert.ChangeType((dynamic)api.Request, parameter.ParameterType);
-                input = new object[] { request };
-            }
-        }
-        else
-        {
-            input = null;
-        }
-
-        return input;
-    }
-
-    private static object[]? handleMultipleParameter(ApiCall api, List<ParameterInfo> parameters)
-    {
-        var input = new List<object> { };
-        var index = 0;
-
-        var requestCollection = api.Request as IEnumerable<object>;
-        // Try to safely cast each element to the expected type
-        var requestList = requestCollection.Cast<object>().ToList();
-
-        foreach (var parameter in parameters)
-        {
-            if (requestList[index] == null)
-            {
-                input.Add(null);
-                index++;
-                continue;
-            }
-
-            if (MyTypeExtensions.IsNullableOfT(parameter.ParameterType))
-            {
-                var underlyingType = Nullable.GetUnderlyingType(parameter.ParameterType);
-                var request = Convert.ChangeType((dynamic)requestList[index], underlyingType);
-                input.Add(request);
-            }
-            else
-            {
-                if (parameter.ParameterType.IsGenericType && parameter.ParameterType.GetGenericTypeDefinition() == typeof(IEnumerable<>))
-                {
-                    var list = requestList[index];
-                    input.Add(list);
-                }
-                else
-                {
-                    var request = Convert.ChangeType((dynamic)requestList[index], parameter.ParameterType);
-                    input.Add(request);
-                }
-            }
-            index++;
-        }
-        return input.ToArray();
+        return parameterArray;
     }
 }
 
