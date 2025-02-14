@@ -19,7 +19,7 @@ public static class HelperFunctions
 
         var tester = new ApiFuzzer(httpClient, fuseDrillOpenApiUrl);
         var snapshot = await tester.TestWholeApi();
-        var newSnapshotString = JsonSerializer.Serialize(snapshot,SerializerOptions.GetOptions());
+        var newSnapshotString = JsonSerializer.Serialize(snapshot, SerializerOptions.GetOptions());
 
         if (smokeFlag)
         {
@@ -79,7 +79,7 @@ public static class HelperFunctions
             return false;
         }
 
-        string llmResponse = await CompareFuzzingsWithLLM(newSnapshotString, existingSnapshotString);
+        string llmResponse = await CompareFuzzingsWithLLM(newText: newSnapshotString, oldText: existingSnapshotString);
 
         if (string.IsNullOrEmpty(llmResponse))
         {
@@ -248,7 +248,7 @@ Heres is the real API Contract Difference you should work on this:
             return string.Empty;
 
         //use difplex string comparison 
-        var actualDiff = SimpleDiffer.GenerateDiff(oldText, newText);
+        var actualDiff = SimpleDiffer.GenerateDiff(newText: newText, oldText: oldText);
 
         if (string.IsNullOrEmpty(actualDiff))
             return string.Empty;
