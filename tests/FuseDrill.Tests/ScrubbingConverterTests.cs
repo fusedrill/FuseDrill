@@ -11,10 +11,11 @@ public class ScrubbingConverterTests
             Id = new { id = Guid.NewGuid(), date = DateTimeOffset.Now }, 
             Name = "In-Memory Test Data",
             Date = DateTime.Now,  
-            Tags = new[] { "example", "snapshot", "memory" }
+            Tags = new[] { "example", "snapshot", "memory" },
+            Types = new[] { "example".GetType(), 6.GetType(), new int[] { }.GetType() }
         };
 
-        var json = JsonSerializer.Serialize(testData, new JsonSerializerOptions { WriteIndented = true, Converters = { new DateTimeScrubbingConverter(), new GuidScrubbingConverter(), new DateTimeOffsetScrubbingConverter() }, });
+        var json = JsonSerializer.Serialize(testData, SerializerOptions.GetOptions());
 
         await Verify(json);
     }

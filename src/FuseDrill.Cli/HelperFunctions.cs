@@ -19,7 +19,7 @@ public static class HelperFunctions
 
         var tester = new ApiFuzzer(httpClient, fuseDrillOpenApiUrl);
         var snapshot = await tester.TestWholeApi();
-        var newSnapshotString = JsonSerializer.Serialize(snapshot, new JsonSerializerOptions { WriteIndented = true, Converters = { new DateTimeScrubbingConverter(), new GuidScrubbingConverter(), new DateTimeOffsetScrubbingConverter() }, });
+        var newSnapshotString = JsonSerializer.Serialize(snapshot,SerializerOptions.GetOptions());
 
         if (smokeFlag)
         {

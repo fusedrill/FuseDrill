@@ -9,5 +9,10 @@
     "example",
     "snapshot",
     "memory"
+  ],
+  "Types": [
+    "String",
+    "Int32",
+    "Int32[]"
   ]
 }
