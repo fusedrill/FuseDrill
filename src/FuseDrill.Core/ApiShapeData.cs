@@ -1,4 +1,4 @@
-﻿using OneOf;
+﻿using System.Reflection;
 
 namespace FuseDrill.Core;
 
@@ -12,10 +12,19 @@ public class ApiShapeData
         Methods = methods.Select(item => new Method
         {
             MethodName = item.Name,
+            MethodForCall = item,
             HttpMethod = ExtractTextBeeetween(item.Name, "_http_", "_"),
-            MethodParameterTypeNames = item?.GetParameters()?.Select(item => item?.ParameterType?.Name ?? "None").ToList() ?? ["None"], // not sure what if this is good way lets see
-            MethodParameterTypes = item?.GetParameters()?.Select(item => item?.ParameterType ?? OneOf<Type, VoidEmptyType>.FromT1(new VoidEmptyType())).ToList() ?? new List<OneOf<Type, VoidEmptyType>> { OneOf<Type, VoidEmptyType>.FromT1(new VoidEmptyType()) }
+            MethodParameters = GetParameters(item)
         }).ToList();
+    }
+
+    private static List<Parameter> GetParameters(MethodInfo item)
+    {
+        var parameters = item?.GetParameters()?
+            .Select(item => new Parameter { Name = item?.Name, Type = item?.ParameterType })
+            .ToList() ?? new List<Parameter> { };
+
+        return parameters;
     }
 
     private string ExtractTextBeeetween(string text, string start, string end)
