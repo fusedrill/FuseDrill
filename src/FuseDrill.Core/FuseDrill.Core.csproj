@@ -14,6 +14,9 @@
     <IncludeSource>True</IncludeSource>
     <!-- Suppress CS1591 for missing XML documentation comments -->
     <NoWarn>$(NoWarn);1591</NoWarn>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <RepositoryUrl>https://github.com/fusedrill/FuseDrill</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
   </PropertyGroup>
 
   <ItemGroup>
