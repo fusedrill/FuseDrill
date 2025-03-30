@@ -31,6 +31,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\..\..\StackTraceCapture\StackTraceCapture\StackTraceCapture.csproj" />
     <ProjectReference Include="..\..\src\FuseDrill.Cli\FuseDrill.Cli.csproj" />
     <ProjectReference Include="..\..\src\FuseDrill.Core\FuseDrill.Core.csproj" />
     <ProjectReference Include="..\..\src\FuseDrill\FuseDrill.csproj" />
@@ -40,6 +41,14 @@
   <ItemGroup>
     <None Update="list.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="VerticalFuzzingTest.GrafanaDockerTest.received.json">
+      <ParentFile>GrafanaFuzzingTests</ParentFile>
+      <DependentUpon>VerticalFuzzingTest.cs</DependentUpon>
+    </None>
+    <None Update="VerticalFuzzingTest.GrafanaDockerTest.verified.json">
+      <ParentFile>GrafanaFuzzingTests</ParentFile>
+      <DependentUpon>VerticalFuzzingTest.cs</DependentUpon>
     </None>
   </ItemGroup>
 
