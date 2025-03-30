@@ -309,3 +309,19 @@ If you have further questions about your complicated case and setup, feel free t
 ## 💬 Contact
 
 For any questions or feedback, please open an issue on the [GitHub repository](https://github.com/fusedrill/FuseDrill/issues).
+
+## 📦 Publishing the NuGet Package
+
+To publish the NuGet package, follow these steps:
+
+1. Ensure you have the necessary API key from NuGet. You can generate one from your [NuGet account](https://www.nuget.org/account/apikeys).
+
+2. Add the API key to your GitHub repository secrets. Name it `NUGET_API_KEY`.
+
+3. The GitHub Actions workflow file `src/FuseDrill.Core/.github/workflows/publish.yml` is already configured to automate the publishing process. It will trigger on push to the `main` branch.
+
+4. When you push changes to the `main` branch, the workflow will automatically build the project and publish the package to NuGet.
+
+5. Provide Glob Pattern in NuGet: The `dotnet nuget push` command in the workflow uses a glob pattern to match the NuGet package files. The pattern `./nupkgs/*.nupkg` is used to match all `.nupkg` files in the `./nupkgs/` directory.
+
+For more details, refer to the [GitHub Actions documentation](https://docs.github.com/en/actions).
