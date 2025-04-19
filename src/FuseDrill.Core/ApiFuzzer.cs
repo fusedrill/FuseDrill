@@ -248,7 +248,10 @@ public class ApiFuzzer : IApiFuzzer
             ExposeJsonSerializerSettings = true,
             UseBaseUrl = true,
             OperationNameGenerator = new CustomOperationNameGenerator(),
-            AdditionalNamespaceUsages = new[] { "FuseDrill.Core" },
+            AdditionalNamespaceUsages = new[] {
+                 "FuseDrill.Core",
+                 "System",
+                 },
             CSharpGeneratorSettings =
             {
 
@@ -261,7 +264,9 @@ public class ApiFuzzer : IApiFuzzer
                 EnumNameGenerator = new CustomEnumNameGenerator(),
                 ExcludedTypeNames = new[]
                 {
-                    "GroupSchema"
+                    "GroupSchema",
+                    "DateOnly",
+                    "TimeOnly"
                 }
 
             }

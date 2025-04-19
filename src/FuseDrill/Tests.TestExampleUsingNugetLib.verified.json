@@ -1,0 +1,23 @@
+﻿{
+  "Seed": 1234567,
+  "TestSuites": [
+    {
+      "ApiCalls": [
+        {
+          "MethodName": "GetWeatherForecast_http_get_Async",
+          "ApiCallOrderId": 0,
+          "RequestParameters": [],
+          "Response": {
+            "Date": "Date_1",
+            "TemperatureC": 25,
+            "TemperatureF": 76,
+            "Summary": "Hot"
+          },
+          "HttpMethod": "get"
+        }
+      ],
+      "TestCoveragePercentage": 0.0,
+      "TestSuiteOrderId": 0
+    }
+  ]
+}

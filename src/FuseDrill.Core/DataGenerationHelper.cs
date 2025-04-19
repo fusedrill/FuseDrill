@@ -110,6 +110,7 @@ public class DataGenerationHelper
             Type t when t == typeof(bool) => random.Next(0, 2) == 0,                                   // Random boolean
             Type t when t == typeof(double) => random.NextDouble() * 100,                              // Random double
             Type t when t == typeof(DateTime) => DateTime.Now.AddDays(random.Next(-100, 100)),         // Random date
+            Type t when t == typeof(DateOnly) => DateOnly.FromDateTime(DateTime.Now).AddDays(random.Next(-100, 100)),        // Random dateOnly
             Type t when t == typeof(TimeSpan) => TimeSpan.FromHours(random.Next(1, 100)),              // Random TimeSpan
             Type t when t == typeof(DateTimeOffset) => DateTimeOffset.Now.AddDays(random.Next(-100, 100)),         // Random date
             Type t when t == typeof(Guid) => GenerateGuidFromSeed(),
@@ -133,6 +134,7 @@ public class DataGenerationHelper
             Type t when t == typeof(bool?) => random.Next(0, 2) == 0 ? (bool?)null : random.Next(0, 2) == 0,               // Random bool? (null or bool)
             Type t when t == typeof(double?) => random.Next(0, 2) == 0 ? (double?)null : random.NextDouble() * 100,          // Random double? (null or double)
             Type t when t == typeof(DateTime?) => random.Next(0, 2) == 0 ? (DateTime?)null : DateTime.Now.AddDays(random.Next(-100, 100)), // Random DateTime? (null or DateTime)
+            Type t when t == typeof(DateOnly?) => random.Next(0, 2) == 0 ? (DateOnly?)null : DateOnly.FromDateTime(DateTime.Now).AddDays(random.Next(-100, 100)),  
             Type t when t == typeof(TimeSpan?) => random.Next(0, 2) == 0 ? (TimeSpan?)null : TimeSpan.FromHours(random.Next(1, 100)), // Random TimeSpan? (null or DateTime)
             Type t when t == typeof(DateTimeOffset?) => random.Next(0, 2) == 0 ? (DateTimeOffset?)null : DateTimeOffset.Now.AddDays(random.Next(-100, 100)), // Random DateTime? (null or DateTime)
             Type t when t == typeof(Guid?) => random.Next(0, 2) == 0 ? (Guid?)null : GenerateGuidFromSeed(),
