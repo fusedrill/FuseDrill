@@ -16,7 +16,7 @@ public class GrafanaFuzzingTests
         //docker remove grafana
         //docker run -d --name=grafana -p 3000:3000 grafana/grafana
 
-        var dockerImageUrl = "grafana/grafana:latest"; // Change this to your actual image URL
+        var dockerImageUrl = "grafana/grafana@sha256:62d2b9d20a19714ebfe48d1bb405086081bc602aa053e28cf6d73c7537640dfb"; // Change this to your actual image URL
         var containerName = "grafana";
 
         // Set up a TestContainer for the image
@@ -27,7 +27,7 @@ public class GrafanaFuzzingTests
 
         var container = containerBuilder.Build();
         await container.StartAsync();
-        await Task.Delay(7000);
+        await Task.Delay(10000);
 
         var httpClient = new HttpClient
         {
