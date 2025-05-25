@@ -17,7 +17,7 @@ public static class FuseDrillTools
 {
     private readonly static ApiAnalysisService _apiAnalysisService = new();
 
-    [McpServerTool, Description("FirstPassFuzzing: Run first pass fuzzing in order to know about the API shape")]
+    [McpServerTool, Description("FirstPassFuzzing: Run first pass fuzzing in order to know about the API shape, You need to figure out first inputs of the API using curl or other tool, then you can use this tool to run first pass fuzzing on the API")]
     public static async Task<string> RunFirstPassFuzzing(
         [Description("(First figure out if server hostname and port if it is running using curl) Base URL for the API")] string baseUrl,
         [Description("(First figure out if server hostname and port if it is running using curl) OpenAPI URL for the API")] string openAPIUrl,
@@ -40,7 +40,8 @@ public static class FuseDrillTools
         {
             BaseUrl = baseUrl,
             OpenAPIUrl = openAPIUrl,
-            TestSuites = results.TestSuites
+            TestSuites = results.TestSuites,
+            NextSteps = "Now you can use the results to understand the API shape and run specific endpoint fuzzing tests. But first you need to ask a user which endpoint specifically they want to test."
         });
     }
 
@@ -77,8 +78,43 @@ public static class FuseDrillTools
             Endpoint = endpoint,
             BaseUrl = baseUrl,
             OpenAPIUrl = OpenAPIUrl,
-            TestSuites = results.TestSuites
+            TestSuites = results.TestSuites,
+            NextSteps = "You can now review the test results for the specific endpoint. Now you can ask user if it want to implement a remote fuzzing test for this endpoint. Use the tool GetCSharpTemplateCodeOfHowToImplementRemoteFuzzingTest to show how the test code will look like"
         });
+    }
+
+    [McpServerTool, Description("if user asks to write a a fuzzing test for specific endpoint, you can get a c sharp template code of how to implement remote fuzzing test for a specific endpoint")]
+    public static async Task<string> GetCSharpTemplateCodeOfHowToImplementRemoteFuzzingTest()
+    {
+        var template = @"var httpClient = new HttpClient();
+        if (!string.IsNullOrEmpty(baseUrl))
+        {
+            httpClient.BaseAddress = new Uri(baseUrl);
+        }
+
+        var fuzzer = new ApiFuzzer(httpClient, OpenAPIUrl);
+        var results = await fuzzer.TestWholeApi(apiCall =>
+        {
+            var filterEndpoint = apiCall.MethodName.EndsWith(endpoint);
+
+            //change body on specific endpoint
+            if (filterEndpoint)
+            {
+                apiCall.RequestParameters = RequestParameters;
+            }
+
+            return filterEndpoint;
+        });
+
+        // Return serialized test details
+        return JsonSerializer.Serialize(new
+        {
+            Endpoint = endpoint,
+            BaseUrl = baseUrl,
+            OpenAPIUrl = OpenAPIUrl,
+            TestSuites = results.TestSuites
+        });";
+        return template;
     }
 
     // [McpServerTool, Description("Analyze OpenAPI specification for issues and coverage")]
