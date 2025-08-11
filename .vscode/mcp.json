@@ -33,7 +33,7 @@
             ]
         },
         "fusedrill": {
-            "command": "dotnet",
+            "command": "dotnet", 
             "args": [
                 "run",
                 "--project",
