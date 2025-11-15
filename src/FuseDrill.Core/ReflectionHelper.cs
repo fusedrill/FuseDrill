@@ -15,6 +15,13 @@ public static class ReflectionHelper
                    .OrderBy(m => m.Name)
                    .GroupBy(item => item.Name).Select(item => item.First()).ToList();
     }
+    public static List<MethodInfo> GetPublicMethods(Type type)
+    {
+        return type.GetMethods(BindingFlags.Public | BindingFlags.Instance | BindingFlags.DeclaredOnly)
+                   .Where(m => !m.IsSpecialName) // Exclude property getters/setters
+                   .OrderBy(m => m.Name)
+                   .GroupBy(item => item.Name).Select(item => item.First()).ToList();
+    }
 
     /// <summary>
     /// Gets the public endpoint method by name.

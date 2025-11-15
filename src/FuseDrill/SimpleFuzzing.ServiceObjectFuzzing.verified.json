@@ -1,0 +1,86 @@
+﻿{
+  "Seed": 1234567,
+  "TestSuites": [
+    {
+      "ApiCalls": [
+        {
+          "MethodName": "AddItem",
+          "ApiCallOrderId": 0,
+          "RequestParameters": [
+            {
+              "Value": {
+                "Id": 3,
+                "Name": "RandomString760",
+                "CreatedAt": "DateTime_1",
+                "Tags": [
+                  "RandomString157",
+                  "RandomString601",
+                  "RandomString952"
+                ]
+              },
+              "Type": "ComplexClass",
+              "Name": "item"
+            }
+          ],
+          "Response": "Empty response (void) or (null)",
+          "HttpMethod": ""
+        },
+        {
+          "MethodName": "GetAllItems",
+          "ApiCallOrderId": 1,
+          "RequestParameters": [],
+          "Response": [
+            {
+              "Id": 3,
+              "Name": "RandomString760",
+              "CreatedAt": "DateTime_1",
+              "Tags": [
+                "RandomString157",
+                "RandomString601",
+                "RandomString952"
+              ]
+            }
+          ],
+          "HttpMethod": ""
+        },
+        {
+          "MethodName": "GetItem",
+          "ApiCallOrderId": 2,
+          "RequestParameters": [
+            {
+              "Value": 3,
+              "Type": "int",
+              "Name": "id"
+            }
+          ],
+          "Response": {
+            "Id": 3,
+            "Name": "RandomString760",
+            "CreatedAt": "DateTime_1",
+            "Tags": [
+              "RandomString157",
+              "RandomString601",
+              "RandomString952"
+            ]
+          },
+          "HttpMethod": ""
+        },
+        {
+          "MethodName": "RemoveItem",
+          "ApiCallOrderId": 3,
+          "RequestParameters": [
+            {
+              "Value": 2,
+              "Type": "int",
+              "Name": "id"
+            }
+          ],
+          "Response": "Empty response (void) or (null)",
+          "HttpMethod": ""
+        }
+      ],
+      "TestCoveragePercentage": 0.0,
+      "TestSuiteOrderId": 0
+    }
+  ]
+}

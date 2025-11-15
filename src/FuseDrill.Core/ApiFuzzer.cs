@@ -395,7 +395,7 @@ public class ApiFuzzer : IApiFuzzer
     //    return clientInstance;
     //}
 
-    private static async Task<ApiCall> DoApiCall(object ClientInstance, ApiCall api) 
+    private static async Task<ApiCall> DoApiCall(object ClientInstance, ApiCall api)
     {
         Debug.Assert(api?.MethodName is not null, "Method name should be always filled.");
 
@@ -404,35 +404,68 @@ public class ApiFuzzer : IApiFuzzer
             var input = new object[] { };
             input = handleMultipleParameter(api);
 
-            Task task = null;
+            var value = new object();
             try
             {
-                // Dynamically invoke the method on the instance
-                task = (Task)api.Method.MethodForCall.Invoke(ClientInstance, input);
-                await task;
+                value = api.Method.MethodForCall.Invoke(ClientInstance, input);
+
+                //only allow simple values like string, bool, int,
+
+                if (value is null)
+                {
+                    api.Response = "Empty response (void) or (null)";
+                }
+                else if (value is string stringValue)
+                {
+                    api.Response = stringValue;
+                }
+                else if (value is bool boolValue)
+                {
+                    api.Response = boolValue;
+                }
+                else if (value is int intvalue)
+                {
+                    api.Response = intvalue;
+                }
+                else
+                {
+                    string serialized = "Not serializable";
+                    try
+                    {
+                        var type = value?.GetType();
+
+                        if (typeof(Task).IsAssignableFrom(type))
+                        {
+                            var task = (Task)value;
+                            await task.ConfigureAwait(false);
+
+                            if (type.IsGenericType)
+                            {
+                                // Extract Result property for Task<T>
+                                var resultProperty = type.GetProperty("Result");
+                                value = resultProperty.GetValue(task);
+                            }
+                            else
+                            {
+                                // For non-generic Task, no result
+                                value = null;
+                            }
+                        }
+
+                        serialized = System.Text.Json.JsonSerializer.Serialize(value);  //Todo Use argon serializer, This Still can fail whole serialization, because verify uses Argon serializer.
+                        api.Response = (object)value;
+                    }
+                    catch
+                    {
+                        api.Response = serialized;
+                    }
+                }
+
             }
             catch (Exception ex)
             {
-
-                //resolving api client exceptions dynamically, Dont have actual types during build time
-                var typeName1 = "ApiException`1";
-                var typeName2 = "ApiException";
-                if (typeName1 == ex.GetType().Name || typeName2 == ex.GetType().Name)
-                {
-                    api.Response = ex;
-                    return api;
-                }
-
-                // exception is in fuzzer source code;
-                //Todo: add logs
-                throw;
+                api.Response = ex?.Message + " | " + ex?.InnerException?.Message;
             }
-
-            // Retrieve the result from the Task
-            var resultProperty = task.GetType().GetProperty("Result");
-            var result = resultProperty?.GetValue(task);
-
-            api.Response = result;
 
         }
         catch (Exception e)

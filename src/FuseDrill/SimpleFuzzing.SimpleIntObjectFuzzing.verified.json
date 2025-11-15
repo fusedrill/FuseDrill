@@ -1,0 +1,92 @@
+﻿{
+  "Seed": 1234567,
+  "TestSuites": [
+    {
+      "ApiCalls": [
+        {
+          "MethodName": "CompareTo",
+          "ApiCallOrderId": 0,
+          "RequestParameters": [
+            {
+              "Value": {},
+              "Type": "object",
+              "Name": "value"
+            }
+          ],
+          "Response": "Exception has been thrown by the target of an invocation. | Object must be of type Int32.",
+          "HttpMethod": ""
+        },
+        {
+          "MethodName": "Equals",
+          "ApiCallOrderId": 1,
+          "RequestParameters": [
+            {
+              "Value": {},
+              "Type": "object",
+              "Name": "obj"
+            }
+          ],
+          "Response": false,
+          "HttpMethod": ""
+        },
+        {
+          "MethodName": "GetHashCode",
+          "ApiCallOrderId": 2,
+          "RequestParameters": [],
+          "Response": 20,
+          "HttpMethod": ""
+        },
+        {
+          "MethodName": "GetTypeCode",
+          "ApiCallOrderId": 3,
+          "RequestParameters": [],
+          "Response": "Int32",
+          "HttpMethod": ""
+        },
+        {
+          "MethodName": "ToString",
+          "ApiCallOrderId": 4,
+          "RequestParameters": [],
+          "Response": "20",
+          "HttpMethod": ""
+        },
+        {
+          "MethodName": "TryFormat",
+          "ApiCallOrderId": 5,
+          "RequestParameters": [
+            {
+              "Value": {
+                "Length": 1,
+                "IsEmpty": false
+              },
+              "Type": "Span<char>",
+              "Name": "destination"
+            },
+            {
+              "Value": 4,
+              "Type": "Int32&",
+              "Name": "charsWritten"
+            },
+            {
+              "Value": {
+                "Length": 1,
+                "IsEmpty": false
+              },
+              "Type": "ReadOnlySpan<char>",
+              "Name": "format"
+            },
+            {
+              "Value": "en-US",
+              "Type": "IFormatProvider",
+              "Name": "provider"
+            }
+          ],
+          "Response": "Object of type 'System.Memory`1[System.Char]' cannot be converted to type 'System.Span`1[System.Char]'. | ",
+          "HttpMethod": ""
+        }
+      ],
+      "TestCoveragePercentage": 0.0,
+      "TestSuiteOrderId": 0
+    }
+  ]
+}

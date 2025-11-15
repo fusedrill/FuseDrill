@@ -1,0 +1,709 @@
+﻿{
+  "Seed": 1234567,
+  "TestSuites": [
+    {
+      "ApiCalls": [
+        {
+          "MethodName": "Clone",
+          "ApiCallOrderId": 0,
+          "RequestParameters": [],
+          "Response": "      This is a sentence.      ",
+          "HttpMethod": ""
+        },
+        {
+          "MethodName": "CompareTo",
+          "ApiCallOrderId": 1,
+          "RequestParameters": [
+            {
+              "Value": {},
+              "Type": "object",
+              "Name": "value"
+            }
+          ],
+          "Response": "Exception has been thrown by the target of an invocation. | Object must be of type String.",
+          "HttpMethod": ""
+        },
+        {
+          "MethodName": "Contains",
+          "ApiCallOrderId": 2,
+          "RequestParameters": [
+            {
+              "Value": "RandomString779",
+              "Type": "string",
+              "Name": "value"
+            }
+          ],
+          "Response": false,
+          "HttpMethod": ""
+        },
+        {
+          "MethodName": "CopyTo",
+          "ApiCallOrderId": 3,
+          "RequestParameters": [
+            {
+              "Value": 27,
+              "Type": "int",
+              "Name": "sourceIndex"
+            },
+            {
+              "Value": [
+                ":"
+              ],
+              "Type": "char[]",
+              "Name": "destination"
+            },
+            {
+              "Value": 6,
+              "Type": "int",
+              "Name": "destinationIndex"
+            },
+            {
+              "Value": 22,
+              "Type": "int",
+              "Name": "count"
+            }
+          ],
+          "Response": "Exception has been thrown by the target of an invocation. | sourceIndex ('22') must be less than or equal to '4'. (Parameter 'sourceIndex')\nActual value was 22.",
+          "HttpMethod": ""
+        },
+        {
+          "MethodName": "EndsWith",
+          "ApiCallOrderId": 4,
+          "RequestParameters": [
+            {
+              "Value": "RandomString952",
+              "Type": "string",
+              "Name": "value"
+            }
+          ],
+          "Response": false,
+          "HttpMethod": ""
+        },
+        {
+          "MethodName": "EnumerateRunes",
+          "ApiCallOrderId": 5,
+          "RequestParameters": [],
+          "Response": [
+            {
+              "IsAscii": true,
+              "IsBmp": true,
+              "Plane": 0,
+              "Utf16SequenceLength": 1,
+              "Utf8SequenceLength": 1,
+              "Value": 32
+            },
+            {
+              "IsAscii": true,
+              "IsBmp": true,
+              "Plane": 0,
+              "Utf16SequenceLength": 1,
+              "Utf8SequenceLength": 1,
+              "Value": 32
+            },
+            {
+              "IsAscii": true,
+              "IsBmp": true,
+              "Plane": 0,
+              "Utf16SequenceLength": 1,
+              "Utf8SequenceLength": 1,
+              "Value": 32
+            },
+            {
+              "IsAscii": true,
+              "IsBmp": true,
+              "Plane": 0,
+              "Utf16SequenceLength": 1,
+              "Utf8SequenceLength": 1,
+              "Value": 32
+            },
+            {
+              "IsAscii": true,
+              "IsBmp": true,
+              "Plane": 0,
+              "Utf16SequenceLength": 1,
+              "Utf8SequenceLength": 1,
+              "Value": 32
+            },
+            {
+              "IsAscii": true,
+              "IsBmp": true,
+              "Plane": 0,
+              "Utf16SequenceLength": 1,
+              "Utf8SequenceLength": 1,
+              "Value": 32
+            },
+            {
+              "IsAscii": true,
+              "IsBmp": true,
+              "Plane": 0,
+              "Utf16SequenceLength": 1,
+              "Utf8SequenceLength": 1,
+              "Value": 84
+            },
+            {
+              "IsAscii": true,
+              "IsBmp": true,
+              "Plane": 0,
+              "Utf16SequenceLength": 1,
+              "Utf8SequenceLength": 1,
+              "Value": 104
+            },
+            {
+              "IsAscii": true,
+              "IsBmp": true,
+              "Plane": 0,
+              "Utf16SequenceLength": 1,
+              "Utf8SequenceLength": 1,
+              "Value": 105
+            },
+            {
+              "IsAscii": true,
+              "IsBmp": true,
+              "Plane": 0,
+              "Utf16SequenceLength": 1,
+              "Utf8SequenceLength": 1,
+              "Value": 115
+            },
+            {
+              "IsAscii": true,
+              "IsBmp": true,
+              "Plane": 0,
+              "Utf16SequenceLength": 1,
+              "Utf8SequenceLength": 1,
+              "Value": 32
+            },
+            {
+              "IsAscii": true,
+              "IsBmp": true,
+              "Plane": 0,
+              "Utf16SequenceLength": 1,
+              "Utf8SequenceLength": 1,
+              "Value": 105
+            },
+            {
+              "IsAscii": true,
+              "IsBmp": true,
+              "Plane": 0,
+              "Utf16SequenceLength": 1,
+              "Utf8SequenceLength": 1,
+              "Value": 115
+            },
+            {
+              "IsAscii": true,
+              "IsBmp": true,
+              "Plane": 0,
+              "Utf16SequenceLength": 1,
+              "Utf8SequenceLength": 1,
+              "Value": 32
+            },
+            {
+              "IsAscii": true,
+              "IsBmp": true,
+              "Plane": 0,
+              "Utf16SequenceLength": 1,
+              "Utf8SequenceLength": 1,
+              "Value": 97
+            },
+            {
+              "IsAscii": true,
+              "IsBmp": true,
+              "Plane": 0,
+              "Utf16SequenceLength": 1,
+              "Utf8SequenceLength": 1,
+              "Value": 32
+            },
+            {
+              "IsAscii": true,
+              "IsBmp": true,
+              "Plane": 0,
+              "Utf16SequenceLength": 1,
+              "Utf8SequenceLength": 1,
+              "Value": 115
+            },
+            {
+              "IsAscii": true,
+              "IsBmp": true,
+              "Plane": 0,
+              "Utf16SequenceLength": 1,
+              "Utf8SequenceLength": 1,
+              "Value": 101
+            },
+            {
+              "IsAscii": true,
+              "IsBmp": true,
+              "Plane": 0,
+              "Utf16SequenceLength": 1,
+              "Utf8SequenceLength": 1,
+              "Value": 110
+            },
+            {
+              "IsAscii": true,
+              "IsBmp": true,
+              "Plane": 0,
+              "Utf16SequenceLength": 1,
+              "Utf8SequenceLength": 1,
+              "Value": 116
+            },
+            {
+              "IsAscii": true,
+              "IsBmp": true,
+              "Plane": 0,
+              "Utf16SequenceLength": 1,
+              "Utf8SequenceLength": 1,
+              "Value": 101
+            },
+            {
+              "IsAscii": true,
+              "IsBmp": true,
+              "Plane": 0,
+              "Utf16SequenceLength": 1,
+              "Utf8SequenceLength": 1,
+              "Value": 110
+            },
+            {
+              "IsAscii": true,
+              "IsBmp": true,
+              "Plane": 0,
+              "Utf16SequenceLength": 1,
+              "Utf8SequenceLength": 1,
+              "Value": 99
+            },
+            {
+              "IsAscii": true,
+              "IsBmp": true,
+              "Plane": 0,
+              "Utf16SequenceLength": 1,
+              "Utf8SequenceLength": 1,
+              "Value": 101
+            },
+            {
+              "IsAscii": true,
+              "IsBmp": true,
+              "Plane": 0,
+              "Utf16SequenceLength": 1,
+              "Utf8SequenceLength": 1,
+              "Value": 46
+            },
+            {
+              "IsAscii": true,
+              "IsBmp": true,
+              "Plane": 0,
+              "Utf16SequenceLength": 1,
+              "Utf8SequenceLength": 1,
+              "Value": 32
+            },
+            {
+              "IsAscii": true,
+              "IsBmp": true,
+              "Plane": 0,
+              "Utf16SequenceLength": 1,
+              "Utf8SequenceLength": 1,
+              "Value": 32
+            },
+            {
+              "IsAscii": true,
+              "IsBmp": true,
+              "Plane": 0,
+              "Utf16SequenceLength": 1,
+              "Utf8SequenceLength": 1,
+              "Value": 32
+            },
+            {
+              "IsAscii": true,
+              "IsBmp": true,
+              "Plane": 0,
+              "Utf16SequenceLength": 1,
+              "Utf8SequenceLength": 1,
+              "Value": 32
+            },
+            {
+              "IsAscii": true,
+              "IsBmp": true,
+              "Plane": 0,
+              "Utf16SequenceLength": 1,
+              "Utf8SequenceLength": 1,
+              "Value": 32
+            },
+            {
+              "IsAscii": true,
+              "IsBmp": true,
+              "Plane": 0,
+              "Utf16SequenceLength": 1,
+              "Utf8SequenceLength": 1,
+              "Value": 32
+            }
+          ],
+          "HttpMethod": ""
+        },
+        {
+          "MethodName": "Equals",
+          "ApiCallOrderId": 6,
+          "RequestParameters": [
+            {
+              "Value": {},
+              "Type": "object",
+              "Name": "obj"
+            }
+          ],
+          "Response": false,
+          "HttpMethod": ""
+        },
+        {
+          "MethodName": "GetEnumerator",
+          "ApiCallOrderId": 7,
+          "RequestParameters": [],
+          "Response": "Not serializable",
+          "HttpMethod": ""
+        },
+        {
+          "MethodName": "GetHashCode",
+          "ApiCallOrderId": 8,
+          "RequestParameters": [],
+          "Response": 1588317493,
+          "HttpMethod": ""
+        },
+        {
+          "MethodName": "GetPinnableReference",
+          "ApiCallOrderId": 9,
+          "RequestParameters": [],
+          "Response": " ",
+          "HttpMethod": ""
+        },
+        {
+          "MethodName": "GetTypeCode",
+          "ApiCallOrderId": 10,
+          "RequestParameters": [],
+          "Response": "String",
+          "HttpMethod": ""
+        },
+        {
+          "MethodName": "IndexOf",
+          "ApiCallOrderId": 11,
+          "RequestParameters": [
+            {
+              "Value": "w",
+              "Type": "char",
+              "Name": "value"
+            }
+          ],
+          "Response": -1,
+          "HttpMethod": ""
+        },
+        {
+          "MethodName": "IndexOfAny",
+          "ApiCallOrderId": 12,
+          "RequestParameters": [
+            {
+              "Value": [
+                "J"
+              ],
+              "Type": "char[]",
+              "Name": "anyOf"
+            }
+          ],
+          "Response": -1,
+          "HttpMethod": ""
+        },
+        {
+          "MethodName": "Insert",
+          "ApiCallOrderId": 13,
+          "RequestParameters": [
+            {
+              "Value": 19,
+              "Type": "int",
+              "Name": "startIndex"
+            },
+            {
+              "Value": "RandomString210",
+              "Type": "string",
+              "Name": "value"
+            }
+          ],
+          "Response": "      This is a senRandomString210tence.      ",
+          "HttpMethod": ""
+        },
+        {
+          "MethodName": "IsNormalized",
+          "ApiCallOrderId": 14,
+          "RequestParameters": [],
+          "Response": true,
+          "HttpMethod": ""
+        },
+        {
+          "MethodName": "LastIndexOf",
+          "ApiCallOrderId": 15,
+          "RequestParameters": [
+            {
+              "Value": "N",
+              "Type": "char",
+              "Name": "value"
+            }
+          ],
+          "Response": -1,
+          "HttpMethod": ""
+        },
+        {
+          "MethodName": "LastIndexOfAny",
+          "ApiCallOrderId": 16,
+          "RequestParameters": [
+            {
+              "Value": [
+                "g"
+              ],
+              "Type": "char[]",
+              "Name": "anyOf"
+            }
+          ],
+          "Response": -1,
+          "HttpMethod": ""
+        },
+        {
+          "MethodName": "Normalize",
+          "ApiCallOrderId": 17,
+          "RequestParameters": [],
+          "Response": "      This is a sentence.      ",
+          "HttpMethod": ""
+        },
+        {
+          "MethodName": "PadLeft",
+          "ApiCallOrderId": 18,
+          "RequestParameters": [
+            {
+              "Value": 1,
+              "Type": "int",
+              "Name": "totalWidth"
+            }
+          ],
+          "Response": "      This is a sentence.      ",
+          "HttpMethod": ""
+        },
+        {
+          "MethodName": "PadRight",
+          "ApiCallOrderId": 19,
+          "RequestParameters": [
+            {
+              "Value": 16,
+              "Type": "int",
+              "Name": "totalWidth"
+            }
+          ],
+          "Response": "      This is a sentence.      ",
+          "HttpMethod": ""
+        },
+        {
+          "MethodName": "Remove",
+          "ApiCallOrderId": 20,
+          "RequestParameters": [
+            {
+              "Value": 6,
+              "Type": "int",
+              "Name": "startIndex"
+            },
+            {
+              "Value": 33,
+              "Type": "int",
+              "Name": "count"
+            }
+          ],
+          "Response": "Exception has been thrown by the target of an invocation. | count ('33') must be less than or equal to '25'. (Parameter 'count')\nActual value was 33.",
+          "HttpMethod": ""
+        },
+        {
+          "MethodName": "Replace",
+          "ApiCallOrderId": 21,
+          "RequestParameters": [
+            {
+              "Value": "RandomString299",
+              "Type": "string",
+              "Name": "oldValue"
+            },
+            {
+              "Value": "RandomString704",
+              "Type": "string",
+              "Name": "newValue"
+            },
+            {
+              "Value": false,
+              "Type": "bool",
+              "Name": "ignoreCase"
+            },
+            {
+              "Value": "en-US",
+              "Type": "CultureInfo",
+              "Name": "culture"
+            }
+          ],
+          "Response": "      This is a sentence.      ",
+          "HttpMethod": ""
+        },
+        {
+          "MethodName": "ReplaceLineEndings",
+          "ApiCallOrderId": 22,
+          "RequestParameters": [],
+          "Response": "      This is a sentence.      ",
+          "HttpMethod": ""
+        },
+        {
+          "MethodName": "Split",
+          "ApiCallOrderId": 23,
+          "RequestParameters": [
+            {
+              "Value": "a",
+              "Type": "char",
+              "Name": "separator"
+            },
+            {
+              "Value": "RemoveEmptyEntries",
+              "Type": "StringSplitOptions",
+              "Name": "options"
+            }
+          ],
+          "Response": [
+            "      This is ",
+            " sentence.      "
+          ],
+          "HttpMethod": ""
+        },
+        {
+          "MethodName": "StartsWith",
+          "ApiCallOrderId": 24,
+          "RequestParameters": [
+            {
+              "Value": "RandomString439",
+              "Type": "string",
+              "Name": "value"
+            }
+          ],
+          "Response": false,
+          "HttpMethod": ""
+        },
+        {
+          "MethodName": "Substring",
+          "ApiCallOrderId": 25,
+          "RequestParameters": [
+            {
+              "Value": 1,
+              "Type": "int",
+              "Name": "startIndex"
+            }
+          ],
+          "Response": "     This is a sentence.      ",
+          "HttpMethod": ""
+        },
+        {
+          "MethodName": "ToCharArray",
+          "ApiCallOrderId": 26,
+          "RequestParameters": [],
+          "Response": [
+            " ",
+            " ",
+            " ",
+            " ",
+            " ",
+            " ",
+            "T",
+            "h",
+            "i",
+            "s",
+            " ",
+            "i",
+            "s",
+            " ",
+            "a",
+            " ",
+            "s",
+            "e",
+            "n",
+            "t",
+            "e",
+            "n",
+            "c",
+            "e",
+            ".",
+            " ",
+            " ",
+            " ",
+            " ",
+            " ",
+            " "
+          ],
+          "HttpMethod": ""
+        },
+        {
+          "MethodName": "ToLower",
+          "ApiCallOrderId": 27,
+          "RequestParameters": [],
+          "Response": "      this is a sentence.      ",
+          "HttpMethod": ""
+        },
+        {
+          "MethodName": "ToLowerInvariant",
+          "ApiCallOrderId": 28,
+          "RequestParameters": [],
+          "Response": "      this is a sentence.      ",
+          "HttpMethod": ""
+        },
+        {
+          "MethodName": "ToString",
+          "ApiCallOrderId": 29,
+          "RequestParameters": [],
+          "Response": "      This is a sentence.      ",
+          "HttpMethod": ""
+        },
+        {
+          "MethodName": "ToUpper",
+          "ApiCallOrderId": 30,
+          "RequestParameters": [],
+          "Response": "      THIS IS A SENTENCE.      ",
+          "HttpMethod": ""
+        },
+        {
+          "MethodName": "ToUpperInvariant",
+          "ApiCallOrderId": 31,
+          "RequestParameters": [],
+          "Response": "      THIS IS A SENTENCE.      ",
+          "HttpMethod": ""
+        },
+        {
+          "MethodName": "TryCopyTo",
+          "ApiCallOrderId": 32,
+          "RequestParameters": [
+            {
+              "Value": {
+                "Length": 1,
+                "IsEmpty": false
+              },
+              "Type": "Span<char>",
+              "Name": "destination"
+            }
+          ],
+          "Response": "Object of type 'System.Memory`1[System.Char]' cannot be converted to type 'System.Span`1[System.Char]'. | ",
+          "HttpMethod": ""
+        },
+        {
+          "MethodName": "Trim",
+          "ApiCallOrderId": 33,
+          "RequestParameters": [],
+          "Response": "This is a sentence.",
+          "HttpMethod": ""
+        },
+        {
+          "MethodName": "TrimEnd",
+          "ApiCallOrderId": 34,
+          "RequestParameters": [],
+          "Response": "      This is a sentence.",
+          "HttpMethod": ""
+        },
+        {
+          "MethodName": "TrimStart",
+          "ApiCallOrderId": 35,
+          "RequestParameters": [],
+          "Response": "This is a sentence.      ",
+          "HttpMethod": ""
+        }
+      ],
+      "TestCoveragePercentage": 0.0,
+      "TestSuiteOrderId": 0
+    }
+  ]
+}

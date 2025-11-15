@@ -107,19 +107,24 @@ public class DataGenerationHelper
         {
             // Handle non-nullable types
             Type t when t == typeof(int) => random.Next(1, permutationSizeCount),                      // Random integer
+            Type t when t == typeof(char) => (char)random.Next(32, 127),                               // Random char
             Type t when t == typeof(bool) => random.Next(0, 2) == 0,                                   // Random boolean
             Type t when t == typeof(double) => random.NextDouble() * 100,                              // Random double
             Type t when t == typeof(DateTime) => DateTime.Now.AddDays(random.Next(-100, 100)),         // Random date
             Type t when t == typeof(DateOnly) => DateOnly.FromDateTime(DateTime.Now).AddDays(random.Next(-100, 100)),        // Random dateOnly
+            Type t when t == typeof(TimeOnly) => TimeOnly.FromDateTime(DateTime.Now).AddHours(random.Next(-100, 100)),        // Random TimeOnly
             Type t when t == typeof(TimeSpan) => TimeSpan.FromHours(random.Next(1, 100)),              // Random TimeSpan
             Type t when t == typeof(DateTimeOffset) => DateTimeOffset.Now.AddDays(random.Next(-100, 100)),         // Random date
             Type t when t == typeof(Guid) => GenerateGuidFromSeed(),
             Type t when t == typeof(long) => random.NextInt64(1, 10000),
             Type t when t == typeof(float) => random.NextSingle(),
-            Type t when t == typeof(double) => random.NextDouble(),
             Type t when t == typeof(decimal) => random.NextDouble(),
             Type t when t == typeof(byte[]) => GetRandomBytes(),
 
+            //System.Int32&
+            Type t when t == typeof(int) || (t.IsByRef && t.GetElementType() == typeof(int)) => random.Next(1, permutationSizeCount),
+            Type t when t == typeof(DateOnly) || (t.IsByRef && t.GetElementType() == typeof(DateOnly)) => random.Next(1, permutationSizeCount),
+            Type t when t == typeof(TimeOnly) || (t.IsByRef && t.GetElementType() == typeof(TimeOnly)) => random.Next(1, permutationSizeCount),
 
             // Handle non-nullable string
             Type t when t == typeof(string) => "RandomString" + random.Next(1, 1000),  // Non-nullable string (always returns a string)
@@ -131,10 +136,12 @@ public class DataGenerationHelper
 
             // Handle nullable types explicitly (e.g., int?, bool?, double?, DateTime?)
             Type t when t == typeof(int?) => random.Next(0, 2) == 0 ? null : (int?)random.Next(1, permutationSizeCount),  // Random int? (null or int)
+            Type t when t == typeof(char?) => random.Next(0, 2) == 0 ? null : (char?)random.Next(32, 127),                 // Random char
             Type t when t == typeof(bool?) => random.Next(0, 2) == 0 ? (bool?)null : random.Next(0, 2) == 0,               // Random bool? (null or bool)
             Type t when t == typeof(double?) => random.Next(0, 2) == 0 ? (double?)null : random.NextDouble() * 100,          // Random double? (null or double)
             Type t when t == typeof(DateTime?) => random.Next(0, 2) == 0 ? (DateTime?)null : DateTime.Now.AddDays(random.Next(-100, 100)), // Random DateTime? (null or DateTime)
-            Type t when t == typeof(DateOnly?) => random.Next(0, 2) == 0 ? (DateOnly?)null : DateOnly.FromDateTime(DateTime.Now).AddDays(random.Next(-100, 100)),  
+            Type t when t == typeof(DateOnly?) => random.Next(0, 2) == 0 ? (DateOnly?)null : DateOnly.FromDateTime(DateTime.Now).AddDays(random.Next(-100, 100)),
+            Type t when t == typeof(TimeOnly?) => random.Next(0, 2) == 0 ? (TimeOnly?)null : TimeOnly.FromDateTime(DateTime.Now).AddHours(random.Next(-100, 100)),
             Type t when t == typeof(TimeSpan?) => random.Next(0, 2) == 0 ? (TimeSpan?)null : TimeSpan.FromHours(random.Next(1, 100)), // Random TimeSpan? (null or DateTime)
             Type t when t == typeof(DateTimeOffset?) => random.Next(0, 2) == 0 ? (DateTimeOffset?)null : DateTimeOffset.Now.AddDays(random.Next(-100, 100)), // Random DateTime? (null or DateTime)
             Type t when t == typeof(Guid?) => random.Next(0, 2) == 0 ? (Guid?)null : GenerateGuidFromSeed(),
@@ -159,12 +166,27 @@ public class DataGenerationHelper
             //For self mocking
             Type t when t == typeof(Func<ApiCall, bool>) => null,
 
+            //System.IFormatProvider
+            Type t when t == typeof(System.IFormatProvider) => new System.Globalization.CultureInfo("en-US"), // Default format provider
+
+            //System.Globalization.CultureInfo 
+            Type t when t == typeof(System.Globalization.CultureInfo) => new System.Globalization.CultureInfo("en-US"), // Default culture info
+
+            //System.Span`1[System.Char]
+            Type t when t == typeof(System.Span<char>) => new char[] { (char)random.Next(32, 127) }.AsMemory(), // Random char span with one character
+
+            //System.ReadOnlySpan`1[System.Char]
+            Type t when t == typeof(System.ReadOnlySpan<char>) => new char[] { (char)random.Next(32, 127) }.AsMemory(), // Random char span with one character
 
             //Handle complex nullable types
             Type t when MyTypeExtensions.IsNullableOfT(t) => Activator.CreateInstance(t, null),
 
             // Handle enums by randomly selecting one of the possible values
             Type t when t.IsEnum => GetRandomEnumValue(t, random),
+
+
+            //System.Char[]
+            Type t when t == typeof(char[]) => new char[] { (char)random.Next(32, 127) }, // Random char array with one character
 
             // Handle IEnumerable<T> types (always create 3 elements)
             Type t when t.IsGenericType && t.GetGenericTypeDefinition() == typeof(IEnumerable<>) =>
@@ -185,6 +207,20 @@ public class DataGenerationHelper
             // Handle IDictionary<TKey, TValue> types (always create 3 key-value pairs)
             Type t when t.IsGenericType && t.GetGenericTypeDefinition() == typeof(IDictionary<,>) =>
                 CreateDictionaryWithThreeEntries(t, permutationSizeCount),  // Delegate to a helper method
+
+            // Create a System.HttpContent.
+            Type t when t == typeof(System.Net.Http.HttpContent) =>
+                new System.Net.Http.StringContent("Random String Content"),
+
+            // Create random System.Net.Http.HttpMethod based on seed.
+            Type t when t == typeof(System.Net.Http.HttpMethod) => new System.Net.Http.HttpMethod[]
+            {
+                new System.Net.Http.HttpMethod("GET"),
+                new System.Net.Http.HttpMethod("POST"),
+                new System.Net.Http.HttpMethod("PUT"),
+                new System.Net.Http.HttpMethod("DELETE"),
+                new System.Net.Http.HttpMethod("PATCH")
+            }[random.Next(0, 5)],
 
             // For complex types, recursively create an instance with random values
             Type t when t.IsClass =>
@@ -387,12 +423,22 @@ public class DataGenerationHelper
         //However, a common range for endpoints per micro-service is generally between 5 to 20 endpoints.
 
         //TODO How to reduce search space? Currently just a simple hack.
+
+        var multiplier = Enumerable.Range(1, 50).ToList().Select(item => dataModel.Methods);
+
         var methodNamePermutations = range.Count switch
         {
-            > 50 => PermutationGenerator.GetPermutationsOfOne(dataModel.Methods), // Skip permutations if count > 50
-            > 5 => PermutationGenerator.GetPermutationsOfTwo(dataModel.Methods), // If count > 5, use GetPermutationsOfTwo
-            _ => PermutationGenerator.GetPermutations(dataModel.Methods) // Otherwise, get full permutations
+            //> 50 => PermutationGenerator.GetPermutationsOfOne(dataModel.Methods), // Skip permutations if count > 50
+            //> 5 => PermutationGenerator.GetPermutationsOfTwo(dataModel.Methods), // If count > 5, use GetPermutationsOfTwo
+            //_ => PermutationGenerator.GetPermutations(dataModel.Methods) // Otherwise, get full permutations
+
+            // make 50 test suites with one that method call;    
+             
+            // _ => PermutationGenerator.GetPermutationsOfOne(multiplier.SelectMany(x => x).ToList()), 
+            _ => new List<List<Method>> { multiplier.SelectMany(x => x).ToList() } // no permutations, just use the methods as is
         };
+
+
 
         var testSuites = methodNamePermutations.Select((calls, testSuiteOrder) => new TestSuite
         {

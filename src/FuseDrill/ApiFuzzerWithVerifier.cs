@@ -1,6 +1,8 @@
+using DiffEngine;
 using FuseDrill.Core;
 
 namespace FuseDrill;
+
 public class ApiFuzzerWithVerifier : IApiFuzzer
 {
     private readonly ApiFuzzer _apiFuzzer;

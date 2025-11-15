@@ -1,0 +1,24 @@
+﻿{
+  "Seed": 1234567,
+  "TestSuites": [
+    {
+      "ApiCalls": [
+        {
+          "MethodName": "SquareRoot",
+          "ApiCallOrderId": 0,
+          "RequestParameters": [
+            {
+              "Value": 77.91058052233913,
+              "Type": "double",
+              "Name": "number"
+            }
+          ],
+          "Response": 8.826697033564658,
+          "HttpMethod": ""
+        }
+      ],
+      "TestCoveragePercentage": 0.0,
+      "TestSuiteOrderId": 0
+    }
+  ]
+}

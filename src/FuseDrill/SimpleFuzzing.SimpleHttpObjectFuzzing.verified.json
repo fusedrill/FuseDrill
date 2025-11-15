@@ -1,0 +1,535 @@
+﻿{
+  "Seed": 1234567,
+  "TestSuites": [
+    {
+      "ApiCalls": [
+        {
+          "MethodName": "CancelPendingRequests",
+          "ApiCallOrderId": 0,
+          "RequestParameters": [],
+          "Response": "Empty response (void) or (null)",
+          "HttpMethod": ""
+        },
+        {
+          "MethodName": "DeleteAsync",
+          "ApiCallOrderId": 1,
+          "RequestParameters": [
+            {
+              "Value": "RandomString779",
+              "Type": "string",
+              "Name": "requestUri"
+            }
+          ],
+          "Response": {
+            "Version": "1.1",
+            "Content": {
+              "Headers": [
+                {
+                  "Content-Type": [
+                    "text/html; charset=UTF-8"
+                  ]
+                },
+                {
+                  "Content-Length": [
+                    "1576"
+                  ]
+                }
+              ]
+            },
+            "StatusCode": "NotFound",
+            "ReasonPhrase": "Not Found",
+            "Headers": [
+              {
+                "Referrer-Policy": [
+                  "no-referrer"
+                ]
+              },
+              {
+                "Date": [
+                  "Tue, 28 Oct 2025 20:09:46 GMT"
+                ]
+              },
+              {
+                "Alt-Svc": [
+                  "h3=\":443\"; ma=2592000",
+                  "h3-29=\":443\"; ma=2592000"
+                ]
+              }
+            ],
+            "TrailingHeaders": [],
+            "RequestMessage": {
+              "Version": "1.1",
+              "VersionPolicy": "RequestVersionOrLower",
+              "Method": {
+                "Method": "DELETE"
+              },
+              "RequestUri": "https://www.google.com/RandomString779",
+              "Headers": [],
+              "Options": {}
+            },
+            "IsSuccessStatusCode": false
+          },
+          "HttpMethod": ""
+        },
+        {
+          "MethodName": "GetAsync",
+          "ApiCallOrderId": 2,
+          "RequestParameters": [
+            {
+              "Value": "RandomString760",
+              "Type": "string",
+              "Name": "requestUri"
+            }
+          ],
+          "Response": {
+            "Version": "1.1",
+            "Content": {
+              "Headers": [
+                {
+                  "Content-Type": [
+                    "text/html; charset=UTF-8"
+                  ]
+                },
+                {
+                  "Content-Length": [
+                    "1576"
+                  ]
+                }
+              ]
+            },
+            "StatusCode": "NotFound",
+            "ReasonPhrase": "Not Found",
+            "Headers": [
+              {
+                "Referrer-Policy": [
+                  "no-referrer"
+                ]
+              },
+              {
+                "Date": [
+                  "Tue, 28 Oct 2025 20:09:46 GMT"
+                ]
+              },
+              {
+                "Alt-Svc": [
+                  "h3=\":443\"; ma=2592000",
+                  "h3-29=\":443\"; ma=2592000"
+                ]
+              }
+            ],
+            "TrailingHeaders": [],
+            "RequestMessage": {
+              "Version": "1.1",
+              "VersionPolicy": "RequestVersionOrLower",
+              "Method": {
+                "Method": "GET"
+              },
+              "RequestUri": "https://www.google.com/RandomString760",
+              "Headers": [],
+              "Options": {}
+            },
+            "IsSuccessStatusCode": false
+          },
+          "HttpMethod": ""
+        },
+        {
+          "MethodName": "GetByteArrayAsync",
+          "ApiCallOrderId": 3,
+          "RequestParameters": [
+            {
+              "Value": "RandomString275",
+              "Type": "string",
+              "Name": "requestUri"
+            }
+          ],
+          "Response": "Not serializable",
+          "HttpMethod": ""
+        },
+        {
+          "MethodName": "GetStreamAsync",
+          "ApiCallOrderId": 4,
+          "RequestParameters": [
+            {
+              "Value": "RandomString157",
+              "Type": "string",
+              "Name": "requestUri"
+            }
+          ],
+          "Response": "Not serializable",
+          "HttpMethod": ""
+        },
+        {
+          "MethodName": "GetStringAsync",
+          "ApiCallOrderId": 5,
+          "RequestParameters": [
+            {
+              "Value": "RandomString601",
+              "Type": "string",
+              "Name": "requestUri"
+            }
+          ],
+          "Response": "Not serializable",
+          "HttpMethod": ""
+        },
+        {
+          "MethodName": "PatchAsync",
+          "ApiCallOrderId": 6,
+          "RequestParameters": [
+            {
+              "Value": "RandomString952",
+              "Type": "string",
+              "Name": "requestUri"
+            },
+            {
+              "Value": {
+                "Headers": [
+                  {
+                    "Content-Type": [
+                      "text/plain; charset=utf-8"
+                    ]
+                  },
+                  {
+                    "Content-Length": [
+                      "21"
+                    ]
+                  }
+                ]
+              },
+              "Type": "HttpContent",
+              "Name": "content"
+            }
+          ],
+          "Response": {
+            "Version": "1.1",
+            "Content": {
+              "Headers": [
+                {
+                  "Content-Type": [
+                    "text/html; charset=UTF-8"
+                  ]
+                },
+                {
+                  "Content-Length": [
+                    "1576"
+                  ]
+                }
+              ]
+            },
+            "StatusCode": "NotFound",
+            "ReasonPhrase": "Not Found",
+            "Headers": [
+              {
+                "Referrer-Policy": [
+                  "no-referrer"
+                ]
+              },
+              {
+                "Date": [
+                  "Tue, 28 Oct 2025 20:09:46 GMT"
+                ]
+              },
+              {
+                "Alt-Svc": [
+                  "h3=\":443\"; ma=2592000",
+                  "h3-29=\":443\"; ma=2592000"
+                ]
+              },
+              {
+                "Connection": [
+                  "close"
+                ]
+              }
+            ],
+            "TrailingHeaders": [],
+            "RequestMessage": {
+              "Version": "1.1",
+              "VersionPolicy": "RequestVersionOrLower",
+              "Content": {
+                "Headers": [
+                  {
+                    "Content-Type": [
+                      "text/plain; charset=utf-8"
+                    ]
+                  },
+                  {
+                    "Content-Length": [
+                      "21"
+                    ]
+                  }
+                ]
+              },
+              "Method": {
+                "Method": "PATCH"
+              },
+              "RequestUri": "https://www.google.com/RandomString952",
+              "Headers": [],
+              "Options": {}
+            },
+            "IsSuccessStatusCode": false
+          },
+          "HttpMethod": ""
+        },
+        {
+          "MethodName": "PostAsync",
+          "ApiCallOrderId": 7,
+          "RequestParameters": [
+            {
+              "Value": "RandomString919",
+              "Type": "string",
+              "Name": "requestUri"
+            },
+            {
+              "Value": {
+                "Headers": [
+                  {
+                    "Content-Type": [
+                      "text/plain; charset=utf-8"
+                    ]
+                  },
+                  {
+                    "Content-Length": [
+                      "21"
+                    ]
+                  }
+                ]
+              },
+              "Type": "HttpContent",
+              "Name": "content"
+            }
+          ],
+          "Response": {
+            "Version": "1.1",
+            "Content": {
+              "Headers": [
+                {
+                  "Content-Type": [
+                    "text/html; charset=UTF-8"
+                  ]
+                },
+                {
+                  "Content-Length": [
+                    "1576"
+                  ]
+                }
+              ]
+            },
+            "StatusCode": "NotFound",
+            "ReasonPhrase": "Not Found",
+            "Headers": [
+              {
+                "Referrer-Policy": [
+                  "no-referrer"
+                ]
+              },
+              {
+                "Date": [
+                  "Tue, 28 Oct 2025 20:09:46 GMT"
+                ]
+              },
+              {
+                "Alt-Svc": [
+                  "h3=\":443\"; ma=2592000",
+                  "h3-29=\":443\"; ma=2592000"
+                ]
+              },
+              {
+                "Connection": [
+                  "close"
+                ]
+              }
+            ],
+            "TrailingHeaders": [],
+            "RequestMessage": {
+              "Version": "1.1",
+              "VersionPolicy": "RequestVersionOrLower",
+              "Content": {
+                "Headers": [
+                  {
+                    "Content-Type": [
+                      "text/plain; charset=utf-8"
+                    ]
+                  },
+                  {
+                    "Content-Length": [
+                      "21"
+                    ]
+                  }
+                ]
+              },
+              "Method": {
+                "Method": "POST"
+              },
+              "RequestUri": "https://www.google.com/RandomString919",
+              "Headers": [],
+              "Options": {}
+            },
+            "IsSuccessStatusCode": false
+          },
+          "HttpMethod": ""
+        },
+        {
+          "MethodName": "PutAsync",
+          "ApiCallOrderId": 8,
+          "RequestParameters": [
+            {
+              "Value": "RandomString450",
+              "Type": "string",
+              "Name": "requestUri"
+            },
+            {
+              "Value": {
+                "Headers": [
+                  {
+                    "Content-Type": [
+                      "text/plain; charset=utf-8"
+                    ]
+                  },
+                  {
+                    "Content-Length": [
+                      "21"
+                    ]
+                  }
+                ]
+              },
+              "Type": "HttpContent",
+              "Name": "content"
+            }
+          ],
+          "Response": {
+            "Version": "1.1",
+            "Content": {
+              "Headers": [
+                {
+                  "Content-Type": [
+                    "text/html; charset=UTF-8"
+                  ]
+                },
+                {
+                  "Content-Length": [
+                    "1576"
+                  ]
+                }
+              ]
+            },
+            "StatusCode": "NotFound",
+            "ReasonPhrase": "Not Found",
+            "Headers": [
+              {
+                "Referrer-Policy": [
+                  "no-referrer"
+                ]
+              },
+              {
+                "Date": [
+                  "Tue, 28 Oct 2025 20:09:47 GMT"
+                ]
+              },
+              {
+                "Alt-Svc": [
+                  "h3=\":443\"; ma=2592000",
+                  "h3-29=\":443\"; ma=2592000"
+                ]
+              },
+              {
+                "Connection": [
+                  "close"
+                ]
+              }
+            ],
+            "TrailingHeaders": [],
+            "RequestMessage": {
+              "Version": "1.1",
+              "VersionPolicy": "RequestVersionOrLower",
+              "Content": {
+                "Headers": [
+                  {
+                    "Content-Type": [
+                      "text/plain; charset=utf-8"
+                    ]
+                  },
+                  {
+                    "Content-Length": [
+                      "21"
+                    ]
+                  }
+                ]
+              },
+              "Method": {
+                "Method": "PUT"
+              },
+              "RequestUri": "https://www.google.com/RandomString450",
+              "Headers": [],
+              "Options": {}
+            },
+            "IsSuccessStatusCode": false
+          },
+          "HttpMethod": ""
+        },
+        {
+          "MethodName": "Send",
+          "ApiCallOrderId": 9,
+          "RequestParameters": [
+            {
+              "Value": {
+                "Version": "0.0",
+                "VersionPolicy": "RequestVersionOrHigher",
+                "Content": {
+                  "Headers": [
+                    {
+                      "Content-Type": [
+                        "text/plain; charset=utf-8"
+                      ]
+                    }
+                  ]
+                },
+                "Method": {
+                  "Method": "POST"
+                },
+                "RequestUri": "https://RandomString490.com",
+                "Headers": [],
+                "Options": {}
+              },
+              "Type": "HttpRequestMessage",
+              "Name": "request"
+            }
+          ],
+          "Response": "Exception has been thrown by the target of an invocation. | HTTP request version upgrade is not enabled for synchronous 'Send'. Do not use 'RequestVersionOrHigher' version policy for synchronous HTTP methods.",
+          "HttpMethod": ""
+        },
+        {
+          "MethodName": "SendAsync",
+          "ApiCallOrderId": 10,
+          "RequestParameters": [
+            {
+              "Value": {
+                "Version": "0.0",
+                "VersionPolicy": "RequestVersionExact",
+                "Content": {
+                  "Headers": [
+                    {
+                      "Content-Type": [
+                        "text/plain; charset=utf-8"
+                      ]
+                    }
+                  ]
+                },
+                "Method": {
+                  "Method": "GET"
+                },
+                "RequestUri": "https://RandomString457.com",
+                "Headers": [],
+                "Options": {}
+              },
+              "Type": "HttpRequestMessage",
+              "Name": "request"
+            }
+          ],
+          "Response": "Not serializable",
+          "HttpMethod": ""
+        }
+      ],
+      "TestCoveragePercentage": 0.0,
+      "TestSuiteOrderId": 0
+    }
+  ]
+}

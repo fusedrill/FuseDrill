@@ -35,6 +35,7 @@ namespace FuseDrill.Core
             return result;
         }
 
+
         // Method to generate all permutations of 1 items from a list
         public static List<List<T>> GetPermutationsOfOne<T>(List<T> list)
         {
