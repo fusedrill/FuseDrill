@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="9.0.4" />
+    <PackageReference Include="Microsoft.Extensions.Http" Version="9.0.4" />
+    <PackageReference Include="ModelContextProtocol" Version="0.4.0-preview.3" />
+    <PackageReference Include="Microsoft.OpenApi.Readers" Version="1.6.14" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\FuseDrill.Core\FuseDrill.Core.csproj" />
+  </ItemGroup>
+
+<!-- // add prebuild step and kill the mcp server ModelContextProtocol  that runs in vs code or antigravity  -->
+<!-- Image	PID	Type	Handle Name
+FuseDrill.MCP.exe	35396	File	D:\main\org\FuseDrill\src\FuseDrill.MCP\bin\Debug\net9.0\Microsoft.Extensions.Logging.Configuration.dll -->
+<Target Name="PreBuildKillMCP" BeforeTargets="PreBuildEvent">
+  <Exec IgnoreExitCode="true" Command="taskkill /F /IM FuseDrill.MCP.exe 2&gt;NUL" />
+</Target>
+
+</Project>

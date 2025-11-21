@@ -1,5 +1,6 @@
 using FuseDrill;
 using GeneratedClientMyNamespace1;
+using System.Text.Json;
 
 namespace tests;
 
@@ -43,6 +44,34 @@ public class DrillerTests
 
         var fuzzer = new ApiFuzzerWithVerifier(newHttpClient, swaggerPath);
         await fuzzer.TestWholeApi();
+
+    }
+
+    #if DEBUG
+    [Fact(Skip = "Do not works in github actions")]// calling external api guru endpoint, good for debugging.
+    #endif
+    public async Task TestRemoteFuzzingWithSerialization()
+    {
+        // Search for "TestApi.csproj" starting from the current directory
+        var apiProjectFileName = "TestApi.csproj";
+
+        // Start the project using dotnet run
+        var apiProcessManager = new ApiProcessManager();
+        await apiProcessManager.DotnetRun(apiProjectFileName);
+
+        var apiUrl = "http://localhost:5184/";
+        var swaggerPath = "http://localhost:5184/swagger/v1/swagger.json";
+
+        var newHttpClient = new HttpClient
+        {
+            BaseAddress = new Uri(apiUrl)
+        };
+
+        var fuzzer = new FuseDrill.Core.ApiFuzzer(newHttpClient, swaggerPath, seed: 1234567, callEndpoints: true);
+        var results = await fuzzer.TestWholeApi();
+
+        var json = JsonSerializer.Serialize(results, SerializerOptions.GetOptions());
+        Console.WriteLine(json);
 
         await apiProcessManager.DisposeAsync();
     }

@@ -206,12 +206,22 @@ public class ApiFuzzer : IApiFuzzer
         return name + sanitizedName;
     }
 
-    private async Task<object> GetOpenApiClientInstanceDynamically(string fullOpenApiPath, HttpClient HttpClientForOpenApiDownalod)
+    private async Task<object> GetOpenApiClientInstanceDynamically(string fullOpenApiPath, HttpClient HttpClientForOpenApiDownload)
     {
-        //// Step 1: Get the Swagger JSON
-        ///
-        var response = await HttpClientForOpenApiDownalod.GetAsync(fullOpenApiPath);
-        var swaggerContent = await response.Content.ReadAsStringAsync();
+        //Validate fullOpenApiPath url by pinging it, throw exception that url is not reachable or its not web api not running.
+
+        var swaggerContent = string.Empty;
+        try
+        {
+            //// Step 1: Get the Swagger JSON
+            var response = await HttpClientForOpenApiDownload.GetAsync(fullOpenApiPath);
+            swaggerContent = await response.Content.ReadAsStringAsync();
+            response.EnsureSuccessStatusCode();
+        }
+        catch (Exception ex)
+        {
+            throw new InvalidOperationException($"Failed to reach the OpenAPI URL: {fullOpenApiPath}. Please ensure the URL is correct and the API is running.", ex);
+        }
 
         // Step 2: Determine the content type based on the extension and parse accordingly
         OpenApiDocument document = null;

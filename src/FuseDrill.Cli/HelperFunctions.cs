@@ -15,6 +15,7 @@ public static class HelperFunctions
             BaseAddress = new Uri(fuseDrillBaseAddres),
         };
 
+        //Todo need to support other providers Like basic, 
         httpClient.DefaultRequestHeaders.TryAddWithoutValidation("Authorization", fuseDrillTestAccountOAuthHeaderValue);
 
         var tester = new ApiFuzzer(httpClient, fuseDrillOpenApiUrl);

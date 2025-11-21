@@ -20,6 +20,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FuseDrill.Cli.Tests", "tests\FuseDrill.Cli.Tests\FuseDrill.Cli.Tests.csproj", "{5E8280D8-CB9F-44A4-B51C-A4E4A51CE11B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FuseDrill.MCP", "src\FuseDrill.MCP\FuseDrill.MCP.csproj", "{FD54C36B-6DAE-4698-9690-F1BCFE59F44F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -50,6 +52,10 @@ Global
 		{5E8280D8-CB9F-44A4-B51C-A4E4A51CE11B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5E8280D8-CB9F-44A4-B51C-A4E4A51CE11B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5E8280D8-CB9F-44A4-B51C-A4E4A51CE11B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD54C36B-6DAE-4698-9690-F1BCFE59F44F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD54C36B-6DAE-4698-9690-F1BCFE59F44F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD54C36B-6DAE-4698-9690-F1BCFE59F44F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD54C36B-6DAE-4698-9690-F1BCFE59F44F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
