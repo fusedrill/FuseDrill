@@ -12,7 +12,7 @@ namespace tests;
 [CollectionDefinition("Sequential Tests", DisableParallelization = true)]
 public class GrafanaFuzzingVizTests
 {
-    [Fact]
+    [Fact(Skip = "Only good for testing/POCS")]
     public async Task GrafanaDockerTest()
     {
         //http://localhost:3000/public/openapi3.json
