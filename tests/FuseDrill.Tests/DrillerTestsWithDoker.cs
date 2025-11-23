@@ -1,13 +1,17 @@
 using DotNet.Testcontainers.Builders;
 using FuseDrill;
+using System.Diagnostics;
 
 namespace tests;
+
 public class ApiIntegrationTests
-{   
+{
     [Fact]
     public async Task TestApiContainer()
     {
-        var dockerImageUrl = "fusedrill/testapi:latest"; // Change this to your actual image URL
+        string imageTag = await PublishContainer();
+
+        var dockerImageUrl = imageTag; // Change this to your actual image URL
         var containerName = "testapi";
         var apiBaseUrl = "http://localhost:8080/"; // Ensure this reflects the exposed port correctly
         var openApiSwaggerUrl = "http://localhost:8080/swagger/v1/swagger.json"; // Ensure this reflects the exposed port correctly
@@ -39,4 +43,36 @@ public class ApiIntegrationTests
             await container.DisposeAsync();
         }
     }
+
+    static async Task<string> PublishContainer()
+    {
+        // build local fusedrill/testapi:latest container 
+        var repoRoot = Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..", "..", "..", "..", ".."));
+        var testApiDir = Path.Combine(repoRoot, "tests", "TestApi");
+        var imageTag = "fusedrill/testapi:latest";
+
+        // 1) dotnet publish the TestApi
+        var publishInfo = new ProcessStartInfo
+        {
+            FileName = "dotnet",
+            Arguments = "publish /t:PublishContainer -c Release --runtime linux-x64",
+            WorkingDirectory = testApiDir,
+            RedirectStandardOutput = true,
+            RedirectStandardError = true,
+            UseShellExecute = false,
+            CreateNoWindow = true,
+        };
+
+        var publishProc = Process.Start(publishInfo)!;
+        var publishOut = await publishProc.StandardOutput.ReadToEndAsync();
+        var publishErr = await publishProc.StandardError.ReadToEndAsync();
+        publishProc.WaitForExit();
+        if (publishProc.ExitCode != 0)
+        {
+            throw new InvalidOperationException($"dotnet publish failed:\n{publishOut}\n{publishErr}");
+        }
+
+        return imageTag;
+    }
+
 }

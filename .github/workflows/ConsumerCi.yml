@@ -55,6 +55,3 @@ jobs:
             -e GEMINI_API_KEY="${{ secrets.GEMINI_API_KEY }}" \
             ghcr.io/fusedrill/fusedrill-cli:latest
 
-            
-
-          

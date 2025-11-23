@@ -1,0 +1,6 @@
+<Project>
+  <PropertyGroup>
+    <!-- Optional: prefer deterministic builds -->
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+</Project>  

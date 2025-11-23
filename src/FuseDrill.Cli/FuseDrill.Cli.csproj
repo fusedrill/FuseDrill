@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>net8.0</TargetFramework>
+    <TargetFramework>net10.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
 
@@ -13,7 +13,7 @@
     <!--<ContainerBaseImage>mcr.microsoft.com/dotnet/aspnet:8.0</ContainerBaseImage>-->
     <!--<ContainerBaseImage>mcr.microsoft.com/dotnet/runtime-deps:8.0</ContainerBaseImage>-->
     <!--dotnet publish /t:PublishContainer-->
-    <PackageVersion>1.0.1</PackageVersion>
+    <PackageVersion>1.1.0</PackageVersion>
     <PackageOutputPath>./nupkgs/</PackageOutputPath>
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
     <RepositoryUrl>https://github.com/fusedrill/FuseDrill</RepositoryUrl>
