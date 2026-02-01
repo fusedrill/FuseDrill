@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 18
-VisualStudioVersion = 18.0.11217.181 d18.0
+VisualStudioVersion = 18.0.11217.181
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuseDrill.Cli", "src\FuseDrill.Cli\FuseDrill.Cli.csproj", "{86275FC8-8BE6-4A5E-8007-833A007884B3}"
 EndProject
@@ -26,6 +26,14 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FuseDrill.Cli.Tests", "tests\FuseDrill.Cli.Tests\FuseDrill.Cli.Tests.csproj", "{5E8280D8-CB9F-44A4-B51C-A4E4A51CE11B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FuseDrill.MCP", "src\FuseDrill.MCP\FuseDrill.MCP.csproj", "{FD54C36B-6DAE-4698-9690-F1BCFE59F44F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RequestCaptureAndReplay.AppHost", "RequestCaptureAndReplay\RequestCaptureAndReplay.AppHost\RequestCaptureAndReplay.AppHost.csproj", "{217E616D-65E3-44A1-BF27-8658BB622926}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RequestCaptureAndReplay.ServiceDefaults", "RequestCaptureAndReplay\RequestCaptureAndReplay.ServiceDefaults\RequestCaptureAndReplay.ServiceDefaults.csproj", "{B9D48E5D-02F8-2364-7F04-3EC02B046F5F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RequestCaptureAndReplay.ApiService", "RequestCaptureAndReplay\RequestCaptureAndReplay.ApiService\RequestCaptureAndReplay.ApiService.csproj", "{80E24C7F-BE2C-D6F1-635C-AA2D079132A0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RequestCaptureAndReplay.Tests", "RequestCaptureAndReplay\RequestCaptureAndReplay.Tests\RequestCaptureAndReplay.Tests.csproj", "{031AECFB-A7BD-622C-1225-124FECC6D95E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -61,6 +69,22 @@ Global
 		{FD54C36B-6DAE-4698-9690-F1BCFE59F44F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FD54C36B-6DAE-4698-9690-F1BCFE59F44F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FD54C36B-6DAE-4698-9690-F1BCFE59F44F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{217E616D-65E3-44A1-BF27-8658BB622926}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{217E616D-65E3-44A1-BF27-8658BB622926}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{217E616D-65E3-44A1-BF27-8658BB622926}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{217E616D-65E3-44A1-BF27-8658BB622926}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B9D48E5D-02F8-2364-7F04-3EC02B046F5F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9D48E5D-02F8-2364-7F04-3EC02B046F5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9D48E5D-02F8-2364-7F04-3EC02B046F5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9D48E5D-02F8-2364-7F04-3EC02B046F5F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{80E24C7F-BE2C-D6F1-635C-AA2D079132A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80E24C7F-BE2C-D6F1-635C-AA2D079132A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80E24C7F-BE2C-D6F1-635C-AA2D079132A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80E24C7F-BE2C-D6F1-635C-AA2D079132A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{031AECFB-A7BD-622C-1225-124FECC6D95E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{031AECFB-A7BD-622C-1225-124FECC6D95E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{031AECFB-A7BD-622C-1225-124FECC6D95E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{031AECFB-A7BD-622C-1225-124FECC6D95E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
