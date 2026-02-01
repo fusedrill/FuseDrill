@@ -387,6 +387,8 @@ public class DataGenerationHelper
         //However, a common range for endpoints per micro-service is generally between 5 to 20 endpoints.
 
         //TODO How to reduce search space? Currently just a simple hack.
+        //TODO Problem that with increasing number of endpointe, a snapshot diff breaks , theres big blobs of changes from current to baseline.
+        //Consider making setting by user for permuations strategy. 
         var methodNamePermutations = range.Count switch
         {
             > 50 => PermutationGenerator.GetPermutationsOfOne(dataModel.Methods), // Skip permutations if count > 50
