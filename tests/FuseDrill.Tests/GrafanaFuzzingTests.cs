@@ -1,4 +1,5 @@
 using DotNet.Testcontainers.Builders;
+using DotNet.Testcontainers;
 using FuseDrill.Core;
 using System.Net.Http.Headers;
 using System.Text;
@@ -27,7 +28,25 @@ public class GrafanaFuzzingTests
 
         var container = containerBuilder.Build();
         await container.StartAsync();
-        await Task.Delay(10000);
+
+        // Wait for OpenAPI endpoint to be ready by polling
+        var httpClientForWait = new HttpClient { BaseAddress = new Uri("http://localhost:3000") };
+        var maxRetries = 30;
+        var delayMs = 2000;
+        for (var i = 0; i < maxRetries; i++)
+        {
+            try
+            {
+                var response = await httpClientForWait.GetAsync("/public/openapi3.json");
+                if (response.IsSuccessStatusCode)
+                    break;
+            }
+            catch
+            {
+                // Ignore connection errors during polling
+            }
+            await Task.Delay(delayMs);
+        }
 
         var httpClient = new HttpClient
         {
