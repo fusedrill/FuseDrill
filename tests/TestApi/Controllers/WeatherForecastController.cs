@@ -12,10 +12,12 @@ namespace TestApi.Controllers
         };
 
         private readonly ILogger<WeatherForecastController> _logger;
+        private readonly IHttpClientFactory _httpClientFactory;
 
-        public WeatherForecastController(ILogger<WeatherForecastController> logger)
+        public WeatherForecastController(ILogger<WeatherForecastController> logger, IHttpClientFactory httpClientFactory)
         {
             _logger = logger;
+            _httpClientFactory = httpClientFactory;
         }
 
         [HttpGet(Name = "GetWeatherForecast")]
@@ -28,6 +30,14 @@ namespace TestApi.Controllers
                 Summary = "Freezing"
             })
             .ToArray();
+        }
+
+        [HttpGet("external")]
+        public async Task<ActionResult<string>> GetExternalAsync()
+        {
+            var client = _httpClientFactory.CreateClient("external");
+            var response = await client.GetStringAsync("https://www.google.com/robots.txt");
+            return Ok(response);
         }
     }
 }
