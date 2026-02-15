@@ -1,4 +1,5 @@
 using FuseDrill.Core;
+using FuseDrill.Core.Coverage;
 
 namespace FuseDrill;
 
@@ -14,7 +15,7 @@ public class ApiFuzzerWithVerifier<TEntryPoint> : IApiFuzzer where TEntryPoint :
         _apiFuzzer = new ApiFuzzer<TEntryPoint>(seed);
     }
 
-    public async Task<FuzzerTests> TestWholeApi(Func<ApiCall, bool> filter = null)
+    public async Task<FuzzerTests> TestWholeApi(Func<ApiCall, bool>? filter = null)
     {
         var settings = new VerifySettings();
         settings.UseStrictJson();
@@ -24,12 +25,22 @@ public class ApiFuzzerWithVerifier<TEntryPoint> : IApiFuzzer where TEntryPoint :
 
         var testSuitesProcessed = await _apiFuzzer.TestWholeApi(filter);
 
-        //render tree currently does not work
-        //var renders = testSuitesProcessed.Select(item => item.ToString()).ToList();
-        //await Verify(renders, settings);
-
         await Verify(testSuitesProcessed, settings);
-        return testSuitesProcessed; // not reachable just preserving same interface;
+        return testSuitesProcessed;
     }
 
+    public async Task<FuzzerTests> TestWholeApiWithCoverageGuidance(FuzzingOptions? options = null)
+    {
+        return await _apiFuzzer.TestWholeApiWithCoverageGuidance(options ?? new FuzzingOptions());
+    }
+
+    public CoverageReport? GetCoverageReport()
+    {
+        return _apiFuzzer.GetCoverageReport();
+    }
+
+    public void ResetCoverage()
+    {
+        _apiFuzzer.ResetCoverage();
+    }
 }
