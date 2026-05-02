@@ -10,7 +10,19 @@ public static class HelperFunctions
     public static async Task<bool> CliFlow(string? owner, string? repoName, string? branch, string? githubToken, string? fuseDrillBaseAddres, string? fuseDrillOpenApiUrl, string? fuseDrillTestAccountOAuthHeaderValue, bool smokeFlag, string? pullRequestNumber, string? geminiToken)
     {
         // Fuzz testing the API
-        var httpClient = new HttpClient
+        var devProxyOptions = DevProxyConfiguration.FromEnvironment();
+        if (devProxyOptions != null &&
+            devProxyOptions.InternalHosts.Count == 0 &&
+            Uri.TryCreate(fuseDrillBaseAddres, UriKind.Absolute, out var baseUri))
+        {
+            devProxyOptions.InternalHosts = new[] { baseUri.Host };
+        }
+
+        var handler = devProxyOptions == null
+            ? new HttpClientHandler()
+            : new DevProxyHandler(devProxyOptions);
+
+        var httpClient = new HttpClient(handler)
         {
             BaseAddress = new Uri(fuseDrillBaseAddres),
         };
