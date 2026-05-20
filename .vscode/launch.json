@@ -1,0 +1,20 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": ".NET Core Attach",
+            "type": "coreclr",
+            "request": "attach",
+            "processId": "${command:pickProcess}"
+        },
+        {
+            "name": "Debug GrafanaDockerTest",
+            "type": "coreclr",
+            "request": "launch",
+            "program": "${workspaceFolder}/tests/FuseDrill.Tests/bin/Debug/net10.0/tests.dll",
+            "args": ["--filter", "FullyQualifiedName~GrafanaFuzzingTests.GrafanaDockerTest"],
+            "cwd": "${workspaceFolder}/tests/FuseDrill.Tests",
+            "console": "integratedTerminal"
+        }
+    ]
+}

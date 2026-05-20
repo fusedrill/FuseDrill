@@ -1,4 +1,4 @@
-﻿using FuseDrill.Core;
+using FuseDrill.Core;
 using System.Collections;
 using System.Reflection;
 using System.Text;
@@ -6,7 +6,7 @@ using System.Text;
 public class FuzzerTests
 {
     public int Seed { get; set; }
-    public List<TestSuite> TestSuites { get; set; }
+    public List<TestSuite> TestSuites { get; set; } = new();
 }
 
 public class TestSuite

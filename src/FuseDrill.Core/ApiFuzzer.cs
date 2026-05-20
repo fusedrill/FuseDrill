@@ -11,6 +11,8 @@ using System.Diagnostics;
 using System.Reflection;
 using System.Text.RegularExpressions;
 using static FuseDrill.Core.DataGenerationHelper;
+using FuseDrill.Core.Coverage;
+using FuseDrill.Core.Generation;
 
 namespace FuseDrill.Core;
 
@@ -23,6 +25,9 @@ public class ApiFuzzer : IApiFuzzer
     private readonly string _baseurl;
     private readonly int _seed;
     private readonly bool _callEndpoints;
+    
+    private CoverageTracker? _coverageTracker;
+    private CoverageReport? _lastCoverageReport;
 
     /// <summary>
     /// Remote API fuzzing
@@ -463,6 +468,397 @@ public class ApiFuzzer : IApiFuzzer
 
         return parameterArray;
     }
+
+    public void ResetCoverage()
+    {
+        _coverageTracker = new CoverageTracker();
+        _lastCoverageReport = null;
+    }
+
+    public CoverageReport GetCoverageReport()
+    {
+        if (_lastCoverageReport == null)
+        {
+            _lastCoverageReport = _coverageTracker?.GenerateReport() ?? new CoverageReport();
+        }
+        return _lastCoverageReport;
+    }
+
+    public async Task<FuzzerTests> TestWholeApiWithCoverageGuidance(FuzzingOptions options)
+    {
+        _coverageTracker = new CoverageTracker();
+        var logger = options.Logger ?? (_ => { });
+        logger("Starting coverage-guided fuzzing...");
+
+        var genericClientInstance = _openApiClientClassInstance ?? await GetOpenApiClientInstanceDynamically(_swaggerPath, _httpClientForSwaggerDownload);
+        var apiClientAsData = new ApiShapeData(genericClientInstance);
+        var dataGenerationHelper = new DataGenerationHelper(_seed);
+        var testSuiteGen = dataGenerationHelper.CreateApiMethodPermutationsTestSuite(apiClientAsData);
+
+        var edgeCaseGenerator = new SchemaEdgeCaseGenerator();
+        var combinatorialGenerator = new CombinatorialGenerator();
+        var corpusMinimizer = new CorpusMinimizer();
+
+        var fuzzerTests = new FuzzerTests
+        {
+            Seed = _seed
+        };
+
+        var metrics = new FuzzingSessionMetrics
+        {
+            TotalApiCalls = 0,
+            UniqueInputsGenerated = 0,
+            EdgeCasesGenerated = 0,
+            CombinationsGenerated = 0,
+            MutationsApplied = 0,
+            ExceptionsEncountered = 0,
+            DiscoveredExceptionTypes = new List<string>()
+        };
+
+        var sw = System.Diagnostics.Stopwatch.StartNew();
+
+        foreach (var testSuite in testSuiteGen)
+        {
+            if (options.Filter != null)
+            {
+                testSuite.ApiCalls = testSuite.ApiCalls.Where(options.Filter).ToList();
+            }
+
+            var originalApiCalls = testSuite.ApiCalls.ToList();
+            metrics.TotalApiCalls += originalApiCalls.Count;
+            metrics.UniqueInputsGenerated += originalApiCalls.Count;
+
+            var apiCalls = new List<ApiCall>(originalApiCalls);
+
+            if (options.EnableEdgeCaseGeneration)
+            {
+                var enhancedWithEdgeCases = EnhanceWithEdgeCases(apiCalls, edgeCaseGenerator).ToList();
+                metrics.EdgeCasesGenerated += enhancedWithEdgeCases.Count - apiCalls.Count;
+                apiCalls = enhancedWithEdgeCases;
+            }
+
+            if (options.EnableCombinatorialTesting)
+            {
+                var enhancedWithCombos = EnhanceWithCombinations(apiCalls, combinatorialGenerator, logger).ToList();
+                metrics.CombinationsGenerated += enhancedWithCombos.Count - apiCalls.Count;
+                apiCalls = enhancedWithCombos;
+            }
+
+            metrics.TotalApiCalls += apiCalls.Count;
+
+            if (_callEndpoints)
+            {
+                foreach (var apiCall in apiCalls)
+                {
+                    var trackedCall = _coverageTracker.StartTracking(apiCall);
+                    var callStart = DateTime.UtcNow;
+                    try
+                    {
+                        var api = await DoApiCall(genericClientInstance, apiCall);
+                        apiCall.Response = ResolveResponse(api);
+                        _coverageTracker.CompleteTracking(trackedCall, apiCall.Response);
+                    }
+                    catch (Exception ex)
+                    {
+                        metrics.ExceptionsEncountered++;
+                        var exceptionType = ex.GetType().Name;
+                        if (!metrics.DiscoveredExceptionTypes.Contains(exceptionType))
+                        {
+                            metrics.DiscoveredExceptionTypes.Add(exceptionType);
+                        }
+                        _coverageTracker.CompleteTracking(trackedCall, ex);
+                    }
+                    apiCall.Method = null;
+                }
+            }
+
+            testSuite.ApiCalls = apiCalls;
+            fuzzerTests.TestSuites.Add(testSuite);
+        }
+
+        if (options.MinimizeInputs && _callEndpoints)
+        {
+            logger("Minimizing corpus...");
+            var beforeCount = fuzzerTests.TestSuites.Sum(s => s.ApiCalls.Count);
+            metrics.InputsBeforeMinimization = beforeCount;
+
+            var allCalls = fuzzerTests.TestSuites.SelectMany(s => s.ApiCalls).ToList();
+            var minimizedCalls = corpusMinimizer.Minimize(allCalls, logger);
+            
+            metrics.InputsAfterMinimization = minimizedCalls.Count;
+            metrics.UniqueBehaviors = minimizedCalls.Count;
+            metrics.MinimizationReductionPercent = beforeCount > 0 
+                ? Math.Round((double)(beforeCount - minimizedCalls.Count) / beforeCount * 100, 1) 
+                : 0;
+
+            var minimizedBySuite = new Dictionary<int, List<ApiCall>>();
+            foreach (var call in minimizedCalls)
+            {
+                var suiteId = call.ApiCallOrderId / 10000;
+                if (!minimizedBySuite.ContainsKey(suiteId))
+                {
+                    minimizedBySuite[suiteId] = new List<ApiCall>();
+                }
+                minimizedBySuite[suiteId].Add(call);
+            }
+
+            foreach (var testSuite in fuzzerTests.TestSuites)
+            {
+                var suiteId = testSuite.TestSuiteOrderId;
+                if (minimizedBySuite.TryGetValue(suiteId, out var calls))
+                {
+                    testSuite.ApiCalls = calls;
+                }
+            }
+        }
+
+        sw.Stop();
+        metrics.TotalDuration = sw.Elapsed;
+        metrics.UniqueExceptions = metrics.DiscoveredExceptionTypes.Count;
+
+        _lastCoverageReport = _coverageTracker.GenerateReport();
+        _lastCoverageReport.FuzzingMetrics = metrics;
+
+        logger($"Coverage-guided fuzzing complete in {sw.Elapsed.TotalSeconds:F2}s");
+        logger($"Total API calls: {metrics.TotalApiCalls}");
+        logger($"Edge cases generated: {metrics.EdgeCasesGenerated}");
+        logger($"Combinations generated: {metrics.CombinationsGenerated}");
+        logger($"Exceptions encountered: {metrics.ExceptionsEncountered}");
+        
+        if (options.MinimizeInputs)
+        {
+            logger($"Minimization: {metrics.InputsBeforeMinimization} -> {metrics.InputsAfterMinimization} ({metrics.MinimizationReductionPercent}% reduction)");
+            logger($"Unique behaviors: {metrics.UniqueBehaviors}");
+        }
+
+        fuzzerTests.TestSuites.ForEach(suite => 
+        {
+            suite.ApiCalls = suite.ApiCalls.OrderBy(item => item.ApiCallOrderId).ThenBy(item => item.MethodName).ToList();
+        });
+        fuzzerTests.TestSuites.OrderBy(item => item.TestSuiteOrderId);
+
+        return fuzzerTests;
+    }
+
+    private IEnumerable<ApiCall> EnhanceWithEdgeCases(IEnumerable<ApiCall> apiCalls, SchemaEdgeCaseGenerator edgeCaseGenerator)
+    {
+        foreach (var apiCall in apiCalls)
+        {
+            yield return apiCall;
+
+            foreach (var edgeCase in edgeCaseGenerator.GenerateEdgeCases(apiCall))
+            {
+                yield return edgeCase;
+            }
+        }
+    }
+
+    private IEnumerable<ApiCall> EnhanceWithCombinations(IEnumerable<ApiCall> apiCalls, CombinatorialGenerator combinatorialGenerator, Action<string> logger)
+    {
+        foreach (var apiCall in apiCalls)
+        {
+            yield return apiCall;
+
+            var parameterValues = new Dictionary<string, List<object>>();
+            foreach (var param in apiCall.RequestParameters)
+            {
+                parameterValues[param.Name] = GenerateSampleValues(param.Type);
+            }
+
+            var parameters = apiCall.RequestParameters.Select(p => new Parameter { Name = p.Name, Type = p.Type }).ToList();
+            var combinations = combinatorialGenerator.GenerateTwise(parameters, parameterValues, 2);
+
+            foreach (var combo in combinations)
+            {
+                var comboCall = new ApiCall
+                {
+                    ApiCallOrderId = apiCall.ApiCallOrderId + 10000,
+                    MethodName = apiCall.MethodName,
+                    HttpMethod = apiCall.HttpMethod,
+                    RequestParameters = apiCall.RequestParameters.Select(p => new ParameterValue
+                    {
+                        Name = p.Name,
+                        Type = p.Type,
+                        Value = combo.TryGetValue(p.Name, out var val) ? val : p.Value
+                    }).ToList(),
+                    Response = null!
+                };
+                yield return comboCall;
+            }
+        }
+    }
+
+    private List<object> GenerateSampleValues(Type type)
+    {
+        var values = new List<object>();
+        
+        if (type == typeof(int) || type == typeof(long) || type == typeof(short))
+        {
+            values.AddRange(new object[] { 0, 1, -1, 100 });
+        }
+        else if (type == typeof(double) || type == typeof(decimal) || type == typeof(float))
+        {
+            values.AddRange(new object[] { 0.0, 1.0, -1.0, 100.5 });
+        }
+        else if (type == typeof(string))
+        {
+            values.AddRange(new object[] { "", "test", "TEST123" });
+        }
+        else if (type == typeof(bool))
+        {
+            values.AddRange(new object[] { true, false });
+        }
+        else
+        {
+            values.Add(null!);
+        }
+        
+        return values;
+    }
+
+    private ApiCall CloneApiCall(ApiCall original)
+    {
+        return new ApiCall
+        {
+            ApiCallOrderId = original.ApiCallOrderId,
+            MethodName = original.MethodName,
+            HttpMethod = original.HttpMethod,
+            RequestParameters = original.RequestParameters.Select(p => new ParameterValue
+            {
+                Name = p.Name,
+                Value = p.Value,
+                Type = p.Type
+            }).ToList(),
+            Response = null!
+        };
+    }
+
+    private ApiCall MutateApiCall(ApiCall apiCall, int mutationCount)
+    {
+        var random = new Random(_seed ^ (int)DateTime.UtcNow.Ticks);
+        var mutationEngine = new MutationEngine(_seed);
+
+        var seed = new InputSeed
+        {
+            Values = apiCall.RequestParameters.ToDictionary(p => p.Name, p => p.Value ?? "")
+        };
+
+        var mutatedSeeds = mutationEngine.Mutate(seed, mutationCount);
+        var firstMutated = mutatedSeeds.FirstOrDefault();
+
+        if (firstMutated == null)
+        {
+            return CloneApiCall(apiCall);
+        }
+
+        return new ApiCall
+        {
+            ApiCallOrderId = apiCall.ApiCallOrderId + 5000,
+            MethodName = apiCall.MethodName,
+            HttpMethod = apiCall.HttpMethod,
+            RequestParameters = apiCall.RequestParameters.Select(p => new ParameterValue
+            {
+                Name = p.Name,
+                Type = p.Type,
+                Value = firstMutated.Values.TryGetValue(p.Name, out var val) ? val : p.Value
+            }).ToList(),
+            Response = null!
+        };
+    }
+
+    private async Task ExecuteWithCoverageGuidance(object clientInstance, FuzzingOptions options)
+    {
+        var logger = options.Logger ?? (_ => { });
+        var population = new List<ApiCall>();
+        var dataGenerationHelper = new DataGenerationHelper(_seed);
+        var edgeCaseGenerator = new SchemaEdgeCaseGenerator();
+        var combinatorialGenerator = new CombinatorialGenerator(_seed);
+        var mutationEngine = new MutationEngine(_seed);
+
+        var sw = Stopwatch.StartNew();
+        var iteration = 0;
+
+        while (iteration < options.MaxIterations && sw.Elapsed.TotalSeconds < options.MaxDurationSeconds)
+        {
+            iteration++;
+
+            var candidates = new List<ApiCall>();
+
+            if (options.EnableEdgeCaseGeneration)
+            {
+                foreach (var apiCall in population)
+                {
+                    candidates.AddRange(edgeCaseGenerator.GenerateEdgeCases(apiCall));
+                }
+            }
+
+            if (options.EnableMutation && population.Count > 0)
+            {
+                foreach (var apiCall in population.Take(population.Count / 2))
+                {
+                    candidates.Add(MutateApiCall(apiCall, options.MutationCount));
+                }
+            }
+
+            foreach (var candidate in candidates)
+            {
+                var trackedCall = _coverageTracker.StartTracking(candidate);
+                try
+                {
+                    var api = await DoApiCall(clientInstance, candidate);
+                    _coverageTracker.CompleteTracking(trackedCall, api.Response);
+                }
+                catch (Exception ex)
+                {
+                    _coverageTracker.CompleteTracking(trackedCall, ex);
+                }
+            }
+
+            population.AddRange(candidates.Where(c => !population.Contains(c)));
+
+            var report = _coverageTracker.GenerateReport();
+            if (report.TotalCoveragePercentage >= options.TargetCoverage)
+            {
+                logger($"Target coverage reached at iteration {iteration}");
+                break;
+            }
+
+            if (iteration % 100 == 0)
+            {
+                logger($"Iteration {iteration}, Coverage: {report.TotalCoveragePercentage}%, Unique Coverage: {report.UniqueCoveragePoints}");
+            }
+        }
+
+        sw.Stop();
+        logger($"Fuzzing completed in {sw.Elapsed.TotalSeconds}s, {iteration} iterations");
+    }
+}
+
+public class CoverageGuidedFuzzer
+{
+    private readonly ApiFuzzer _apiFuzzer;
+    private readonly FuzzingOptions _options;
+
+    public CoverageGuidedFuzzer(ApiFuzzer apiFuzzer, FuzzingOptions? options = null)
+    {
+        _apiFuzzer = apiFuzzer;
+        _options = options ?? new FuzzingOptions();
+    }
+
+    public async Task<FuzzerTests> FuzzAsync()
+    {
+        return await _apiFuzzer.TestWholeApiWithCoverageGuidance(_options);
+    }
+
+    public CoverageReport GetCoverageReport()
+    {
+        return _apiFuzzer.GetCoverageReport();
+    }
+
+    public void Reset()
+    {
+        _apiFuzzer.ResetCoverage();
+    }
 }
 
 public class CustomPropertyNameGenerator : IPropertyNameGenerator
@@ -525,7 +921,6 @@ public class CustomEnumNameGenerator : IEnumNameGenerator
     public string Generate(int index, string name, object value, JsonSchema schema) =>
         _defaultEnumNameGenerator.Generate(
             index,
-            // Fixes + and - enum values that cannot be generated into C# enum names
             name.Equals("+") ? "plus" : name.Equals("-") ? "minus" : name,
             value,
             schema);
@@ -533,19 +928,20 @@ public class CustomEnumNameGenerator : IEnumNameGenerator
 
 public class CustomOperationNameGenerator : IOperationNameGenerator
 {
-    // Default implementation for SupportsMultipleClients (this can return true or false based on your needs)
-    public bool SupportsMultipleClients => false; // Adjust as needed for your case
+    public bool SupportsMultipleClients { get; } = false;
 
-    // Default implementation for GetClientName (you can leave it empty or return a default value)
-    public string GetClientName(OpenApiDocument document, string path, string httpMethod, OpenApiOperation operation)
+    public string GetClientName(OpenApiDocument document, string settingsClassName, string clientVariableName)
     {
-        // Return default value or handle custom logic here
-        return string.Empty; // Can be empty if not needed
+        return settingsClassName;
     }
 
-    // Default implementation for GetOperationName (so it doesn't throw exception)
+    public string GetClientName(OpenApiDocument document, string settingsClassName, string clientVariableName, OpenApiOperation operation)
+    {
+        return settingsClassName;
+    }
+
     public string GetOperationName(OpenApiDocument document, string path, string httpMethod, OpenApiOperation operation)
     {
-        return operation.OperationId + $"_http_{httpMethod}_"; // Or return some meaningful default value
+        return operation.OperationId ?? $"{httpMethod}_{path.Replace("/", "_").TrimStart('_')}";
     }
 }
