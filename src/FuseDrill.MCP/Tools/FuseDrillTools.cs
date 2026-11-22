@@ -3,12 +3,8 @@ using System.Net.Http.Headers;
 using System.Text.Json;
 using System.Text.RegularExpressions;
 using FuseDrill.Core;
-using Microsoft.OpenApi.Models;
-using Microsoft.OpenApi.Readers;
-using Microsoft.OpenApi.Writers;
 using ModelContextProtocol;
 using ModelContextProtocol.Server;
-using SharpYaml.Serialization;
 
 namespace FuseDrill.MCP.Tools;
 

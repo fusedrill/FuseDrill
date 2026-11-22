@@ -2,8 +2,6 @@ using DotNet.Testcontainers.Builders;
 using FuseDrill.Core;
 using System.Net.Http.Headers;
 using System.Text;
-using SixLabors.ImageSharp;
-using SixLabors.ImageSharp.PixelFormats;
 using System.Diagnostics;
 
 namespace tests;
@@ -36,7 +34,6 @@ public class GrafanaFuzzingVizTests
         var filePath = "grafana_diff.txt";
         await System.IO.File.WriteAllTextAsync(filePath, diff);
 
-        // create binary image of a grafana11V text using ImageSharp
         CreateBinaryVisualization(grafana11V, "grafana11V.png");
         CreateBinaryVisualization(grafanaLatestV, "grafanaLatestV.png");
 
@@ -108,42 +105,48 @@ public class GrafanaFuzzingVizTests
 
     private static void CreateBinaryVisualization(string text, string outputPath)
     {
-        // Convert text to bytes
         byte[] bytes = Encoding.UTF8.GetBytes(text);
 
-        // Calculate dimensions for a roughly square image
         int width = (int)Math.Ceiling(Math.Sqrt(bytes.Length));
         int height = (int)Math.Ceiling((double)bytes.Length / width);
+        int rowStride = ((width * 3 + 3) / 4) * 4;
+        int imageSize = rowStride * height;
 
-        // Create a new image
-        using (var image = new Image<Rgba32>(width, height))
+        using var stream = File.Create(outputPath);
+        using var writer = new BinaryWriter(stream);
+
+        writer.Write((byte)'B');
+        writer.Write((byte)'M');
+        writer.Write(54 + imageSize);
+        writer.Write((short)0);
+        writer.Write((short)0);
+        writer.Write(54);
+        writer.Write(40);
+        writer.Write(width);
+        writer.Write(height);
+        writer.Write((short)1);
+        writer.Write((short)24);
+        writer.Write(0);
+        writer.Write(imageSize);
+        writer.Write(0);
+        writer.Write(0);
+        writer.Write(0);
+        writer.Write(0);
+
+        var row = new byte[rowStride];
+        for (int y = height - 1; y >= 0; y--)
         {
-            // Fill the image with black background
-            image.ProcessPixelRows(accessor =>
+            Array.Clear(row);
+            for (int x = 0; x < width; x++)
             {
-                for (int y = 0; y < accessor.Height; y++)
-                {
-                    var row = accessor.GetRowSpan(y);
-                    for (int x = 0; x < accessor.Width; x++)
-                    {
-                        int index = y * width + x;
-                        if (index < bytes.Length)
-                        {
-                            // Create a color based on the byte value
-                            byte value = bytes[index];
-                            row[x] = new Rgba32(value, value, value, 255);
-                        }
-                        else
-                        {
-                            // Fill remaining pixels with black
-                            row[x] = new Rgba32(0, 0, 0, 255);
-                        }
-                    }
-                }
-            });
+                int index = y * width + x;
+                byte value = index < bytes.Length ? bytes[index] : (byte)0;
+                row[x * 3] = value;
+                row[x * 3 + 1] = value;
+                row[x * 3 + 2] = value;
+            }
 
-            // Save the image
-            image.Save(outputPath);
+            writer.Write(row);
         }
     }
 
