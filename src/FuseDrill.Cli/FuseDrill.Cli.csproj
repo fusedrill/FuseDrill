@@ -26,9 +26,9 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
     </PackageReference>-->
-    <PackageReference Include="Microsoft.SemanticKernel" Version="1.32.0" />
+    <PackageReference Include="Microsoft.SemanticKernel" Version="1.71.0" />
     <PackageReference Include="Octokit" Version="13.0.1" />
-    <PackageReference Include="Microsoft.SemanticKernel.Connectors.Google" Version="1.32.0-alpha" />
+    <PackageReference Include="Microsoft.SemanticKernel.Connectors.Google" Version="1.71.0-alpha" />
   </ItemGroup>
 
   <ItemGroup>
