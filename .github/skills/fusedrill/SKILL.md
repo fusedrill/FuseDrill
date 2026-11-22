@@ -276,7 +276,8 @@ var results = await fuzzer.TestWholeApi(apiCall =>
    - Use a separate data directory per version so state does not leak between runs.
    - Confirm both specs are reachable with `curl` before fuzzing.
 
-2. Write a temporary C# script for the actual targets. There is no fixed CLI contract here: `Fuzz.cs` in this folder is only a starting example that keeps both target definitions in a C# array. Rewrite it freely, inline a test, or build the config from a JSON string or dictionary — the skill is instructions for an LLM, not an executable interface.
+2. Write a temporary C# script for the actual targets. There is no fixed CLI contract here: `Fuzz.cs` in this folder is only a starting example that keeps both target definitions in a C# array. When using this skill, edit `Fuzz.cs` on the fly for the case at hand: discover the real base/spec URLs with `curl`/bash/cmd, change auth, seed, exclusions, target count, labels, and output paths, or replace the harness entirely. Rewrite it freely, inline a test, or build the config from a JSON string or dictionary — the skill is instructions for an LLM, not an executable interface.
+   - Treat every value in `Fuzz.cs` as editable, not a contract; the inline comments are prompts to investigate and change the URLs when the target differs.
    - A good shape is a `Target[]` (or equivalent JSON) with `Label`, `BaseUrl`, `OpenApiUrl`, `Authorization`, `Seed`, and `Excluded` for each version, then loop over it and write one snapshot per label. Use labels `baseline` and `next-version` so the diff is easy to read.
    - Use the **same seed and same exclusions** for both versions.
    - The base address must include the spec's `servers.url` (Grafana uses `http://localhost:<port>/api`).

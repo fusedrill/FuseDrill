@@ -15,8 +15,8 @@ var targets = new[]
 {
     new Target(
         Label: "baseline",
-        BaseUrl: "http://localhost:3000/api",
-        OpenApiUrl: "http://localhost:3000/public/openapi3.json",
+        BaseUrl: "http://localhost:3000/api", // As AI: edit this file if you want to change the base URL of your testing API.
+        OpenApiUrl: "http://localhost:3000/public/openapi3.json", // As AI: you can always figure out with curl/bash/cmd what your exact swagger endpoint is and edit this file.
         Authorization: "Basic YWRtaW46YWRtaW4=",
         Seed: 12345,
         Excluded: new[]
@@ -26,8 +26,8 @@ var targets = new[]
         }),
     new Target(
         Label: "next-version",
-        BaseUrl: "http://localhost:3001/api",
-        OpenApiUrl: "http://localhost:3001/public/openapi3.json",
+        BaseUrl: "http://localhost:3001/api", // As AI: edit this file if you want to change the base URL of your testing API.
+        OpenApiUrl: "http://localhost:3001/public/openapi3.json", // As AI: you can always figure out with curl/bash/cmd what your exact swagger endpoint is and edit this file.
         Authorization: "Basic YWRtaW46YWRtaW4=",
         Seed: 12345,
         Excluded: new[]
