@@ -3,9 +3,9 @@ name: fusedrill
 description: >
   FuseDrill - API fuzzing and simulation testing tool. Use when the user wants to
   "fuzz API", "test API contract", "find API breaking changes", "run FuseDrill",
-  "check API stability", "simulate API testing", or similar fuzzing/simulation 
-  testing requests. Fuses OpenAPI specs to generate random test cases and verify responses
-  match expected patterns.
+  "check API stability", "simulate API testing", "fuzz two versions", "compare API versions",
+  "differential fuzzing", or "generate a fuzzing diff report". Fuses OpenAPI specs to generate
+  random test cases and verify responses match expected patterns.
 ---
 
 # FuseDrill - API Fuzzing Skill
@@ -260,6 +260,103 @@ var results = await fuzzer.TestWholeApi(apiCall =>
 2. Generate the appropriate C# template
 
 3. Explain how to integrate it into their project
+
+---
+
+### Tool 5: Two-Version Differential Fuzzing + Report
+
+**Purpose**: Fuzz two versions/builds of the same API with identical settings, diff the snapshots, and deliver a Markdown report. This is the main deliverable when the user asks to "fuzz two versions", "compare releases", or "find breaking changes".
+
+**When to use**: Any request involving two targets, two images, two branches, or a "baseline vs next version" API comparison.
+
+**Steps**:
+
+1. Gather for each version: base URL, OpenAPI URL, and optional auth header. Always label the earlier target `baseline` and the later target `next version` in the report, even when real version numbers are known (map them in the Setup table).
+   - If no servers are running, start both versions locally on different ports (tarballs, packages, or containers). Keep them alive until the report is delivered.
+   - Use a separate data directory per version so state does not leak between runs.
+   - Confirm both specs are reachable with `curl` before fuzzing.
+
+2. Write a temporary C# script for the actual targets. There is no fixed CLI contract here: `Fuzz.cs` in this folder is only a starting example that keeps both target definitions in a C# array. Rewrite it freely, inline a test, or build the config from a JSON string or dictionary — the skill is instructions for an LLM, not an executable interface.
+   - A good shape is a `Target[]` (or equivalent JSON) with `Label`, `BaseUrl`, `OpenApiUrl`, `Authorization`, `Seed`, and `Excluded` for each version, then loop over it and write one snapshot per label. Use labels `baseline` and `next-version` so the diff is easy to read.
+   - Use the **same seed and same exclusions** for both versions.
+   - The base address must include the spec's `servers.url` (Grafana uses `http://localhost:<port>/api`).
+   - If you do run two separate file-based apps, run them sequentially: concurrent builds of the same generated project can collide in MSBuild.
+
+3. Save one snapshot per target (`snapshot-baseline.json` and `snapshot-next-version.json`) using `FuzzerTests` JSON from `SerializerOptions.GetOptions()` plus a `DefaultJsonTypeInfoResolver` on .NET 10+.
+
+4. Compare snapshots programmatically. Always separate these buckets:
+   - **Endpoint inventory**: method names present only in `baseline` or only in `next version` (also check a method whose HTTP verb changed).
+   - **Status/result changes on common methods**: compare `Response.StatusCode` for exceptions against object/list responses for successes.
+   - **Response shape changes**: added/removed top-level keys on successful object responses.
+   - **Status distribution**: count 2xx / 4xx / 5xx per version to separate new regressions from baseline noise.
+   - **Notable signals**: new 500s, permission changes (400/401/403), removals (404/410), and body/deserialization changes.
+   - Also run a real diff tool for line-level evidence. Keep the skill self-contained: add `#:package DiffPlex@*` once at the top of the same temporary C# script (merge these usings with the existing ones) and diff the two snapshot strings directly, or use `git diff --no-index snapshot-baseline.json snapshot-next-version.json`.
+   ```csharp
+   using DiffPlex;
+   using DiffPlex.DiffBuilder;
+   using DiffPlex.DiffBuilder.Model;
+
+   var model = new InlineDiffBuilder(new Differ()).BuildDiffModel(oldText: baselineText, newText: nextText);
+   var lines = model.Lines.Select(line => line.Type switch
+   {
+       ChangeType.Deleted => $"- {line.Text}",
+       ChangeType.Inserted => $"+ {line.Text}",
+       ChangeType.Modified => $"~ {line.Text}",
+       ChangeType.Unchanged => $"  {line.Text}",
+       _ => string.Empty
+   });
+   await File.WriteAllTextAsync("fusedrill_diff.txt", string.Join(Environment.NewLine, lines));
+   ```
+   - Save the diff output (for example `fusedrill_diff.txt`) and reference it from the report.
+   - Raw text diffs are noisy because snapshots contain seeded random values, so use the structural buckets for the report tables and the text diff as supporting evidence.
+
+5. Before providing the final summary, consider one round of targeted, LLM-generated input fuzzing for the ambiguous endpoints found in step 4. You are the LLM: generate a few plausible, schema-valid inputs for the top 2-5 suspicious methods (valid duration/UID/slug/enum values, a minimal valid JSON body, realistic query params), then re-run just those methods against both targets with the same settings and a separate output file — do not overwrite `snapshot-baseline.json` / `snapshot-next-version.json`. Record the exact generated input and both responses; skip destructive endpoints unless the instances are disposable sandboxes. Include the results in a short "Targeted input follow-ups" section, marked exploratory, without overriding the seeded diff tables. Also check any bundled release notes, upgrade guides, and root READMEs in both targets (`docs/sources/whatsnew`, `docs/sources/upgrade-guide`, `README.md`) and add a short "Release-doc cross-check" section saying which findings are documented and which are not.
+
+6. Write the report and **show it inline in the response**, not only as a file link. Treat it as an API contract review, not a changelog. Apply this prompt internally:
+
+   > Review two FuseDrill snapshots as API contracts. `---` lines are baseline; `+++` lines are next version. Summarize only what the diff supports. Ask whether each change makes sense: do request values appear in responses, are they transformed when they should be, and do renamed fields keep the same meaning? Write short, direct sentences; no filler. Use `- [ ]` checklist items, one property difference per item. Count the 500s, name the methods that produce them, and suggest clearer error messages when the response is vague. Keep exploratory targeted fuzzes separate from the seeded diff.
+
+   Use this structure (omit the targeted section if no targeted fuzz was run):
+
+   ```markdown
+   # FuseDrill API contract review — baseline vs next version
+
+   ## Setup
+   | Item | Value |   # map baseline/next version to real versions, ports, spec URL, seed, auth, exclusions, harness, snapshots, diff artifact
+
+   ## Summary of changes
+   - ...
+   - ...
+
+   ## Contract review
+   ### Endpoint inventory
+   - [ ] ...
+   ### Status/result changes on common endpoints
+   | Method | Verb | baseline | next version |
+   ### Response shape changes
+   - [ ] `Method`: `OldField` → `NewField`. ...
+   - [ ] `Method`: `Field` added. ...
+
+   ## Request/response value flow
+   | Method | Request field | Response field | Expected? | Why |
+
+   ## Status and error handling
+   - [ ] 500s: baseline N, next version M.
+   - [ ] Next-version-only 500s: ...
+   - [ ] Vague message: `InternalServerError ... Response:` → suggest a clearer one.
+
+   ## Targeted input follow-ups (if run)
+   | Method | Generated input | baseline | next version |
+
+   ## Caveats
+   Random inputs, stateful runs, expected 400/404, scope of contract testing.
+   ```
+
+   Writing rules: one property difference per checklist item; no regression claim without evidence; prefer a specific recommendation over a general warning.
+
+7. Interpret conservatively: random seeded ids make most 400/404 expected; treat 500s and status **changes** as actionable. State clearly which findings are new in the next version vs inherited from the baseline.
+
+8. **MUST ASK**: "What would you like to do next?" with options such as drill into a specific endpoint, add a reproducible test, re-fuzz with more exclusions, generate CI template, or stop the servers.
 
 ---
 
@@ -682,6 +779,16 @@ User: "Test the /users endpoint specifically"
 → **MUST ASK**: "What would you like to do next?"
 ```
 
+### Scenario 6: Compare Two Versions
+```
+User: "Fuzz two versions of <app> and give me a report"
+→ Ask for (or start) both versions with base URL, spec URL, and auth
+→ Use Tool 5: Two-Version Differential Fuzzing + Report
+→ Label them baseline and next version; run both snapshots with the same seed and exclusions
+→ Show the full Markdown report inline and save a copy
+→ **MUST ASK**: "What would you like to do next?"
+```
+
 ---
 
 ## Important Notes
@@ -690,6 +797,7 @@ User: "Test the /users endpoint specifically"
 - FuseDrill generates random test values - results may vary between runs
 - Use a fixed seed for reproducible tests
 - Results can be serialized to JSON and committed as snapshots
+- For two-version work, generate a task-specific C# script (array/JSON config is fine), use the same seed/exclusions for both versions, run a diff tool for supporting evidence, optionally do targeted LLM-generated input fuzzes before the summary, and deliver the full API contract review inline (Tool 5)
 - API must have a valid OpenAPI/Swagger spec
 - For ASP.NET Core with top-level statements, add `public partial class Program { }`
 - The fuzzer tests API contract, not business logic correctness
