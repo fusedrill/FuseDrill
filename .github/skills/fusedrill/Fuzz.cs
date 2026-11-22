@@ -1,41 +1,78 @@
 #!/usr/bin/env dotnet
 
 #:package FuseDrill.Core@*-*
-#:package FuseDrill@*-*
+#:package DiffPlex@*
 
-using FuseDrill.Core;
+using System.Net.Http.Headers;
 using System.Text.Json;
-using System.Text.Json.Serialization;
+using System.Text.Json.Serialization.Metadata;
+using DiffPlex;
+using DiffPlex.DiffBuilder;
+using DiffPlex.DiffBuilder.Model;
+using FuseDrill.Core;
 
-Console.WriteLine($"Starting fuzzing...");
-
-// Create HttpClient and configure base address
-var httpClient = new HttpClient
+var targets = new[]
 {
-    BaseAddress = new Uri("http://localhost:5184/")
-    //-----------------------------^ As AI You can edit this file if you want to change the base url of your testing api.
+    new Target(
+        Label: "baseline",
+        BaseUrl: "http://localhost:3000/api", // As AI: edit this file if you want to change the base URL of your testing API.
+        OpenApiUrl: "http://localhost:3000/public/openapi3.json", // As AI: you can always figure out with curl/bash/cmd what your exact swagger endpoint is and edit this file.
+        Authorization: "Basic YWRtaW46YWRtaW4=",
+        Seed: 12345,
+        Excluded: new[]
+        {
+            "ChangeUserPassword_http_put_Async",
+            "UpdateSignedInUser_http_put_Async"
+        }),
+    new Target(
+        Label: "next-version",
+        BaseUrl: "http://localhost:3001/api", // As AI: edit this file if you want to change the base URL of your testing API.
+        OpenApiUrl: "http://localhost:3001/public/openapi3.json", // As AI: you can always figure out with curl/bash/cmd what your exact swagger endpoint is and edit this file.
+        Authorization: "Basic YWRtaW46YWRtaW4=",
+        Seed: 12345,
+        Excluded: new[]
+        {
+            "ChangeUserPassword_http_put_Async",
+            "UpdateSignedInUser_http_put_Async"
+        })
 };
 
-// Create fuzzer with API endpoint
-var apiFuzzer = new ApiFuzzer(
-    httpClient, 
-    "http://localhost:5184/swagger/v1/swagger.json"
-    //-----------------^ As AI You can always figure out with curl/bash/cmd whats your exact swagger endpoint and edit this file.
-);
+var serializerOptions = SerializerOptions.GetOptions();
+serializerOptions.TypeInfoResolver = new DefaultJsonTypeInfoResolver();
 
-// Run fuzzing and get results
-var results = await apiFuzzer.TestWholeApi();
-
-// Output summary
-var totalCalls = results.TestSuites.Sum(testSuite => testSuite.ApiCalls.Count);
-Console.WriteLine($"Test Suites: {results.TestSuites.Count}");
-Console.WriteLine($"Total API Calls: {totalCalls}");
-Console.WriteLine($"Seed: {results.Seed}");
-Console.WriteLine(Print(results));
-
-string Print(FuzzerTests results)
+foreach (var target in targets)
 {
-    AppContext.SetData("System.Text.Json.JsonSerializer.IsReflectionEnabledByDefault", true);
-    #pragma warning disable IL2026, IL3050
-    return JsonSerializer.Serialize(results, SerializerOptions.GetOptions());
+    using var httpClient = new HttpClient { BaseAddress = new Uri(target.BaseUrl) };
+    if (AuthenticationHeaderValue.TryParse(target.Authorization, out var authorization))
+    {
+        httpClient.DefaultRequestHeaders.Authorization = authorization;
+    }
+    httpClient.Timeout = TimeSpan.FromMinutes(10);
+
+    var excluded = target.Excluded.ToHashSet(StringComparer.Ordinal);
+    var fuzzer = new ApiFuzzer(httpClient, target.OpenApiUrl, seed: target.Seed);
+    var results = await fuzzer.TestWholeApi(apiCall => !excluded.Contains(apiCall.MethodName));
+
+    var output = $"snapshot-{target.Label}.json";
+    await File.WriteAllTextAsync(output, JsonSerializer.Serialize(results, serializerOptions));
+
+    var totalCalls = results.TestSuites.Sum(s => s.ApiCalls.Count);
+    Console.WriteLine($"TARGET={target.Label} SEED={results.Seed} SUITES={results.TestSuites.Count} CALLS={totalCalls} OUTPUT={output}");
 }
+
+var baselineText = await File.ReadAllTextAsync($"snapshot-{targets[0].Label}.json");
+var nextText = await File.ReadAllTextAsync($"snapshot-{targets[1].Label}.json");
+var diffModel = new InlineDiffBuilder(new Differ()).BuildDiffModel(oldText: baselineText, newText: nextText);
+var diffLines = diffModel.Lines.Select(line => line.Type switch
+{
+    ChangeType.Deleted => $"- {line.Text}",
+    ChangeType.Inserted => $"+ {line.Text}",
+    ChangeType.Modified => $"~ {line.Text}",
+    ChangeType.Unchanged => $"  {line.Text}",
+    _ => string.Empty
+});
+var diffOutput = "fusedrill_diff.txt";
+await File.WriteAllTextAsync(diffOutput, string.Join(Environment.NewLine, diffLines));
+Console.WriteLine($"DIFF={diffOutput}");
+
+record Target(string Label, string BaseUrl, string OpenApiUrl, string? Authorization, int Seed, string[] Excluded);
